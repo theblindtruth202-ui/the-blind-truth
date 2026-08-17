@@ -2,6 +2,7 @@
 <html lang="en">
 
 <head>
+
   <meta charset="UTF-8">
 
   <meta
@@ -13,10 +14,14 @@
 
   <meta
     name="description"
-    content="The Blind Truth investigates conspiracies, hidden history, controversial claims, popular beliefs, and unanswered questions by separating documented evidence from speculation."
+    content="The Blind Truth investigates conspiracies, hidden history, controversial claims, popular beliefs, and unanswered questions by separating evidence from speculation."
   >
 
   <style>
+
+    /* ========================================
+       GLOBAL
+    ======================================== */
 
     * {
       margin: 0;
@@ -32,7 +37,7 @@
       font-family: Arial, Helvetica, sans-serif;
       background: #090909;
       color: #f5f5f5;
-      line-height: 1.6;
+      line-height: 1.65;
     }
 
     a {
@@ -41,8 +46,8 @@
     }
 
     img {
-      max-width: 100%;
       display: block;
+      max-width: 100%;
     }
 
     .container {
@@ -50,11 +55,14 @@
       margin: 0 auto;
     }
 
-    /* HEADER */
+
+    /* ========================================
+       HEADER
+    ======================================== */
 
     header {
       background: #050505;
-      border-bottom: 1px solid #282828;
+      border-bottom: 1px solid #292929;
       position: sticky;
       top: 0;
       z-index: 1000;
@@ -75,10 +83,11 @@
     }
 
     .site-logo {
-      width: 68px;
-      height: 68px;
+      width: 64px;
+      height: 64px;
       object-fit: contain;
       border-radius: 8px;
+      flex-shrink: 0;
     }
 
     .brand-text {
@@ -105,7 +114,10 @@
       color: #d7ff34;
     }
 
-    /* HERO */
+
+    /* ========================================
+       HERO
+    ======================================== */
 
     .hero {
       min-height: 82vh;
@@ -139,38 +151,26 @@
       bottom: -250px;
     }
 
-    .hero-layout {
-      display: grid;
-      grid-template-columns: 1fr 0.85fr;
-      gap: 45px;
-      align-items: center;
-      padding: 80px 0;
+    .hero-content {
       position: relative;
       z-index: 2;
-    }
-
-    .hero-logo {
-      width: 100%;
-      max-width: 520px;
-      margin-left: auto;
-      border-radius: 12px;
-      border: 1px solid #252525;
-      box-shadow: 0 20px 80px rgba(0,0,0,.45);
+      max-width: 820px;
+      padding: 80px 0;
     }
 
     .eyebrow {
       display: inline-block;
       color: #d7ff34;
       text-transform: uppercase;
-      font-weight: 800;
+      font-weight: 900;
       letter-spacing: 2px;
       margin-bottom: 18px;
       font-size: 0.8rem;
     }
 
     .hero h1 {
-      font-size: clamp(3rem, 8vw, 6rem);
-      line-height: 0.94;
+      font-size: clamp(3rem, 9vw, 7rem);
+      line-height: 0.92;
       letter-spacing: -3px;
       text-transform: uppercase;
       margin-bottom: 24px;
@@ -181,11 +181,16 @@
     }
 
     .hero p {
-      font-size: 1.15rem;
-      color: #bbbbbb;
-      max-width: 680px;
+      font-size: 1.18rem;
+      color: #c7c7c7;
+      max-width: 700px;
       margin-bottom: 30px;
     }
+
+
+    /* ========================================
+       BUTTONS
+    ======================================== */
 
     .button {
       display: inline-block;
@@ -195,10 +200,12 @@
       font-weight: 900;
       text-transform: uppercase;
       border-radius: 4px;
+      letter-spacing: 0.5px;
       transition: 0.2s ease;
     }
 
-    .button:hover {
+    .button:hover,
+    .button:focus {
       transform: translateY(-2px);
       background: #ffffff;
     }
@@ -206,16 +213,20 @@
     .button.secondary {
       background: transparent;
       color: #ffffff;
-      border: 1px solid #444;
+      border: 1px solid #555;
       margin-left: 10px;
     }
 
-    .button.secondary:hover {
+    .button.secondary:hover,
+    .button.secondary:focus {
       border-color: #d7ff34;
       color: #d7ff34;
     }
 
-    /* GENERAL SECTIONS */
+
+    /* ========================================
+       GENERAL SECTIONS
+    ======================================== */
 
     section {
       padding: 80px 0;
@@ -237,19 +248,22 @@
     }
 
     .section-description {
-      color: #aaa;
-      max-width: 700px;
+      color: #b8b8b8;
+      max-width: 720px;
       margin-bottom: 38px;
     }
 
-    /* FEATURED INVESTIGATION */
+
+    /* ========================================
+       FEATURED INVESTIGATION
+    ======================================== */
 
     .featured {
       background: #101010;
     }
 
     .featured-card {
-      border: 1px solid #2c2c2c;
+      border: 1px solid #343434;
       background: #080808;
       display: grid;
       grid-template-columns: 1.15fr 1fr;
@@ -265,8 +279,8 @@
 
       background:
         linear-gradient(
-          rgba(0,0,0,0.25),
-          rgba(0,0,0,0.75)
+          rgba(0,0,0,0.35),
+          rgba(0,0,0,0.80)
         ),
         repeating-linear-gradient(
           45deg,
@@ -275,12 +289,10 @@
           #111 20px,
           #111 40px
         );
-    }
 
-    .featured-visual img {
-      width: 88%;
-      max-width: 520px;
-      border-radius: 10px;
+      font-size: 7rem;
+      font-weight: 900;
+      color: #d7ff34;
     }
 
     .featured-content {
@@ -311,18 +323,26 @@
     }
 
     .featured-content p {
-      color: #aaa;
+      color: #bdbdbd;
       margin-bottom: 25px;
     }
 
     .read-more {
       color: #d7ff34;
-      font-weight: 800;
-      font-size: 0.85rem;
+      font-weight: 900;
+      font-size: 0.9rem;
       text-transform: uppercase;
     }
 
-    /* ARTICLE CARDS */
+    .read-more:hover,
+    .read-more:focus {
+      color: #ffffff;
+    }
+
+
+    /* ========================================
+       ARTICLE CARDS
+    ======================================== */
 
     .articles-grid {
       display: grid;
@@ -332,7 +352,7 @@
 
     .article-card {
       background: #101010;
-      border: 1px solid #262626;
+      border: 1px solid #303030;
       padding: 28px;
       border-radius: 8px;
       transition: 0.2s ease;
@@ -344,7 +364,7 @@
     }
 
     .article-number {
-      color: #444;
+      color: #555;
       font-size: 2.3rem;
       font-weight: 900;
       margin-bottom: 25px;
@@ -356,12 +376,15 @@
     }
 
     .article-card p {
-      color: #999;
+      color: #b8b8b8;
       font-size: 0.95rem;
       margin-bottom: 18px;
     }
 
-    /* CATEGORIES */
+
+    /* ========================================
+       CATEGORIES
+    ======================================== */
 
     .categories {
       background: #101010;
@@ -375,17 +398,18 @@
 
     .category {
       min-height: 130px;
-      border: 1px solid #2c2c2c;
+      border: 1px solid #343434;
       background: #080808;
       border-radius: 7px;
       padding: 22px;
       display: flex;
       flex-direction: column;
       justify-content: space-between;
-      transition: .2s ease;
+      transition: 0.2s ease;
     }
 
-    .category:hover {
+    .category:hover,
+    .category:focus {
       border-color: #d7ff34;
       transform: translateY(-2px);
     }
@@ -395,11 +419,14 @@
     }
 
     .category span {
-      color: #777;
+      color: #999;
       font-size: 0.8rem;
     }
 
-    /* VERDICTS */
+
+    /* ========================================
+       VERDICT SYSTEM
+    ======================================== */
 
     .verdict-grid {
       display: grid;
@@ -409,7 +436,7 @@
     }
 
     .verdict {
-      border: 1px solid #333;
+      border: 1px solid #444;
       border-radius: 5px;
       padding: 18px 10px;
       text-align: center;
@@ -424,7 +451,10 @@
       color: #d7ff34;
     }
 
-    /* MISSION */
+
+    /* ========================================
+       MISSION
+    ======================================== */
 
     .mission {
       border-top: 1px solid #222;
@@ -447,10 +477,13 @@
     }
 
     .mission-box p {
-      color: #aaa;
+      color: #bdbdbd;
     }
 
-    /* NEWSLETTER */
+
+    /* ========================================
+       NEWSLETTER
+    ======================================== */
 
     .newsletter {
       background: #d7ff34;
@@ -476,19 +509,22 @@
 
     .newsletter-button {
       background: #050505;
-      color: white;
+      color: #ffffff;
       padding: 14px 22px;
       border-radius: 4px;
       font-weight: 900;
       white-space: nowrap;
     }
 
-    /* FOOTER */
+
+    /* ========================================
+       FOOTER
+    ======================================== */
 
     footer {
       padding: 45px 0;
       background: #050505;
-      color: #777;
+      color: #999;
     }
 
     .footer-inner {
@@ -498,21 +534,8 @@
       align-items: center;
     }
 
-    .footer-brand {
-      display: flex;
-      align-items: center;
-      gap: 12px;
-    }
-
-    .footer-brand img {
-      width: 55px;
-      height: 55px;
-      object-fit: contain;
-      border-radius: 6px;
-    }
-
     .footer-logo {
-      color: white;
+      color: #ffffff;
       font-weight: 900;
       letter-spacing: 2px;
     }
@@ -521,20 +544,36 @@
       color: #d7ff34;
     }
 
-    /* MOBILE */
 
-    @media (max-width: 900px) {
+    /* ========================================
+       MOBILE
+    ======================================== */
+
+    @media (max-width: 850px) {
+
+      .nav-wrapper {
+        min-height: 70px;
+      }
+
+      .site-logo {
+        width: 52px;
+        height: 52px;
+      }
+
+      .brand-text {
+        font-size: 0.95rem;
+      }
 
       nav {
         display: none;
       }
 
-      .hero-layout {
-        grid-template-columns: 1fr;
+      .hero {
+        min-height: 72vh;
       }
 
-      .hero-logo {
-        margin: 10px auto 0;
+      .hero-content {
+        padding: 60px 0;
       }
 
       .featured-card {
@@ -542,7 +581,8 @@
       }
 
       .featured-visual {
-        min-height: 260px;
+        min-height: 220px;
+        font-size: 5rem;
       }
 
       .featured-content {
@@ -575,23 +615,33 @@
       }
     }
 
-    @media (max-width: 520px) {
+
+    @media (max-width: 500px) {
+
+      .container {
+        width: 92%;
+      }
+
+      .nav-wrapper {
+        min-height: 62px;
+      }
 
       .site-logo {
-        width: 54px;
-        height: 54px;
+        width: 46px;
+        height: 46px;
+      }
+
+      .brand {
+        gap: 10px;
       }
 
       .brand-text {
-        font-size: 0.92rem;
+        font-size: 0.82rem;
+        letter-spacing: 1.4px;
       }
 
       .hero {
-        min-height: auto;
-      }
-
-      .hero-layout {
-        padding: 60px 0;
+        min-height: 68vh;
       }
 
       .hero h1 {
@@ -603,63 +653,93 @@
       }
 
       section {
-        padding: 60px 0;
+        padding: 58px 0;
       }
 
       .category-grid {
         grid-template-columns: 1fr;
       }
 
+      .featured-content h3 {
+        font-size: 1.65rem;
+      }
+
+      .section-description {
+        font-size: 0.98rem;
+      }
     }
 
   </style>
+
 </head>
+
 
 <body>
 
-<header>
 
-  <div class="container nav-wrapper">
+  <!-- ========================================
+       HEADER
+  ======================================== -->
 
-    <a href="index.html" class="brand">
+  <header>
 
-      <img
-        src="file_00000000391c81f6a220d6a46ecc9d9b.png"
-        alt="The Blind Truth logo"
-        class="site-logo"
-      >
+    <div class="container nav-wrapper">
 
-      <div class="brand-text">
-        THE BLIND<br>
-        <span>TRUTH</span>
-      </div>
+      <a href="index.html" class="brand">
 
-    </a>
+        <!-- YOUR LOGO FILE -->
 
-    <nav>
-      <a href="#investigations">Investigations</a>
-      <a href="#categories">Categories</a>
-      <a href="#verdicts">Verdicts</a>
-      <a href="#about">About</a>
-    </nav>
+        <img
+          class="site-logo"
+          src="file_00000000391c81f6a220d6a46ecc9d9b.png"
+          alt="The Blind Truth logo"
+        >
 
-  </div>
+        <div class="brand-text">
+          THE BLIND <span>TRUTH</span>
+        </div>
 
-</header>
+      </a>
 
 
-<main>
+      <nav>
 
-  <!-- HERO -->
+        <a href="#investigations">
+          Investigations
+        </a>
 
-  <section class="hero">
+        <a href="#categories">
+          Categories
+        </a>
 
-    <div class="container hero-layout">
+        <a href="#verdicts">
+          Verdicts
+        </a>
 
-      <div>
+        <a href="#about">
+          About
+        </a>
+
+      </nav>
+
+    </div>
+
+  </header>
+
+
+  <main>
+
+
+    <!-- ========================================
+         HERO
+    ======================================== -->
+
+    <section class="hero">
+
+      <div class="container hero-content">
 
         <span class="eyebrow">
-          Question everything. Follow the evidence.
+          Question Everything. Follow the Evidence.
         </span>
 
         <h1>
@@ -674,505 +754,528 @@
           speculation so you can decide what deserves to be believed.
         </p>
 
-        <a class="button" href="#investigations">
+        <a
+          class="button"
+          href="#investigations"
+        >
           Explore Investigations
         </a>
 
-        <a class="button secondary" href="#about">
+        <a
+          class="button secondary"
+          href="#about"
+        >
           Our Mission
         </a>
 
       </div>
 
-      <div>
+    </section>
 
-        <img
-          src="file_00000000391c81f6a220d6a46ecc9d9b.png"
-          alt="The Blind Truth - Investigate Everything"
-          class="hero-logo"
-        >
 
-      </div>
+    <!-- ========================================
+         FEATURED INVESTIGATION
+    ======================================== -->
 
-    </div>
+    <section
+      class="featured"
+      id="investigations"
+    >
 
-  </section>
-
-
-  <!-- FEATURED INVESTIGATION -->
-
-  <section
-    class="featured"
-    id="investigations"
-  >
-
-    <div class="container">
-
-      <div class="section-label">
-        Featured Investigation
-      </div>
-
-      <h2 class="section-title">
-        What are we really being told?
-      </h2>
-
-      <p class="section-description">
-        Every investigation starts with a claim.
-        Then we examine the evidence, competing explanations,
-        historical records, and what remains unknown.
-      </p>
-
-
-      <div class="featured-card">
-
-        <div class="featured-visual">
-
-          <img
-            src="file_00000000391c81f6a220d6a46ecc9d9b.png"
-            alt="The Blind Truth"
-          >
-
-        </div>
-
-
-        <div class="featured-content">
-
-          <span class="tag">
-            Investigation 001
-          </span>
-
-          <h3>
-            Why Do Certain Conspiracy Theories Refuse to Die?
-          </h3>
-
-          <p>
-            Why do some theories disappear while others survive
-            for decades? This investigation examines distrust,
-            uncertainty, misinformation, psychology, social identity,
-            and the history of real secrecy.
-          </p>
-
-          <a
-            class="read-more"
-            href="why-conspiracy-theories-survive.html"
-          >
-            Read Investigation →
-          </a>
-
-        </div>
-
-      </div>
-
-    </div>
-
-  </section>
-
-
-  <!-- LATEST -->
-
-  <section>
-
-    <div class="container">
-
-      <div class="section-label">
-        Latest
-      </div>
-
-      <h2 class="section-title">
-        Investigations
-      </h2>
-
-      <p class="section-description">
-        No assumption gets a free pass.
-        Each topic is examined from multiple angles before
-        reaching a conclusion.
-      </p>
-
-
-      <div class="articles-grid">
-
-
-        <article class="article-card">
-
-          <div class="article-number">
-            01
-          </div>
-
-          <span class="tag">
-            Conspiracy
-          </span>
-
-          <h3>
-            Why Do Certain Conspiracy Theories Refuse to Die?
-          </h3>
-
-          <p>
-            Looking at how distrust, missing information,
-            government secrecy, misinformation, media coverage,
-            and psychology can keep theories alive.
-          </p>
-
-          <a
-            href="why-conspiracy-theories-survive.html"
-            class="read-more"
-          >
-            Read Investigation →
-          </a>
-
-        </article>
-
-
-        <article class="article-card">
-
-          <div class="article-number">
-            02
-          </div>
-
-          <span class="tag">
-            Hidden History
-          </span>
-
-          <h3>
-            How Much History Has Been Forgotten?
-          </h3>
-
-          <p>
-            Exploring events, people, documents, and stories
-            that rarely receive attention in mainstream
-            historical discussions.
-          </p>
-
-          <span class="read-more">
-            Coming Soon →
-          </span>
-
-        </article>
-
-
-        <article class="article-card">
-
-          <div class="article-number">
-            03
-          </div>
-
-          <span class="tag">
-            Fact Check
-          </span>
-
-          <h3>
-            Viral Doesn't Mean True
-          </h3>
-
-          <p>
-            Investigating how false or incomplete claims
-            spread online and how evidence can reveal
-            what actually happened.
-          </p>
-
-          <span class="read-more">
-            Coming Soon →
-          </span>
-
-        </article>
-
-
-      </div>
-
-    </div>
-
-  </section>
-
-
-  <!-- CATEGORIES -->
-
-  <section
-    class="categories"
-    id="categories"
-  >
-
-    <div class="container">
-
-      <div class="section-label">
-        Explore
-      </div>
-
-      <h2 class="section-title">
-        Follow the Questions
-      </h2>
-
-      <p class="section-description">
-        The Blind Truth investigates subjects across history,
-        science, government, business, technology,
-        popular culture, and unexplained events.
-      </p>
-
-
-      <div class="category-grid">
-
-
-        <a
-          href="#investigations"
-          class="category"
-        >
-          <strong>
-            Conspiracies
-          </strong>
-
-          <span>
-            Claims, theories & evidence
-          </span>
-        </a>
-
-
-        <div class="category">
-          <strong>
-            Hidden History
-          </strong>
-
-          <span>
-            Forgotten stories & records
-          </span>
-        </div>
-
-
-        <div class="category">
-          <strong>
-            Government
-          </strong>
-
-          <span>
-            Policies, secrecy & power
-          </span>
-        </div>
-
-
-        <div class="category">
-          <strong>
-            Science
-          </strong>
-
-          <span>
-            Claims, research & evidence
-          </span>
-        </div>
-
-
-        <div class="category">
-          <strong>
-            Money & Corporations
-          </strong>
-
-          <span>
-            Influence, business & wealth
-          </span>
-        </div>
-
-
-        <div class="category">
-          <strong>
-            Technology
-          </strong>
-
-          <span>
-            AI, surveillance & innovation
-          </span>
-        </div>
-
-
-        <div class="category">
-          <strong>
-            Unsolved Mysteries
-          </strong>
-
-          <span>
-            Questions without final answers
-          </span>
-        </div>
-
-
-        <div class="category">
-          <strong>
-            Fact Checks
-          </strong>
-
-          <span>
-            Separating evidence from fiction
-          </span>
-        </div>
-
-
-      </div>
-
-    </div>
-
-  </section>
-
-
-  <!-- VERDICTS -->
-
-  <section id="verdicts">
-
-    <div class="container">
-
-      <div class="section-label">
-        The Blind Truth Standard
-      </div>
-
-      <h2 class="section-title">
-        Not Everything Is Simply True or False
-      </h2>
-
-      <p class="section-description">
-        Some claims are proven.
-        Others contain pieces of truth.
-        Some remain impossible to verify.
-        Our verdict system shows where the available
-        evidence actually leads.
-      </p>
-
-
-      <div class="verdict-grid">
-
-        <div class="verdict highlight">
-          Verified
-        </div>
-
-        <div class="verdict">
-          Mostly True
-        </div>
-
-        <div class="verdict">
-          Unproven
-        </div>
-
-        <div class="verdict">
-          Misleading
-        </div>
-
-        <div class="verdict">
-          Mostly False
-        </div>
-
-        <div class="verdict">
-          False
-        </div>
-
-      </div>
-
-    </div>
-
-  </section>
-
-
-  <!-- ABOUT -->
-
-  <section
-    class="mission"
-    id="about"
-  >
-
-    <div class="container">
-
-      <div class="mission-box">
+      <div class="container">
 
         <div class="section-label">
-          Why The Blind Truth Exists
+          Featured Investigation
         </div>
 
-        <blockquote>
-          Don't believe something because everyone says it's true.
-          Don't reject something because everyone says it's crazy.
-          <span>Investigate it.</span>
-        </blockquote>
-
-        <p>
-          The Blind Truth exists to examine controversial ideas
-          without deciding the answer before the investigation begins.
-          We look for primary sources, credible reporting,
-          historical records, scientific evidence,
-          public documents, expert analysis,
-          contradictions, and missing information.
-        </p>
-
-        <br>
-
-        <p>
-          Readers should be able to see what supports a claim,
-          what challenges it, what remains unknown,
-          and why a final verdict was reached.
-        </p>
-
-      </div>
-
-    </div>
-
-  </section>
-
-
-  <!-- NEWSLETTER -->
-
-  <section class="newsletter">
-
-    <div class="container newsletter-inner">
-
-      <div>
-
-        <h2>
-          Don't Miss the Next Investigation.
+        <h2 class="section-title">
+          Why Do Certain Conspiracy Theories Refuse to Die?
         </h2>
 
-        <p>
-          Email updates and subscriber features are coming
-          as The Blind Truth grows.
+        <p class="section-description">
+          Some theories disappear quickly. Others survive for
+          generations. Our first investigation examines uncertainty,
+          distrust, misinformation, identity, psychology, real secrecy,
+          and the forces that allow conspiracy beliefs to persist.
         </p>
+
+
+        <div class="featured-card">
+
+          <div class="featured-visual">
+            ?
+          </div>
+
+
+          <div class="featured-content">
+
+            <span class="tag">
+              Investigation 001
+            </span>
+
+            <h3>
+              Why Do Certain Conspiracy Theories Refuse to Die?
+            </h3>
+
+            <p>
+              Why can some conspiracy theories survive even after
+              contradictory evidence appears? We examine the psychology,
+              history, information environment, real examples of secrecy,
+              and the difference between justified skepticism and claims
+              that cannot be verified.
+            </p>
+
+
+            <!-- THIS BUTTON NOW OPENS THE ARTICLE -->
+
+            <a
+              class="read-more"
+              href="why-conspiracy-theories-survive.html"
+            >
+              Read Investigation →
+            </a>
+
+          </div>
+
+        </div>
 
       </div>
 
-      <span class="newsletter-button">
-        Coming Soon
-      </span>
-
-    </div>
-
-  </section>
-
-</main>
+    </section>
 
 
-<footer>
+    <!-- ========================================
+         LATEST INVESTIGATIONS
+    ======================================== -->
 
-  <div class="container footer-inner">
+    <section>
 
-    <div class="footer-brand">
+      <div class="container">
 
-      <img
-        src="file_00000000391c81f6a220d6a46ecc9d9b.png"
-        alt="The Blind Truth logo"
-      >
+        <div class="section-label">
+          Latest
+        </div>
+
+        <h2 class="section-title">
+          Investigations
+        </h2>
+
+        <p class="section-description">
+          No assumption gets a free pass. Each topic is examined
+          from multiple angles before reaching a conclusion.
+        </p>
+
+
+        <div class="articles-grid">
+
+
+          <!-- ARTICLE 1 -->
+
+          <article class="article-card">
+
+            <div class="article-number">
+              01
+            </div>
+
+            <span class="tag">
+              Conspiracy
+            </span>
+
+            <h3>
+              Why Do Certain Conspiracy Theories Refuse to Die?
+            </h3>
+
+            <p>
+              Examining how uncertainty, distrust, real secrecy,
+              misinformation, psychology, repetition, and identity
+              can keep certain theories alive.
+            </p>
+
+            <a
+              href="why-conspiracy-theories-survive.html"
+              class="read-more"
+            >
+              Read Investigation →
+            </a>
+
+          </article>
+
+
+          <!-- ARTICLE 2 -->
+
+          <article class="article-card">
+
+            <div class="article-number">
+              02
+            </div>
+
+            <span class="tag">
+              Hidden History
+            </span>
+
+            <h3>
+              How Much History Has Been Forgotten?
+            </h3>
+
+            <p>
+              Exploring events, people, documents, and stories
+              that rarely receive attention in mainstream
+              historical discussions.
+            </p>
+
+            <span class="read-more">
+              Coming Soon →
+            </span>
+
+          </article>
+
+
+          <!-- ARTICLE 3 -->
+
+          <article class="article-card">
+
+            <div class="article-number">
+              03
+            </div>
+
+            <span class="tag">
+              Fact Check
+            </span>
+
+            <h3>
+              Viral Doesn't Mean True
+            </h3>
+
+            <p>
+              Investigating how false or incomplete claims spread
+              online and how evidence can reveal what actually happened.
+            </p>
+
+            <span class="read-more">
+              Coming Soon →
+            </span>
+
+          </article>
+
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- ========================================
+         CATEGORIES
+    ======================================== -->
+
+    <section
+      class="categories"
+      id="categories"
+    >
+
+      <div class="container">
+
+        <div class="section-label">
+          Explore
+        </div>
+
+        <h2 class="section-title">
+          Follow the Questions
+        </h2>
+
+        <p class="section-description">
+          The Blind Truth investigates subjects across history,
+          science, government, business, technology, culture,
+          mysteries, misinformation, and public controversy.
+        </p>
+
+
+        <div class="category-grid">
+
+          <div class="category">
+
+            <strong>
+              Conspiracies
+            </strong>
+
+            <span>
+              Claims, theories & evidence
+            </span>
+
+          </div>
+
+
+          <div class="category">
+
+            <strong>
+              Hidden History
+            </strong>
+
+            <span>
+              Forgotten stories & records
+            </span>
+
+          </div>
+
+
+          <div class="category">
+
+            <strong>
+              Government
+            </strong>
+
+            <span>
+              Policies, secrecy & power
+            </span>
+
+          </div>
+
+
+          <div class="category">
+
+            <strong>
+              Science
+            </strong>
+
+            <span>
+              Claims, research & evidence
+            </span>
+
+          </div>
+
+
+          <div class="category">
+
+            <strong>
+              Money & Corporations
+            </strong>
+
+            <span>
+              Influence, business & wealth
+            </span>
+
+          </div>
+
+
+          <div class="category">
+
+            <strong>
+              Technology
+            </strong>
+
+            <span>
+              AI, surveillance & innovation
+            </span>
+
+          </div>
+
+
+          <div class="category">
+
+            <strong>
+              Unsolved Mysteries
+            </strong>
+
+            <span>
+              Questions without final answers
+            </span>
+
+          </div>
+
+
+          <div class="category">
+
+            <strong>
+              Fact Checks
+            </strong>
+
+            <span>
+              Separating evidence from fiction
+            </span>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- ========================================
+         VERDICTS
+    ======================================== -->
+
+    <section id="verdicts">
+
+      <div class="container">
+
+        <div class="section-label">
+          The Blind Truth Standard
+        </div>
+
+        <h2 class="section-title">
+          Not Everything Is Simply True or False
+        </h2>
+
+        <p class="section-description">
+          Some claims are proven. Others contain pieces of truth.
+          Some remain impossible to verify. Our verdict system shows
+          where the available evidence actually leads.
+        </p>
+
+
+        <div class="verdict-grid">
+
+          <div class="verdict highlight">
+            Verified
+          </div>
+
+          <div class="verdict">
+            Mostly True
+          </div>
+
+          <div class="verdict">
+            Unproven
+          </div>
+
+          <div class="verdict">
+            Misleading
+          </div>
+
+          <div class="verdict">
+            Mostly False
+          </div>
+
+          <div class="verdict">
+            False
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- ========================================
+         ABOUT
+    ======================================== -->
+
+    <section
+      class="mission"
+      id="about"
+    >
+
+      <div class="container">
+
+        <div class="mission-box">
+
+          <div class="section-label">
+            Why The Blind Truth Exists
+          </div>
+
+
+          <blockquote>
+
+            Don't believe something because everyone says it's true.
+
+            Don't reject something because everyone says it's crazy.
+
+            <span>
+              Investigate it.
+            </span>
+
+          </blockquote>
+
+
+          <p>
+            The Blind Truth exists to examine controversial ideas
+            without deciding the answer before the investigation begins.
+            We look for primary sources, credible reporting, historical
+            records, scientific evidence, public documents, expert analysis,
+            contradictions, and missing information.
+          </p>
+
+          <br>
+
+          <p>
+            Readers should be able to see what supports a claim,
+            what challenges it, what remains unknown, and why a
+            final verdict was reached.
+          </p>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- ========================================
+         NEWSLETTER
+    ======================================== -->
+
+    <section class="newsletter">
+
+      <div class="container newsletter-inner">
+
+        <div>
+
+          <h2>
+            Don't Miss the Next Investigation.
+          </h2>
+
+          <p>
+            Email updates and subscriber features are coming
+            as The Blind Truth grows.
+          </p>
+
+        </div>
+
+        <div class="newsletter-button">
+          Coming Soon
+        </div>
+
+      </div>
+
+    </section>
+
+
+  </main>
+
+
+  <!-- ========================================
+       FOOTER
+  ======================================== -->
+
+  <footer>
+
+    <div class="container footer-inner">
 
       <div class="footer-logo">
         THE BLIND <span>TRUTH</span>
       </div>
 
+      <div>
+        © <span id="year"></span> The Blind Truth.
+        Evidence before assumption.
+      </div>
+
     </div>
 
-    <div>
-      © <span id="year"></span>
-      The Blind Truth.
-      Evidence before assumption.
-    </div>
-
-  </div>
-
-</footer>
+  </footer>
 
 
-<script>
+  <script>
 
-  document.getElementById("year").textContent =
-    new Date().getFullYear();
+    document.getElementById("year").textContent =
+      new Date().getFullYear();
 
-</script>
+  </script>
+
 
 </body>
+
 </html>
