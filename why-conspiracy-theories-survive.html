@@ -1,682 +1,1473 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8"> 
-
-  <meta
-    name="viewport"
-    content="width=device-width, initial-scale=1.0"
-  >
-
-  <title>Why Do Conspiracy Theories Refuse to Die? | The Blind Truth</title>
-
-  <meta
-    name="description"
-    content="The Blind Truth investigates why conspiracy theories can survive for years or decades, examining uncertainty, distrust, psychology, misinformation, identity, and real secrecy."
-  >
-
-  <style>
-
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-
-    html {
-      scroll-behavior: smooth;
-    }
-
-    body {
-      font-family: Arial, Helvetica, sans-serif;
-      background: #050505;
-      color: #f5f5f5;
-      line-height: 1.7;
-    }
-
-    a {
-      color: inherit;
-      text-decoration: none;
-    }
-
-    .container {
-      width: min(900px, 92%);
-      margin: 0 auto;
-    }
-
-    /* HEADER */
-
-    header {
-      background: #050505;
-      border-bottom: 1px solid #2d2d2d;
-      position: sticky;
-      top: 0;
-      z-index: 1000;
-    }
-
-    .nav {
-      min-height: 62px;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      gap: 16px;
-    }
-
-    .logo {
-      font-weight: 900;
-      letter-spacing: 2px;
-      font-size: 1rem;
-      white-space: nowrap;
-    }
-
-    .logo span {
-      color: #d7ff34;
-    }
-
-    .back {
-      color: #d6d6d6;
-      font-size: 0.88rem;
-      font-weight: 700;
-      text-align: right;
-    }
-
-    .back:hover,
-    .back:focus {
-      color: #d7ff34;
-    }
-
-    /* ARTICLE HERO */
-
-    .article-hero {
-      padding: 42px 0 32px;
-      border-bottom: 1px solid #292929;
-
-      background:
-        radial-gradient(
-          circle at 80% 10%,
-          rgba(215,255,52,.08),
-          transparent 28%
-        ),
-        linear-gradient(
-          145deg,
-          #050505,
-          #101010
-        );
-    }
-
-    .tag {
-      display: inline-block;
-      color: #d7ff34;
-      border: 1px solid rgba(215,255,52,.4);
-      background: rgba(215,255,52,.08);
-      padding: 6px 10px;
-      border-radius: 4px;
-      text-transform: uppercase;
-      font-size: .72rem;
-      font-weight: 900;
-      letter-spacing: 1px;
-      margin-bottom: 16px;
-    }
-
-    h1 {
-      font-size: clamp(2.2rem, 7vw, 4.5rem);
-      line-height: 1.03;
-      letter-spacing: -2px;
-      margin-bottom: 18px;
-    }
-
-    .intro {
-      color: #dddddd;
-      font-size: 1.08rem;
-      max-width: 800px;
-    }
-
-    .meta {
-      margin-top: 18px;
-      color: #a8a8a8;
-      font-size: .85rem;
-    }
-
-    /* ARTICLE */
-
-    article {
-      padding: 28px 0 70px;
-    }
-
-    article h2 {
-      font-size: clamp(1.75rem, 6vw, 2.35rem);
-      line-height: 1.15;
-      margin-top: 42px;
-      margin-bottom: 16px;
-      color: #ffffff;
-    }
-
-    article h3 {
-      font-size: 1.3rem;
-      margin-top: 26px;
-      margin-bottom: 10px;
-      color: #d7ff34;
-    }
-
-    article p {
-      color: #d7d7d7;
-      margin-bottom: 20px;
-      font-size: 1.05rem;
-    }
-
-    strong {
-      color: #ffffff;
-    }
-
-    /* VERDICT */
-
-    .verdict-box {
-      margin: 8px 0 36px;
-      padding: 26px;
-      background: #0c0c0c;
-      border: 1px solid #4a4a4a;
-      border-left: 6px solid #d7ff34;
-      border-radius: 8px;
-    }
-
-    .verdict-label {
-      color: #d7ff34;
-      text-transform: uppercase;
-      font-size: .76rem;
-      letter-spacing: 2px;
-      font-weight: 900;
-    }
-
-    .verdict-box h2 {
-      margin-top: 8px;
-      margin-bottom: 12px;
-      font-size: 2rem;
-    }
-
-    .verdict-box p {
-      color: #dddddd;
-      margin-bottom: 0;
-    }
-
-    /* CLAIM */
-
-    .claim-box {
-      background: #0d0d0d;
-      border: 1px solid #454545;
-      padding: 24px;
-      border-radius: 8px;
-      margin: 20px 0 28px;
-    }
-
-    .claim-box p {
-      color: #d9d9d9;
-      margin-bottom: 0;
-    }
-
-    .claim-box strong {
-      color: #d7ff34;
-    }
-
-    /* LISTS */
-
-    .evidence-list {
-      margin: 18px 0 24px 24px;
-      color: #d8d8d8;
-    }
-
-    .evidence-list li {
-      margin-bottom: 12px;
-    }
-
-    /* QUOTES */
-
-    blockquote {
-      border-left: 5px solid #d7ff34;
-      padding: 22px 24px;
-      margin: 30px 0;
-      background: #0b0b0b;
-      color: #ffffff;
-      font-size: 1.18rem;
-      font-weight: 800;
-      line-height: 1.5;
-    }
-
-    /* STANDARD */
-
-    .standard {
-      background: linear-gradient(145deg, #164f00, #103900);
-      color: #ffffff;
-      padding: 32px;
-      border-radius: 8px;
-      margin: 42px 0;
-      border: 1px solid #2c7500;
-    }
-
-    .standard h2 {
-      margin-top: 0;
-      color: #ffffff;
-    }
-
-    .standard p,
-    .standard li {
-      color: #eeeeee;
-    }
-
-    /* FOOTER */
-
-    footer {
-      background: #050505;
-      border-top: 1px solid #222;
-      padding: 34px 0;
-      color: #a0a0a0;
-    }
-
-    footer span {
-      color: #d7ff34;
-    }
-
-    /* MOBILE */
-
-    @media (max-width: 600px) {
-
-      .container {
-        width: 92%;
-      }
-
-      .nav {
-        min-height: 54px;
-        gap: 8px;
-      }
-
-      .logo {
-        font-size: 0.78rem;
-        letter-spacing: 1.4px;
-      }
-
-      .back {
-        font-size: 0.72rem;
-        line-height: 1.2;
-      }
-
-      .article-hero {
-        padding: 28px 0 24px;
-      }
-
-      h1 {
-        font-size: 2.2rem;
-        letter-spacing: -1px;
-      }
-
-      .intro {
-        font-size: 1rem;
-        line-height: 1.65;
-      }
-
-      article {
-        padding-top: 18px;
-      }
-
-      article h2 {
-        margin-top: 34px;
-        font-size: 1.85rem;
-      }
-
-      article p {
-        font-size: 1rem;
-        line-height: 1.72;
-      }
-
-      .verdict-box,
-      .claim-box,
-      .standard {
-        padding: 20px;
-      }
-
-      blockquote {
-        padding: 18px;
-        font-size: 1.05rem;
-      }
-
-      .evidence-list {
-        margin-left: 20px;
-      }
-    }
-
-  </style>
+<meta charset="UTF-8">
+
+<meta
+  name="viewport"
+  content="width=device-width, initial-scale=1.0"
+>
+
+<title>Case 001 | Why Do Conspiracy Theories Refuse to Die? | The Blind Truth</title>
+
+<meta
+  name="description"
+  content="The Blind Truth investigates why conspiracy theories survive for years or decades, examining uncertainty, distrust, psychology, repetition, identity, documented conspiracies, and misinformation research."
+>
+
+<style>
+
+/* =========================================================
+   THE BLIND TRUTH
+   CASE FILE 001
+   ========================================================= */
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --black: #050505;
+  --deep-black: #090909;
+  --panel: #111111;
+  --panel-light: #171717;
+  --border: #303030;
+  --text: #f5f5f5;
+  --muted: #aaaaaa;
+  --green: #c8ff38;
+  --green-dark: #718f1f;
+  --red: #ff5b5b;
+  --amber: #ffc857;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background: var(--black);
+  color: var(--text);
+  line-height: 1.7;
+  overflow-x: hidden;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.container {
+  width: min(940px, 92%);
+  margin: 0 auto;
+}
+
+/* =========================================================
+   MATRIX-STYLE BLIND TRUTH RAIN
+   ========================================================= */
+
+#truth-rain {
+  position: fixed;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+  pointer-events: none;
+  opacity: 0.12;
+}
+
+.site-layer {
+  position: relative;
+  z-index: 2;
+}
+
+/* =========================================================
+   HEADER
+   ========================================================= */
+
+header {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  background: rgba(5, 5, 5, 0.94);
+  border-bottom: 1px solid #252525;
+  backdrop-filter: blur(12px);
+}
+
+.nav {
+  min-height: 68px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.logo {
+  font-weight: 900;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+.logo span {
+  color: var(--green);
+}
+
+.back-link {
+  color: var(--muted);
+  font-size: 0.92rem;
+  font-weight: 700;
+}
+
+.back-link:hover {
+  color: var(--green);
+}
+
+/* =========================================================
+   CASE HEADER
+   ========================================================= */
+
+.case-hero {
+  padding: 78px 0 50px;
+  border-bottom: 1px solid var(--border);
+}
+
+.case-label {
+  color: var(--green);
+  font-size: 0.9rem;
+  font-weight: 900;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  margin-bottom: 18px;
+}
+
+.case-hero h1 {
+  max-width: 850px;
+  font-size: clamp(2.6rem, 8vw, 5.8rem);
+  line-height: 0.98;
+  letter-spacing: -3px;
+  text-transform: uppercase;
+  margin-bottom: 28px;
+}
+
+.case-hero h1 span {
+  color: var(--green);
+}
+
+.deck {
+  max-width: 780px;
+  color: #d0d0d0;
+  font-size: 1.15rem;
+  margin-bottom: 32px;
+}
+
+.case-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.tag {
+  border: 1px solid var(--border);
+  background: var(--panel);
+  color: #d8d8d8;
+  padding: 8px 12px;
+  font-size: 0.76rem;
+  font-weight: 800;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+/* =========================================================
+   SOURCE KEY
+   ========================================================= */
+
+.source-key {
+  padding: 28px 0;
+  border-bottom: 1px solid var(--border);
+}
+
+.source-key h2 {
+  color: var(--green);
+  font-size: 0.82rem;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  margin-bottom: 14px;
+}
+
+.key-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px 22px;
+}
+
+.key-item {
+  color: var(--muted);
+  font-size: 0.84rem;
+}
+
+.key-item strong {
+  color: #ffffff;
+}
+
+.dot {
+  display: inline-block;
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  background: var(--green);
+  margin-right: 7px;
+}
+
+/* =========================================================
+   VERDICT
+   ========================================================= */
+
+.verdict {
+  margin: 46px 0;
+  border: 1px solid var(--green-dark);
+  background: linear-gradient(
+    135deg,
+    rgba(200,255,56,0.08),
+    rgba(255,255,255,0.02)
+  );
+  padding: 28px;
+}
+
+.verdict-label {
+  color: var(--green);
+  font-size: 0.78rem;
+  font-weight: 900;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  margin-bottom: 8px;
+}
+
+.verdict h2 {
+  font-size: 1.8rem;
+  line-height: 1.2;
+  margin-bottom: 12px;
+}
+
+/* =========================================================
+   ARTICLE
+   ========================================================= */
+
+article {
+  padding-bottom: 60px;
+}
+
+.section {
+  padding: 44px 0;
+  border-bottom: 1px solid var(--border);
+}
+
+.section-number {
+  color: var(--green);
+  font-weight: 900;
+  font-size: 0.82rem;
+  letter-spacing: 3px;
+  margin-bottom: 8px;
+}
+
+.section h2 {
+  font-size: clamp(1.8rem, 5vw, 2.8rem);
+  line-height: 1.1;
+  margin-bottom: 20px;
+}
+
+.section p {
+  color: #d0d0d0;
+  margin-bottom: 18px;
+  font-size: 1.03rem;
+}
+
+.section strong {
+  color: #ffffff;
+}
+
+/* =========================================================
+   IN-TEXT CITATIONS
+   ========================================================= */
+
+.citation {
+  color: var(--green);
+  font-weight: 900;
+  font-size: 0.78em;
+  vertical-align: super;
+  margin-left: 2px;
+}
+
+.citation:hover {
+  text-decoration: underline;
+}
+
+/* =========================================================
+   CLAIM / EVIDENCE BOX
+   ========================================================= */
+
+.evidence-box {
+  margin: 26px 0;
+  padding: 22px;
+  background: var(--panel);
+  border-left: 4px solid var(--green);
+}
+
+.evidence-box .label {
+  display: block;
+  color: var(--green);
+  font-size: 0.74rem;
+  font-weight: 900;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  margin-bottom: 8px;
+}
+
+/* =========================================================
+   DOCUMENTED HISTORY
+   ========================================================= */
+
+.history-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 18px;
+  margin-top: 26px;
+}
+
+.history-card {
+  background: var(--panel);
+  border: 1px solid var(--border);
+  padding: 24px;
+}
+
+.history-card .classification {
+  color: var(--green);
+  font-size: 0.72rem;
+  font-weight: 900;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+.history-card h3 {
+  margin: 9px 0 12px;
+  font-size: 1.25rem;
+}
+
+.history-card p {
+  font-size: 0.94rem;
+  margin: 0;
+}
+
+/* =========================================================
+   INVESTIGATIVE STANDARD
+   ========================================================= */
+
+.standard {
+  background: #0d0d0d;
+  border: 1px solid var(--border);
+  margin: 45px 0;
+  padding: 30px;
+}
+
+.standard h2 {
+  color: var(--green);
+  margin-bottom: 18px;
+}
+
+.standard ol {
+  padding-left: 22px;
+}
+
+.standard li {
+  color: #d0d0d0;
+  margin-bottom: 12px;
+}
+
+/* =========================================================
+   SOURCES
+   ========================================================= */
+
+.sources {
+  padding: 60px 0;
+}
+
+.sources-header {
+  margin-bottom: 30px;
+}
+
+.sources-header .eyebrow {
+  color: var(--green);
+  font-weight: 900;
+  letter-spacing: 3px;
+  font-size: 0.8rem;
+}
+
+.sources-header h2 {
+  font-size: clamp(2rem, 6vw, 3.5rem);
+  line-height: 1;
+  margin: 8px 0 14px;
+}
+
+.sources-header p {
+  color: var(--muted);
+}
+
+.source-card {
+  background: var(--panel);
+  border: 1px solid var(--border);
+  padding: 24px;
+  margin-bottom: 15px;
+  scroll-margin-top: 90px;
+}
+
+.source-card:target {
+  border-color: var(--green);
+}
+
+.source-number {
+  color: var(--green);
+  font-weight: 900;
+  margin-bottom: 6px;
+}
+
+.source-type {
+  display: inline-block;
+  color: var(--green);
+  border: 1px solid var(--green-dark);
+  padding: 4px 8px;
+  margin-bottom: 10px;
+  font-size: 0.68rem;
+  font-weight: 900;
+  letter-spacing: 1.5px;
+}
+
+.source-card h3 {
+  font-size: 1.08rem;
+  margin-bottom: 6px;
+}
+
+.source-card p {
+  color: var(--muted);
+  font-size: 0.9rem;
+  margin-bottom: 12px;
+}
+
+.source-link {
+  color: var(--green);
+  font-weight: 800;
+  font-size: 0.9rem;
+}
+
+.source-link:hover {
+  text-decoration: underline;
+}
+
+/* =========================================================
+   DISCLAIMER
+   ========================================================= */
+
+.disclaimer {
+  background: #0b0b0b;
+  border-top: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
+  padding: 28px 0;
+}
+
+.disclaimer p {
+  color: #a8a8a8;
+  font-size: 0.9rem;
+}
+
+/* =========================================================
+   FOOTER
+   ========================================================= */
+
+footer {
+  padding: 38px 0;
+}
+
+.footer-inner {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  color: var(--muted);
+  font-size: 0.84rem;
+}
+
+.footer-inner strong {
+  color: var(--green);
+}
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (max-width: 700px) {
+
+  .case-hero {
+    padding-top: 55px;
+  }
+
+  .case-hero h1 {
+    letter-spacing: -2px;
+  }
+
+  .history-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .footer-inner {
+    flex-direction: column;
+  }
+
+  .back-link {
+    font-size: 0.78rem;
+  }
+
+}
+
+</style>
 </head>
 
 <body>
 
+<canvas id="truth-rain"></canvas>
+
+<div class="site-layer">
+
 <header>
   <div class="container nav">
 
-    <a
-      class="logo"
-      href="index.html"
-    >
+    <a class="logo" href="index.html">
       THE BLIND <span>TRUTH</span>
     </a>
 
-    <a
-      class="back"
-      href="index.html#investigations"
-    >
-      ← Back to Investigations
+    <a class="back-link" href="index.html">
+      ← BACK TO HOME
     </a>
 
   </div>
 </header>
 
-
 <main>
 
-  <section class="article-hero">
+<section class="case-hero">
+  <div class="container">
 
-    <div class="container">
+    <div class="case-label">
+      CASE FILE 001 • INVESTIGATION
+    </div>
 
-      <span class="tag">
-        Investigation 001 • Conspiracy
-      </span>
+    <h1>
+      WHY DO CONSPIRACY THEORIES
+      <span>REFUSE TO DIE?</span>
+    </h1>
 
-      <h1>
-        Why Do Certain Conspiracy Theories Refuse to Die?
-      </h1>
+    <p class="deck">
+      Some conspiracy theories disappear almost immediately.
+      Others survive for years, decades, or generations.
+      This investigation examines why — using psychological
+      research, misinformation research, documented history,
+      and primary government sources.
+    </p>
 
-      <p class="intro">
-        Some theories disappear almost immediately.
-        Others survive for decades, crossing generations and
-        adapting to every new piece of information.
-        Why? The answer is more complicated than simply calling
-        believers gullible—or assuming every suspicious claim must be true.
-      </p>
+    <div class="case-meta">
+      <div class="tag">CASE 001</div>
+      <div class="tag">PSYCHOLOGY</div>
+      <div class="tag">MISINFORMATION</div>
+      <div class="tag">HISTORY</div>
+      <div class="tag">EVIDENCE REVIEW</div>
+    </div>
 
-      <div class="meta">
-        The Blind Truth Investigation • Evidence Review
+  </div>
+</section>
+
+<section class="source-key">
+  <div class="container">
+
+    <h2>Source Classification Key</h2>
+
+    <div class="key-grid">
+
+      <div class="key-item">
+        <span class="dot"></span>
+        <strong>PEER REVIEWED</strong> — academic research
+      </div>
+
+      <div class="key-item">
+        <span class="dot"></span>
+        <strong>RESEARCH REVIEW</strong> — synthesis of research
+      </div>
+
+      <div class="key-item">
+        <span class="dot"></span>
+        <strong>PRIMARY SOURCE</strong> — official historical record
       </div>
 
     </div>
 
-  </section>
+  </div>
+</section>
+
+<div class="container">
+
+<div class="verdict">
+
+  <div class="verdict-label">
+    Investigative Finding
+  </div>
+
+  <h2>
+    Conspiracy theories survive for more than one reason.
+  </h2>
+
+  <p>
+    Research points to a combination of uncertainty,
+    attempts to understand threatening events, social identity,
+    distrust, repetition, and the difficulty of correcting
+    misinformation once it becomes familiar. At the same time,
+    history contains genuine examples of secret or unethical
+    institutional conduct. The existence of real conspiracies,
+    however, does not establish the truth of unrelated claims.
+    Each claim still requires its own evidence.
+  </p>
+
+</div>
+
+<article>
+
+<section class="section">
+
+  <div class="section-number">01 / THE QUESTION</div>
+
+  <h2>
+    Why are some conspiracy theories so difficult to eliminate?
+  </h2>
+
+  <p>
+    Conspiracy theories are often treated as though they are
+    simply the result of people refusing to accept facts.
+    Psychological research suggests the picture is more complicated.
+  </p>
+
+  <p>
+    Researchers Karen Douglas, Robbie Sutton, and Aleksandra
+    Cichocka describe conspiracy beliefs as potentially connected
+    to three broad categories of psychological motives:
+    <strong>epistemic</strong> motives involving understanding,
+    <strong>existential</strong> motives involving security and
+    control, and <strong>social</strong> motives involving the
+    individual or group.
+    <a class="citation" href="#source-1">[1]</a>
+  </p>
+
+  <div class="evidence-box">
+    <span class="label">Evidence Check</span>
+    A conspiracy theory can therefore provide more than an
+    explanation. It can potentially provide certainty, meaning,
+    group identity, or a sense that confusing events have an
+    understandable cause.
+  </div>
+
+</section>
 
 
-  <article>
+<section class="section">
 
-    <div class="container">
+  <div class="section-number">02 / UNCERTAINTY & CONTROL</div>
 
-      <div class="verdict-box">
+  <h2>
+    Uncertain events create a demand for explanations.
+  </h2>
 
-        <div class="verdict-label">
-          The Blind Truth Verdict
-        </div>
+  <p>
+    Major events are frequently complicated. Wars, assassinations,
+    disease outbreaks, economic crashes, political scandals,
+    technological changes, and intelligence operations may involve
+    incomplete information and competing explanations.
+  </p>
 
-        <h2>
-          Verified
-        </h2>
+  <p>
+    Research on conspiracy belief has examined how people's desire
+    for understanding, certainty, security, and control can contribute
+    to the appeal of conspiratorial explanations.
+    <a class="citation" href="#source-1">[1]</a>
+  </p>
 
-        <p>
-          Conspiracy theories can persist because several forces reinforce
-          one another: uncertainty, distrust, identity, psychological needs,
-          repeated exposure, information gaps, and—in some cases—the
-          documented history of real secrecy or wrongdoing.
-        </p>
+  <p>
+    That does not mean uncertainty automatically creates conspiracy
+    beliefs. It means uncertainty can create conditions in which a
+    simple, intentional explanation may become psychologically
+    attractive.
+  </p>
 
+</section>
+
+
+<section class="section">
+
+  <div class="section-number">03 / REPETITION</div>
+
+  <h2>
+    Familiarity can feel like evidence.
+  </h2>
+
+  <p>
+    One of the strongest findings relevant to misinformation is the
+    <strong>illusory truth effect</strong>: repeated information can
+    feel more truthful simply because it has become familiar.
+  </p>
+
+  <p>
+    A 2023 preregistered study found that repetition increased
+    participants' truth judgments of conspiracy statements.
+    <a class="citation" href="#source-2">[2]</a>
+  </p>
+
+  <p>
+    A broader 2024 research review concluded that repetition can
+    increase belief in misinformation, including fake news and
+    conspiracy beliefs, and that the effect can occur even for
+    implausible statements or statements that conflict with prior
+    knowledge.
+    <a class="citation" href="#source-3">[3]</a>
+  </p>
+
+  <p>
+    A registered replication published in 2026 found that when
+    conspiracy statements and ordinary trivia statements were
+    matched for plausibility, repetition affected their perceived
+    truth similarly.
+    <a class="citation" href="#source-4">[4]</a>
+  </p>
+
+  <div class="evidence-box">
+    <span class="label">Investigative Implication</span>
+    Seeing the same claim repeatedly is not independent confirmation.
+    Ten websites repeating one unsupported allegation may ultimately
+    trace back to the same original source.
+  </div>
+
+</section>
+
+
+<section class="section">
+
+  <div class="section-number">04 / IDENTITY</div>
+
+  <h2>
+    Sometimes a belief becomes part of the group.
+  </h2>
+
+  <p>
+    Beliefs do not exist only as isolated pieces of information.
+    They can become connected to communities, political identities,
+    social groups, and people's understanding of who they are.
+  </p>
+
+  <p>
+    A 2022 review examining social identity and conspiracy belief
+    argues that conspiracy theories can interact with needs involving
+    belonging, positive views of one's in-group, and security in
+    group status.
+    <a class="citation" href="#source-5">[5]</a>
+  </p>
+
+  <p>
+    Once a claim becomes tied to identity, disagreement may therefore
+    be interpreted as more than disagreement about evidence. It can
+    be experienced as criticism of the group itself.
+  </p>
+
+</section>
+
+
+<section class="section">
+
+  <div class="section-number">05 / DISTRUST</div>
+
+  <h2>
+    Distrust does not appear from nowhere.
+  </h2>
+
+  <p>
+    Governments, corporations, intelligence agencies, researchers,
+    media organizations, and other institutions have sometimes
+    behaved dishonestly or unethically.
+  </p>
+
+  <p>
+    That history matters because people evaluate new claims through
+    their previous understanding of institutional credibility.
+  </p>
+
+  <p>
+    But there is an essential logical distinction:
+    <strong>evidence that an institution lied about one event does
+    not prove that it is lying about another event.</strong>
+  </p>
+
+  <p>
+    Historical misconduct is evidence for the historical misconduct.
+    A separate allegation requires separate evidence.
+  </p>
+
+</section>
+
+
+<section class="section">
+
+  <div class="section-number">06 / DOCUMENTED CONSPIRACIES</div>
+
+  <h2>
+    Some secret institutional actions were real.
+  </h2>
+
+  <p>
+    Responsible investigation cannot begin with the assumption that
+    secret coordinated wrongdoing is impossible. There are documented
+    historical cases in which institutions concealed, misrepresented,
+    or secretly conducted activities.
+  </p>
+
+  <div class="history-grid">
+
+    <div class="history-card">
+
+      <div class="classification">
+        PRIMARY SOURCE • FBI
       </div>
 
+      <h3>COINTELPRO</h3>
 
-      <h2>
-        The Claim
-      </h2>
+      <p>
+        The FBI's own historical account describes COINTELPRO and
+        acknowledges that agents infiltrated groups, sowed discord,
+        and attempted to discredit organizations, including cases
+        where there was little or no evidence of unlawful activity.
+        <a class="citation" href="#source-6">[6]</a>
+      </p>
 
-      <div class="claim-box">
+    </div>
 
-        <p>
-          <strong>Claim:</strong>
-          Conspiracy theories survive because people who believe them
-          simply ignore facts.
-        </p>
+    <div class="history-card">
 
+      <div class="classification">
+        PRIMARY SOURCE • CDC
       </div>
 
-      <p>
-        That explanation is attractive because it is simple.
-        It is also incomplete.
-      </p>
+      <h3>
+        Untreated Syphilis Study at Tuskegee
+      </h3>
 
       <p>
-        Research suggests there is no single personality type,
-        political identity, intelligence level, or psychological defect
-        that explains conspiracy belief.
+        The CDC states that informed consent was not collected from
+        participants and that treatment was not offered even after
+        penicillin became the treatment of choice and was widely
+        available.
+        <a class="citation" href="#source-7">[7]</a>
       </p>
 
-      <p>
-        Instead, several cognitive, emotional, social, and historical
-        factors can combine to make certain explanations especially
-        difficult to dislodge.
-      </p>
+    </div>
+
+  </div>
+
+  <p style="margin-top:24px;">
+    These examples establish an important principle:
+    <strong>real institutional conspiracies and misconduct can occur.</strong>
+    They do not establish that every allegation of conspiracy is
+    credible.
+  </p>
+
+</section>
 
 
-      <h2>
-        1. Uncertainty Creates a Demand for Explanations
-      </h2>
+<section class="section">
 
-      <p>
-        Human beings dislike uncertainty. Major crises, assassinations,
-        wars, disasters, political scandals, pandemics, and sudden social
-        changes can create enormous gaps between what people know and
-        what they want to know.
-      </p>
+  <div class="section-number">07 / CORRECTIONS</div>
 
-      <p>
-        Conspiracy explanations can provide something psychologically
-        powerful: a clear cause, identifiable actors, and a story
-        connecting otherwise confusing events.
-      </p>
+  <h2>
+    Does correcting misinformation make people believe it more?
+  </h2>
 
-      <p>
-        Research reviews have repeatedly linked conspiracy beliefs with
-        conditions involving uncertainty, perceived threat, anxiety,
-        and diminished feelings of control.
-      </p>
+  <p>
+    A popular claim says that correcting false information normally
+    causes people to double down — the so-called
+    <strong>backfire effect</strong>.
+  </p>
 
+  <p>
+    Current research does not support treating that as the normal
+    response. A 2024 review concluded that factual corrections
+    generally improve belief accuracy and that genuine backfire
+    effects appear to be exceedingly rare.
+    <a class="citation" href="#source-8">[8]</a>
+  </p>
 
-      <h2>
-        2. Distrust Does Not Appear From Nowhere
-      </h2>
+  <p>
+    Another research review recommends detailed corrections,
+    alternative explanations, reminders of the original
+    misinformation, and repetition of the correction as useful
+    strategies for improving correction effectiveness.
+    <a class="citation" href="#source-9">[9]</a>
+  </p>
 
-      <p>
-        Distrust of governments, corporations, intelligence agencies,
-        news organizations, police departments, medical institutions,
-        and other powerful organizations can strongly influence how
-        people interpret new information.
-      </p>
+  <div class="evidence-box">
+    <span class="label">Evidence Check</span>
+    Correcting misinformation is not hopeless. The quality,
+    clarity, detail, source, and persistence of a correction matter.
+  </div>
 
-      <p>
-        Sometimes that distrust is based on misinformation.
-        But history also contains genuine examples of institutions
-        concealing information, conducting secret operations,
-        misleading the public, or committing abuse.
-      </p>
-
-      <blockquote>
-        A history of real secrecy can make false conspiracy claims
-        more believable later.
-      </blockquote>
-
-      <p>
-        This creates an important distinction for The Blind Truth:
-        skepticism itself is not evidence that someone is irrational.
-        Skepticism can be justified.
-      </p>
-
-      <p>
-        The question is whether the specific evidence supports the
-        specific claim being made.
-      </p>
+</section>
 
 
-      <h2>
-        3. Repetition Makes Information Feel Familiar
-      </h2>
+<section class="section">
 
-      <p>
-        Repeated exposure can increase familiarity with a claim.
-        Research on misinformation shows that information can continue
-        influencing reasoning even after it has been corrected.
-      </p>
+  <div class="section-number">08 / THE BLIND TRUTH STANDARD</div>
 
-      <p>
-        Online environments can intensify this effect because the same
-        basic claim may appear through videos, memes, podcasts,
-        screenshots, posts, comments, and conversations while appearing
-        to come from many independent sources.
-      </p>
+  <h2>
+    Skepticism has to work in both directions.
+  </h2>
 
-      <p>
-        In reality, dozens of posts may trace back to the same
-        original allegation.
-      </p>
+  <p>
+    Automatically believing an official explanation is not
+    investigation.
+  </p>
 
+  <p>
+    Automatically rejecting an official explanation is not
+    investigation either.
+  </p>
 
-      <h2>
-        4. Identity Can Become Attached to a Belief
-      </h2>
+  <p>
+    A serious investigation asks the same questions regardless of
+    who makes the claim:
+  </p>
 
-      <p>
-        People do not evaluate every claim as detached investigators.
-        Beliefs can become connected to political identity, community
-        membership, religion, personal experiences, distrust of outsiders,
-        or loyalty to a social group.
-      </p>
+  <div class="standard">
 
-      <p>
-        Once a belief becomes part of a person's identity, changing that
-        belief can feel like abandoning the group rather than merely
-        changing an opinion.
-      </p>
+    <h2>THE EVIDENCE TEST</h2>
 
+    <ol>
+      <li>What exactly is being claimed?</li>
+      <li>What is the original source of the claim?</li>
+      <li>Is there primary evidence?</li>
+      <li>Can the evidence be independently verified?</li>
+      <li>Are multiple sources genuinely independent?</li>
+      <li>What evidence contradicts the claim?</li>
+      <li>What alternative explanations fit the evidence?</li>
+      <li>What would prove the claim wrong?</li>
+      <li>Are facts being separated from inference?</li>
+      <li>How confident should we actually be?</li>
+    </ol>
 
-      <h2>
-        5. Some Theories Protect Themselves From Disproof
-      </h2>
+  </div>
 
-      <p>
-        Certain conspiracy theories contain a built-in defense mechanism:
-        contradictory evidence itself becomes evidence of the conspiracy.
-      </p>
-
-      <div class="claim-box">
-
-        <ul class="evidence-list">
-
-          <li>
-            No documents exist → they destroyed the documents.
-          </li>
-
-          <li>
-            Documents contradict the theory → the documents were fabricated.
-          </li>
-
-          <li>
-            An insider denies it → the insider is involved.
-          </li>
-
-          <li>
-            An investigation finds nothing → investigators are part of
-            the cover-up.
-          </li>
-
-        </ul>
-
-      </div>
-
-      <p>
-        A claim structured this way becomes extremely difficult to test
-        because every possible outcome can be interpreted as confirmation.
-      </p>
-
-      <p>
-        That does not prove the underlying accusation is false.
-        It means the method being used cannot reliably distinguish
-        a true theory from a false one.
-      </p>
+</section>
 
 
-      <h2>
-        6. Real Conspiracies Complicate the Conversation
-      </h2>
+<section class="section">
 
-      <p>
-        Another reason conspiracy theories persist is simple:
-        conspiracies actually happen.
-      </p>
+  <div class="section-number">09 / FINAL FINDING</div>
 
-      <p>
-        People secretly cooperate to commit crimes, manipulate markets,
-        conceal wrongdoing, conduct intelligence operations, obstruct
-        investigations, and mislead competitors or the public.
-      </p>
+  <h2>
+    Why do conspiracy theories refuse to die?
+  </h2>
 
-      <p>
-        Therefore, saying something is a "conspiracy theory" cannot
-        substitute for examining its evidence.
-      </p>
+  <p>
+    There is no single explanation.
+  </p>
 
-      <p>
-        At the same time, the existence of real conspiracies does not
-        prove an unrelated conspiracy claim.
-      </p>
+  <p>
+    Research indicates that conspiracy beliefs can interact with
+    people's desire to understand uncertain events, feel secure,
+    maintain control, and protect social identities.
+    <a class="citation" href="#source-1">[1]</a>
+    <a class="citation" href="#source-5">[5]</a>
+  </p>
 
-      <blockquote>
-        “Governments have lied before” is a reason to investigate a claim—
-        not proof that the current claim is true.
-      </blockquote>
+  <p>
+    Repetition can also increase perceived truth, meaning a claim
+    may become more familiar — and therefore more believable —
+    without becoming better supported by evidence.
+    <a class="citation" href="#source-2">[2]</a>
+    <a class="citation" href="#source-3">[3]</a>
+    <a class="citation" href="#source-4">[4]</a>
+  </p>
 
+  <p>
+    Historical cases such as COINTELPRO and the Untreated Syphilis
+    Study at Tuskegee demonstrate why institutional skepticism cannot
+    simply be dismissed.
+    <a class="citation" href="#source-6">[6]</a>
+    <a class="citation" href="#source-7">[7]</a>
+  </p>
 
-      <h2>
-        7. Corrections Do Not Always Erase the Original Story
-      </h2>
+  <p>
+    But skepticism is a method — not a predetermined conclusion.
+    The existence of genuine historical wrongdoing cannot substitute
+    for evidence supporting a different allegation.
+  </p>
 
-      <p>
-        Research into misinformation has identified what researchers call
-        the continued influence effect: incorrect information can continue
-        affecting reasoning even after people learn that the information
-        was wrong.
-      </p>
+  <div class="evidence-box">
+    <span class="label">Case File 001 Conclusion</span>
+    Question everything — including the conspiracy theory.
+    Follow evidence wherever it leads, and change the conclusion
+    when better evidence requires it.
+  </div>
 
-      <p>
-        One reason is that removing a false explanation creates a hole in
-        the person's understanding of what happened.
-      </p>
+</section>
 
-      <p>
-        A correction can work better when it also provides a credible
-        alternative explanation.
-      </p>
-
-
-      <h2>
-        What the Evidence Does NOT Show
-      </h2>
-
-      <p>
-        The evidence does not justify saying that everyone who believes
-        a conspiracy theory is unintelligent, mentally ill, politically
-        extreme, or incapable of examining evidence.
-      </p>
-
-      <p>
-        Researchers have found multiple influences, and their importance
-        can vary depending on the individual, culture, event,
-        and specific theory.
-      </p>
-
-      <p>
-        Research also shows that conspiracy beliefs are not necessarily
-        permanent. People's beliefs can change over time.
-      </p>
+</article>
 
 
-      <div class="standard">
+<!-- ======================================================
+     SOURCES & EVIDENCE
+     ====================================================== -->
 
-        <h2>
-         
+<section class="sources">
+
+  <div class="sources-header">
+
+    <div class="eyebrow">
+      CASE FILE 001
+    </div>
+
+    <h2>
+      SOURCES &amp; EVIDENCE
+    </h2>
+
+    <p>
+      Sources are classified so readers can distinguish
+      peer-reviewed research, research reviews, and primary
+      institutional records.
+    </p>
+
+  </div>
+
+
+  <div class="source-card" id="source-1">
+
+    <div class="source-number">[1]</div>
+
+    <div class="source-type">
+      PEER REVIEWED • RESEARCH REVIEW
+    </div>
+
+    <h3>
+      Douglas, K. M., Sutton, R. M., &amp; Cichocka, A. (2017).
+      The Psychology of Conspiracy Theories.
+    </h3>
+
+    <p>
+      Current Directions in Psychological Science,
+      26(6), 538–542.
+      DOI: 10.1177/0963721417718261
+    </p>
+
+    <a
+      class="source-link"
+      href="https://pmc.ncbi.nlm.nih.gov/articles/PMC5724570/"
+      target="_blank"
+      rel="noopener noreferrer"
+    >
+      VIEW SOURCE — NIH / PUBMED CENTRAL →
+    </a>
+
+  </div>
+
+
+  <div class="source-card" id="source-2">
+
+    <div class="source-number">[2]</div>
+
+    <div class="source-type">
+      PEER REVIEWED • EXPERIMENTAL RESEARCH
+    </div>
+
+    <h3>
+      Béna, J., Rihet, M., Carreras, O., &amp; Terrier, P. (2023).
+      Repetition Could Increase the Perceived Truth of
+      Conspiracy Theories.
+    </h3>
+
+    <p>
+      Psychonomic Bulletin &amp; Review,
+      30(6), 2397–2406.
+      DOI: 10.3758/s13423-023-02276-4
+    </p>
+
+    <a
+      class="source-link"
+      href="https://pubmed.ncbi.nlm.nih.gov/37219761/"
+      target="_blank"
+      rel="noopener noreferrer"
+    >
+      VIEW SOURCE — PUBMED →
+    </a>
+
+  </div>
+
+
+  <div class="source-card" id="source-3">
+
+    <div class="source-number">[3]</div>
+
+    <div class="source-type">
+      PEER REVIEWED • RESEARCH REVIEW
+    </div>
+
+    <h3>
+      Udry, J., &amp; Barber, S. J. (2024).
+      The Illusory Truth Effect: A Review of How Repetition
+      Increases Belief in Misinformation.
+    </h3>
+
+    <p>
+      Current Opinion in Psychology,
+      56, 101736.
+      DOI: 10.1016/j.copsyc.2023.101736
+    </p>
+
+    <a
+      class="source-link"
+      href="https://pubmed.ncbi.nlm.nih.gov/38113667/"
+      target="_blank"
+      rel="noopener noreferrer"
+    >
+      VIEW SOURCE — PUBMED →
+    </a>
+
+  </div>
+
+
+  <div class="source-card" id="source-4">
+
+    <div class="source-number">[4]</div>
+
+    <div class="source-type">
+      PEER REVIEWED • REGISTERED REPLICATION • 2026
+    </div>
+
+    <h3>
+      Bowes, S. M., &amp; Fazio, L. K. (2026).
+      Does Repetition Increase Perceived Truth Equally for
+      Conspiracy and Trivia Statements?
+    </h3>
+
+    <p>
+      Psychonomic Bulletin &amp; Review,
+      Volume 33, Article 39.
+      DOI: 10.3758/s13423-025-02836-w
+    </p>
+
+    <a
+      class="source-link"
+      href="https://link.springer.com/article/10.3758/s13423-025-02836-w"
+      target="_blank"
+      rel="noopener noreferrer"
+    >
+      VIEW SOURCE — SPRINGER NATURE →
+    </a>
+
+  </div>
+
+
+  <div class="source-card" id="source-5">
+
+    <div class="source-number">[5]</div>
+
+    <div class="source-type">
+      PEER REVIEWED • RESEARCH REVIEW
+    </div>
+
+    <h3>
+      Robertson, C. E., Pretus, C., Rathje, S.,
+      Harris, E. A., &amp; Van Bavel, J. J. (2022).
+      How Social Identity Shapes Conspiratorial Belief.
+    </h3>
+
+    <p>
+      Current Opinion in Psychology,
+      47, 101423.
+      DOI: 10.1016/j.copsyc.2022.101423
+    </p>
+
+    <a
+      class="source-link"
+      href="https://www.sciencedirect.com/science/article/pii/S2352250X22001440"
+      target="_blank"
+      rel="noopener noreferrer"
+    >
+      VIEW SOURCE — SCIENCEDIRECT →
+    </a>
+
+  </div>
+
+
+  <div class="source-card" id="source-6">
+
+    <div class="source-number">[6]</div>
+
+    <div class="source-type">
+      PRIMARY SOURCE • U.S. GOVERNMENT
+    </div>
+
+    <h3>
+      Federal Bureau of Investigation —
+      And Justice for All, 1954–1971.
+    </h3>
+
+    <p>
+      FBI historical account discussing COINTELPRO,
+      its targets, methods, public disclosure, criticism,
+      and termination.
+    </p>
+
+    <a
+      class="source-link"
+      href="https://www.fbi.gov/history/history-of-the-fbi/and-justice-for-all"
+      target="_blank"
+      rel="noopener noreferrer"
+    >
+      VIEW SOURCE — FBI.GOV →
+    </a>
+
+  </div>
+
+
+  <div class="source-card" id="source-7">
+
+    <div class="source-number">[7]</div>
+
+    <div class="source-type">
+      PRIMARY SOURCE • U.S. GOVERNMENT
+    </div>
+
+    <h3>
+      Centers for Disease Control and Prevention —
+      The Untreated Syphilis Study at Tuskegee Timeline.
+    </h3>
+
+    <p>
+      CDC historical record covering the 1932–1972 study,
+      lack of informed consent, withholding of available
+      treatment, termination of the study, and subsequent
+      government response.
+    </p>
+
+    <a
+      class="source-link"
+      href="https://www.cdc.gov/tuskegee/about/timeline.html"
+      target="_blank"
+      rel="noopener noreferrer"
+    >
+      VIEW SOURCE — CDC.GOV →
+    </a>
+
+  </div>
+
+
+  <div class="source-card" id="source-8">
+
+    <div class="source-number">[8]</div>
+
+    <div class="source-type">
+      PEER REVIEWED • RESEARCH REVIEW
+    </div>
+
+    <h3>
+      Porter, E., &amp; Wood, T. J. (2024).
+      Factual Corrections: Concerns and Current Evidence.
+    </h3>
+
+    <p>
+      Current Opinion in Psychology,
+      55, 101715.
+      DOI: 10.1016/j.copsyc.2023.101715
+    </p>
+
+    <a
+      class="source-link"
+      href="https://www.sciencedirect.com/science/article/pii/S2352250X23001604"
+      target="_blank"
+      rel="noopener noreferrer"
+    >
+      VIEW SOURCE — SCIENCEDIRECT →
+    </a>
+
+  </div>
+
+
+  <div class="source-card" id="source-9">
+
+    <div class="source-number">[9]</div>
+
+    <div class="source-type">
+      PEER REVIEWED • RESEARCH REVIEW
+    </div>
+
+    <h3>
+      Prike, T., &amp; Ecker, U. K. H. (2023).
+      Effective Correction of Misinformation.
+    </h3>
+
+    <p>
+      Current Opinion in Psychology,
+      54, 101712.
+      DOI: 10.1016/j.copsyc.2023.101712
+    </p>
+
+    <a
+      class="source-link"
+      href="https://www.sciencedirect.com/science/article/pii/S2352250X23001574"
+      target="_blank"
+      rel="noopener noreferrer"
+    >
+      VIEW SOURCE — SCIENCEDIRECT →
+    </a>
+
+  </div>
+
+</section>
+
+</div>
+
+
+<section class="disclaimer">
+
+  <div class="container">
+
+    <p>
+      <strong>EDITORIAL STANDARD:</strong>
+      The Blind Truth distinguishes documented facts from
+      interpretations and allegations. A source citation indicates
+      where supporting information can be examined; it does not mean
+      that every statement made by that source is automatically
+      accepted as true. Conclusions should remain open to revision
+      when stronger evidence becomes available.
+    </p>
+
+  </div>
+
+</section>
+
+</main>
+
+
+<footer>
+
+  <div class="container footer-inner">
+
+    <div>
+      © <span id="year"></span>
+      <strong>THE BLIND TRUTH</strong>
+    </div>
+
+    <div>
+      QUESTION EVERYTHING. FOLLOW THE EVIDENCE.
+    </div>
+
+  </div>
+
+</footer>
+
+</div>
+
+
+<script>
+
+/* =========================================================
+   COPYRIGHT YEAR
+   ========================================================= */
+
+document.getElementById("year").textContent =
+  new Date().getFullYear();
+
+
+/* =========================================================
+   THE BLIND TRUTH MATRIX RAIN
+
+   Instead of random Matrix numbers, the falling characters
+   are generated from the phrase "THE BLIND TRUTH".
+   ========================================================= */
+
+const canvas = document.getElementById("truth-rain");
+const ctx = canvas.getContext("2d");
+
+const phrase = "THEBLINDTRUTH";
+const fontSize = 17;
+
+let columns;
+let drops;
+
+function setupRain() {
+
+  canvas.width = window.innerWidth;
+  canvas.height = window.innerHeight;
+
+  columns = Math.floor(canvas.width / fontSize);
+
+  drops = [];
+
+  for (let i = 0; i < columns; i++) {
+    drops[i] = Math.random() * -50;
+  }
+
+}
+
+function drawRain() {
+
+  ctx.fillStyle = "rgba(5, 5, 5, 0.12)";
+  ctx.fillRect(
+    0,
+    0,
+    canvas.width,
+    canvas.height
+  );
+
+  ctx.fillStyle = "#c8ff38";
+  ctx.font = fontSize + "px monospace";
+
+  for (let i = 0; i < drops.length; i++) {
+
+    const letter =
+      phrase.charAt(
+        Math.floor(
+          (drops[i] + i) % phrase.length
+        )
+      );
+
+    ctx.fillText(
+      letter,
+      i * fontSize,
+      drops[i] * fontSize
+    );
+
+    if (
+      drops[i] * fontSize > canvas.height &&
+      Math.random() > 0.975
+    ) {
+      drops[i] = 0;
+    }
+
+    drops[i] += 0.35;
+
+  }
+
+}
+
+setupRain();
+
+setInterval(drawRain, 55);
+
+window.addEventListener(
+  "resize",
+  setupRain
+);
+
+</script>
+
+</body>
+</html>
