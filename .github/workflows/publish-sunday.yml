@@ -1,0 +1,24 @@
+name: Blind Truth Weekly Publisher
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: "0 15 * * 0"
+
+permissions:
+  contents: write
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Check out website
+        uses: actions/checkout@v4
+
+      - name: Check scheduled investigations
+        shell: bash
+        run: |
+          echo "The Blind Truth weekly publishing system is running."
+          echo "Checking the scheduled folder..."
+          ls -la scheduled || true
