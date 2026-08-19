@@ -1,750 +1,802 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>The Blind Truth | Question Everything. Follow the Evidence.</title>
-  <meta name="description" content="The Blind Truth investigates conspiracy theories, hidden history, viral claims, money, power, and unanswered questions by separating documented facts from speculation.">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <style>
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
+<title>The Blind Truth | Investigate Everything</title>
+
+<meta name="description" content="The Blind Truth investigates conspiracy theories, hidden history, controversial claims, unexplained events, and popular beliefs by following the evidence wherever it leads.">
+
+<style>
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --black: #050505;
+    --deep-black: #090909;
+    --panel: #111111;
+    --panel-light: #171717;
+    --border: #303030;
+    --text: #f5f5f5;
+    --muted: #aaaaaa;
+    --red: #cf1f1f;
+    --red-dark: #7d1111;
+    --green: #4fbf68;
+    --yellow: #c8ca55;
+    --orange: #e58b36;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: var(--black);
+    color: var(--text);
+    line-height: 1.6;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+header {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background: rgba(5,5,5,.96);
+    border-bottom: 1px solid #252525;
+}
+
+.nav {
+    max-width: 1200px;
+    margin: auto;
+    min-height: 72px;
+    padding: 12px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.brand {
+    font-size: 1.35rem;
+    font-weight: 900;
+    letter-spacing: 1px;
+}
+
+.brand span {
+    color: var(--red);
+}
+
+.nav-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+    align-items: center;
+}
+
+.nav-links a:hover {
+    color: #ff4141;
+}
+
+.tiktok-btn {
+    background: #ffffff;
+    color: #000000;
+    padding: 9px 15px;
+    border-radius: 999px;
+    font-weight: 800;
+}
+
+.tiktok-btn:hover {
+    background: #eeeeee;
+    color: #000000 !important;
+}
+
+.hero {
+    min-height: 72vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 80px 20px;
+    background:
+        radial-gradient(circle at center, rgba(180,0,0,.14), transparent 50%),
+        linear-gradient(#070707, #050505);
+}
+
+.hero-inner {
+    max-width: 900px;
+}
+
+.eyebrow {
+    color: var(--red);
+    font-weight: 900;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    margin-bottom: 15px;
+}
+
+.hero h1 {
+    font-size: clamp(2.6rem, 8vw, 5.5rem);
+    line-height: .98;
+    margin-bottom: 25px;
+}
+
+.hero h1 span {
+    color: var(--red);
+}
+
+.hero p {
+    color: #cccccc;
+    max-width: 760px;
+    margin: 0 auto 30px;
+    font-size: 1.08rem;
+}
+
+.actions {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 14px;
+}
+
+.button {
+    display: inline-block;
+    padding: 13px 22px;
+    border-radius: 6px;
+    font-weight: 800;
+    border: 1px solid var(--border);
+}
+
+.button-primary {
+    background: var(--red);
+    border-color: var(--red);
+}
+
+.button-primary:hover {
+    background: #e52b2b;
+}
+
+.button-secondary {
+    background: #111111;
+}
+
+.button-secondary:hover {
+    background: #1d1d1d;
+}
+
+section {
+    padding: 75px 20px;
+}
+
+.container {
+    width: min(1100px, 100%);
+    margin: auto;
+}
+
+.section-heading {
+    margin-bottom: 32px;
+}
+
+.section-heading small {
+    color: var(--red);
+    font-weight: 900;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.section-heading h2 {
+    margin-top: 6px;
+    font-size: clamp(2rem, 5vw, 3rem);
+}
+
+.section-heading p {
+    color: var(--muted);
+    margin-top: 8px;
+    max-width: 700px;
+}
+
+.featured {
+    background: #090909;
+}
+
+.featured-card {
+    border: 1px solid var(--border);
+    background: linear-gradient(145deg,#151515,#0c0c0c);
+    padding: 32px;
+    border-radius: 12px;
+}
+
+.case-label {
+    display: inline-block;
+    color: #ff5050;
+    border: 1px solid var(--red-dark);
+    background: rgba(160,0,0,.10);
+    padding: 5px 10px;
+    border-radius: 4px;
+    margin-bottom: 14px;
+    font-size: .82rem;
+    font-weight: 900;
+}
+
+.featured-card h3 {
+    font-size: clamp(1.6rem,4vw,2.5rem);
+    margin-bottom: 12px;
+}
+
+.featured-card p {
+    color: #bdbdbd;
+    margin-bottom: 20px;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(230px,1fr));
+    gap: 18px;
+}
+
+.card {
+    background: var(--panel);
+    border: 1px solid var(--border);
+    padding: 23px;
+    border-radius: 9px;
+}
+
+.card h3 {
+    margin-bottom: 8px;
+}
+
+.card p {
+    color: var(--muted);
+}
+
+.card:hover {
+    border-color: #5a1b1b;
+    transform: translateY(-2px);
+    transition: .2s ease;
+}
+
+.verdicts {
+    background: #080808;
+}
+
+.verdict-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(220px,1fr));
+    gap: 12px;
+}
+
+.verdict {
+    padding: 16px;
+    background: #111;
+    border: 1px solid #2c2c2c;
+    border-radius: 7px;
+    font-weight: 900;
+}
+
+.supported {
+    color: var(--green);
+}
+
+.mostly-supported {
+    color: var(--yellow);
+}
+
+.mixed {
+    color: var(--orange);
+}
+
+.unproven {
+    color: #e77a30;
+}
+
+.mostly-unsupported {
+    color: #e14141;
+}
+
+.unsupported {
+    color: #ff3030;
+}
+
+.social {
+    text-align: center;
+    background:
+        linear-gradient(180deg,#080808,#111111);
+}
+
+.social-box {
+    max-width: 760px;
+    margin: auto;
+    border: 1px solid var(--border);
+    padding: 35px;
+    border-radius: 12px;
+}
+
+.social-box h2 {
+    font-size: clamp(2rem,5vw,3rem);
+    margin-bottom: 12px;
+}
+
+.social-box p {
+    color: #bcbcbc;
+    margin-bottom: 24px;
+}
+
+.big-tiktok {
+    display: inline-block;
+    background: white;
+    color: black;
+    font-weight: 900;
+    padding: 15px 26px;
+    border-radius: 999px;
+}
+
+.big-tiktok:hover {
+    transform: scale(1.03);
+}
+
+.subscribe {
+    text-align: center;
+}
+
+.subscribe-box {
+    max-width: 800px;
+    margin: auto;
+    border: 1px solid var(--border);
+    background: var(--panel);
+    padding: 35px 22px;
+    border-radius: 10px;
+}
+
+.subscribe-box h2 {
+    margin-bottom: 10px;
+}
+
+.subscribe-box p {
+    color: var(--muted);
+}
+
+.status {
+    display: inline-block;
+    margin-top: 18px;
+    padding: 7px 12px;
+    border-radius: 4px;
+    background: #191919;
+    border: 1px solid #333;
+    color: #ccc;
+}
+
+.about {
+    background: #080808;
+}
+
+.about p {
+    max-width: 820px;
+    color: #c6c6c6;
+    font-size: 1.05rem;
+}
+
+footer {
+    border-top: 1px solid #242424;
+    padding: 35px 20px;
+    color: #888;
+    text-align: center;
+}
+
+footer strong {
+    color: white;
+}
+
+.footer-links {
+    margin-top: 12px;
+}
+
+.footer-links a {
+    margin: 0 8px;
+}
+
+.footer-links a:hover {
+    color: white;
+}
+
+@media (max-width: 700px) {
+
+    .nav {
+        align-items: flex-start;
+        flex-direction: column;
     }
 
-    :root {
-      --black: #050505;
-      --deep-black: #090909;
-      --panel: #111111;
-      --panel-light: #171717;
-      --border: #303030;
-      --text: #f5f5f5;
-      --muted: #aaaaaa;
-      --green: #c8ff38;
-      --green-dark: #718f1f;
-    }
-
-    html {
-      scroll-behavior: smooth;
-    }
-
-    body {
-      font-family: Arial, Helvetica, sans-serif;
-      background: var(--black);
-      color: var(--text);
-      line-height: 1.65;
-      overflow-x: hidden;
-    }
-
-    a {
-      color: inherit;
-      text-decoration: none;
-    }
-
-    img {
-      display: block;
-      max-width: 100%;
-    }
-
-    #truth-rain {
-      position: fixed;
-      inset: 0;
-      width: 100%;
-      height: 100%;
-      z-index: 0;
-      pointer-events: none;
-      opacity: 0.2;
-    }
-
-    .site-layer {
-      position: relative;
-      z-index: 2;
-    }
-
-    header {
-      position: sticky;
-      top: 0;
-      z-index: 1000;
-      background: rgba(5, 5, 5, 0.94);
-      backdrop-filter: blur(12px);
-      border-bottom: 1px solid #252525;
-    }
-
-    .nav-wrapper {
-      width: min(1200px, 92%);
-      margin: auto;
-      min-height: 78px;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 20px;
-    }
-
-    .brand {
-      display: flex;
-      align-items: center;
-      gap: 14px;
-    }
-
-    .brand-mark {
-      width: 50px;
-      height: 50px;
-      border: 2px solid var(--green);
-      display: grid;
-      place-items: center;
-      font-weight: 900;
-      color: var(--green);
-      font-size: 18px;
-      background: #000;
-    }
-
-    .brand-name {
-      font-size: clamp(19px, 3vw, 28px);
-      font-weight: 900;
-      letter-spacing: 3px;
-    }
-
-    .brand-name span {
-      color: var(--green);
-    }
-
-    .nav-note {
-      color: var(--green);
-      font-size: 13px;
-      font-weight: 800;
-      letter-spacing: 1.5px;
-    }
-
-    .banner-section {
-      position: relative;
-      background: linear-gradient(180deg, rgba(0,0,0,.9), rgba(8,8,8,.76));
-      border-bottom: 1px solid #262626;
-      padding: 22px 0 24px;
-    }
-
-    .banner-wrap {
-      width: min(1200px, 94%);
-      margin: auto;
-    }
-
-    .banner-frame {
-      position: relative;
-      width: 100%;
-      overflow: hidden;
-      border: 1px solid #333;
-      background: #000;
-      box-shadow:
-        0 0 0 1px rgba(200,255,56,.10),
-        0 20px 50px rgba(0,0,0,.65);
-    }
-
-    .banner-frame img {
-      width: 100%;
-      aspect-ratio: 16 / 5;
-      object-fit: cover;
-      object-position: center;
-    }
-
-    .banner-frame::after {
-      content: "";
-      position: absolute;
-      inset: 0;
-      pointer-events: none;
-      box-shadow: inset 0 0 70px rgba(0,0,0,.28);
-    }
-
-    .banner-caption {
-      margin-top: 14px;
-      display: flex;
-      justify-content: space-between;
-      flex-wrap: wrap;
-      gap: 10px;
-      text-transform: uppercase;
-      font-size: 12px;
-      letter-spacing: 2px;
-      font-weight: 800;
-      color: var(--muted);
-    }
-
-    .banner-caption strong {
-      color: var(--green);
+    .nav-links {
+        gap: 11px;
     }
 
     .hero {
-      width: min(1100px, 92%);
-      margin: auto;
-      padding: 86px 0 72px;
+        min-height: 65vh;
     }
-
-    .eyebrow {
-      color: var(--green);
-      font-size: 14px;
-      font-weight: 900;
-      letter-spacing: 3px;
-      text-transform: uppercase;
-      margin-bottom: 22px;
-    }
-
-    .hero h1 {
-      max-width: 950px;
-      font-size: clamp(42px, 8vw, 90px);
-      line-height: .98;
-      letter-spacing: -2px;
-      text-transform: uppercase;
-      margin-bottom: 30px;
-    }
-
-    .hero h1 span {
-      color: var(--green);
-    }
-
-    .hero-copy {
-      max-width: 780px;
-      color: #c0c0c0;
-      font-size: clamp(18px, 2.4vw, 24px);
-      margin-bottom: 32px;
-    }
-
-    .release-badge {
-      display: inline-block;
-      border: 1px solid var(--green-dark);
-      background: rgba(200,255,56,.07);
-      color: var(--green);
-      padding: 13px 18px;
-      font-weight: 900;
-      text-transform: uppercase;
-      letter-spacing: 1.5px;
-    }
-
-    .section-shell {
-      width: min(1100px, 92%);
-      margin: auto;
-      padding: 78px 0;
-    }
-
-    .section-heading {
-      margin-bottom: 40px;
-    }
-
-    .section-heading small {
-      color: var(--green);
-      display: block;
-      margin-bottom: 12px;
-      font-weight: 900;
-      letter-spacing: 3px;
-      text-transform: uppercase;
-    }
-
-    .section-heading h2 {
-      font-size: clamp(34px, 6vw, 62px);
-      line-height: 1.05;
-      text-transform: uppercase;
-    }
-
-    .section-heading p {
-      margin-top: 18px;
-      max-width: 760px;
-      color: var(--muted);
-      font-size: 18px;
-    }
-
-    .investigation-grid {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      gap: 24px;
-    }
-
-    .investigation {
-      position: relative;
-      background: rgba(17,17,17,.94);
-      border: 1px solid var(--border);
-      padding: clamp(28px, 5vw, 52px);
-      min-height: 450px;
-      display: flex;
-      flex-direction: column;
-      transition: .25s ease;
-    }
-
-    .investigation:hover {
-      border-color: var(--green);
-      transform: translateY(-3px);
-    }
-
-    .investigation.featured {
-      border-color: var(--green);
-    }
-
-    .number {
-      color: #444;
-      font-weight: 900;
-      font-size: 76px;
-      line-height: 1;
-      margin-bottom: 36px;
-    }
-
-    .category {
-      display: inline-block;
-      width: fit-content;
-      border: 1px solid #61791e;
-      color: var(--green);
-      background: rgba(200,255,56,.07);
-      padding: 8px 13px;
-      font-weight: 900;
-      text-transform: uppercase;
-      margin-bottom: 24px;
-    }
-
-    .investigation h3 {
-      font-size: clamp(27px, 4vw, 40px);
-      line-height: 1.12;
-      margin-bottom: 20px;
-    }
-
-    .investigation p {
-      color: #b6b6b6;
-      font-size: 18px;
-      margin-bottom: 30px;
-    }
-
-    .action {
-      margin-top: auto;
-      display: inline-flex;
-      align-items: center;
-      gap: 10px;
-      color: var(--green);
-      font-weight: 900;
-      text-transform: uppercase;
-      letter-spacing: .8px;
-    }
-
-    .coming {
-      opacity: .9;
-    }
-
-    .mission {
-      border-top: 1px solid #222;
-      border-bottom: 1px solid #222;
-      background: rgba(8,8,8,.82);
-    }
-
-    .mission-grid {
-      display: grid;
-      grid-template-columns: .85fr 1.15fr;
-      gap: 70px;
-    }
-
-    .mission-statement {
-      font-size: clamp(34px, 5vw, 58px);
-      line-height: 1.04;
-      text-transform: uppercase;
-    }
-
-    .mission-statement span {
-      color: var(--green);
-    }
-
-    .topic-list {
-      display: grid;
-      gap: 18px;
-    }
-
-    .topic {
-      border-bottom: 1px solid #282828;
-      padding: 0 0 18px;
-      color: #c4c4c4;
-      font-size: 19px;
-    }
-
-    .topic strong {
-      color: white;
-    }
-
-    .weekly {
-      text-align: center;
-      padding: 100px 20px;
-    }
-
-    .weekly-box {
-      width: min(900px, 92%);
-      margin: auto;
-      background: rgba(17,17,17,.94);
-      border: 1px solid var(--green-dark);
-      padding: clamp(35px, 7vw, 70px);
-    }
-
-    .weekly small {
-      color: var(--green);
-      font-weight: 900;
-      letter-spacing: 3px;
-    }
-
-    .weekly h2 {
-      font-size: clamp(36px, 7vw, 72px);
-      line-height: 1;
-      text-transform: uppercase;
-      margin: 20px 0;
-    }
-
-    .weekly p {
-      max-width: 650px;
-      margin: auto;
-      color: #b8b8b8;
-      font-size: 19px;
-    }
-
-    footer {
-      background: #030303;
-      border-top: 1px solid #242424;
-      padding: 42px 0;
-    }
-
-    .footer-inner {
-      width: min(1100px, 92%);
-      margin: auto;
-      display: flex;
-      justify-content: space-between;
-      gap: 20px;
-      flex-wrap: wrap;
-      color: #858585;
-    }
-
-    .footer-inner strong {
-      color: var(--green);
-    }
-
-    @media (max-width: 760px) {
-      .nav-note {
-        display: none;
-      }
-
-      .brand-name {
-        letter-spacing: 1.5px;
-      }
-
-      .banner-frame img {
-        aspect-ratio: 16 / 7;
-      }
-
-      .hero {
-        padding-top: 62px;
-      }
-
-      .investigation-grid,
-      .mission-grid {
-        grid-template-columns: 1fr;
-      }
-
-      .investigation {
-        min-height: auto;
-      }
-
-      .number {
-        font-size: 58px;
-      }
-    }
-
-    @media (prefers-reduced-motion: reduce) {
-      #truth-rain {
-        display: none;
-      }
-
-      html {
-        scroll-behavior: auto;
-      }
-
-      .investigation:hover {
-        transform: none;
-      }
-    }
-  </style>
+}
+</style>
 </head>
 
 <body>
 
-  <canvas id="truth-rain" aria-hidden="true"></canvas>
+<header>
+    <div class="nav">
 
-  <div class="site-layer">
-
-    <header>
-      <div class="nav-wrapper">
-        <a href="index.html" class="brand">
-          <div class="brand-mark">BT</div>
-          <div class="brand-name">THE BLIND <span>TRUTH</span></div>
+        <a class="brand" href="index.html">
+            THE BLIND <span>TRUTH</span>
         </a>
-        <div class="nav-note">QUESTION EVERYTHING.</div>
-      </div>
-    </header>
 
-    <section class="banner-section">
-      <div class="banner-wrap">
+        <nav class="nav-links">
+            <a href="#investigations">Investigations</a>
+            <a href="#categories">Categories</a>
+            <a href="#verdicts">Verdicts</a>
+            <a href="#about">About</a>
 
-        <div class="banner-frame">
-          <img
-            src="file_0000000065dc81f68c480db95364a113.png"
-            alt="The Blind Truth investigative media banner"
-          >
+            <a
+                class="tiktok-btn"
+                href="https://www.tiktok.com/@theblindtruthofficial"
+                target="_blank"
+                rel="noopener noreferrer">
+                TikTok
+            </a>
+        </nav>
+
+    </div>
+</header>
+
+
+<main>
+
+<section class="hero">
+
+    <div class="hero-inner">
+
+        <div class="eyebrow">
+            Investigate Everything
         </div>
 
-        <div class="banner-caption">
-          <span>Investigating what others overlook</span>
-          <strong>New investigation every Sunday</strong>
-        </div>
+        <h1>
+            QUESTION EVERYTHING.<br>
+            <span>FOLLOW THE EVIDENCE.</span>
+        </h1>
 
-      </div>
-    </section>
-
-    <section class="hero">
-      <div class="eyebrow">// THE BLIND TRUTH</div>
-
-      <h1>
-        Question Everything.
-        <span>Follow The Evidence.</span>
-      </h1>
-
-      <p class="hero-copy">
-        Conspiracy theories. Forgotten history. Viral claims. Money. Power.
-        Hidden connections. We investigate the evidence, separate documented
-        fact from speculation, and ask the questions others overlook.
-      </p>
-
-      <div class="release-badge">New Investigation Every Sunday</div>
-    </section>
-
-    <section class="section-shell">
-
-      <div class="section-heading">
-        <small>// Investigations</small>
-        <h2>Explore The Blind Truth</h2>
         <p>
-          Every subject begins with a question. The evidence determines where
-          the investigation goes.
+            The Blind Truth investigates controversial claims,
+            conspiracy theories, hidden history, mysteries and
+            popular beliefs — separating documented evidence
+            from speculation.
         </p>
-      </div>
 
-      <div class="investigation-grid">
+        <div class="actions">
 
-        <article class="investigation featured">
-          <div class="number">01</div>
-          <div class="category">Conspiracy</div>
-          <h3>Why Do Certain Conspiracy Theories Refuse To Die?</h3>
-          <p>
-            Examining how uncertainty, distrust, real secrecy, misinformation,
-            psychology, repetition, and identity can keep certain theories alive.
-          </p>
-          <a class="action" href="why-conspiracy-theories-survive.html">
-            Read Investigation →
-          </a>
-        </article>
+            <a class="button button-primary"
+               href="#investigations">
+                Explore Investigations
+            </a>
 
-        <article class="investigation">
-          <div class="number">02</div>
-          <div class="category">Hidden History</div>
-          <h3>How Much History Has Been Forgotten?</h3>
-          <p>
-            Exploring events, people, documents, communities, and stories that
-            rarely receive attention in mainstream historical discussion.
-          </p>
-          <div class="action coming">Coming Soon →</div>
-        </article>
+            <a class="button button-secondary"
+               href="https://www.tiktok.com/@theblindtruthofficial"
+               target="_blank"
+               rel="noopener noreferrer">
+                Follow on TikTok
+            </a>
 
-        <article class="investigation">
-          <div class="number">03</div>
-          <div class="category">Fact Check</div>
-          <h3>Viral Doesn't Mean True</h3>
-          <p>
-            Investigating how false, misleading, or incomplete claims spread
-            online and how evidence can reveal what actually happened.
-          </p>
-          <div class="action coming">Coming Soon →</div>
-        </article>
-
-        <article class="investigation">
-          <div class="number">04</div>
-          <div class="category">Money & Credit</div>
-          <h3>The Systems Behind Your Money</h3>
-          <p>
-            Credit, debt, banking, financial power, consumer systems, and the
-            rules affecting everyday people's ability to build stability.
-          </p>
-          <div class="action coming">Coming Soon →</div>
-        </article>
-
-        <article class="investigation">
-          <div class="number">05</div>
-          <div class="category">American History</div>
-          <h3>The Untold Truth Of American Slavery</h3>
-          <p>
-            Examining the complicated origins, institutions, individuals,
-            economic forces, and historical records surrounding slavery in
-            colonial America and the United States.
-          </p>
-          <div class="action coming">Coming Soon →</div>
-        </article>
-
-        <article class="investigation">
-          <div class="number">06</div>
-          <div class="category">Bloodlines & Power</div>
-          <h3>The Presidential Bloodline Theory</h3>
-          <p>
-            Investigating claims about ancestry, family connections, elite
-            networks, and alleged relationships among past and present
-            American presidents.
-          </p>
-          <div class="action coming">Coming Soon →</div>
-        </article>
-
-      </div>
-    </section>
-
-    <section class="mission">
-      <div class="section-shell mission-grid">
-
-        <div>
-          <div class="eyebrow">// What We Investigate</div>
-          <h2 class="mission-statement">
-            Question Everything.
-            <span>Follow The Evidence.</span>
-          </h2>
         </div>
 
-        <div class="topic-list">
-          <div class="topic">
-            <strong>Conspiracy theories</strong> and the evidence behind them
-          </div>
+    </div>
 
-          <div class="topic">
-            <strong>Forgotten history</strong> and stories rarely discussed
-          </div>
+</section>
 
-          <div class="topic">
-            <strong>Viral claims</strong>, misinformation, and questionable narratives
-          </div>
 
-          <div class="topic">
-            <strong>Money, credit, and power</strong> and the systems affecting everyday life
-          </div>
+<section
+    class="featured"
+    id="investigations">
 
-          <div class="topic">
-            <strong>Historical mysteries</strong>, hidden connections, and unanswered questions
-          </div>
-        </div>
+<div class="container">
 
-      </div>
-    </section>
+    <div class="section-heading">
 
-    <section class="weekly">
-      <div class="weekly-box">
-        <small>// EVERY SUNDAY</small>
+        <small>Featured Investigation</small>
 
         <h2>
-          One Question.<br>
-          One Investigation.
+            Follow the evidence wherever it leads.
         </h2>
 
         <p>
-          The Blind Truth is built around a simple mission: choose a question,
-          investigate the available evidence, distinguish verified facts from
-          speculation, and publish what we find.
+            Each Blind Truth investigation examines competing claims,
+            available evidence and documented sources before reaching
+            a verdict.
         </p>
-      </div>
-    </section>
 
-    <footer>
-      <div class="footer-inner">
-        <div>
-          © <span id="year"></span> <strong>The Blind Truth</strong>
-        </div>
-        <div>Evidence before assumption.</div>
-      </div>
-    </footer>
+    </div>
 
-  </div>
+    <article class="featured-card">
 
-  <script>
-    const canvas = document.getElementById("truth-rain");
-    const ctx = canvas.getContext("2d");
+        <span class="case-label">
+            BLIND TRUTH INVESTIGATION
+        </span>
 
-    const phrase = "THEBLINDTRUTH";
-    const fontSize = 18;
+        <h3>
+            Why Conspiracy Theories Survive
+        </h3>
 
-    let width = 0;
-    let height = 0;
-    let columns = 0;
-    let drops = [];
+        <p>
+            Why do certain theories continue spreading even after
+            evidence challenges them? Explore the psychological,
+            social and historical forces that keep controversial
+            beliefs alive.
+        </p>
 
-    function resizeRain() {
-      const ratio = Math.max(1, window.devicePixelRatio || 1);
+        <a
+            class="button button-primary"
+            href="why-conspiracy-theories-survive.html">
+            Read Investigation
+        </a>
 
-      width = window.innerWidth;
-      height = window.innerHeight;
+    </article>
 
-      canvas.width = Math.floor(width * ratio);
-      canvas.height = Math.floor(height * ratio);
-      canvas.style.width = width + "px";
-      canvas.style.height = height + "px";
+</div>
+</section>
 
-      ctx.setTransform(ratio, 0, 0, ratio, 0, 0);
 
-      columns = Math.ceil(width / fontSize);
+<section id="categories">
 
-      drops = Array.from(
-        { length: columns },
-        () => Math.random() * -50
-      );
-    }
+<div class="container">
 
-    function drawRain() {
-      ctx.fillStyle = "rgba(5,5,5,0.12)";
-      ctx.fillRect(0, 0, width, height);
+<div class="section-heading">
 
-      ctx.font = fontSize + "px monospace";
-      ctx.textAlign = "center";
+    <small>Explore</small>
 
-      for (let i = 0; i < drops.length; i++) {
-        const index =
-          ((Math.floor(drops[i]) % phrase.length) + phrase.length) % phrase.length;
+    <h2>Investigation Categories</h2>
 
-        const character = phrase[index];
-        const x = i * fontSize + fontSize / 2;
-        const y = drops[i] * fontSize;
+</div>
 
-        if (Math.random() > 0.97) {
-          ctx.fillStyle = "rgba(235,255,205,0.95)";
-        } else {
-          const brightness = 0.35 + Math.random() * 0.5;
-          ctx.fillStyle = `rgba(200,255,56,${brightness})`;
-        }
 
-        ctx.fillText(character, x, y);
+<div class="grid">
 
-        if (y > height && Math.random() > 0.975) {
-          drops[i] = Math.random() * -30;
-        }
+    <div class="card">
+        <h3>Conspiracies</h3>
+        <p>
+            Claims, theories and disputed explanations examined
+            against available evidence.
+        </p>
+    </div>
 
-        drops[i] += 0.35 + Math.random() * 0.35;
-      }
-    }
+    <div class="card">
+        <h3>Hidden History</h3>
+        <p>
+            Overlooked events, forgotten records and historical
+            claims worth another look.
+        </p>
+    </div>
 
-    function animateRain() {
-      drawRain();
-      requestAnimationFrame(animateRain);
-    }
+    <div class="card">
+        <h3>Government</h3>
+        <p>
+            Public records, government claims and historical
+            controversies.
+        </p>
+    </div>
 
-    resizeRain();
-    window.addEventListener("resize", resizeRain);
+    <div class="card">
+        <h3>Science</h3>
+        <p>
+            Scientific claims examined through research and
+            available evidence.
+        </p>
+    </div>
 
-    const reducedMotion = window.matchMedia(
-      "(prefers-reduced-motion: reduce)"
-    );
+    <div class="card">
+        <h3>Money & Corporations</h3>
+        <p>
+            Business practices, financial claims and corporate
+            controversies.
+        </p>
+    </div>
 
-    if (!reducedMotion.matches) {
-      animateRain();
-    }
+    <div class="card">
+        <h3>Technology</h3>
+        <p>
+            AI, surveillance, emerging technology and the claims
+            surrounding them.
+        </p>
+    </div>
 
-    document.getElementById("year").textContent =
-      new Date().getFullYear();
-  </script>
+    <div class="card">
+        <h3>Unsolved Mysteries</h3>
+        <p>
+            Cases and questions where important pieces of the story
+            remain unknown.
+        </p>
+    </div>
+
+    <div class="card">
+        <h3>Fact Checks</h3>
+        <p>
+            Popular claims tested against documented evidence.
+        </p>
+    </div>
+
+</div>
+
+</div>
+</section>
+
+
+<section
+    class="verdicts"
+    id="verdicts">
+
+<div class="container">
+
+<div class="section-heading">
+
+    <small>The Evidence Scale</small>
+
+    <h2>
+        We don't assume. We investigate.
+    </h2>
+
+    <p>
+        Blind Truth investigations use evidence-based verdicts
+        instead of forcing every question into simply true or false.
+    </p>
+
+</div>
+
+
+<div class="verdict-grid">
+
+    <div class="verdict supported">
+        ✓ SUPPORTED
+    </div>
+
+    <div class="verdict mostly-supported">
+        ✓ MOSTLY SUPPORTED
+    </div>
+
+    <div class="verdict mixed">
+        — MIXED
+    </div>
+
+    <div class="verdict unproven">
+        × UNPROVEN
+    </div>
+
+    <div class="verdict mostly-unsupported">
+        × MOSTLY UNSUPPORTED
+    </div>
+
+    <div class="verdict unsupported">
+        × UNSUPPORTED
+    </div>
+
+</div>
+
+</div>
+</section>
+
+
+<section class="social">
+
+<div class="social-box">
+
+    <h2>
+        Follow The Blind Truth on TikTok
+    </h2>
+
+    <p>
+        Watch investigation previews, evidence breakdowns
+        and announcements for new Blind Truth case files.
+    </p>
+
+    <a
+        class="big-tiktok"
+        href="https://www.tiktok.com/@theblindtruthofficial"
+        target="_blank"
+        rel="noopener noreferrer">
+        @theblindtruthofficial
+    </a>
+
+</div>
+
+</section>
+
+
+<section class="subscribe">
+
+<div class="subscribe-box">
+
+    <h2>
+        Join The Blind Truth
+    </h2>
+
+    <p>
+        Get new investigations delivered directly to your inbox.
+        The automated subscriber system is currently being prepared.
+    </p>
+
+    <div class="status">
+        Newsletter launching soon
+    </div>
+
+</div>
+
+</section>
+
+
+<section
+    class="about"
+    id="about">
+
+<div class="container">
+
+<div class="section-heading">
+
+    <small>Our Mission</small>
+
+    <h2>
+        Investigate it.
+    </h2>
+
+</div>
+
+<p>
+    The Blind Truth exists to examine claims instead of blindly
+    accepting or dismissing them. We look at primary sources,
+    official records, research, conflicting claims and available
+    evidence before drawing conclusions. The objective isn't to
+    tell readers what to believe — it's to give them enough
+    information to examine the evidence themselves.
+</p>
+
+</div>
+</section>
+
+</main>
+
+
+<footer>
+
+    <strong>
+        THE BLIND TRUTH
+    </strong>
+
+    <p>
+        Stories • Evidence • The Truth
+    </p>
+
+    <div class="footer-links">
+
+        <a
+            href="https://www.tiktok.com/@theblindtruthofficial"
+            target="_blank"
+            rel="noopener noreferrer">
+            TikTok
+        </a>
+
+        <a href="#investigations">
+            Investigations
+        </a>
+
+        <a href="#about">
+            About
+        </a>
+
+    </div>
+
+    <p style="margin-top:15px;">
+        © 2026 The Blind Truth. All rights reserved.
+    </p>
+
+</footer>
 
 </body>
 </html>
