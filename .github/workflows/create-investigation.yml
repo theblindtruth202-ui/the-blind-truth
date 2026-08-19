@@ -1,0 +1,157 @@
+name: Create Blind Truth Investigation
+
+on:
+  workflow_dispatch:
+    inputs:
+      topic:
+        description: "What should The Blind Truth investigate?"
+        required: true
+        type: string
+
+permissions:
+  contents: write
+
+jobs:
+  create-draft:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Check out website
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install OpenAI
+        run: pip install openai
+
+      - name: Generate Blind Truth draft
+        env:
+          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+          INVESTIGATION_TOPIC: ${{ inputs.topic }}
+        run: |
+          python - <<'PY'
+          import os
+          import re
+          from pathlib import Path
+          from openai import OpenAI
+
+          topic = os.environ["INVESTIGATION_TOPIC"].strip()
+
+          if not topic:
+              raise SystemExit("Investigation topic cannot be empty.")
+
+          client = OpenAI(
+              api_key=os.environ["OPENAI_API_KEY"]
+          )
+
+          prompt = f"""
+          You are the research and drafting assistant for The Blind Truth,
+          an evidence-focused investigative publication.
+
+          INVESTIGATION TOPIC:
+          {topic}
+
+          Your task is to prepare a DRAFT investigation for human review.
+
+          Requirements:
+
+          1. Research the subject using web search.
+          2. Prefer primary sources, official records, government documents,
+             academic research, court records, institutional sources, and
+             high-quality reporting.
+          3. Do not present speculation as fact.
+          4. Clearly separate:
+             - confirmed facts
+             - disputed claims
+             - unsupported claims
+             - unknowns
+          5. Present meaningful evidence both for and against the central claim.
+          6. Include source links.
+          7. Do not fabricate quotes, documents, statistics, or citations.
+          8. If reliable evidence is insufficient, say so.
+          9. The final verdict must be one of:
+             SUPPORTED
+             MOSTLY SUPPORTED
+             MIXED
+             UNPROVEN
+             MOSTLY UNSUPPORTED
+             UNSUPPORTED
+          10. This is a DRAFT. Do not claim that it has been approved by
+              The Blind Truth.
+
+          Produce a complete standalone HTML document suitable for
+          The Blind Truth website.
+
+          The page must contain these sections:
+
+          - Investigation title
+          - The central claim
+          - Why this matters
+          - Background
+          - What the evidence confirms
+          - Evidence supporting the claim
+          - Evidence challenging the claim
+          - What remains unknown
+          - Blind Truth analysis
+          - Verdict
+          - Sources
+          - Draft review notice
+
+          Use a dark black/red visual design consistent with an investigative
+          publication.
+
+          In the Draft Review Notice clearly state:
+
+          "DRAFT — This investigation was AI-assisted and has not yet been
+          approved for publication by The Blind Truth."
+
+          Return only the complete HTML document.
+          """
+
+          response = client.responses.create(
+              model="gpt-5",
+              tools=[{"type": "web_search"}],
+              input=prompt
+          )
+
+          html = response.output_text.strip()
+
+          if "DRAFT" not in html.upper():
+              raise SystemExit("Generated investigation is missing draft notice.")
+
+          slug = topic.lower()
+          slug = re.sub(r"[^a-z0-9]+", "-", slug)
+          slug = slug.strip("-")[:70]
+
+          if not slug:
+              slug = "blind-truth-investigation"
+
+          output = Path("drafts") / f"{slug}.html"
+
+          if output.exists():
+              raise SystemExit(
+                  f"Draft already exists: {output}"
+              )
+
+          output.write_text(html, encoding="utf-8")
+
+          print(f"Created draft: {output}")
+          PY
+
+      - name: Commit draft investigation
+        run: |
+          git add drafts/
+
+          if git diff --cached --quiet; then
+            echo "No draft was created."
+            exit 1
+          fi
+
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+
+          git commit -m "Create Blind Truth investigation draft"
+          git push
