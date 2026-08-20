@@ -23,11 +23,12 @@
     --border: #303030;
     --text: #f5f5f5;
     --muted: #aaaaaa;
-    --red: #cf1f1f;
-    --red-dark: #7d1111;
+    --lime: #b7ff00;
+    --lime-soft: #8ed000;
     --green: #4fbf68;
     --yellow: #c8ca55;
     --orange: #e58b36;
+    --red: #cf1f1f;
 }
 
 html {
@@ -39,6 +40,7 @@ body {
     background: var(--black);
     color: var(--text);
     line-height: 1.6;
+    overflow-x: hidden;
 }
 
 a {
@@ -46,12 +48,36 @@ a {
     text-decoration: none;
 }
 
+/* MATRIX BACKGROUND */
+
+#matrix {
+    position: fixed;
+    inset: 0;
+    z-index: -3;
+    width: 100%;
+    height: 100%;
+    background: #020202;
+}
+
+.matrix-overlay {
+    position: fixed;
+    inset: 0;
+    z-index: -2;
+    pointer-events: none;
+    background:
+        radial-gradient(circle at 50% 10%, rgba(183,255,0,.08), transparent 35%),
+        linear-gradient(rgba(0,0,0,.28), rgba(0,0,0,.82));
+}
+
+/* HEADER */
+
 header {
     position: sticky;
     top: 0;
     z-index: 1000;
-    background: rgba(5,5,5,.96);
-    border-bottom: 1px solid #252525;
+    background: rgba(5,5,5,.94);
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid rgba(183,255,0,.22);
 }
 
 .nav {
@@ -72,7 +98,7 @@ header {
 }
 
 .brand span {
-    color: var(--red);
+    color: var(--lime);
 }
 
 .nav-links {
@@ -83,7 +109,7 @@ header {
 }
 
 .nav-links a:hover {
-    color: #ff4141;
+    color: var(--lime);
 }
 
 .tiktok-btn {
@@ -95,28 +121,42 @@ header {
 }
 
 .tiktok-btn:hover {
-    background: #eeeeee;
+    background: var(--lime);
     color: #000000 !important;
 }
 
+/* HERO */
+
 .hero {
-    min-height: 72vh;
+    min-height: 82vh;
     display: flex;
     align-items: center;
     justify-content: center;
     text-align: center;
-    padding: 80px 20px;
-    background:
-        radial-gradient(circle at center, rgba(180,0,0,.14), transparent 50%),
-        linear-gradient(#070707, #050505);
+    padding: 70px 20px 45px;
+    position: relative;
 }
 
 .hero-inner {
-    max-width: 900px;
+    width: min(1100px, 100%);
+    position: relative;
+    z-index: 2;
+}
+
+.hero-banner {
+    width: 100%;
+    max-width: 1100px;
+    display: block;
+    margin: 0 auto 32px;
+    border-radius: 14px;
+    border: 1px solid rgba(183,255,0,.35);
+    box-shadow:
+        0 0 30px rgba(183,255,0,.08),
+        0 0 80px rgba(0,0,0,.8);
 }
 
 .eyebrow {
-    color: var(--red);
+    color: var(--lime);
     font-weight: 900;
     text-transform: uppercase;
     letter-spacing: 3px;
@@ -124,18 +164,18 @@ header {
 }
 
 .hero h1 {
-    font-size: clamp(2.6rem, 8vw, 5.5rem);
+    font-size: clamp(2.6rem, 8vw, 5.2rem);
     line-height: .98;
     margin-bottom: 25px;
 }
 
 .hero h1 span {
-    color: var(--red);
+    color: var(--lime);
 }
 
 .hero p {
-    color: #cccccc;
-    max-width: 760px;
+    color: #d0d0d0;
+    max-width: 780px;
     margin: 0 auto 30px;
     font-size: 1.08rem;
 }
@@ -153,24 +193,30 @@ header {
     border-radius: 6px;
     font-weight: 800;
     border: 1px solid var(--border);
+    transition: .2s ease;
 }
 
 .button-primary {
-    background: var(--red);
-    border-color: var(--red);
+    background: var(--lime);
+    color: #050505;
+    border-color: var(--lime);
 }
 
 .button-primary:hover {
-    background: #e52b2b;
+    background: #d1ff47;
+    transform: translateY(-1px);
 }
 
 .button-secondary {
-    background: #111111;
+    background: rgba(17,17,17,.9);
 }
 
 .button-secondary:hover {
     background: #1d1d1d;
+    border-color: var(--lime);
 }
+
+/* GENERAL */
 
 section {
     padding: 75px 20px;
@@ -186,7 +232,7 @@ section {
 }
 
 .section-heading small {
-    color: var(--red);
+    color: var(--lime);
     font-weight: 900;
     text-transform: uppercase;
     letter-spacing: 2px;
@@ -200,25 +246,31 @@ section {
 .section-heading p {
     color: var(--muted);
     margin-top: 8px;
-    max-width: 700px;
+    max-width: 760px;
 }
 
+/* FEATURED */
+
 .featured {
-    background: #090909;
+    background: rgba(9,9,9,.91);
+    border-top: 1px solid rgba(183,255,0,.10);
+    border-bottom: 1px solid rgba(183,255,0,.10);
 }
 
 .featured-card {
-    border: 1px solid var(--border);
-    background: linear-gradient(145deg,#151515,#0c0c0c);
+    border: 1px solid rgba(183,255,0,.25);
+    background:
+        linear-gradient(145deg,rgba(21,21,21,.96),rgba(8,8,8,.96));
     padding: 32px;
     border-radius: 12px;
+    box-shadow: 0 0 35px rgba(183,255,0,.05);
 }
 
 .case-label {
     display: inline-block;
-    color: #ff5050;
-    border: 1px solid var(--red-dark);
-    background: rgba(160,0,0,.10);
+    color: var(--lime);
+    border: 1px solid rgba(183,255,0,.35);
+    background: rgba(183,255,0,.08);
     padding: 5px 10px;
     border-radius: 4px;
     margin-bottom: 14px;
@@ -227,14 +279,16 @@ section {
 }
 
 .featured-card h3 {
-    font-size: clamp(1.6rem,4vw,2.5rem);
+    font-size: clamp(1.7rem,4vw,2.6rem);
     margin-bottom: 12px;
 }
 
 .featured-card p {
-    color: #bdbdbd;
+    color: #c5c5c5;
     margin-bottom: 20px;
 }
+
+/* GRID */
 
 .grid {
     display: grid;
@@ -243,10 +297,11 @@ section {
 }
 
 .card {
-    background: var(--panel);
+    background: rgba(17,17,17,.94);
     border: 1px solid var(--border);
     padding: 23px;
     border-radius: 9px;
+    transition: .2s ease;
 }
 
 .card h3 {
@@ -258,13 +313,15 @@ section {
 }
 
 .card:hover {
-    border-color: #5a1b1b;
-    transform: translateY(-2px);
-    transition: .2s ease;
+    border-color: var(--lime-soft);
+    transform: translateY(-3px);
+    box-shadow: 0 0 18px rgba(183,255,0,.06);
 }
 
+/* VERDICTS */
+
 .verdicts {
-    background: #080808;
+    background: rgba(8,8,8,.93);
 }
 
 .verdict-grid {
@@ -275,40 +332,71 @@ section {
 
 .verdict {
     padding: 16px;
-    background: #111;
+    background: rgba(17,17,17,.96);
     border: 1px solid #2c2c2c;
     border-radius: 7px;
     font-weight: 900;
 }
 
-.supported {
-    color: var(--green);
+.verified {
+    color: #62df80;
 }
 
-.mostly-supported {
-    color: var(--yellow);
-}
-
-.mixed {
-    color: var(--orange);
+.mostly-true {
+    color: #bfe85e;
 }
 
 .unproven {
-    color: #e77a30;
+    color: #ffaf49;
 }
 
-.mostly-unsupported {
-    color: #e14141;
+.misleading {
+    color: #ff8b42;
 }
 
-.unsupported {
+.mostly-false {
+    color: #f05f5f;
+}
+
+.false {
     color: #ff3030;
 }
+
+/* BRAND IMAGE SECTION */
+
+.brand-section {
+    background: rgba(5,5,5,.92);
+}
+
+.brand-image-wrap {
+    display: grid;
+    grid-template-columns: minmax(260px, 420px) 1fr;
+    gap: 32px;
+    align-items: center;
+}
+
+.brand-image {
+    width: 100%;
+    display: block;
+    border-radius: 12px;
+    border: 1px solid rgba(183,255,0,.30);
+}
+
+.brand-copy h2 {
+    font-size: clamp(2rem, 5vw, 3rem);
+    margin-bottom: 14px;
+}
+
+.brand-copy p {
+    color: #c3c3c3;
+}
+
+/* SOCIAL */
 
 .social {
     text-align: center;
     background:
-        linear-gradient(180deg,#080808,#111111);
+        linear-gradient(180deg,rgba(8,8,8,.94),rgba(17,17,17,.94));
 }
 
 .social-box {
@@ -317,6 +405,7 @@ section {
     border: 1px solid var(--border);
     padding: 35px;
     border-radius: 12px;
+    background: rgba(10,10,10,.9);
 }
 
 .social-box h2 {
@@ -339,8 +428,11 @@ section {
 }
 
 .big-tiktok:hover {
+    background: var(--lime);
     transform: scale(1.03);
 }
+
+/* SUBSCRIBE */
 
 .subscribe {
     text-align: center;
@@ -349,8 +441,8 @@ section {
 .subscribe-box {
     max-width: 800px;
     margin: auto;
-    border: 1px solid var(--border);
-    background: var(--panel);
+    border: 1px solid rgba(183,255,0,.20);
+    background: rgba(17,17,17,.94);
     padding: 35px 22px;
     border-radius: 10px;
 }
@@ -373,8 +465,10 @@ section {
     color: #ccc;
 }
 
+/* ABOUT */
+
 .about {
-    background: #080808;
+    background: rgba(8,8,8,.94);
 }
 
 .about p {
@@ -383,11 +477,22 @@ section {
     font-size: 1.05rem;
 }
 
+/* FOOTER */
+
 footer {
-    border-top: 1px solid #242424;
+    border-top: 1px solid rgba(183,255,0,.14);
     padding: 35px 20px;
     color: #888;
     text-align: center;
+    background: rgba(5,5,5,.97);
+}
+
+.footer-logo {
+    width: min(420px, 92%);
+    display: block;
+    margin: 0 auto 20px;
+    border-radius: 10px;
+    border: 1px solid rgba(183,255,0,.18);
 }
 
 footer strong {
@@ -403,11 +508,12 @@ footer strong {
 }
 
 .footer-links a:hover {
-    color: white;
+    color: var(--lime);
 }
 
-@media (max-width: 700px) {
+/* RESPONSIVE */
 
+@media (max-width: 760px) {
     .nav {
         align-items: flex-start;
         flex-direction: column;
@@ -418,13 +524,31 @@ footer strong {
     }
 
     .hero {
-        min-height: 65vh;
+        min-height: auto;
+        padding-top: 45px;
+    }
+
+    .brand-image-wrap {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    html {
+        scroll-behavior: auto;
+    }
+
+    #matrix {
+        display: none;
     }
 }
 </style>
 </head>
 
 <body>
+
+<canvas id="matrix"></canvas>
+<div class="matrix-overlay"></div>
 
 <header>
     <div class="nav">
@@ -451,12 +575,16 @@ footer strong {
     </div>
 </header>
 
-
 <main>
 
 <section class="hero">
 
     <div class="hero-inner">
+
+        <img
+            class="hero-banner"
+            src="file_0000000065dc81f68c480db95364a113.png"
+            alt="The Blind Truth - Investigate Everything">
 
         <div class="eyebrow">
             Investigate Everything
@@ -469,22 +597,24 @@ footer strong {
 
         <p>
             The Blind Truth investigates controversial claims,
-            conspiracy theories, hidden history, mysteries and
-            popular beliefs — separating documented evidence
-            from speculation.
+            conspiracy theories, hidden history, mysteries,
+            government records, technology, money and popular beliefs
+            by separating documented evidence from speculation.
         </p>
 
         <div class="actions">
 
-            <a class="button button-primary"
-               href="#investigations">
+            <a
+                class="button button-primary"
+                href="#investigations">
                 Explore Investigations
             </a>
 
-            <a class="button button-secondary"
-               href="https://www.tiktok.com/@theblindtruthofficial"
-               target="_blank"
-               rel="noopener noreferrer">
+            <a
+                class="button button-secondary"
+                href="https://www.tiktok.com/@theblindtruthofficial"
+                target="_blank"
+                rel="noopener noreferrer">
                 Follow on TikTok
             </a>
 
@@ -494,7 +624,6 @@ footer strong {
 
 </section>
 
-
 <section
     class="featured"
     id="investigations">
@@ -503,16 +632,15 @@ footer strong {
 
     <div class="section-heading">
 
-        <small>Featured Investigation</small>
+        <small>Investigation 001</small>
 
         <h2>
-            Follow the evidence wherever it leads.
+            Why Conspiracy Theories Survive
         </h2>
 
         <p>
-            Each Blind Truth investigation examines competing claims,
-            available evidence and documented sources before reaching
-            a verdict.
+            The first Blind Truth case file examines why controversial
+            theories can survive even when strong evidence challenges them.
         </p>
 
     </div>
@@ -528,23 +656,21 @@ footer strong {
         </h3>
 
         <p>
-            Why do certain theories continue spreading even after
-            evidence challenges them? Explore the psychological,
-            social and historical forces that keep controversial
-            beliefs alive.
+            Explore the psychological, social, historical and technological
+            forces that allow controversial beliefs to spread, adapt and
+            survive over time.
         </p>
 
         <a
             class="button button-primary"
             href="why-conspiracy-theories-survive.html">
-            Read Investigation
+            Read Investigation 001
         </a>
 
     </article>
 
 </div>
 </section>
-
 
 <section id="categories">
 
@@ -556,31 +682,35 @@ footer strong {
 
     <h2>Investigation Categories</h2>
 
-</div>
+    <p>
+        The Blind Truth follows evidence across different subjects rather
+        than limiting investigations to one type of claim.
+    </p>
 
+</div>
 
 <div class="grid">
 
     <div class="card">
         <h3>Conspiracies</h3>
         <p>
-            Claims, theories and disputed explanations examined
-            against available evidence.
+            Claims, theories and disputed explanations examined against
+            available evidence.
         </p>
     </div>
 
     <div class="card">
         <h3>Hidden History</h3>
         <p>
-            Overlooked events, forgotten records and historical
-            claims worth another look.
+            Overlooked events, forgotten records and historical claims
+            worth another look.
         </p>
     </div>
 
     <div class="card">
         <h3>Government</h3>
         <p>
-            Public records, government claims and historical
+            Public records, government claims, policies and historical
             controversies.
         </p>
     </div>
@@ -588,7 +718,7 @@ footer strong {
     <div class="card">
         <h3>Science</h3>
         <p>
-            Scientific claims examined through research and
+            Scientific claims examined through published research and
             available evidence.
         </p>
     </div>
@@ -596,8 +726,8 @@ footer strong {
     <div class="card">
         <h3>Money & Corporations</h3>
         <p>
-            Business practices, financial claims and corporate
-            controversies.
+            Business practices, financial claims, corporate influence and
+            economic controversies.
         </p>
     </div>
 
@@ -612,15 +742,16 @@ footer strong {
     <div class="card">
         <h3>Unsolved Mysteries</h3>
         <p>
-            Cases and questions where important pieces of the story
-            remain unknown.
+            Cases and questions where important pieces of the story remain
+            unknown.
         </p>
     </div>
 
     <div class="card">
         <h3>Fact Checks</h3>
         <p>
-            Popular claims tested against documented evidence.
+            Viral stories and popular claims tested against documented
+            evidence.
         </p>
     </div>
 
@@ -628,7 +759,6 @@ footer strong {
 
 </div>
 </section>
-
 
 <section
     class="verdicts"
@@ -638,44 +768,43 @@ footer strong {
 
 <div class="section-heading">
 
-    <small>The Evidence Scale</small>
+    <small>The Blind Truth Verdict System</small>
 
     <h2>
-        We don't assume. We investigate.
+        Evidence first. Verdict second.
     </h2>
 
     <p>
-        Blind Truth investigations use evidence-based verdicts
-        instead of forcing every question into simply true or false.
+        Not every investigation ends with a simple true or false answer.
+        Our verdict scale reflects the strength and quality of the evidence.
     </p>
 
 </div>
 
-
 <div class="verdict-grid">
 
-    <div class="verdict supported">
-        ✓ SUPPORTED
+    <div class="verdict verified">
+        ✓ VERIFIED
     </div>
 
-    <div class="verdict mostly-supported">
-        ✓ MOSTLY SUPPORTED
-    </div>
-
-    <div class="verdict mixed">
-        — MIXED
+    <div class="verdict mostly-true">
+        ✓ MOSTLY TRUE
     </div>
 
     <div class="verdict unproven">
-        × UNPROVEN
+        ? UNPROVEN
     </div>
 
-    <div class="verdict mostly-unsupported">
-        × MOSTLY UNSUPPORTED
+    <div class="verdict misleading">
+        ! MISLEADING
     </div>
 
-    <div class="verdict unsupported">
-        × UNSUPPORTED
+    <div class="verdict mostly-false">
+        × MOSTLY FALSE
+    </div>
+
+    <div class="verdict false">
+        × FALSE
     </div>
 
 </div>
@@ -683,6 +812,41 @@ footer strong {
 </div>
 </section>
 
+<section class="brand-section">
+
+<div class="container">
+
+    <div class="brand-image-wrap">
+
+        <img
+            class="brand-image"
+            src="file_00000000391c81f6a220d6a46ecc9d9b.png"
+            alt="The Blind Truth logo">
+
+        <div class="brand-copy">
+
+            <div class="section-heading">
+                <small>No Narratives. No Fear. Just the Truth.</small>
+
+                <h2>
+                    Look closer.
+                </h2>
+            </div>
+
+            <p>
+                The Blind Truth was created around one principle:
+                important claims deserve investigation, not automatic belief
+                and not automatic dismissal. Follow the records, question the
+                assumptions and examine what the evidence actually shows.
+            </p>
+
+        </div>
+
+    </div>
+
+</div>
+
+</section>
 
 <section class="social">
 
@@ -693,8 +857,8 @@ footer strong {
     </h2>
 
     <p>
-        Watch investigation previews, evidence breakdowns
-        and announcements for new Blind Truth case files.
+        Watch investigation previews, evidence breakdowns,
+        developing stories and announcements for new case files.
     </p>
 
     <a
@@ -709,7 +873,6 @@ footer strong {
 
 </section>
 
-
 <section class="subscribe">
 
 <div class="subscribe-box">
@@ -719,8 +882,8 @@ footer strong {
     </h2>
 
     <p>
-        Get new investigations delivered directly to your inbox.
-        The automated subscriber system is currently being prepared.
+        Get new investigations and Blind Truth updates delivered directly
+        to your inbox. Our independent newsletter system is being built now.
     </p>
 
     <div class="status">
@@ -730,7 +893,6 @@ footer strong {
 </div>
 
 </section>
-
 
 <section
     class="about"
@@ -749,12 +911,11 @@ footer strong {
 </div>
 
 <p>
-    The Blind Truth exists to examine claims instead of blindly
-    accepting or dismissing them. We look at primary sources,
-    official records, research, conflicting claims and available
-    evidence before drawing conclusions. The objective isn't to
-    tell readers what to believe — it's to give them enough
-    information to examine the evidence themselves.
+    The Blind Truth exists to examine claims instead of blindly accepting
+    or dismissing them. We look at primary sources, official records,
+    research, conflicting claims and available evidence before drawing
+    conclusions. The objective is not to tell readers what to believe.
+    It is to give them enough information to examine the evidence themselves.
 </p>
 
 </div>
@@ -762,8 +923,12 @@ footer strong {
 
 </main>
 
-
 <footer>
+
+    <img
+        class="footer-logo"
+        src="file_00000000391c81f6a220d6a46ecc9d9b.png"
+        alt="The Blind Truth">
 
     <strong>
         THE BLIND TRUTH
@@ -797,6 +962,70 @@ footer strong {
     </p>
 
 </footer>
+
+<script>
+const canvas = document.getElementById("matrix");
+const ctx = canvas.getContext("2d");
+
+let width;
+let height;
+let columns;
+let drops;
+
+const characters =
+    "ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789$#@%&?+-<>/\\\\|{}[]THEBLINDTRUTH";
+
+function setupMatrix() {
+    width = canvas.width = window.innerWidth;
+    height = canvas.height = window.innerHeight;
+
+    const fontSize = 16;
+    columns = Math.floor(width / fontSize);
+
+    drops = Array(columns).fill(1);
+}
+
+function drawMatrix() {
+    const fontSize = 16;
+
+    ctx.fillStyle = "rgba(0, 0, 0, 0.08)";
+    ctx.fillRect(0, 0, width, height);
+
+    ctx.fillStyle = "#9dff00";
+    ctx.font = fontSize + "px monospace";
+
+    for (let i = 0; i < drops.length; i++) {
+
+        const text =
+            characters.charAt(
+                Math.floor(Math.random() * characters.length)
+            );
+
+        ctx.fillText(
+            text,
+            i * fontSize,
+            drops[i] * fontSize
+        );
+
+        if (
+            drops[i] * fontSize > height &&
+            Math.random() > 0.975
+        ) {
+            drops[i] = 0;
+        }
+
+        drops[i]++;
+    }
+}
+
+setupMatrix();
+
+window.addEventListener("resize", setupMatrix);
+
+if (!window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+    setInterval(drawMatrix, 45);
+}
+</script>
 
 </body>
 </html>
