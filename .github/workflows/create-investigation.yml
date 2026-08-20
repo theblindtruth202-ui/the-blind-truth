@@ -24,27 +24,29 @@ jobs:
         with:
           python-version: "3.12"
 
-      - name: Install OpenAI
-        run: pip install openai
+      - name: Install Gemini SDK
+        run: pip install google-genai
 
-      - name: Generate Blind Truth draft
+      - name: Generate Blind Truth draft with Gemini
         env:
-          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
           INVESTIGATION_TOPIC: ${{ inputs.topic }}
+        shell: bash
         run: |
           python - <<'PY'
           import os
           import re
           from pathlib import Path
-          from openai import OpenAI
+          from google import genai
+          from google.genai import types
 
           topic = os.environ["INVESTIGATION_TOPIC"].strip()
 
           if not topic:
               raise SystemExit("Investigation topic cannot be empty.")
 
-          client = OpenAI(
-              api_key=os.environ["OPENAI_API_KEY"]
+          client = genai.Client(
+              api_key=os.environ["GEMINI_API_KEY"]
           )
 
           prompt = f"""
@@ -54,38 +56,26 @@ jobs:
           INVESTIGATION TOPIC:
           {topic}
 
-          Your task is to prepare a DRAFT investigation for human review.
+          Prepare a DRAFT investigation for human review.
 
-          Requirements:
-
-          1. Research the subject using web search.
+          Research requirements:
+          1. Use Google Search to research the subject.
           2. Prefer primary sources, official records, government documents,
              academic research, court records, institutional sources, and
-             high-quality reporting.
+             high-quality journalism.
           3. Do not present speculation as fact.
           4. Clearly separate:
              - confirmed facts
              - disputed claims
              - unsupported claims
              - unknowns
-          5. Present meaningful evidence both for and against the central claim.
+          5. Present meaningful evidence both supporting and challenging
+             the central claim.
           6. Include source links.
-          7. Do not fabricate quotes, documents, statistics, or citations.
-          8. If reliable evidence is insufficient, say so.
-          9. The final verdict must be one of:
-             SUPPORTED
-             MOSTLY SUPPORTED
-             MIXED
-             UNPROVEN
-             MOSTLY UNSUPPORTED
-             UNSUPPORTED
-          10. This is a DRAFT. Do not claim that it has been approved by
-              The Blind Truth.
+          7. If evidence is insufficient, clearly say so.
+          8. Never invent quotations, documents, statistics, sources, or URLs.
 
-          Produce a complete standalone HTML document suitable for
-          The Blind Truth website.
-
-          The page must contain these sections:
+          The HTML page must contain these sections:
 
           - Investigation title
           - The central claim
@@ -100,8 +90,8 @@ jobs:
           - Sources
           - Draft review notice
 
-          Use a dark black/red visual design consistent with an investigative
-          publication.
+          Use a clean dark black/red visual design consistent with
+          an investigative publication.
 
           In the Draft Review Notice clearly state:
 
@@ -111,16 +101,28 @@ jobs:
           Return only the complete HTML document.
           """
 
-          response = client.responses.create(
-              model="gpt-5",
-              tools=[{"type": "web_search"}],
-              input=prompt
+          search_tool = types.Tool(
+              google_search=types.GoogleSearch()
           )
 
-          html = response.output_text.strip()
+          response = client.models.generate_content(
+              model="gemini-3.5-flash",
+              contents=prompt,
+              config=types.GenerateContentConfig(
+                  tools=[search_tool]
+              ),
+          )
+
+          html = response.text.strip()
+
+          if not html:
+              raise SystemExit("Gemini returned an empty response.")
 
           if "DRAFT" not in html.upper():
               raise SystemExit("Generated investigation is missing draft notice.")
+
+          if not html.lower().lstrip().startswith("<!doctype html"):
+              raise SystemExit("Gemini did not return a complete HTML document.")
 
           slug = topic.lower()
           slug = re.sub(r"[^a-z0-9]+", "-", slug)
@@ -129,7 +131,10 @@ jobs:
           if not slug:
               slug = "blind-truth-investigation"
 
-          output = Path("drafts") / f"{slug}.html"
+          drafts_dir = Path("drafts")
+          drafts_dir.mkdir(exist_ok=True)
+
+          output = drafts_dir / f"{slug}.html"
 
           if output.exists():
               raise SystemExit(
@@ -142,12 +147,13 @@ jobs:
           PY
 
       - name: Commit draft investigation
+        shell: bash
         run: |
           git add drafts/
 
           if git diff --cached --quiet; then
             echo "No draft was created."
-            exit 1
+            exit 0
           fi
 
           git config user.name "github-actions[bot]"
