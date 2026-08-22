@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://theblindtruth202-ui.github.io/the-blind-truth/sitemap.xml
