@@ -6,18 +6,17 @@
 
 <title>The Blind Truth | News, Celebrity, Gossip & Investigations</title>
 
-<meta name="description"
-content="The Blind Truth covers breaking news, celebrity gossip, music, viral stories, court cases and investigations — separating what's confirmed from what's claimed.">
+<meta name="description" content="The Blind Truth covers breaking news, celebrity gossip, entertainment, music, viral stories, court cases and investigations — separating what's confirmed from what's claimed.">
 
-<meta property="og:title"
-content="The Blind Truth | News, Celebrity, Gossip & Investigations">
-
-<meta property="og:description"
-content="The stories everybody's talking about. The facts behind them. Question everything. Follow the evidence.">
-
+<meta property="og:title" content="The Blind Truth | News, Celebrity, Gossip & Investigations">
+<meta property="og:description" content="The stories everybody's talking about. The facts behind them. Question everything. Follow the evidence.">
 <meta property="og:type" content="website">
 
 <style>
+
+/* =====================================================
+   THE BLIND TRUTH — MASTER DESIGN
+===================================================== */
 
 * {
     box-sizing: border-box;
@@ -27,12 +26,10 @@ content="The stories everybody's talking about. The facts behind them. Question 
 
 :root {
     --black: #050505;
-    --black-2: #0a0a0a;
     --panel: #111111;
-    --panel-2: #171717;
-
+    --panel2: #171717;
     --white: #ffffff;
-    --muted: #a7a7a7;
+    --muted: #aaaaaa;
     --border: #2b2b2b;
 
     --lime: #39ff14;
@@ -43,8 +40,7 @@ content="The stories everybody's talking about. The facts behind them. Question 
     --orange: #ff7a00;
     --yellow: #ffe600;
 
-    --radius: 14px;
-    --shadow: 0 15px 45px rgba(0,0,0,.45);
+    --radius: 16px;
 }
 
 html {
@@ -53,16 +49,8 @@ html {
 
 body {
     font-family: Arial, Helvetica, sans-serif;
-
-    background:
-        radial-gradient(
-            circle at top,
-            rgba(57,255,20,.05),
-            transparent 28%
-        ),
-        var(--black);
-
-    color: var(--white);
+    background: #050505;
+    color: white;
     line-height: 1.55;
     overflow-x: hidden;
 }
@@ -73,15 +61,13 @@ a {
 }
 
 img {
-    width: 100%;
     display: block;
+    max-width: 100%;
 }
 
-button {
-    font-family: inherit;
-}
-
-/* MATRIX BACKGROUND */
+/* =====================================================
+   MATRIX BACKGROUND
+===================================================== */
 
 #matrix {
     position: fixed;
@@ -89,8 +75,8 @@ button {
     width: 100%;
     height: 100%;
     z-index: -3;
-    opacity: .17;
     background: #000;
+    opacity: .17;
 }
 
 .page-shade {
@@ -98,77 +84,90 @@ button {
     inset: 0;
     z-index: -2;
     pointer-events: none;
-
-    background:
-        linear-gradient(
-            rgba(0,0,0,.52),
-            rgba(0,0,0,.9)
-        );
+    background: linear-gradient(
+        rgba(0,0,0,.50),
+        rgba(0,0,0,.90)
+    );
 }
 
-/* HEADER */
+/* =====================================================
+   HEADER
+===================================================== */
 
 .site-header {
     position: sticky;
     top: 0;
     z-index: 1000;
-
     background: rgba(5,5,5,.97);
-
-    border-bottom:
-        1px solid rgba(57,255,20,.25);
-
+    border-bottom: 1px solid rgba(57,255,20,.30);
     backdrop-filter: blur(12px);
 }
 
 .header-inner {
     width: min(1250px, 100%);
     margin: auto;
+    min-height: 82px;
+    padding: 10px 20px;
 
     display: flex;
     align-items: center;
     justify-content: space-between;
-
     gap: 20px;
-
-    padding: 10px 20px;
 }
 
+/* =====================================================
+   REAL IMAGE LOGO
+===================================================== */
+
 .logo-link {
-    display: block;
+    display: flex;
+    align-items: center;
     flex-shrink: 0;
 }
 
 .header-logo {
     display: block;
-    width: clamp(190px, 31vw, 390px);
-    height: auto;
-    max-height: 95px;
+    width: auto;
+    height: 62px;
+    max-width: 310px;
     object-fit: contain;
 }
+
+/* Backup text only appears if image fails */
+
+.logo-fallback {
+    display: none;
+    font-size: 1.5rem;
+    font-weight: 1000;
+    letter-spacing: 1px;
+}
+
+.logo-fallback span {
+    color: var(--lime);
+}
+
+/* =====================================================
+   NAVIGATION
+===================================================== */
 
 .desktop-nav {
     display: flex;
     align-items: center;
+    justify-content: flex-end;
     flex-wrap: wrap;
-
-    gap: 9px;
+    gap: 8px;
 }
 
 .nav-btn {
     background: #050505;
+    color: var(--nav-color, var(--lime));
 
-    border:
-        1px solid var(--nav-color, var(--lime));
-
-    color:
-        var(--nav-color, var(--lime));
-
-    padding: 8px 12px;
-
+    border: 1px solid var(--nav-color, var(--lime));
     border-radius: 999px;
 
-    font-size: .78rem;
+    padding: 8px 11px;
+
+    font-size: .75rem;
     font-weight: 900;
 
     transition: .2s ease;
@@ -176,14 +175,7 @@ button {
 
 .nav-btn:hover {
     transform: translateY(-2px);
-
-    box-shadow:
-        0 0 18px
-        color-mix(
-            in srgb,
-            var(--nav-color) 45%,
-            transparent
-        );
+    box-shadow: 0 0 15px var(--nav-color);
 }
 
 .menu-btn {
@@ -193,62 +185,57 @@ button {
     color: var(--lime);
 
     border: 1px solid var(--lime);
+    border-radius: 10px;
 
-    font-size: 1.25rem;
+    font-size: 1.6rem;
+    font-weight: 900;
 
-    padding: 7px 12px;
-    border-radius: 8px;
+    padding: 7px 13px;
+
+    cursor: pointer;
 }
 
-/* BREAKING NEWS */
+/* =====================================================
+   BREAKING NEWS
+===================================================== */
 
 .breaking-bar {
     width: 100%;
-
     display: flex;
     align-items: center;
 
     overflow: hidden;
 
-    border-bottom:
-        1px solid #361010;
-
     background: #080808;
+    border-bottom: 1px solid #451313;
 }
 
 .breaking-label {
     flex: 0 0 auto;
 
-    background: var(--red);
+    padding: 13px 20px;
 
+    background: var(--red);
     color: white;
 
     font-weight: 1000;
-
-    padding: 11px 15px;
-
-    letter-spacing: .7px;
-
-    z-index: 2;
+    letter-spacing: .5px;
 }
 
 .ticker {
-    white-space: nowrap;
     overflow: hidden;
     flex: 1;
+    white-space: nowrap;
 }
 
 .ticker-track {
     display: inline-block;
-
     padding-left: 100%;
 
-    animation:
-        tickerMove 28s linear infinite;
+    animation: tickerMove 28s linear infinite;
 
-    font-weight: 800;
-
-    color: #f2f2f2;
+    color: #f5f5f5;
+    font-weight: 900;
 }
 
 .ticker-track span {
@@ -256,29 +243,30 @@ button {
 }
 
 @keyframes tickerMove {
-    0% {
+    from {
         transform: translateX(0);
     }
 
-    100% {
+    to {
         transform: translateX(-100%);
     }
 }
 
-/* TRENDING TAGS */
+/* =====================================================
+   TRENDING TAGS
+===================================================== */
 
 .trending-tags {
     width: min(1250px, 100%);
-
     margin: auto;
 
-    padding: 14px 20px;
+    padding: 15px 20px;
 
     display: flex;
+    align-items: center;
     gap: 10px;
 
     overflow-x: auto;
-
     scrollbar-width: none;
 }
 
@@ -288,35 +276,32 @@ button {
 
 .trending-title {
     color: var(--yellow);
-
     font-weight: 1000;
-
-    flex: 0 0 auto;
+    flex-shrink: 0;
 }
 
 .trend-tag {
-    flex: 0 0 auto;
+    flex-shrink: 0;
 
-    background: #090909;
-
-    border: 1px solid #494200;
+    background: #080808;
+    border: 1px solid #5b5100;
 
     color: var(--yellow);
 
-    padding: 6px 11px;
-
     border-radius: 999px;
 
-    font-size: .8rem;
+    padding: 7px 13px;
 
+    font-size: .8rem;
     font-weight: 900;
 }
 
-/* HERO */
+/* =====================================================
+   HERO
+===================================================== */
 
 .hero {
-    padding: 60px 20px 45px;
-
+    padding: 65px 20px 55px;
     text-align: center;
 }
 
@@ -328,102 +313,91 @@ button {
 .hero-kicker {
     color: var(--lime);
 
-    letter-spacing: 3px;
-
+    font-size: 1rem;
     font-weight: 1000;
 
-    margin-bottom: 12px;
+    letter-spacing: 5px;
+
+    margin-bottom: 15px;
 }
 
 .hero h1 {
-    font-size:
-        clamp(
-            2.4rem,
-            7vw,
-            5rem
-        );
-
+    font-size: clamp(2.5rem, 7vw, 5.2rem);
     line-height: .98;
 
-    margin-bottom: 20px;
-
     font-weight: 1000;
+
+    margin-bottom: 25px;
 }
 
 .hero h1 span {
-    background:
-        linear-gradient(
-            90deg,
-            var(--pink),
-            var(--purple),
-            var(--blue),
-            var(--lime)
-        );
+    background: linear-gradient(
+        90deg,
+        var(--pink),
+        var(--purple),
+        var(--blue),
+        var(--lime)
+    );
 
     -webkit-background-clip: text;
+    background-clip: text;
+
     color: transparent;
 }
 
 .hero p {
-    max-width: 760px;
+    max-width: 780px;
 
-    margin: 0 auto 25px;
+    margin: 0 auto 28px;
 
-    color: #c8c8c8;
+    color: #b5b5b5;
 
-    font-size: 1.05rem;
+    font-size: 1.08rem;
 }
 
 .hero-actions {
     display: flex;
     justify-content: center;
-
-    gap: 12px;
-
     flex-wrap: wrap;
+    gap: 13px;
 }
 
-/* BUTTONS */
+/* =====================================================
+   BUTTONS
+===================================================== */
 
 .btn {
+    display: inline-block;
+
     background: #050505;
 
-    padding: 12px 20px;
-
     border-radius: 999px;
+
+    padding: 12px 22px;
 
     font-weight: 1000;
 
     transition: .2s ease;
+}
 
-    display: inline-block;
+.btn:hover {
+    transform: translateY(-3px) scale(1.02);
 }
 
 .btn-lime {
     color: var(--lime);
-
-    border:
-        2px solid var(--lime);
-
-    box-shadow:
-        0 0 18px
-        rgba(57,255,20,.15);
+    border: 2px solid var(--lime);
+    box-shadow: 0 0 18px rgba(57,255,20,.15);
 }
 
 .btn-pink {
     color: var(--pink);
-
-    border:
-        2px solid var(--pink);
+    border: 2px solid var(--pink);
 }
 
-.btn:hover {
-    transform:
-        translateY(-2px)
-        scale(1.02);
-}
-
-/* GENERAL SECTIONS */
+/* =====================================================
+   SECTIONS
+===================================================== */
 
 .section {
     padding: 65px 20px;
@@ -434,30 +408,13 @@ button {
     margin: auto;
 }
 
-.section-title-row {
-    display: flex;
-    align-items: end;
-    justify-content: space-between;
-
-    gap: 20px;
-
-    margin-bottom: 25px;
-}
-
 .section-title h2 {
-    font-size:
-        clamp(
-            1.8rem,
-            5vw,
-            3rem
-        );
-
+    font-size: clamp(1.9rem, 5vw, 3rem);
     font-weight: 1000;
 }
 
 .section-title p {
     color: var(--muted);
-
     margin-top: 5px;
 }
 
@@ -465,77 +422,51 @@ button {
     height: 4px;
     width: 100%;
 
-    margin-top: 9px;
+    margin-top: 10px;
 
     border-radius: 999px;
 
-    background:
-        var(
-            --section-color,
-            var(--lime)
-        );
+    background: var(--section-color, var(--lime));
 
-    box-shadow:
-        0 0 15px
-        var(
-            --section-color,
-            var(--lime)
-        );
+    box-shadow: 0 0 15px var(--section-color, var(--lime));
 }
 
-/* TRENDING */
+/* =====================================================
+   TRENDING STORY
+===================================================== */
 
 .trending-layout {
     display: grid;
-
-    grid-template-columns:
-        2fr 1fr;
-
+    grid-template-columns: 2fr 1fr;
     gap: 18px;
+
+    margin-top: 25px;
 }
 
 .lead-story {
-    min-height: 440px;
-
-    position: relative;
-
     overflow: hidden;
 
+    background: linear-gradient(145deg,#171717,#090909);
+
+    border: 1px solid #514900;
     border-radius: var(--radius);
-
-    border:
-        1px solid #453e00;
-
-    background:
-        linear-gradient(
-            145deg,
-            #171717,
-            #090909
-        );
-
-    box-shadow:
-        var(--shadow);
 }
 
 .story-image {
     min-height: 230px;
 
-    background:
-        linear-gradient(
-            135deg,
-            #202020,
-            #080808
-        );
-
     display: flex;
     align-items: center;
     justify-content: center;
 
+    background: linear-gradient(135deg,#202020,#080808);
+
     color: #555;
 
     font-weight: 1000;
-
     letter-spacing: 2px;
+
+    transition: .3s ease;
 }
 
 .lead-story .story-image {
@@ -550,42 +481,24 @@ button {
     display: inline-block;
 
     padding: 5px 9px;
-
-    border-radius: 999px;
-
     margin-bottom: 10px;
-
-    font-size: .72rem;
-
-    font-weight: 1000;
 
     background: #050505;
 
-    color:
-        var(
-            --card-color,
-            var(--lime)
-        );
+    color: var(--card-color,var(--lime));
 
-    border:
-        1px solid
-        var(
-            --card-color,
-            var(--lime)
-        );
+    border: 1px solid var(--card-color,var(--lime));
+    border-radius: 999px;
+
+    font-size: .72rem;
+    font-weight: 1000;
 }
 
 .story-title {
-    font-size:
-        clamp(
-            1.35rem,
-            4vw,
-            2.25rem
-        );
-
+    font-size: clamp(1.4rem,4vw,2.3rem);
     line-height: 1.08;
 
-    margin-bottom: 9px;
+    margin-bottom: 10px;
 
     font-weight: 1000;
 }
@@ -597,9 +510,9 @@ button {
 .story-meta {
     margin-top: 14px;
 
-    font-size: .75rem;
-
     color: #777;
+
+    font-size: .75rem;
 }
 
 .side-stories {
@@ -607,53 +520,37 @@ button {
     gap: 18px;
 }
 
-/* STORY GRID */
+/* =====================================================
+   STORY CARDS
+===================================================== */
 
 .card-grid {
     display: grid;
 
     grid-template-columns:
-        repeat(
-            auto-fit,
-            minmax(245px,1fr)
-        );
+        repeat(auto-fit,minmax(245px,1fr));
 
     gap: 18px;
+
+    margin-top: 25px;
 }
 
 .story-card {
-    background:
-        rgba(
-            17,
-            17,
-            17,
-            .94
-        );
-
-    border:
-        1px solid #2d2d2d;
-
-    border-radius:
-        var(--radius);
-
     overflow: hidden;
+    position: relative;
 
-    transition:
-        .22s ease;
+    background: rgba(17,17,17,.95);
 
-    position:
-        relative;
+    border: 1px solid #2d2d2d;
+    border-radius: var(--radius);
+
+    transition: .22s ease;
 }
 
 .story-card:hover {
-    transform:
-        translateY(-5px);
+    transform: translateY(-5px);
 
-    border-color:
-        var(
-            --card-color,
-            var(--lime)
-        );
+    border-color: var(--card-color,var(--lime));
 
     box-shadow:
         0 0 25px
@@ -668,493 +565,317 @@ button {
     transform: scale(1.025);
 }
 
-.story-image {
-    transition: .3s ease;
-}
-
-/* STATUS BADGES */
+/* =====================================================
+   STATUS BADGES
+===================================================== */
 
 .status-badge {
-    font-size: .7rem;
+    display: inline-block;
 
-    font-weight: 1000;
+    margin-top: 13px;
 
     padding: 5px 8px;
 
-    border-radius: 4px;
+    border-radius: 5px;
 
-    display: inline-block;
-
-    margin-top: 12px;
+    font-size: .7rem;
+    font-weight: 1000;
 }
 
 .confirmed {
-    background:
-        rgba(57,255,20,.12);
-
-    border:
-        1px solid var(--lime);
-
-    color:
-        var(--lime);
+    color: var(--lime);
+    border: 1px solid var(--lime);
 }
 
 .developing {
-    background:
-        rgba(255,230,0,.10);
-
-    border:
-        1px solid var(--yellow);
-
-    color:
-        var(--yellow);
+    color: var(--yellow);
+    border: 1px solid var(--yellow);
 }
 
 .alleged {
-    background:
-        rgba(255,122,0,.12);
-
-    border:
-        1px solid var(--orange);
-
-    color:
-        var(--orange);
+    color: var(--orange);
+    border: 1px solid var(--orange);
 }
 
 .unverified {
-    background:
-        rgba(255,45,149,.12);
-
-    border:
-        1px solid var(--pink);
-
-    color:
-        var(--pink);
+    color: var(--pink);
+    border: 1px solid var(--pink);
 }
 
 .disputed {
-    background:
-        rgba(168,85,247,.12);
-
-    border:
-        1px solid var(--purple);
-
-    color:
-        var(--purple);
+    color: var(--purple);
+    border: 1px solid var(--purple);
 }
 
-/* VIRAL VIDEOS */
+/* =====================================================
+   VIRAL VIDEO
+===================================================== */
 
 .video-grid {
-    display:
-        grid;
+    display: grid;
 
     grid-template-columns:
-        repeat(
-            auto-fit,
-            minmax(270px,1fr)
-        );
+        repeat(auto-fit,minmax(270px,1fr));
 
-    gap:
-        18px;
+    gap: 18px;
+
+    margin-top: 25px;
 }
 
 .video-card {
-    background:
-        #101010;
+    overflow: hidden;
 
-    border:
-        1px solid #403800;
+    background: #101010;
 
-    border-radius:
-        var(--radius);
-
-    overflow:
-        hidden;
+    border: 1px solid #514900;
+    border-radius: var(--radius);
 }
 
 .video-frame {
-    aspect-ratio:
-        9 / 16;
+    aspect-ratio: 9 / 16;
 
-    background:
-        #000;
+    position: relative;
 
-    display:
-        flex;
+    background: #000;
 
-    align-items:
-        center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 
-    justify-content:
-        center;
-
-    color:
-        #666;
-
-    position:
-        relative;
+    color: #666;
 }
 
 .video-frame iframe,
 .video-frame video {
-    width:
-        100%;
+    width: 100%;
+    height: 100%;
 
-    height:
-        100%;
+    border: 0;
 
-    border:
-        0;
-
-    object-fit:
-        cover;
+    object-fit: cover;
 }
 
 .platform-badge {
-    position:
-        absolute;
+    position: absolute;
 
     top: 10px;
     left: 10px;
 
     z-index: 3;
 
-    background:
-        #050505;
+    padding: 5px 8px;
 
-    border:
-        1px solid var(--yellow);
+    background: #050505;
 
-    color:
-        var(--yellow);
+    border: 1px solid var(--yellow);
+    border-radius: 999px;
 
-    padding:
-        5px 8px;
+    color: var(--yellow);
 
-    border-radius:
-        999px;
-
-    font-size:
-        .7rem;
-
-    font-weight:
-        1000;
+    font-size: .7rem;
+    font-weight: 1000;
 }
 
-/* INVESTIGATIONS */
+/* =====================================================
+   INVESTIGATIONS
+===================================================== */
 
 .investigations-section {
-    background:
-        linear-gradient(
-            180deg,
-            rgba(57,255,20,.04),
-            rgba(0,0,0,.2)
-        );
+    background: linear-gradient(
+        180deg,
+        rgba(57,255,20,.04),
+        rgba(0,0,0,.2)
+    );
 
-    border-top:
-        1px solid
-        rgba(57,255,20,.22);
-
-    border-bottom:
-        1px solid
-        rgba(57,255,20,.22);
+    border-top: 1px solid rgba(57,255,20,.22);
+    border-bottom: 1px solid rgba(57,255,20,.22);
 }
 
 .case-file {
-    border:
-        1px solid
-        rgba(57,255,20,.40);
+    margin-top: 25px;
 
-    background:
-        rgba(8,8,8,.95);
+    padding: 28px;
 
-    border-radius:
-        var(--radius);
+    background: rgba(8,8,8,.96);
 
-    padding:
-        25px;
-
-    box-shadow:
-        0 0 30px
-        rgba(57,255,20,.06);
+    border: 1px solid rgba(57,255,20,.40);
+    border-radius: var(--radius);
 }
 
 .case-number {
-    color:
-        var(--lime);
+    color: var(--lime);
 
-    font-weight:
-        1000;
+    font-weight: 1000;
+    letter-spacing: 2px;
 
-    letter-spacing:
-        2px;
+    margin-bottom: 7px;
 }
 
-/* TRUTH METER */
+/* =====================================================
+   TRUTH METER
+===================================================== */
 
 .truth-meter {
-    display:
-        grid;
+    display: grid;
+    grid-template-columns: repeat(6,1fr);
 
-    grid-template-columns:
-        repeat(
-            6,
-            1fr
-        );
+    gap: 8px;
 
-    gap:
-        8px;
+    margin-top: 25px;
 }
 
 .truth-level {
-    background:
-        #0d0d0d;
+    padding: 15px 8px;
 
-    padding:
-        15px 8px;
+    text-align: center;
 
-    text-align:
-        center;
+    background: #0d0d0d;
 
-    border-radius:
-        7px;
+    border: 1px solid #333;
+    border-radius: 8px;
 
-    font-size:
-        .76rem;
+    font-size: .75rem;
+    font-weight: 1000;
 
-    font-weight:
-        1000;
-
-    cursor:
-        pointer;
-
-    border:
-        1px solid #333;
-
-    transition:
-        .2s ease;
+    transition: .2s ease;
 }
 
 .truth-level:hover {
-    transform:
-        translateY(-3px);
+    transform: translateY(-3px);
 }
 
-.t-verified {
-    color: #39ff14;
-}
+.t-verified { color:#39ff14; }
+.t-mostly { color:#a9ff36; }
+.t-mixed { color:#ffe600; }
+.t-unproven { color:#ff9d00; }
+.t-misleading { color:#ff5757; }
+.t-false { color:#ff2525; }
 
-.t-mostly {
-    color: #a9ff36;
-}
-
-.t-mixed {
-    color: #ffe600;
-}
-
-.t-unproven {
-    color: #ff9d00;
-}
-
-.t-misleading {
-    color: #ff5757;
-}
-
-.t-false {
-    color: #ff2525;
-}
-
-/* TIKTOK */
+/* =====================================================
+   SOCIAL
+===================================================== */
 
 .social-box {
-    max-width:
-        850px;
+    max-width: 850px;
 
-    margin:
-        auto;
+    margin: auto;
 
-    text-align:
-        center;
+    padding: 42px 25px;
 
-    padding:
-        40px 25px;
+    text-align: center;
 
-    background:
-        #101010;
+    background: #101010;
 
-    border:
-        1px solid var(--pink);
-
-    border-radius:
-        var(--radius);
-
-    box-shadow:
-        0 0 30px
-        rgba(255,45,149,.08);
+    border: 1px solid var(--pink);
+    border-radius: var(--radius);
 }
 
 .social-box h2 {
-    font-size:
-        clamp(
-            2rem,
-            6vw,
-            3.5rem
-        );
-
-    margin-bottom:
-        12px;
+    font-size: clamp(2rem,6vw,3.5rem);
+    margin-bottom: 12px;
 }
 
-/* NEWSLETTER */
+/* =====================================================
+   NEWSLETTER
+===================================================== */
 
 .newsletter-box {
-    max-width:
-        850px;
+    max-width: 850px;
 
-    margin:
-        auto;
+    margin: auto;
 
-    text-align:
-        center;
+    padding: 40px 25px;
 
-    background:
-        #101010;
+    text-align: center;
 
-    border:
-        1px solid
-        rgba(57,255,20,.35);
+    background: #101010;
 
-    padding:
-        38px 24px;
-
-    border-radius:
-        var(--radius);
+    border: 1px solid rgba(57,255,20,.40);
+    border-radius: var(--radius);
 }
 
 .newsletter-box h2 {
-    font-size:
-        clamp(
-            1.8rem,
-            5vw,
-            3rem
-        );
-
-    margin-bottom:
-        10px;
+    font-size: clamp(1.8rem,5vw,3rem);
+    margin-bottom: 12px;
 }
 
 .newsletter-box p {
-    color:
-        #aaa;
+    max-width: 620px;
 
-    max-width:
-        600px;
+    margin: 0 auto 20px;
 
-    margin:
-        0 auto 18px;
+    color: #aaa;
 }
 
 .newsletter-placeholder {
-    display:
-        inline-block;
+    display: inline-block;
 
-    background:
-        #050505;
+    padding: 11px 18px;
 
-    border:
-        1px solid var(--lime);
+    background: #050505;
 
-    color:
-        var(--lime);
+    border: 1px solid var(--lime);
+    border-radius: 999px;
 
-    padding:
-        10px 15px;
+    color: var(--lime);
 
-    border-radius:
-        999px;
-
-    font-weight:
-        900;
+    font-weight: 1000;
 }
 
-/* FOOTER */
+/* =====================================================
+   FOOTER
+===================================================== */
 
 footer {
-    background:
-        #030303;
+    padding: 45px 20px;
 
-    border-top:
-        1px solid
-        rgba(57,255,20,.18);
+    text-align: center;
 
-    padding:
-        45px 20px;
+    background: #030303;
 
-    text-align:
-        center;
+    border-top: 1px solid rgba(57,255,20,.20);
 
-    color:
-        #888;
+    color: #888;
 }
 
 .footer-logo {
-    font-size:
-        1.7rem;
+    font-size: 1.7rem;
+    font-weight: 1000;
 
-    font-weight:
-        1000;
-
-    color:
-        white;
+    color: white;
 }
 
 .footer-logo span {
-    color:
-        var(--lime);
+    color: var(--lime);
 }
 
 .footer-links {
-    margin:
-        20px 0;
+    margin: 20px 0;
 
-    display:
-        flex;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
 
-    gap:
-        14px;
-
-    flex-wrap:
-        wrap;
-
-    justify-content:
-        center;
+    gap: 14px;
 }
 
 .footer-links a:hover {
-    color:
-        var(--lime);
+    color: var(--lime);
 }
 
-/* MOBILE */
+/* =====================================================
+   MOBILE
+===================================================== */
 
 @media (max-width: 900px) {
 
     .header-inner {
-        padding:
-            8px 12px;
+        min-height: 76px;
     }
 
     .header-logo {
-        width:
-            clamp(
-                180px,
-                58vw,
-                300px
-            );
-
-        max-height:
-            82px;
+        height: 55px;
+        max-width: 250px;
     }
 
     .desktop-nav {
@@ -1170,71 +891,57 @@ footer {
 
         position: absolute;
 
-        top: 88px;
+        top: 76px;
         left: 0;
         right: 0;
 
-        padding: 16px;
+        padding: 18px;
 
-        background:
-            #050505;
+        background: #050505;
 
-        border-bottom:
-            1px solid #333;
+        border-bottom: 1px solid #333;
 
-        flex-direction:
-            column;
-
-        align-items:
-            stretch;
-    }
-
-    .nav-btn {
-        width: 100%;
-        text-align: center;
+        justify-content: center;
     }
 
     .trending-layout {
-        grid-template-columns:
-            1fr;
+        grid-template-columns: 1fr;
     }
 
     .truth-meter {
-        grid-template-columns:
-            repeat(2,1fr);
+        grid-template-columns: repeat(2,1fr);
     }
 }
 
 @media (max-width: 600px) {
 
+    .header-inner {
+        padding: 8px 14px;
+    }
+
+    .header-logo {
+        max-width: 220px;
+        height: 52px;
+    }
+
     .section {
-        padding:
-            50px 16px;
+        padding: 52px 16px;
     }
 
     .hero {
-        padding:
-            45px 16px
-            35px;
+        padding: 50px 16px 40px;
     }
 
-    .section-title-row {
-        align-items:
-            flex-start;
-
-        flex-direction:
-            column;
+    .hero h1 {
+        font-size: clamp(2.4rem,12vw,4rem);
     }
 }
 
 @media (prefers-reduced-motion: reduce) {
 
     * {
-        animation:
-            none !important;
-
-        scroll-behavior:
-            auto !important;
+        animation: none !important;
+        scroll-behavior: auto !important;
     }
 
     #matrix {
@@ -1250,87 +957,75 @@ footer {
 <canvas id="matrix"></canvas>
 <div class="page-shade"></div>
 
+<!-- =====================================================
+     HEADER
+===================================================== -->
+
 <header class="site-header">
 
 <div class="header-inner">
 
-<a
-class="logo-link"
-href="#"
-aria-label="The Blind Truth home">
+<a class="logo-link" href="./">
 
 <img
-class="header-logo"
-src="blind-truth-logo.png"
-alt="The Blind Truth - News, Celebrity, Gossip and Investigations">
+    class="header-logo"
+    src="./blind-truth-logo.png"
+    alt="The Blind Truth - News, Celebrity, Gossip and Investigations"
+    id="siteLogo"
+>
+
+<div class="logo-fallback" id="logoFallback">
+    THE BLIND <span>TRUTH</span>
+</div>
 
 </a>
 
 <button
-class="menu-btn"
-id="menuButton"
-aria-label="Open navigation">
+    class="menu-btn"
+    id="menuButton"
+    aria-label="Open navigation"
+    aria-expanded="false">
 ☰
 </button>
 
-<nav
-class="desktop-nav"
-id="mainNavigation">
+<nav class="desktop-nav" id="mainNavigation">
 
-<a
-class="nav-btn"
-style="--nav-color:#00a8ff;"
-href="#news">
+<a class="nav-btn" style="--nav-color:#00a8ff;" href="#news">
 NEWS
 </a>
 
-<a
-class="nav-btn"
-style="--nav-color:#a855f7;"
-href="#celebrity">
+<a class="nav-btn" style="--nav-color:#a855f7;" href="#celebrity">
 CELEBRITY
 </a>
 
-<a
-class="nav-btn"
-style="--nav-color:#ff2d95;"
-href="#gossip">
+<a class="nav-btn" style="--nav-color:#ff2d95;" href="#gossip">
 GOSSIP
 </a>
 
-<a
-class="nav-btn"
-style="--nav-color:#ff7a00;"
-href="#music">
+<a class="nav-btn" style="--nav-color:#ff7a00;" href="#music">
 MUSIC
 </a>
 
-<a
-class="nav-btn"
-style="--nav-color:#ffe600;"
-href="#viral">
+<a class="nav-btn" style="--nav-color:#ffe600;" href="#viral">
 VIRAL
 </a>
 
-<a
-class="nav-btn"
-style="--nav-color:#ff2a2a;"
-href="#crime">
+<a class="nav-btn" style="--nav-color:#ff2a2a;" href="#crime">
 COURT & CRIME
 </a>
 
-<a
-class="nav-btn"
-style="--nav-color:#39ff14;"
-href="#investigations">
+<a class="nav-btn" style="--nav-color:#39ff14;" href="#investigations">
 INVESTIGATIONS
 </a>
 
 </nav>
 
 </div>
-
 </header>
+
+<!-- =====================================================
+     BREAKING NEWS
+===================================================== -->
 
 <div class="breaking-bar">
 
@@ -1343,11 +1038,11 @@ BREAKING
 <div class="ticker-track">
 
 <span>
-Latest Blind Truth headlines will appear here.
+Celebrity news • breaking stories • viral moments • investigations.
 </span>
 
 <span>
-Celebrity news • breaking stories • viral moments • investigations.
+Latest Blind Truth headlines will appear here.
 </span>
 
 <span>
@@ -1357,8 +1052,11 @@ Question everything. Follow the evidence.
 </div>
 
 </div>
-
 </div>
+
+<!-- =====================================================
+     TRENDING TAGS
+===================================================== -->
 
 <div class="trending-tags">
 
@@ -1366,31 +1064,35 @@ Question everything. Follow the evidence.
 TRENDING:
 </div>
 
-<a class="trend-tag" href="#">
+<a class="trend-tag" href="#celebrity">
 #CelebrityNews
 </a>
 
-<a class="trend-tag" href="#">
+<a class="trend-tag" href="#news">
 #BreakingNews
 </a>
 
-<a class="trend-tag" href="#">
+<a class="trend-tag" href="#music">
 #HipHop
 </a>
 
-<a class="trend-tag" href="#">
+<a class="trend-tag" href="#viral">
 #Viral
 </a>
 
-<a class="trend-tag" href="#">
+<a class="trend-tag" href="#crime">
 #CourtAndCrime
 </a>
 
-<a class="trend-tag" href="#">
+<a class="trend-tag" href="#investigations">
 #BlindTruth
 </a>
 
 </div>
+
+<!-- =====================================================
+     HERO
+===================================================== -->
 
 <section class="hero">
 
@@ -1403,54 +1105,48 @@ THE BLIND TRUTH
 <h1>
 THE STORIES EVERYBODY'S TALKING ABOUT.
 <br>
-<span>
-THE FACTS BEHIND THEM.
-</span>
+<span>THE FACTS BEHIND THEM.</span>
 </h1>
 
 <p>
-Breaking news, celebrity gossip, entertainment,
-music, viral stories, court cases and controversies —
-plus Blind Truth investigations that separate what's
-confirmed from what's claimed.
+Breaking news, celebrity gossip, entertainment, music,
+viral stories, court cases and controversies — plus
+Blind Truth investigations that separate what's confirmed
+from what's claimed.
 </p>
 
 <div class="hero-actions">
 
-<a
-class="btn btn-lime"
-href="#trending">
+<a class="btn btn-lime" href="#trending">
 TRENDING NOW
 </a>
 
 <a
-class="btn btn-pink"
-href="https://www.tiktok.com/@theblindtruthofficial"
-target="_blank"
-rel="noopener noreferrer">
+    class="btn btn-pink"
+    href="https://www.tiktok.com/@theblindtruthofficial"
+    target="_blank"
+    rel="noopener noreferrer">
 FOLLOW ON TIKTOK
 </a>
 
 </div>
-
 </div>
-
 </section>
 
+<!-- =====================================================
+     TRENDING NOW
+===================================================== -->
+
 <section
-class="section"
-id="trending"
-style="--section-color:#ffe600;">
+    class="section"
+    id="trending"
+    style="--section-color:#ffe600;">
 
 <div class="section-inner">
 
-<div class="section-title-row">
-
 <div class="section-title">
 
-<h2>
-🔥 TRENDING NOW
-</h2>
+<h2>🔥 TRENDING NOW</h2>
 
 <p>
 The biggest stories people are talking about right now.
@@ -1460,13 +1156,11 @@ The biggest stories people are talking about right now.
 
 </div>
 
-</div>
-
 <div class="trending-layout">
 
 <article
-class="lead-story"
-style="--card-color:#ffe600;">
+    class="lead-story"
+    style="--card-color:#ffe600;">
 
 <div class="story-image">
 LEAD STORY IMAGE
@@ -1492,14 +1186,13 @@ UPDATED RECENTLY
 </div>
 
 </div>
-
 </article>
 
 <div class="side-stories">
 
 <article
-class="story-card"
-style="--card-color:#ff2d95;">
+    class="story-card"
+    style="--card-color:#ff2d95;">
 
 <div class="story-content">
 
@@ -1507,21 +1200,18 @@ style="--card-color:#ff2d95;">
 GOSSIP
 </span>
 
-<h3>
-Second trending story
-</h3>
+<h3>Second trending story</h3>
 
 <p class="story-summary">
 A short summary goes here.
 </p>
 
 </div>
-
 </article>
 
 <article
-class="story-card"
-style="--card-color:#a855f7;">
+    class="story-card"
+    style="--card-color:#a855f7;">
 
 <div class="story-content">
 
@@ -1529,38 +1219,34 @@ style="--card-color:#a855f7;">
 CELEBRITY
 </span>
 
-<h3>
-Third trending story
-</h3>
+<h3>Third trending story</h3>
 
 <p class="story-summary">
 Another major story preview.
 </p>
 
 </div>
-
 </article>
 
 </div>
-
 </div>
-
 </div>
-
 </section>
 
+<!-- =====================================================
+     NEWS
+===================================================== -->
+
 <section
-class="section"
-id="news"
-style="--section-color:#00a8ff;">
+    class="section"
+    id="news"
+    style="--section-color:#00a8ff;">
 
 <div class="section-inner">
 
 <div class="section-title">
 
-<h2>
-📰 LATEST NEWS
-</h2>
+<h2>📰 LATEST NEWS</h2>
 
 <p>
 Breaking stories and major developments.
@@ -1570,13 +1256,11 @@ Breaking stories and major developments.
 
 </div>
 
-<br>
-
 <div class="card-grid">
 
 <article
-class="story-card"
-style="--card-color:#00a8ff;">
+    class="story-card"
+    style="--card-color:#00a8ff;">
 
 <div class="story-image">
 NEWS IMAGE
@@ -1588,9 +1272,7 @@ NEWS IMAGE
 NEWS
 </span>
 
-<h3>
-Latest news headline
-</h3>
+<h3>Latest news headline</h3>
 
 <p class="story-summary">
 Short description of the story.
@@ -1601,12 +1283,11 @@ CONFIRMED
 </span>
 
 </div>
-
 </article>
 
 <article
-class="story-card"
-style="--card-color:#00a8ff;">
+    class="story-card"
+    style="--card-color:#00a8ff;">
 
 <div class="story-image">
 NEWS IMAGE
@@ -1618,9 +1299,7 @@ NEWS IMAGE
 NEWS
 </span>
 
-<h3>
-Developing story
-</h3>
+<h3>Developing story</h3>
 
 <p class="story-summary">
 Details are still developing.
@@ -1631,27 +1310,26 @@ DEVELOPING
 </span>
 
 </div>
-
 </article>
 
 </div>
-
 </div>
-
 </section>
 
+<!-- =====================================================
+     CELEBRITY
+===================================================== -->
+
 <section
-class="section"
-id="celebrity"
-style="--section-color:#a855f7;">
+    class="section"
+    id="celebrity"
+    style="--section-color:#a855f7;">
 
 <div class="section-inner">
 
 <div class="section-title">
 
-<h2>
-⭐ CELEBRITY
-</h2>
+<h2>⭐ CELEBRITY</h2>
 
 <p>
 Celebrity news, careers, relationships and controversies.
@@ -1661,13 +1339,11 @@ Celebrity news, careers, relationships and controversies.
 
 </div>
 
-<br>
-
 <div class="card-grid">
 
 <article
-class="story-card"
-style="--card-color:#a855f7;">
+    class="story-card"
+    style="--card-color:#a855f7;">
 
 <div class="story-image">
 CELEBRITY IMAGE
@@ -1679,21 +1355,18 @@ CELEBRITY IMAGE
 CELEBRITY
 </span>
 
-<h3>
-Celebrity headline
-</h3>
+<h3>Celebrity headline</h3>
 
 <p class="story-summary">
 Story preview goes here.
 </p>
 
 </div>
-
 </article>
 
 <article
-class="story-card"
-style="--card-color:#a855f7;">
+    class="story-card"
+    style="--card-color:#a855f7;">
 
 <div class="story-image">
 CELEBRITY IMAGE
@@ -1705,36 +1378,33 @@ CELEBRITY IMAGE
 CELEBRITY
 </span>
 
-<h3>
-Another celebrity story
-</h3>
+<h3>Another celebrity story</h3>
 
 <p class="story-summary">
 Story preview goes here.
 </p>
 
 </div>
-
 </article>
 
 </div>
-
 </div>
-
 </section>
 
+<!-- =====================================================
+     GOSSIP
+===================================================== -->
+
 <section
-class="section"
-id="gossip"
-style="--section-color:#ff2d95;">
+    class="section"
+    id="gossip"
+    style="--section-color:#ff2d95;">
 
 <div class="section-inner">
 
 <div class="section-title">
 
-<h2>
-💋 GOSSIP & RUMORS
-</h2>
+<h2>💋 GOSSIP & RUMORS</h2>
 
 <p>
 What's being said — and what can actually be verified.
@@ -1744,13 +1414,11 @@ What's being said — and what can actually be verified.
 
 </div>
 
-<br>
-
 <div class="card-grid">
 
 <article
-class="story-card"
-style="--card-color:#ff2d95;">
+    class="story-card"
+    style="--card-color:#ff2d95;">
 
 <div class="story-content">
 
@@ -1758,9 +1426,7 @@ style="--card-color:#ff2d95;">
 GOSSIP
 </span>
 
-<h3>
-Rumor headline
-</h3>
+<h3>Rumor headline</h3>
 
 <p class="story-summary">
 Explain what people are claiming.
@@ -1771,12 +1437,11 @@ UNVERIFIED
 </span>
 
 </div>
-
 </article>
 
 <article
-class="story-card"
-style="--card-color:#ff2d95;">
+    class="story-card"
+    style="--card-color:#ff2d95;">
 
 <div class="story-content">
 
@@ -1784,12 +1449,10 @@ style="--card-color:#ff2d95;">
 GOSSIP
 </span>
 
-<h3>
-Reported celebrity story
-</h3>
+<h3>Reported celebrity story</h3>
 
 <p class="story-summary">
-What sources currently establish.
+What reliable sources currently establish.
 </p>
 
 <span class="status-badge disputed">
@@ -1797,27 +1460,26 @@ DISPUTED
 </span>
 
 </div>
-
 </article>
 
 </div>
-
 </div>
-
 </section>
 
+<!-- =====================================================
+     MUSIC
+===================================================== -->
+
 <section
-class="section"
-id="music"
-style="--section-color:#ff7a00;">
+    class="section"
+    id="music"
+    style="--section-color:#ff7a00;">
 
 <div class="section-inner">
 
 <div class="section-title">
 
-<h2>
-🎧 MUSIC & HIP-HOP
-</h2>
+<h2>🎧 MUSIC & HIP-HOP</h2>
 
 <p>
 Artists, albums, industry news, disputes and culture.
@@ -1827,13 +1489,11 @@ Artists, albums, industry news, disputes and culture.
 
 </div>
 
-<br>
-
 <div class="card-grid">
 
 <article
-class="story-card"
-style="--card-color:#ff7a00;">
+    class="story-card"
+    style="--card-color:#ff7a00;">
 
 <div class="story-image">
 MUSIC IMAGE
@@ -1845,36 +1505,33 @@ MUSIC IMAGE
 MUSIC
 </span>
 
-<h3>
-Music headline
-</h3>
+<h3>Music headline</h3>
 
 <p class="story-summary">
 Latest music story preview.
 </p>
 
 </div>
-
 </article>
 
 </div>
-
 </div>
-
 </section>
 
+<!-- =====================================================
+     VIRAL
+===================================================== -->
+
 <section
-class="section"
-id="viral"
-style="--section-color:#ffe600;">
+    class="section"
+    id="viral"
+    style="--section-color:#ffe600;">
 
 <div class="section-inner">
 
 <div class="section-title">
 
-<h2>
-🔥 VIRAL RIGHT NOW
-</h2>
+<h2>🔥 VIRAL RIGHT NOW</h2>
 
 <p>
 Videos, posts and moments taking over social media.
@@ -1883,8 +1540,6 @@ Videos, posts and moments taking over social media.
 <div class="color-line"></div>
 
 </div>
-
-<br>
 
 <div class="video-grid">
 
@@ -1902,16 +1557,13 @@ VIDEO PLACEHOLDER
 
 <div class="story-content">
 
-<h3>
-Viral YouTube story
-</h3>
+<h3>Viral YouTube story</h3>
 
 <p class="story-summary">
 Explain why the video is trending.
 </p>
 
 </div>
-
 </article>
 
 <article class="video-card">
@@ -1928,16 +1580,13 @@ EMBED PLACEHOLDER
 
 <div class="story-content">
 
-<h3>
-Viral social-media story
-</h3>
+<h3>Viral social-media story</h3>
 
 <p class="story-summary">
-Paste the original public post here later.
+The original public post or video will appear here.
 </p>
 
 </div>
-
 </article>
 
 <article class="video-card">
@@ -1954,36 +1603,33 @@ YOUR VIDEO PLACEHOLDER
 
 <div class="story-content">
 
-<h3>
-Original Blind Truth video
-</h3>
+<h3>Original Blind Truth video</h3>
 
 <p class="story-summary">
-Your own uploaded video can appear here.
+Original Blind Truth video content can appear here.
 </p>
 
 </div>
-
 </article>
 
 </div>
-
 </div>
-
 </section>
 
+<!-- =====================================================
+     COURT & CRIME
+===================================================== -->
+
 <section
-class="section"
-id="crime"
-style="--section-color:#ff2a2a;">
+    class="section"
+    id="crime"
+    style="--section-color:#ff2a2a;">
 
 <div class="section-inner">
 
 <div class="section-title">
 
-<h2>
-⚖️ COURT & CRIME
-</h2>
+<h2>⚖️ COURT & CRIME</h2>
 
 <p>
 Charges, lawsuits, trials and criminal investigations.
@@ -1993,13 +1639,11 @@ Charges, lawsuits, trials and criminal investigations.
 
 </div>
 
-<br>
-
 <div class="card-grid">
 
 <article
-class="story-card"
-style="--card-color:#ff2a2a;">
+    class="story-card"
+    style="--card-color:#ff2a2a;">
 
 <div class="story-content">
 
@@ -2007,9 +1651,7 @@ style="--card-color:#ff2a2a;">
 COURT & CRIME
 </span>
 
-<h3>
-Court case headline
-</h3>
+<h3>Court case headline</h3>
 
 <p class="story-summary">
 Facts from the documented record.
@@ -2020,27 +1662,26 @@ ALLEGED / PENDING
 </span>
 
 </div>
-
 </article>
 
 </div>
-
 </div>
-
 </section>
 
+<!-- =====================================================
+     INVESTIGATIONS
+===================================================== -->
+
 <section
-class="section investigations-section"
-id="investigations"
-style="--section-color:#39ff14;">
+    class="section investigations-section"
+    id="investigations"
+    style="--section-color:#39ff14;">
 
 <div class="section-inner">
 
 <div class="section-title">
 
-<h2>
-🔎 THE BLIND TRUTH INVESTIGATES
-</h2>
+<h2>🔎 THE BLIND TRUTH INVESTIGATES</h2>
 
 <p>
 Deep dives into the claims behind the headlines.
@@ -2050,41 +1691,33 @@ Deep dives into the claims behind the headlines.
 
 </div>
 
-<br>
-
 <article class="case-file">
 
 <div class="case-number">
 CASE FILE #001
 </div>
 
-<h2>
-What really happened?
-</h2>
+<h2>What really happened?</h2>
 
-<p
-style="
-color:#aaa;
-margin-top:10px;
-max-width:800px;
-">
+<p style="color:#aaa; margin-top:10px; max-width:800px;">
 Evidence. Documents. Timelines. Conflicting claims.
 Then The Blind Truth verdict.
 </p>
 
 <br>
 
-<a
-class="btn btn-lime"
-href="#">
+<a class="btn btn-lime" href="#">
 OPEN CASE FILE
 </a>
 
 </article>
 
 </div>
-
 </section>
+
+<!-- =====================================================
+     TRUTH METER
+===================================================== -->
 
 <section class="section">
 
@@ -2092,21 +1725,18 @@ OPEN CASE FILE
 
 <div class="section-title">
 
-<h2>
-📊 THE TRUTH METER
-</h2>
+<h2>📊 THE TRUTH METER</h2>
 
 <p>
 Not every story is simply true or false.
 </p>
 
-<div class="color-line"
-style="--section-color:#39ff14;">
+<div
+    class="color-line"
+    style="--section-color:#39ff14;">
 </div>
 
 </div>
-
-<br>
 
 <div class="truth-meter">
 
@@ -2135,10 +1765,12 @@ FALSE
 </div>
 
 </div>
-
 </div>
-
 </section>
+
+<!-- =====================================================
+     TIKTOK
+===================================================== -->
 
 <section class="section">
 
@@ -2146,34 +1778,30 @@ FALSE
 
 <div class="social-box">
 
-<h2>
-WATCH THE BLIND TRUTH
-</h2>
+<h2>WATCH THE BLIND TRUTH</h2>
 
-<p
-style="
-color:#aaa;
-margin-bottom:22px;
-">
-Breaking stories, evidence breakdowns and investigations
-on TikTok.
+<p style="color:#aaa; margin-bottom:22px;">
+Breaking stories, celebrity news, viral moments,
+evidence breakdowns and investigations on TikTok.
 </p>
 
 <a
-class="btn btn-pink"
-href="https://www.tiktok.com/@theblindtruthofficial"
-target="_blank"
-rel="noopener noreferrer">
+    class="btn btn-pink"
+    href="https://www.tiktok.com/@theblindtruthofficial"
+    target="_blank"
+    rel="noopener noreferrer">
 
 @theblindtruthofficial
 
 </a>
 
 </div>
-
 </div>
-
 </section>
+
+<!-- =====================================================
+     NEWSLETTER
+===================================================== -->
 
 <section class="section">
 
@@ -2186,9 +1814,8 @@ DON'T LET THE ALGORITHM DECIDE WHAT YOU SEE.
 </h2>
 
 <p>
-Get breaking stories, celebrity news,
-viral stories and Blind Truth investigations
-delivered directly to you.
+Get breaking stories, celebrity news, viral stories
+and Blind Truth investigations delivered directly to you.
 </p>
 
 <div class="newsletter-placeholder">
@@ -2196,10 +1823,12 @@ NEWSLETTER COMING SOON
 </div>
 
 </div>
-
 </div>
-
 </section>
+
+<!-- =====================================================
+     FOOTER
+===================================================== -->
 
 <footer>
 
@@ -2213,68 +1842,59 @@ News • Celebrity • Gossip • Investigations
 
 <div class="footer-links">
 
-<a href="#news">
-News
-</a>
-
-<a href="#celebrity">
-Celebrity
-</a>
-
-<a href="#gossip">
-Gossip
-</a>
-
-<a href="#music">
-Music
-</a>
-
-<a href="#viral">
-Viral
-</a>
-
-<a href="#crime">
-Court & Crime
-</a>
-
-<a href="#investigations">
-Investigations
-</a>
+<a href="#news">News</a>
+<a href="#celebrity">Celebrity</a>
+<a href="#gossip">Gossip</a>
+<a href="#music">Music</a>
+<a href="#viral">Viral</a>
+<a href="#crime">Court & Crime</a>
+<a href="#investigations">Investigations</a>
 
 <a
-href="https://www.tiktok.com/@theblindtruthofficial"
-target="_blank">
+    href="https://www.tiktok.com/@theblindtruthofficial"
+    target="_blank"
+    rel="noopener noreferrer">
 TikTok
 </a>
 
 </div>
 
-<strong
-style="
-display:block;
-color:#39ff14;
-margin-top:20px;
-">
-
-QUESTION EVERYTHING.
-FOLLOW THE EVIDENCE.
-
+<strong style="display:block;color:#39ff14;margin-top:20px;">
+QUESTION EVERYTHING. FOLLOW THE EVIDENCE.
 </strong>
 
-<p
-style="
-margin-top:15px;
-font-size:.8rem;
-">
-
-© 2026 The Blind Truth.
-All rights reserved.
-
+<p style="margin-top:15px;font-size:.8rem;">
+© 2026 The Blind Truth. All rights reserved.
 </p>
 
 </footer>
 
+<!-- =====================================================
+     JAVASCRIPT
+===================================================== -->
+
 <script>
+
+/* =====================================================
+   LOGO FALLBACK
+===================================================== */
+
+const siteLogo =
+document.getElementById("siteLogo");
+
+const logoFallback =
+document.getElementById("logoFallback");
+
+siteLogo.addEventListener("error", function() {
+
+    siteLogo.style.display = "none";
+    logoFallback.style.display = "block";
+
+});
+
+/* =====================================================
+   MOBILE MENU
+===================================================== */
 
 const menuButton =
 document.getElementById("menuButton");
@@ -2282,14 +1902,45 @@ document.getElementById("menuButton");
 const navigation =
 document.getElementById("mainNavigation");
 
-menuButton.addEventListener(
-"click",
-function () {
+menuButton.addEventListener("click", function() {
 
+    const isOpen =
     navigation.classList.toggle("open");
 
-}
-);
+    menuButton.setAttribute(
+        "aria-expanded",
+        isOpen
+    );
+
+    menuButton.textContent =
+        isOpen ? "✕" : "☰";
+
+});
+
+/* Close menu after selecting a link */
+
+document
+.querySelectorAll("#mainNavigation a")
+.forEach(function(link) {
+
+    link.addEventListener("click", function() {
+
+        navigation.classList.remove("open");
+
+        menuButton.setAttribute(
+            "aria-expanded",
+            "false"
+        );
+
+        menuButton.textContent = "☰";
+
+    });
+
+});
+
+/* =====================================================
+   MATRIX BACKGROUND
+===================================================== */
 
 const canvas =
 document.getElementById("matrix");
@@ -2344,8 +1995,7 @@ function drawMatrix() {
     "#39ff14";
 
     ctx.font =
-    fontSize +
-    "px monospace";
+    fontSize + "px monospace";
 
     for (
         let i = 0;
@@ -2368,42 +2018,33 @@ function drawMatrix() {
         );
 
         if (
-            drops[i] *
-            fontSize >
-            height
-            &&
-            Math.random() >
-            .975
+            drops[i] * fontSize > height &&
+            Math.random() > .975
         ) {
-
             drops[i] = 0;
-
         }
 
         drops[i]++;
-
     }
-
 }
 
 setupMatrix();
 
 window.addEventListener(
-"resize",
-setupMatrix
+    "resize",
+    setupMatrix
 );
 
 if (
-!window.matchMedia(
-"(prefers-reduced-motion: reduce)"
-).matches
+    !window.matchMedia(
+        "(prefers-reduced-motion: reduce)"
+    ).matches
 ) {
 
     setInterval(
         drawMatrix,
         55
     );
-
 }
 
 </script>
