@@ -19,10 +19,6 @@ content="The stories everybody's talking about. The facts behind them. Question 
 
 <style>
 
-/* =====================================================
-   THE BLIND TRUTH — MASTER DESIGN SYSTEM
-===================================================== */
-
 * {
     box-sizing: border-box;
     margin: 0;
@@ -30,7 +26,6 @@ content="The stories everybody's talking about. The facts behind them. Question 
 }
 
 :root {
-
     --black: #050505;
     --black-2: #0a0a0a;
     --panel: #111111;
@@ -41,7 +36,6 @@ content="The stories everybody's talking about. The facts behind them. Question 
     --border: #2b2b2b;
 
     --lime: #39ff14;
-
     --red: #ff2a2a;
     --purple: #a855f7;
     --pink: #ff2d95;
@@ -58,10 +52,7 @@ html {
 }
 
 body {
-    font-family:
-        Arial,
-        Helvetica,
-        sans-serif;
+    font-family: Arial, Helvetica, sans-serif;
 
     background:
         radial-gradient(
@@ -90,9 +81,7 @@ button {
     font-family: inherit;
 }
 
-/* =====================================================
-   OPTIONAL MATRIX BACKGROUND
-===================================================== */
+/* MATRIX BACKGROUND */
 
 #matrix {
     position: fixed;
@@ -117,16 +106,14 @@ button {
         );
 }
 
-/* =====================================================
-   HEADER
-===================================================== */
+/* HEADER */
 
 .site-header {
     position: sticky;
     top: 0;
     z-index: 1000;
 
-    background: rgba(5,5,5,.96);
+    background: rgba(5,5,5,.97);
 
     border-bottom:
         1px solid rgba(57,255,20,.25);
@@ -144,32 +131,21 @@ button {
 
     gap: 20px;
 
-    padding: 14px 20px;
+    padding: 10px 20px;
 }
 
-.logo-text {
-    font-size: clamp(1.35rem, 4vw, 2rem);
-    font-weight: 1000;
-
-    letter-spacing: 1px;
-    white-space: nowrap;
-}
-
-.logo-text span {
-    color: var(--lime);
-}
-
-.logo-subtitle {
+.logo-link {
     display: block;
-
-    font-size: .60rem;
-    color: #aaa;
-
-    letter-spacing: 2px;
-    margin-top: -2px;
+    flex-shrink: 0;
 }
 
-/* Replace this text logo later with your new image logo if desired */
+.header-logo {
+    display: block;
+    width: clamp(190px, 31vw, 390px);
+    height: auto;
+    max-height: 95px;
+    object-fit: contain;
+}
 
 .desktop-nav {
     display: flex;
@@ -180,7 +156,6 @@ button {
 }
 
 .nav-btn {
-
     background: #050505;
 
     border:
@@ -197,21 +172,10 @@ button {
     font-weight: 900;
 
     transition: .2s ease;
-
-    box-shadow:
-        0 0 0 transparent;
 }
 
 .nav-btn:hover {
-
     transform: translateY(-2px);
-
-    background:
-        color-mix(
-            in srgb,
-            var(--nav-color) 10%,
-            #050505
-        );
 
     box-shadow:
         0 0 18px
@@ -223,7 +187,6 @@ button {
 }
 
 .menu-btn {
-
     display: none;
 
     background: #050505;
@@ -237,12 +200,9 @@ button {
     border-radius: 8px;
 }
 
-/* =====================================================
-   BREAKING NEWS TICKER
-===================================================== */
+/* BREAKING NEWS */
 
 .breaking-bar {
-
     width: 100%;
 
     display: flex;
@@ -257,7 +217,6 @@ button {
 }
 
 .breaking-label {
-
     flex: 0 0 auto;
 
     background: var(--red);
@@ -274,16 +233,12 @@ button {
 }
 
 .ticker {
-
     white-space: nowrap;
-
     overflow: hidden;
-
     flex: 1;
 }
 
 .ticker-track {
-
     display: inline-block;
 
     padding-left: 100%;
@@ -301,7 +256,6 @@ button {
 }
 
 @keyframes tickerMove {
-
     0% {
         transform: translateX(0);
     }
@@ -311,12 +265,9 @@ button {
     }
 }
 
-/* =====================================================
-   TRENDING TAGS
-===================================================== */
+/* TRENDING TAGS */
 
 .trending-tags {
-
     width: min(1250px, 100%);
 
     margin: auto;
@@ -336,7 +287,6 @@ button {
 }
 
 .trending-title {
-
     color: var(--yellow);
 
     font-weight: 1000;
@@ -345,7 +295,6 @@ button {
 }
 
 .trend-tag {
-
     flex: 0 0 auto;
 
     background: #090909;
@@ -363,28 +312,20 @@ button {
     font-weight: 900;
 }
 
-/* =====================================================
-   HERO
-===================================================== */
+/* HERO */
 
 .hero {
-
-    padding:
-        60px 20px
-        45px;
+    padding: 60px 20px 45px;
 
     text-align: center;
 }
 
 .hero-inner {
-
     width: min(1050px, 100%);
-
     margin: auto;
 }
 
 .hero-kicker {
-
     color: var(--lime);
 
     letter-spacing: 3px;
@@ -395,7 +336,6 @@ button {
 }
 
 .hero h1 {
-
     font-size:
         clamp(
             2.4rem,
@@ -411,7 +351,6 @@ button {
 }
 
 .hero h1 span {
-
     background:
         linear-gradient(
             90deg,
@@ -422,17 +361,13 @@ button {
         );
 
     -webkit-background-clip: text;
-
     color: transparent;
 }
 
 .hero p {
-
     max-width: 760px;
 
-    margin:
-        0 auto
-        25px;
+    margin: 0 auto 25px;
 
     color: #c8c8c8;
 
@@ -440,7 +375,6 @@ button {
 }
 
 .hero-actions {
-
     display: flex;
     justify-content: center;
 
@@ -449,16 +383,12 @@ button {
     flex-wrap: wrap;
 }
 
-/* =====================================================
-   MASTER BUTTON STYLE
-===================================================== */
+/* BUTTONS */
 
 .btn {
-
     background: #050505;
 
-    padding:
-        12px 20px;
+    padding: 12px 20px;
 
     border-radius: 999px;
 
@@ -470,7 +400,6 @@ button {
 }
 
 .btn-lime {
-
     color: var(--lime);
 
     border:
@@ -482,7 +411,6 @@ button {
 }
 
 .btn-pink {
-
     color: var(--pink);
 
     border:
@@ -490,35 +418,23 @@ button {
 }
 
 .btn:hover {
-
     transform:
         translateY(-2px)
         scale(1.02);
 }
 
-/* =====================================================
-   GENERAL SECTIONS
-===================================================== */
+/* GENERAL SECTIONS */
 
 .section {
-
-    padding:
-        65px 20px;
+    padding: 65px 20px;
 }
 
 .section-inner {
-
-    width:
-        min(
-            1250px,
-            100%
-        );
-
+    width: min(1250px, 100%);
     margin: auto;
 }
 
 .section-title-row {
-
     display: flex;
     align-items: end;
     justify-content: space-between;
@@ -529,7 +445,6 @@ button {
 }
 
 .section-title h2 {
-
     font-size:
         clamp(
             1.8rem,
@@ -541,16 +456,13 @@ button {
 }
 
 .section-title p {
-
     color: var(--muted);
 
     margin-top: 5px;
 }
 
 .color-line {
-
     height: 4px;
-
     width: 100%;
 
     margin-top: 9px;
@@ -571,12 +483,9 @@ button {
         );
 }
 
-/* =====================================================
-   TRENDING NOW
-===================================================== */
+/* TRENDING */
 
 .trending-layout {
-
     display: grid;
 
     grid-template-columns:
@@ -586,15 +495,13 @@ button {
 }
 
 .lead-story {
-
     min-height: 440px;
 
     position: relative;
 
     overflow: hidden;
 
-    border-radius:
-        var(--radius);
+    border-radius: var(--radius);
 
     border:
         1px solid #453e00;
@@ -611,7 +518,6 @@ button {
 }
 
 .story-image {
-
     min-height: 230px;
 
     background:
@@ -633,37 +539,27 @@ button {
 }
 
 .lead-story .story-image {
-
     min-height: 285px;
 }
 
 .story-content {
-
     padding: 22px;
 }
 
 .story-label {
+    display: inline-block;
 
-    display:
-        inline-block;
+    padding: 5px 9px;
 
-    padding:
-        5px 9px;
+    border-radius: 999px;
 
-    border-radius:
-        999px;
+    margin-bottom: 10px;
 
-    margin-bottom:
-        10px;
+    font-size: .72rem;
 
-    font-size:
-        .72rem;
+    font-weight: 1000;
 
-    font-weight:
-        1000;
-
-    background:
-        #050505;
+    background: #050505;
 
     color:
         var(
@@ -680,7 +576,6 @@ button {
 }
 
 .story-title {
-
     font-size:
         clamp(
             1.35rem,
@@ -688,46 +583,33 @@ button {
             2.25rem
         );
 
-    line-height:
-        1.08;
+    line-height: 1.08;
 
-    margin-bottom:
-        9px;
+    margin-bottom: 9px;
 
-    font-weight:
-        1000;
+    font-weight: 1000;
 }
 
 .story-summary {
-
-    color:
-        #aaa;
+    color: #aaa;
 }
 
 .story-meta {
+    margin-top: 14px;
 
-    margin-top:
-        14px;
+    font-size: .75rem;
 
-    font-size:
-        .75rem;
-
-    color:
-        #777;
+    color: #777;
 }
 
 .side-stories {
-
     display: grid;
     gap: 18px;
 }
 
-/* =====================================================
-   STORY CARD GRID
-===================================================== */
+/* STORY GRID */
 
 .card-grid {
-
     display: grid;
 
     grid-template-columns:
@@ -740,7 +622,6 @@ button {
 }
 
 .story-card {
-
     background:
         rgba(
             17,
@@ -755,8 +636,7 @@ button {
     border-radius:
         var(--radius);
 
-    overflow:
-        hidden;
+    overflow: hidden;
 
     transition:
         .22s ease;
@@ -766,7 +646,6 @@ button {
 }
 
 .story-card:hover {
-
     transform:
         translateY(-5px);
 
@@ -786,44 +665,30 @@ button {
 }
 
 .story-card:hover .story-image {
-
-    transform:
-        scale(1.025);
+    transform: scale(1.025);
 }
 
 .story-image {
-
-    transition:
-        .3s ease;
+    transition: .3s ease;
 }
 
-/* =====================================================
-   STATUS BADGES
-===================================================== */
+/* STATUS BADGES */
 
 .status-badge {
+    font-size: .7rem;
 
-    font-size:
-        .7rem;
+    font-weight: 1000;
 
-    font-weight:
-        1000;
+    padding: 5px 8px;
 
-    padding:
-        5px 8px;
+    border-radius: 4px;
 
-    border-radius:
-        4px;
+    display: inline-block;
 
-    display:
-        inline-block;
-
-    margin-top:
-        12px;
+    margin-top: 12px;
 }
 
 .confirmed {
-
     background:
         rgba(57,255,20,.12);
 
@@ -835,7 +700,6 @@ button {
 }
 
 .developing {
-
     background:
         rgba(255,230,0,.10);
 
@@ -847,7 +711,6 @@ button {
 }
 
 .alleged {
-
     background:
         rgba(255,122,0,.12);
 
@@ -859,7 +722,6 @@ button {
 }
 
 .unverified {
-
     background:
         rgba(255,45,149,.12);
 
@@ -871,7 +733,6 @@ button {
 }
 
 .disputed {
-
     background:
         rgba(168,85,247,.12);
 
@@ -882,12 +743,9 @@ button {
         var(--purple);
 }
 
-/* =====================================================
-   VIRAL VIDEOS
-===================================================== */
+/* VIRAL VIDEOS */
 
 .video-grid {
-
     display:
         grid;
 
@@ -902,7 +760,6 @@ button {
 }
 
 .video-card {
-
     background:
         #101010;
 
@@ -917,7 +774,6 @@ button {
 }
 
 .video-frame {
-
     aspect-ratio:
         9 / 16;
 
@@ -942,7 +798,6 @@ button {
 
 .video-frame iframe,
 .video-frame video {
-
     width:
         100%;
 
@@ -957,7 +812,6 @@ button {
 }
 
 .platform-badge {
-
     position:
         absolute;
 
@@ -988,12 +842,9 @@ button {
         1000;
 }
 
-/* =====================================================
-   INVESTIGATION MODE
-===================================================== */
+/* INVESTIGATIONS */
 
 .investigations-section {
-
     background:
         linear-gradient(
             180deg,
@@ -1011,7 +862,6 @@ button {
 }
 
 .case-file {
-
     border:
         1px solid
         rgba(57,255,20,.40);
@@ -1031,7 +881,6 @@ button {
 }
 
 .case-number {
-
     color:
         var(--lime);
 
@@ -1042,12 +891,9 @@ button {
         2px;
 }
 
-/* =====================================================
-   TRUTH METER
-===================================================== */
+/* TRUTH METER */
 
 .truth-meter {
-
     display:
         grid;
 
@@ -1062,7 +908,6 @@ button {
 }
 
 .truth-level {
-
     background:
         #0d0d0d;
 
@@ -1092,7 +937,6 @@ button {
 }
 
 .truth-level:hover {
-
     transform:
         translateY(-3px);
 }
@@ -1121,12 +965,9 @@ button {
     color: #ff2525;
 }
 
-/* =====================================================
-   TIKTOK
-===================================================== */
+/* TIKTOK */
 
 .social-box {
-
     max-width:
         850px;
 
@@ -1154,7 +995,6 @@ button {
 }
 
 .social-box h2 {
-
     font-size:
         clamp(
             2rem,
@@ -1166,12 +1006,9 @@ button {
         12px;
 }
 
-/* =====================================================
-   NEWSLETTER
-===================================================== */
+/* NEWSLETTER */
 
 .newsletter-box {
-
     max-width:
         850px;
 
@@ -1196,7 +1033,6 @@ button {
 }
 
 .newsletter-box h2 {
-
     font-size:
         clamp(
             1.8rem,
@@ -1209,7 +1045,6 @@ button {
 }
 
 .newsletter-box p {
-
     color:
         #aaa;
 
@@ -1221,7 +1056,6 @@ button {
 }
 
 .newsletter-placeholder {
-
     display:
         inline-block;
 
@@ -1244,12 +1078,9 @@ button {
         900;
 }
 
-/* =====================================================
-   FOOTER
-===================================================== */
+/* FOOTER */
 
 footer {
-
     background:
         #030303;
 
@@ -1268,7 +1099,6 @@ footer {
 }
 
 .footer-logo {
-
     font-size:
         1.7rem;
 
@@ -1280,13 +1110,11 @@ footer {
 }
 
 .footer-logo span {
-
     color:
         var(--lime);
 }
 
 .footer-links {
-
     margin:
         20px 0;
 
@@ -1304,16 +1132,30 @@ footer {
 }
 
 .footer-links a:hover {
-
     color:
         var(--lime);
 }
 
-/* =====================================================
-   MOBILE
-===================================================== */
+/* MOBILE */
 
 @media (max-width: 900px) {
+
+    .header-inner {
+        padding:
+            8px 12px;
+    }
+
+    .header-logo {
+        width:
+            clamp(
+                180px,
+                58vw,
+                300px
+            );
+
+        max-height:
+            82px;
+    }
 
     .desktop-nav {
         display: none;
@@ -1324,12 +1166,11 @@ footer {
     }
 
     .desktop-nav.open {
-
         display: flex;
 
         position: absolute;
 
-        top: 70px;
+        top: 88px;
         left: 0;
         right: 0;
 
@@ -1340,16 +1181,25 @@ footer {
 
         border-bottom:
             1px solid #333;
+
+        flex-direction:
+            column;
+
+        align-items:
+            stretch;
+    }
+
+    .nav-btn {
+        width: 100%;
+        text-align: center;
     }
 
     .trending-layout {
-
         grid-template-columns:
             1fr;
     }
 
     .truth-meter {
-
         grid-template-columns:
             repeat(2,1fr);
     }
@@ -1358,20 +1208,17 @@ footer {
 @media (max-width: 600px) {
 
     .section {
-
         padding:
             50px 16px;
     }
 
     .hero {
-
         padding:
             45px 16px
             35px;
     }
 
     .section-title-row {
-
         align-items:
             flex-start;
 
@@ -1403,20 +1250,20 @@ footer {
 <canvas id="matrix"></canvas>
 <div class="page-shade"></div>
 
-<!-- =====================================================
-     HEADER
-===================================================== -->
-
 <header class="site-header">
 
 <div class="header-inner">
 
-<a class="logo-text" href="#">
-    THE BLIND <span>TRUTH</span>
+<a
+class="logo-link"
+href="#"
+aria-label="The Blind Truth home">
 
-    <small class="logo-subtitle">
-        NEWS • CELEBRITY • GOSSIP • INVESTIGATIONS
-    </small>
+<img
+class="header-logo"
+src="blind-truth-logo.png"
+alt="The Blind Truth - News, Celebrity, Gossip and Investigations">
+
 </a>
 
 <button
@@ -1485,10 +1332,6 @@ INVESTIGATIONS
 
 </header>
 
-<!-- =====================================================
-     BREAKING TICKER
-===================================================== -->
-
 <div class="breaking-bar">
 
 <div class="breaking-label">
@@ -1516,10 +1359,6 @@ Question everything. Follow the evidence.
 </div>
 
 </div>
-
-<!-- =====================================================
-     TRENDING TAGS
-===================================================== -->
 
 <div class="trending-tags">
 
@@ -1552,10 +1391,6 @@ TRENDING:
 </a>
 
 </div>
-
-<!-- =====================================================
-     HERO
-===================================================== -->
 
 <section class="hero">
 
@@ -1601,10 +1436,6 @@ FOLLOW ON TIKTOK
 </div>
 
 </section>
-
-<!-- =====================================================
-     TRENDING NOW
-===================================================== -->
 
 <section
 class="section"
@@ -1718,10 +1549,6 @@ Another major story preview.
 
 </section>
 
-<!-- =====================================================
-     LATEST NEWS
-===================================================== -->
-
 <section
 class="section"
 id="news"
@@ -1813,10 +1640,6 @@ DEVELOPING
 
 </section>
 
-<!-- =====================================================
-     CELEBRITY
-===================================================== -->
-
 <section
 class="section"
 id="celebrity"
@@ -1899,10 +1722,6 @@ Story preview goes here.
 </div>
 
 </section>
-
-<!-- =====================================================
-     GOSSIP
-===================================================== -->
 
 <section
 class="section"
@@ -1987,10 +1806,6 @@ DISPUTED
 
 </section>
 
-<!-- =====================================================
-     MUSIC
-===================================================== -->
-
 <section
 class="section"
 id="music"
@@ -2048,10 +1863,6 @@ Latest music story preview.
 
 </section>
 
-<!-- =====================================================
-     VIRAL VIDEOS
-===================================================== -->
-
 <section
 class="section"
 id="viral"
@@ -2077,8 +1888,6 @@ Videos, posts and moments taking over social media.
 
 <div class="video-grid">
 
-<!-- YOUTUBE EXAMPLE -->
-
 <article class="video-card">
 
 <div class="video-frame">
@@ -2086,15 +1895,6 @@ Videos, posts and moments taking over social media.
 <div class="platform-badge">
 YOUTUBE
 </div>
-
-<!--
-PASTE A YOUTUBE EMBED HERE LATER:
-
-<iframe
-src="https://www.youtube.com/embed/VIDEO_ID"
-allowfullscreen>
-</iframe>
--->
 
 VIDEO PLACEHOLDER
 
@@ -2113,8 +1913,6 @@ Explain why the video is trending.
 </div>
 
 </article>
-
-<!-- TIKTOK / INSTAGRAM / X PLACEHOLDER -->
 
 <article class="video-card">
 
@@ -2142,8 +1940,6 @@ Paste the original public post here later.
 
 </article>
 
-<!-- DIRECT VIDEO UPLOAD EXAMPLE -->
-
 <article class="video-card">
 
 <div class="video-frame">
@@ -2151,16 +1947,6 @@ Paste the original public post here later.
 <div class="platform-badge">
 BLIND TRUTH VIDEO
 </div>
-
-<!--
-FOR YOUR OWN VIDEO FILE:
-
-<video
-controls
-playsinline
-src="your-video.mp4">
-</video>
--->
 
 YOUR VIDEO PLACEHOLDER
 
@@ -2185,10 +1971,6 @@ Your own uploaded video can appear here.
 </div>
 
 </section>
-
-<!-- =====================================================
-     COURT & CRIME
-===================================================== -->
 
 <section
 class="section"
@@ -2247,10 +2029,6 @@ ALLEGED / PENDING
 
 </section>
 
-<!-- =====================================================
-     INVESTIGATIONS
-===================================================== -->
-
 <section
 class="section investigations-section"
 id="investigations"
@@ -2308,10 +2086,6 @@ OPEN CASE FILE
 
 </section>
 
-<!-- =====================================================
-     TRUTH METER
-===================================================== -->
-
 <section class="section">
 
 <div class="section-inner">
@@ -2366,10 +2140,6 @@ FALSE
 
 </section>
 
-<!-- =====================================================
-     TIKTOK
-===================================================== -->
-
 <section class="section">
 
 <div class="section-inner">
@@ -2405,10 +2175,6 @@ rel="noopener noreferrer">
 
 </section>
 
-<!-- =====================================================
-     NEWSLETTER
-===================================================== -->
-
 <section class="section">
 
 <div class="section-inner">
@@ -2434,10 +2200,6 @@ NEWSLETTER COMING SOON
 </div>
 
 </section>
-
-<!-- =====================================================
-     FOOTER
-===================================================== -->
 
 <footer>
 
@@ -2512,13 +2274,7 @@ All rights reserved.
 
 </footer>
 
-<!-- =====================================================
-     JAVASCRIPT
-===================================================== -->
-
 <script>
-
-/* MOBILE MENU */
 
 const menuButton =
 document.getElementById("menuButton");
@@ -2534,9 +2290,6 @@ function () {
 
 }
 );
-
-
-/* MATRIX BACKGROUND */
 
 const canvas =
 document.getElementById("matrix");
@@ -2609,14 +2362,9 @@ function drawMatrix() {
         );
 
         ctx.fillText(
-
             character,
-
             i * fontSize,
-
-            drops[i] *
-            fontSize
-
+            drops[i] * fontSize
         );
 
         if (
