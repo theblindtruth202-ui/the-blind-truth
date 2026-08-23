@@ -2,69 +2,117 @@
 <html lang="en">
 
 <head>
-   <meta name="google-site-verification" content="_RCvea5xnx3tGhqx8Z1qYD7VLB3qBeYT7mWuwthCMOE" />
 
 <meta charset="UTF-8">
 
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="viewport"
+content="width=device-width, initial-scale=1.0">
 
-<title>The Blind Truth | News, Gossip, Culture & Investigations</title>
+<meta name="google-site-verification"
+content="_RCvea5xnx3tGhqx8Z1qYD7VLB3qBeYT7mWuwthCMOE">
+
+<title>
+The Blind Truth | News, Gossip, Culture & Investigations
+</title>
 
 <meta name="description"
 content="The Blind Truth investigates trending news, entertainment, gossip, rumors, hip-hop, viral claims, hidden history and controversial stories. Question everything. Follow the evidence.">
 
+<meta name="robots"
+content="index, follow, max-image-preview:large">
+
+<meta name="author"
+content="The Blind Truth">
+
+<meta name="keywords"
+content="The Blind Truth, investigations, fact checking, entertainment news, hip hop news, gossip, rumors, viral claims, evidence, hidden history">
+
+<meta name="theme-color"
+content="#050505">
+
+<meta name="color-scheme"
+content="dark">
+
+<link rel="canonical"
+href="https://theblindtruth202-ui.github.io/the-blind-truth/">
+
+<link rel="icon"
+type="image/png"
+href="blind-truth-logo.png">
+
+
+<!-- =====================================================
+     SOCIAL MEDIA SHARING
+===================================================== -->
+
 <meta property="og:title"
 content="The Blind Truth | News, Gossip, Culture & Investigations">
-   
 
 <meta property="og:description"
 content="Question everything. Follow the evidence.">
 
-<meta property="og:type" content="website">
-   
-<!-- SEO & SEARCH ENGINE SETTINGS -->
+<meta property="og:type"
+content="website">
 
-<link rel="canonical" href="https://theblindtruth202-ui.github.io/the-blind-truth/">
+<meta property="og:url"
+content="https://theblindtruth202-ui.github.io/the-blind-truth/">
 
-<meta name="robots" content="index, follow">
+<meta property="og:site_name"
+content="The Blind Truth">
 
-<meta name="author" content="The Blind Truth">
+<meta property="og:image"
+content="https://theblindtruth202-ui.github.io/the-blind-truth/blind-truth-logo.png">
 
-<meta name="keywords" content="The Blind Truth, investigations, fact checking, conspiracies, hidden history, entertainment news, hip hop news, viral claims, rumors, evidence">
+<meta property="og:image:alt"
+content="The Blind Truth logo">
 
-<!-- SOCIAL MEDIA SHARING -->
+<meta name="twitter:card"
+content="summary_large_image">
 
-<meta property="og:url" content="https://theblindtruth202-ui.github.io/the-blind-truth/">
+<meta name="twitter:title"
+content="The Blind Truth | News, Gossip, Culture & Investigations">
 
-<meta property="og:site_name" content="The Blind Truth">
+<meta name="twitter:description"
+content="Question everything. Follow the evidence.">
 
-<meta property="og:image" content="https://theblindtruth202-ui.github.io/the-blind-truth/blind-truth-logo.png">
+<meta name="twitter:image"
+content="https://theblindtruth202-ui.github.io/the-blind-truth/blind-truth-logo.png">
 
-<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image:alt"
+content="The Blind Truth logo">
 
-<meta name="twitter:title" content="The Blind Truth | News, Gossip, Culture & Investigations">
 
-<meta name="twitter:description" content="Question everything. Follow the evidence.">
+<!-- =====================================================
+     STRUCTURED DATA FOR GOOGLE
+===================================================== -->
 
-<meta name="twitter:image" content="https://theblindtruth202-ui.github.io/the-blind-truth/blind-truth-logo.png">
- <!-- STRUCTURED DATA FOR GOOGLE -->
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
-  "@type": "WebSite",
-  "name": "The Blind Truth",
-  "url": "https://theblindtruth202-ui.github.io/the-blind-truth/",
-  "description": "The Blind Truth investigates trending news, entertainment, gossip, rumors, hip-hop, viral claims, hidden history and controversial topics, separating documented facts from speculation.",
-  "publisher": {
-    "@type": "Organization",
-    "name": "The Blind Truth",
-    "logo": {
-      "@type": "ImageObject",
-      "url": "https://theblindtruth202-ui.github.io/the-blind-truth/blind-truth-logo.png"
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://theblindtruth202-ui.github.io/the-blind-truth/#organization",
+      "name": "The Blind Truth",
+      "url": "https://theblindtruth202-ui.github.io/the-blind-truth/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://theblindtruth202-ui.github.io/the-blind-truth/blind-truth-logo.png"
+      }
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://theblindtruth202-ui.github.io/the-blind-truth/#website",
+      "name": "The Blind Truth",
+      "url": "https://theblindtruth202-ui.github.io/the-blind-truth/",
+      "description": "The Blind Truth investigates trending news, entertainment, gossip, rumors, hip-hop, viral claims, hidden history and controversial topics while separating documented facts from speculation.",
+      "publisher": {
+        "@id": "https://theblindtruth202-ui.github.io/the-blind-truth/#organization"
+      }
     }
-  }
+  ]
 }
-</script>  
+</script>
 
 
 <style>
@@ -143,6 +191,32 @@ img {
 
 
 /* =====================================================
+   ACCESSIBILITY
+===================================================== */
+
+.skip-link {
+
+    position: absolute;
+    left: -9999px;
+    top: 10px;
+
+    background: var(--green);
+    color: #000;
+
+    padding: 10px 15px;
+
+    font-weight: 900;
+
+    z-index: 9999;
+}
+
+.skip-link:focus {
+
+    left: 10px;
+}
+
+
+/* =====================================================
    HEADER
 ===================================================== */
 
@@ -214,7 +288,7 @@ nav ul {
 
     display: flex;
 
-    gap: 20px;
+    gap: 18px;
 
     align-items: center;
 }
@@ -223,12 +297,13 @@ nav a {
 
     color: #ddd;
 
-    font-size: .84rem;
+    font-size: .82rem;
 
     font-weight: 800;
 }
 
-nav a:hover {
+nav a:hover,
+nav a:focus {
     color: var(--green);
 }
 
@@ -362,7 +437,9 @@ nav a:hover {
     transition: .2s ease;
 }
 
-.button:hover {
+.button:hover,
+.button:focus {
+
     transform: translateY(-2px);
 }
 
@@ -420,7 +497,7 @@ nav a:hover {
 
 
 /* =====================================================
-   TRENDING NOW
+   TRENDING
 ===================================================== */
 
 .trending-section {
@@ -503,34 +580,28 @@ nav a:hover {
 }
 
 .tag-yellow {
-
     color: #000;
     background: var(--yellow);
 }
 
 .tag-red {
-
     background: var(--red);
 }
 
 .tag-purple {
-
     background: var(--purple);
 }
 
 .tag-pink {
-
     background: var(--pink);
 }
 
 .tag-blue {
-
     background: var(--blue);
     color: #000;
 }
 
 .tag-green {
-
     background: var(--green);
     color: #000;
 }
@@ -705,7 +776,7 @@ nav a:hover {
 
 
 /* =====================================================
-   GOSSIP AND RUMORS
+   GOSSIP
 ===================================================== */
 
 .gossip-section {
@@ -787,6 +858,124 @@ nav a:hover {
     margin-top: auto;
 
     padding-top: 15px;
+}
+
+
+/* =====================================================
+   MUSIC RELEASE RADAR
+===================================================== */
+
+.music-section {
+
+    border-top:
+        1px solid
+        rgba(57,255,20,.2);
+
+    border-bottom:
+        1px solid
+        rgba(57,255,20,.2);
+
+    background:
+        linear-gradient(
+            180deg,
+            #050805,
+            #090909
+        );
+}
+
+.music-grid {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(2,1fr);
+
+    gap: 18px;
+}
+
+.music-card {
+
+    background:
+        linear-gradient(
+            145deg,
+            #131313,
+            #0a0a0a
+        );
+
+    border:
+        1px solid
+        var(--border);
+
+    border-left:
+        4px solid
+        var(--green);
+
+    border-radius: 16px;
+
+    padding: 24px;
+}
+
+.music-date {
+
+    color: var(--green);
+
+    font-size: .7rem;
+
+    font-weight: 1000;
+
+    letter-spacing: 1.3px;
+
+    margin-bottom: 8px;
+}
+
+.music-card h3 {
+
+    font-size: 1.6rem;
+
+    line-height: 1.1;
+
+    margin-bottom: 5px;
+}
+
+.album-title {
+
+    font-size: 1.1rem;
+
+    font-weight: 900;
+
+    margin-bottom: 12px;
+}
+
+.music-card p {
+
+    color: #bcbcbc;
+}
+
+.music-take {
+
+    grid-column: 1 / -1;
+
+    border:
+        1px solid
+        rgba(57,255,20,.5);
+
+    background:
+        rgba(57,255,20,.035);
+
+    border-radius: 16px;
+
+    padding: 24px;
+
+    margin-top: 8px;
+}
+
+.music-take strong {
+
+    display: block;
+
+    color: var(--green);
+
+    margin-bottom: 7px;
 }
 
 
@@ -1100,7 +1289,9 @@ nav a:hover {
 }
 
 .false {
+
     background: var(--red);
+
     color: #fff;
 }
 
@@ -1110,7 +1301,6 @@ nav a:hover {
 ===================================================== */
 
 .about {
-
     max-width: 850px;
 }
 
@@ -1229,10 +1419,16 @@ footer strong {
     .trending-grid,
     .developing-grid,
     .gossip-grid,
+    .music-grid,
     .featured,
     .verdict-layout {
 
         grid-template-columns: 1fr;
+    }
+
+    .music-take {
+
+        grid-column: auto;
     }
 
     .cards {
@@ -1302,6 +1498,14 @@ footer strong {
 <body>
 
 
+<a class="skip-link"
+href="#main-content">
+
+Skip to main content
+
+</a>
+
+
 <!-- =====================================================
      HEADER
 ===================================================== -->
@@ -1310,7 +1514,9 @@ footer strong {
 
 <div class="container nav">
 
-<a href="index.html" class="brand">
+<a href="./"
+class="brand"
+aria-label="The Blind Truth homepage">
 
 <img
 src="blind-truth-logo.png"
@@ -1318,34 +1524,53 @@ alt="The Blind Truth logo"
 class="logo">
 
 <div class="brand-text">
-THE BLIND <span>TRUTH</span>
+
+THE BLIND
+<span>TRUTH</span>
+
 </div>
 
 </a>
 
 
-<nav>
+<nav aria-label="Main navigation">
 
 <ul>
 
 <li>
-<a href="#trending">Trending</a>
+<a href="#trending">
+Trending
+</a>
 </li>
 
 <li>
-<a href="#developing">Developing</a>
+<a href="#developing">
+Developing
+</a>
 </li>
 
 <li>
-<a href="#gossip">Gossip</a>
+<a href="#gossip">
+Gossip
+</a>
 </li>
 
 <li>
-<a href="#investigations">Investigations</a>
+<a href="#music">
+Music
+</a>
 </li>
 
 <li>
-<a href="#about">About</a>
+<a href="#investigations">
+Investigations
+</a>
+</li>
+
+<li>
+<a href="#about">
+About
+</a>
 </li>
 
 </ul>
@@ -1361,20 +1586,27 @@ THE BLIND <span>TRUTH</span>
      NEWS TICKER
 ===================================================== -->
 
-<div class="news-ticker">
+<div class="news-ticker"
+aria-label="Trending topics">
 
 <div class="ticker-label">
+
 TRENDING
+
 </div>
 
 <div class="ticker-text">
 
-Jay-Z appeal • Tupac murder trial • Fat Papi goes viral •
+Jay-Z appeal • Tupac murder trial •
+Fat Papi goes viral • New hip-hop releases •
 Entertainment rumors • Fact checks • Developing stories
 
 </div>
 
 </div>
+
+
+<main id="main-content">
 
 
 <!-- =====================================================
@@ -1386,7 +1618,10 @@ Entertainment rumors • Fact checks • Developing stories
 <div class="container">
 
 <div class="eyebrow">
-Question Everything. Follow the Evidence.
+
+Question Everything.
+Follow the Evidence.
+
 </div>
 
 <h1>
@@ -1451,7 +1686,9 @@ id="trending">
 <div>
 
 <div class="eyebrow yellow-eyebrow">
+
 WHAT EVERYBODY'S TALKING ABOUT
+
 </div>
 
 <h2>
@@ -1475,8 +1712,6 @@ what can actually be documented.
 <div class="trending-grid">
 
 
-<!-- TRENDING 01 — JAY-Z -->
-
 <article class="trending-main">
 
 <div class="story-number">
@@ -1484,7 +1719,9 @@ what can actually be documented.
 </div>
 
 <span class="story-tag tag-yellow">
+
 COURT • CELEBRITY • HIP-HOP
+
 </span>
 
 <h3>
@@ -1531,7 +1768,9 @@ and what courts have actually established.
 </p>
 
 <div class="story-status">
+
 STATUS: DEVELOPING
+
 </div>
 
 </article>
@@ -1540,8 +1779,6 @@ STATUS: DEVELOPING
 <div class="trending-small-wrap">
 
 
-<!-- TRENDING 02 — TUPAC -->
-
 <article class="trending-small">
 
 <div class="story-number">
@@ -1549,7 +1786,9 @@ STATUS: DEVELOPING
 </div>
 
 <span class="story-tag tag-red">
+
 COURT • CRIME • HIP-HOP
+
 </span>
 
 <h3>
@@ -1584,13 +1823,13 @@ and conspiracy theories inside a courtroom.
 </p>
 
 <div class="story-status">
+
 STATUS: TRIAL UNDERWAY
+
 </div>
 
 </article>
 
-
-<!-- TRENDING 03 — FAT PAPI -->
 
 <article class="trending-small">
 
@@ -1599,7 +1838,9 @@ STATUS: TRIAL UNDERWAY
 </div>
 
 <span class="story-tag tag-purple">
+
 MUSIC • VIRAL
+
 </span>
 
 <h3>
@@ -1630,7 +1871,9 @@ to reach the chart.
 </p>
 
 <div class="story-status">
+
 STATUS: TRENDING
+
 </div>
 
 </article>
@@ -1661,14 +1904,19 @@ id="developing">
 <div>
 
 <div class="eyebrow">
+
 DEVELOPING & FACT CHECK
+
 </div>
 
 <h2>
+
 Stories We're Watching
+
 </h2>
 
 </div>
+
 
 <p class="section-description">
 
@@ -1684,12 +1932,12 @@ despite the central claim being false.
 <div class="developing-grid">
 
 
-<!-- DEVELOPING 01 — TRAVIS KELCE -->
-
 <article class="developing-card">
 
 <span class="story-tag tag-red">
+
 VIRAL CLAIM • FACT CHECK
+
 </span>
 
 <h3>
@@ -1711,8 +1959,6 @@ television confrontation.
 
 <p>
 
-The problem?
-
 The supposed confrontation and lawsuit
 were fabricated.
 
@@ -1724,18 +1970,20 @@ people believed it.
 </p>
 
 <div class="verdict-false">
+
 VERDICT: FALSE / DEBUNKED
+
 </div>
 
 </article>
 
 
-<!-- DEVELOPING 02 — ALIX EARLE -->
-
 <article class="developing-card">
 
 <span class="story-tag tag-blue">
+
 ENTERTAINMENT • STREAMING
+
 </span>
 
 <h3>
@@ -1773,7 +2021,9 @@ is replacing traditional celebrity?
 </p>
 
 <div class="status-developing">
+
 STATUS: DEVELOPING
+
 </div>
 
 </article>
@@ -1802,14 +2052,19 @@ id="gossip">
 <div>
 
 <div class="eyebrow gossip-eyebrow">
+
 WHAT'S BEING SAID
+
 </div>
 
 <h2>
+
 Gossip & Rumors
+
 </h2>
 
 </div>
+
 
 <p class="section-description">
 
@@ -1827,12 +2082,12 @@ and what we actually know.
 <div class="gossip-grid">
 
 
-<!-- GOSSIP 01 -->
-
 <article class="gossip-card">
 
 <span class="story-tag tag-pink">
+
 HIP-HOP BEEF
+
 </span>
 
 <h3>
@@ -1865,18 +2120,20 @@ a bigger war than actually exists?
 </p>
 
 <div class="rumor-status">
+
 CONFIRMED TENSION • RUMORED ESCALATION
+
 </div>
 
 </article>
 
 
-<!-- GOSSIP 02 -->
-
 <article class="gossip-card">
 
 <span class="story-tag tag-pink">
+
 ROMANCE RUMORS
+
 </span>
 
 <h3>
@@ -1907,18 +2164,20 @@ automatically proof of a relationship.
 </p>
 
 <div class="rumor-status">
+
 STATUS: ROMANCE RUMORS
+
 </div>
 
 </article>
 
 
-<!-- GOSSIP 03 -->
-
 <article class="gossip-card">
 
 <span class="story-tag tag-pink">
+
 BEEF RUMORS
+
 </span>
 
 <h3>
@@ -1949,10 +2208,360 @@ before either artist said it did?
 </p>
 
 <div class="rumor-status">
+
 STATUS: BEEF SPECULATION
+
 </div>
 
 </article>
+
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- =====================================================
+     HIP-HOP RELEASE RADAR
+===================================================== -->
+
+<section
+class="section music-section"
+id="music">
+
+<div class="container">
+
+
+<div class="section-title-row">
+
+<div>
+
+<div class="eyebrow">
+
+THE BLIND TRUTH • MUSIC WATCH
+
+</div>
+
+<h2>
+
+Hip-Hop Release Radar
+
+</h2>
+
+</div>
+
+
+<p class="section-description">
+
+A quick look at some of the hip-hop
+projects released Friday,
+August 21, 2026.
+
+</p>
+
+</div>
+
+
+<div class="music-grid">
+
+
+<article class="music-card">
+
+<div class="music-date">
+
+FRIDAY • AUGUST 21, 2026
+
+</div>
+
+<h3>
+Rapsody
+</h3>
+
+<div class="album-title">
+
+God Gotta Afro &amp; Gold Hoops
+
+</div>
+
+<p>
+
+The North Carolina lyricist returns
+with her fifth studio album.
+Across 16 tracks, Rapsody continues
+putting sharp writing, identity,
+womanhood and reflection at the center
+of her work.
+
+</p>
+
+</article>
+
+
+<article class="music-card">
+
+<div class="music-date">
+
+FRIDAY • AUGUST 21, 2026
+
+</div>
+
+<h3>
+
+Denzel Curry &amp; Kenneth Blume
+
+</h3>
+
+<div class="album-title">
+
+II
+
+</div>
+
+<p>
+
+Denzel Curry reconnects with producer
+Kenneth Blume, formerly known professionally
+as Kenny Beats, for another compact
+collaborative project built around
+Curry's energetic delivery and
+Blume's production.
+
+</p>
+
+</article>
+
+
+<article class="music-card">
+
+<div class="music-date">
+
+FRIDAY • AUGUST 21, 2026
+
+</div>
+
+<h3>
+
+The Game
+
+</h3>
+
+<div class="album-title">
+
+The Documentary III
+
+</div>
+
+<p>
+
+The Compton veteran returns to
+one of the most recognizable names
+in his catalog, extending the
+Documentary series more than two
+decades after the original helped
+establish his place in West Coast rap.
+
+</p>
+
+</article>
+
+
+<article class="music-card">
+
+<div class="music-date">
+
+FRIDAY • AUGUST 21, 2026
+
+</div>
+
+<h3>
+
+$NOT
+
+</h3>
+
+<div class="album-title">
+
+HIGH+RISK
+
+</div>
+
+<p>
+
+$NOT continues operating in the darker,
+alternative side of modern hip-hop,
+bringing his understated delivery
+and underground sensibility to
+another full project.
+
+</p>
+
+</article>
+
+
+<article class="music-card">
+
+<div class="music-date">
+
+FRIDAY • AUGUST 21, 2026
+
+</div>
+
+<h3>
+
+Payroll Giovanni
+
+</h3>
+
+<div class="album-title">
+
+M.O.B. (Mind My Own Business)
+
+</div>
+
+<p>
+
+The Detroit rapper delivers an
+11-track project with no guest features,
+keeping the focus on his steady flows,
+money-minded writing and the regional
+sound that has defined much of his work.
+
+</p>
+
+</article>
+
+
+<article class="music-card">
+
+<div class="music-date">
+
+FRIDAY • AUGUST 21, 2026
+
+</div>
+
+<h3>
+
+Premo Rice
+
+</h3>
+
+<div class="album-title">
+
+Another Night at The Chateau
+
+</div>
+
+<p>
+
+Premo Rice returns with a
+15-track release featuring collaborators
+including Larry June, Jay Worthy,
+Akeem Ali, ELHAE and Foggieraw,
+while maintaining his laid-back,
+player-oriented style.
+
+</p>
+
+</article>
+
+
+<article class="music-card">
+
+<div class="music-date">
+
+FRIDAY • AUGUST 21, 2026
+
+</div>
+
+<h3>
+
+Mike Shabb
+
+</h3>
+
+<div class="album-title">
+
+Sewaside IV
+
+</div>
+
+<p>
+
+The Montreal rapper and producer
+continues his Sewaside series,
+combining his work behind the boards
+with the underground rap style
+that has helped build his following.
+
+</p>
+
+</article>
+
+
+<article class="music-card">
+
+<div class="music-date">
+
+FRIDAY • AUGUST 21, 2026
+
+</div>
+
+<h3>
+
+Sean Leon
+
+</h3>
+
+<div class="album-title">
+
+TO:SUMMER
+
+</div>
+
+<p>
+
+The Toronto artist continues moving
+between rap, experimental music
+and atmospheric production with
+a project connected to his broader
+GOD'S ALGORITHM creative world.
+
+</p>
+
+</article>
+
+
+<div class="music-take">
+
+<strong>
+
+THE BLIND TRUTH TAKE
+
+</strong>
+
+<p>
+
+This release week stretches across
+several generations and corners
+of hip-hop.
+
+Rapsody brings the lyricism.
+The Game carries veteran West Coast history.
+Denzel Curry continues experimenting,
+while independent and underground artists
+keep bringing different sounds to the table.
+
+The projects are out.
+
+Now the listeners decide what
+still has people talking after
+the weekend is over.
+
+</p>
+
+</div>
 
 
 </div>
@@ -1974,7 +2583,9 @@ id="investigations">
 
 
 <span class="featured-label">
+
 FEATURED INVESTIGATION
+
 </span>
 
 
@@ -1984,7 +2595,9 @@ FEATURED INVESTIGATION
 <div class="featured-content">
 
 <div class="investigation-number">
+
 INVESTIGATION 001
+
 </div>
 
 <h2>
@@ -2026,10 +2639,13 @@ READ FULL INVESTIGATION →
 </div>
 
 
-<div class="featured-side">
+<div class="featured-side"
+aria-hidden="true">
 
 <div class="question-mark">
+
 ?
+
 </div>
 
 </div>
@@ -2056,14 +2672,19 @@ READ FULL INVESTIGATION →
 <div>
 
 <div class="eyebrow">
+
 THE FILES
+
 </div>
 
 <h2>
+
 Investigations
+
 </h2>
 
 </div>
+
 
 <p class="section-description">
 
@@ -2087,7 +2708,9 @@ Verdict second.
 </div>
 
 <div class="card-category">
+
 ENTERTAINMENT / CULTURE
+
 </div>
 
 <h3>
@@ -2126,11 +2749,15 @@ Read Investigation →
 </div>
 
 <div class="card-category">
+
 COMING SOON
+
 </div>
 
 <h3>
+
 Next Blind Truth Investigation
+
 </h3>
 
 <p>
@@ -2142,7 +2769,9 @@ deserves a deeper examination.
 </p>
 
 <span class="card-link">
+
 Coming Soon →
+
 </span>
 
 </article>
@@ -2155,11 +2784,15 @@ Coming Soon →
 </div>
 
 <div class="card-category">
+
 FACT CHECK
+
 </div>
 
 <h3>
+
 Viral Doesn't Mean True
+
 </h3>
 
 <p>
@@ -2172,7 +2805,9 @@ into internet “fact.”
 </p>
 
 <span class="card-link">
+
 Coming Soon →
+
 </span>
 
 </article>
@@ -2201,11 +2836,15 @@ id="categories">
 <div>
 
 <div class="eyebrow">
+
 EXPLORE
+
 </div>
 
 <h2>
+
 Follow the Questions
+
 </h2>
 
 </div>
@@ -2223,8 +2862,10 @@ Celebrity & Culture
 </h3>
 
 <p>
+
 Entertainment, celebrities
 and public controversies.
+
 </p>
 
 </div>
@@ -2237,8 +2878,10 @@ Music & Hip-Hop
 </h3>
 
 <p>
-Artists, beefs,
+
+Artists, releases, beefs,
 industry stories and culture.
+
 </p>
 
 </div>
@@ -2251,8 +2894,10 @@ Gossip & Rumors
 </h3>
 
 <p>
+
 What's being said versus
 what can actually be confirmed.
+
 </p>
 
 </div>
@@ -2265,8 +2910,10 @@ Court & Crime
 </h3>
 
 <p>
+
 Trials, lawsuits,
 charges and court battles.
+
 </p>
 
 </div>
@@ -2279,8 +2926,10 @@ Conspiracies
 </h3>
 
 <p>
+
 Claims, theories,
 evidence and unanswered questions.
+
 </p>
 
 </div>
@@ -2293,8 +2942,10 @@ Hidden History
 </h3>
 
 <p>
+
 Forgotten records,
 events and overlooked stories.
+
 </p>
 
 </div>
@@ -2307,8 +2958,10 @@ Government
 </h3>
 
 <p>
+
 Policy, records,
 power and accountability.
+
 </p>
 
 </div>
@@ -2321,8 +2974,10 @@ Viral
 </h3>
 
 <p>
+
 The stories taking over
 the internet right now.
+
 </p>
 
 </div>
@@ -2335,8 +2990,10 @@ Fact Checks
 </h3>
 
 <p>
+
 Separating evidence
 from misinformation.
+
 </p>
 
 </div>
@@ -2363,12 +3020,16 @@ id="verdicts">
 <div>
 
 <div class="eyebrow">
+
 THE BLIND TRUTH STANDARD
+
 </div>
 
 <h2>
+
 Not Everything Is Simply
 True or False
+
 </h2>
 
 <p>
@@ -2433,11 +3094,15 @@ id="about">
 
 
 <div class="eyebrow">
+
 WHY THE BLIND TRUTH EXISTS
+
 </div>
 
 <h2>
+
 Evidence Before Assumption.
+
 </h2>
 
 
@@ -2512,15 +3177,19 @@ for yourself.
 </section>
 
 
+</main>
+
+
 <!-- =====================================================
-     BUTTONDOWN
+     BUTTONDOWN NEWSLETTER
 ===================================================== -->
 
 <section class="newsletter">
 
-
 <h2>
+
 Don't Miss the Next Story.
+
 </h2>
 
 <p>
@@ -2528,6 +3197,7 @@ Don't Miss the Next Story.
 Get Blind Truth investigations,
 trending stories,
 gossip,
+music updates,
 fact checks
 and evidence breakdowns.
 
@@ -2544,7 +3214,6 @@ JOIN THE BLIND TRUTH NEWSLETTER →
 
 </a>
 
-
 </section>
 
 
@@ -2555,12 +3224,16 @@ JOIN THE BLIND TRUTH NEWSLETTER →
 <footer>
 
 <strong>
+
 THE BLIND TRUTH
+
 </strong>
 
 <p>
+
 Question Everything.
 Follow the Evidence.
+
 </p>
 
 <p style="margin-top:12px;font-size:.8rem;">
@@ -2574,4 +3247,5 @@ Evidence before assumption.
 
 
 </body>
-    </html>
+
+</html>
