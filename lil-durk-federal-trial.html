@@ -1,0 +1,885 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Lil Durk Federal Trial Begins | The Blind Truth</title>
+
+<meta name="description"
+content="Lil Durk's federal murder-for-hire trial is underway in Los Angeles. The Blind Truth examines what prosecutors allege, what the defense says and what the government still has to prove.">
+
+<link rel="canonical"
+href="https://theblindtruth202-ui.github.io/the-blind-truth/lil-durk-federal-trial.html">
+
+<meta name="robots" content="index, follow">
+
+<meta name="author" content="The Blind Truth">
+
+<meta property="og:title"
+content="Lil Durk Federal Trial Begins | The Blind Truth">
+
+<meta property="og:description"
+content="Prosecutors allege revenge and murder-for-hire. Lil Durk's defense says he had nothing to do with the plot. Here's what the evidence must prove.">
+
+<meta property="og:type" content="article">
+
+<meta property="og:url"
+content="https://theblindtruth202-ui.github.io/the-blind-truth/lil-durk-federal-trial.html">
+
+<meta property="og:site_name"
+content="The Blind Truth">
+
+<meta property="og:image"
+content="https://theblindtruth202-ui.github.io/the-blind-truth/blind-truth-logo.png">
+
+<style>
+
+*{
+box-sizing:border-box;
+margin:0;
+padding:0;
+}
+
+:root{
+--black:#050505;
+--panel:#111111;
+--white:#ffffff;
+--muted:#aaaaaa;
+--border:#303030;
+--green:#39ff14;
+--red:#ff2a2a;
+--yellow:#ffe600;
+--orange:#ff7a00;
+}
+
+body{
+background:#050505;
+color:#ffffff;
+font-family:Arial,Helvetica,sans-serif;
+line-height:1.7;
+}
+
+a{
+color:inherit;
+text-decoration:none;
+}
+
+.container{
+width:min(900px,92%);
+margin:auto;
+}
+
+/* HEADER */
+
+header{
+border-bottom:1px solid rgba(57,255,20,.25);
+background:#050505;
+padding:14px 0;
+}
+
+.nav{
+display:flex;
+align-items:center;
+justify-content:space-between;
+gap:20px;
+}
+
+.brand{
+display:flex;
+align-items:center;
+gap:12px;
+font-weight:1000;
+}
+
+.logo{
+width:48px;
+height:48px;
+border-radius:50%;
+object-fit:cover;
+border:1px solid rgba(57,255,20,.4);
+}
+
+.brand span{
+color:var(--green);
+}
+
+.home-link{
+color:#ccc;
+font-size:.85rem;
+font-weight:bold;
+}
+
+/* DEVELOPING BAR */
+
+.breaking{
+background:var(--red);
+color:white;
+text-align:center;
+padding:9px;
+font-size:.78rem;
+font-weight:1000;
+letter-spacing:2px;
+}
+
+/* ARTICLE */
+
+article{
+padding:65px 0 90px;
+}
+
+.category{
+color:var(--red);
+font-size:.78rem;
+font-weight:1000;
+letter-spacing:2px;
+margin-bottom:14px;
+}
+
+h1{
+font-size:clamp(2.7rem,8vw,5.3rem);
+line-height:.98;
+letter-spacing:-2px;
+margin-bottom:22px;
+}
+
+.subtitle{
+font-size:clamp(1.1rem,3vw,1.4rem);
+color:#c9c9c9;
+margin-bottom:25px;
+}
+
+.meta{
+border-top:1px solid var(--border);
+border-bottom:1px solid var(--border);
+padding:15px 0;
+color:#999;
+font-size:.85rem;
+margin-bottom:40px;
+}
+
+.article-body p{
+font-size:1.08rem;
+color:#d2d2d2;
+margin-bottom:24px;
+}
+
+.article-body h2{
+font-size:2rem;
+line-height:1.15;
+margin:45px 0 18px;
+}
+
+.lead{
+font-size:1.25rem !important;
+color:white !important;
+}
+
+/* STATUS BOX */
+
+.status-box{
+background:#12100a;
+border:1px solid rgba(255,230,0,.35);
+border-left:5px solid var(--yellow);
+border-radius:12px;
+padding:25px;
+margin:35px 0;
+}
+
+.status-box strong{
+display:block;
+color:var(--yellow);
+margin-bottom:10px;
+letter-spacing:1px;
+}
+
+/* ALLEGATION BOX */
+
+.allegation-box{
+background:#140909;
+border:1px solid rgba(255,42,42,.3);
+border-radius:14px;
+padding:28px;
+margin:35px 0;
+}
+
+.allegation-box h2{
+color:var(--red);
+margin-top:0;
+}
+
+/* DEFENSE BOX */
+
+.defense-box{
+background:#091209;
+border:1px solid rgba(57,255,20,.28);
+border-radius:14px;
+padding:28px;
+margin:35px 0;
+}
+
+.defense-box h2{
+color:var(--green);
+margin-top:0;
+}
+
+/* FACT VS ALLEGATION */
+
+.evidence-grid{
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:18px;
+margin:35px 0;
+}
+
+.evidence-card{
+background:#101010;
+border:1px solid var(--border);
+border-radius:14px;
+padding:25px;
+}
+
+.evidence-card h3{
+margin-bottom:15px;
+font-size:1.25rem;
+}
+
+.confirmed h3{
+color:var(--green);
+}
+
+.alleged h3{
+color:var(--yellow);
+}
+
+.evidence-card p{
+font-size:1rem;
+}
+
+/* BLIND TRUTH TAKE */
+
+.truth-take{
+background:#0b1209;
+border:1px solid rgba(57,255,20,.3);
+border-radius:16px;
+padding:28px;
+margin-top:45px;
+}
+
+.truth-take strong{
+color:var(--green);
+font-size:.8rem;
+letter-spacing:2px;
+}
+
+.truth-take p{
+margin-top:12px;
+margin-bottom:0;
+}
+
+.sources{
+margin-top:45px;
+padding-top:25px;
+border-top:1px solid var(--border);
+color:#999;
+font-size:.9rem;
+}
+
+.sources h3{
+color:white;
+margin-bottom:12px;
+}
+
+footer{
+border-top:1px solid var(--border);
+padding:35px 20px;
+text-align:center;
+color:#777;
+}
+
+footer strong{
+color:var(--green);
+}
+
+@media(max-width:650px){
+
+.evidence-grid{
+grid-template-columns:1fr;
+}
+
+article{
+padding-top:45px;
+}
+
+h1{
+letter-spacing:-1px;
+}
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<header>
+
+<div class="container nav">
+
+<a href="index.html" class="brand">
+
+<img
+src="blind-truth-logo.png"
+alt="The Blind Truth logo"
+class="logo">
+
+<div>
+THE BLIND <span>TRUTH</span>
+</div>
+
+</a>
+
+<a href="index.html" class="home-link">
+← BACK TO HOME
+</a>
+
+</div>
+
+</header>
+
+<div class="breaking">
+TRIAL WATCH • DEVELOPING STORY
+</div>
+
+<article>
+
+<div class="container">
+
+<div class="category">
+HIP-HOP • COURT • FEDERAL TRIAL
+</div>
+
+<h1>
+Lil Durk's Federal Trial Is Underway
+</h1>
+
+<p class="subtitle">
+
+Prosecutors say revenge over King Von's death
+led to a murder-for-hire plot targeting Quando Rondo.
+
+Lil Durk's defense says the government has the wrong man.
+
+Now a federal jury has to decide what the evidence
+actually proves.
+
+</p>
+
+<div class="meta">
+
+THE BLIND TRUTH • AUGUST 25, 2026 • TRIAL DEVELOPING
+
+</div>
+
+<div class="article-body">
+
+<p class="lead">
+
+The federal trial that could determine the future
+of Grammy-winning Chicago rapper Lil Durk
+has officially begun in Los Angeles.
+
+</p>
+
+<p>
+
+Durk, whose legal name is Durk Devontay Banks,
+has pleaded not guilty to federal charges connected
+to an alleged murder-for-hire plot targeting rapper
+Quando Rondo.
+
+</p>
+
+<p>
+
+The intended target survived.
+
+His cousin, 24-year-old
+Saviay'a “Lul Pab” Robinson, did not.
+
+</p>
+
+<div class="status-box">
+
+<strong>IMPORTANT: PRESUMPTION OF INNOCENCE</strong>
+
+Lil Durk has not been convicted in this case.
+
+The government's accusations are allegations.
+
+The prosecution must prove the charges against him
+beyond a reasonable doubt.
+
+</div>
+
+<h2>
+What Happened in Los Angeles?
+</h2>
+
+<p>
+
+The case centers on an August 19, 2022 shooting
+near the Beverly Center in Los Angeles.
+
+</p>
+
+<p>
+
+Federal prosecutors say members and associates
+of Durk's Only the Family, or OTF, collective
+traveled from Chicago to Los Angeles after learning
+that Quando Rondo — whose legal name is
+Tyquian Bowman — was in the city.
+
+</p>
+
+<p>
+
+Prosecutors allege members of the group tracked
+Bowman before gunfire erupted near a gas station.
+
+Bowman survived.
+
+His cousin Robinson was struck and killed.
+
+</p>
+
+<h2>
+Why Prosecutors Say It Happened
+</h2>
+
+<p>
+
+To understand the government's theory,
+the story goes back nearly two years earlier.
+
+</p>
+
+<p>
+
+In November 2020, Chicago rapper
+Dayvon “King Von” Bennett was killed following
+a confrontation outside an Atlanta nightclub.
+
+</p>
+
+<p>
+
+King Von was closely associated with Durk.
+
+Federal prosecutors now argue that his death
+provided the motive for what happened in
+Los Angeles in 2022.
+
+</p>
+
+<div class="allegation-box">
+
+<h2>
+THE PROSECUTION'S CASE
+</h2>
+
+<p>
+
+Assistant U.S. Attorney Daniel Weiner told jurors
+during opening statements that Durk became
+consumed with revenge following King Von's death.
+
+</p>
+
+<p>
+
+According to prosecutors, Durk allegedly used
+his money and influence to facilitate a plot
+to locate and kill Quando Rondo.
+
+</p>
+
+<p>
+
+The government alleges Durk communicated using
+coded language and offered money in connection
+with targeting Bowman.
+
+</p>
+
+<p>
+
+Prosecutors are expected to rely on communications,
+financial evidence, travel records, surveillance,
+videos, witness testimony and other evidence
+to try to connect Durk to the alleged plot.
+
+</p>
+
+</div>
+
+<h2>
+The Defense Says the Government Has It Wrong
+</h2>
+
+<p>
+
+Durk's attorneys presented a dramatically
+different story to the jury.
+
+</p>
+
+<p>
+
+Defense attorney Marissa Goldberg told jurors
+that Durk had nothing to do with the murder plot.
+
+</p>
+
+<p>
+
+Instead, the defense has pointed toward
+Kavon Grant, a former personal assistant to Durk
+who has pleaded guilty and is cooperating
+with federal prosecutors.
+
+</p>
+
+<div class="defense-box">
+
+<h2>
+THE DEFENSE'S CASE
+</h2>
+
+<p>
+
+Durk's defense argues that Grant was responsible
+for important logistics surrounding the events,
+including hotels, vehicles and the purchase
+of ski masks.
+
+</p>
+
+<p>
+
+The defense contends that after becoming
+a cooperating witness, Grant had an incentive
+to minimize his own responsibility and provide
+prosecutors with someone more prominent.
+
+</p>
+
+<p>
+
+The defense also disputes the government's
+murder-for-hire theory by questioning where
+the alleged payment is.
+
+</p>
+
+<p>
+
+Their position is straightforward:
+
+Durk did not order the murder,
+did not participate in the shooting
+and should be found not guilty.
+
+</p>
+
+</div>
+
+<h2>
+The Cooperating Witnesses Could Be Crucial
+</h2>
+
+<p>
+
+One of the biggest battles in this trial
+may involve witnesses who were themselves
+connected to the alleged conspiracy.
+
+</p>
+
+<p>
+
+Grant has pleaded guilty and agreed
+to cooperate with the government.
+
+Other alleged co-conspirators have also entered
+plea agreements and are expected to testify.
+
+</p>
+
+<p>
+
+That creates an important question for the jury.
+
+</p>
+
+<p>
+
+Are cooperating witnesses providing the inside story
+of what actually happened?
+
+Or are they shifting responsibility in hopes
+of helping themselves?
+
+</p>
+
+<p>
+
+The jury will have to evaluate their testimony
+alongside the government's physical,
+digital and documentary evidence.
+
+</p>
+
+<h2>
+Rap Music Is Entering the Courtroom Too
+</h2>
+
+<p>
+
+The case has also revived a controversial question:
+
+When should an artist's music be used
+as evidence in a criminal trial?
+
+</p>
+
+<p>
+
+The judge has allowed prosecutors to introduce
+certain Lil Durk songs and videos,
+including material the government argues
+helps establish motive.
+
+</p>
+
+<p>
+
+The defense argues that Durk's lyrics are art
+and performance rather than literal admissions
+of criminal conduct.
+
+</p>
+
+<p>
+
+That distinction could become one of the most
+closely watched parts of the case.
+
+</p>
+
+<h2>
+What Is Proven — and What Is Alleged?
+</h2>
+
+<div class="evidence-grid">
+
+<div class="evidence-card confirmed">
+
+<h3>DOCUMENTED</h3>
+
+<p>
+
+Saviay'a Robinson was killed in the
+August 2022 Los Angeles shooting.
+
+</p>
+
+<p>
+
+Quando Rondo was present and survived.
+
+</p>
+
+<p>
+
+Lil Durk has been federally charged.
+
+</p>
+
+<p>
+
+He has pleaded not guilty.
+
+</p>
+
+<p>
+
+Several other defendants have entered plea agreements.
+
+</p>
+
+<p>
+
+A jury has been selected and the trial
+is now underway.
+
+</p>
+
+</div>
+
+<div class="evidence-card alleged">
+
+<h3>THE GOVERNMENT MUST PROVE</h3>
+
+<p>
+
+That Durk ordered or knowingly participated
+in the alleged murder-for-hire conspiracy.
+
+</p>
+
+<p>
+
+That money or resources attributed to him
+were knowingly provided to further the plot.
+
+</p>
+
+<p>
+
+That communications prosecutors attribute
+to the conspiracy mean what the government
+says they mean.
+
+</p>
+
+<p>
+
+That cooperating witnesses are credible
+where their testimony implicates Durk.
+
+</p>
+
+</div>
+
+</div>
+
+<h2>
+Why This Trial Matters Beyond Lil Durk
+</h2>
+
+<p>
+
+There is obviously a massive amount at stake
+for Durk personally.
+
+A conviction on the most serious charges
+could mean life in federal prison.
+
+</p>
+
+<p>
+
+But the case also touches several larger issues
+that have followed hip-hop into courtrooms
+for decades.
+
+</p>
+
+<p>
+
+How should rap lyrics be interpreted?
+
+How much weight should juries give
+cooperating witnesses?
+
+Where does an artist's public persona end
+and evidence of actual intent begin?
+
+And most importantly:
+
+Can prosecutors connect the person accused
+of ordering a crime to the people
+who allegedly carried it out?
+
+</p>
+
+<div class="truth-take">
+
+<strong>THE BLIND TRUTH TAKE</strong>
+
+<p>
+
+This is exactly the kind of case where people
+can decide what they believe before the evidence
+ever reaches the jury.
+
+Durk's fans may believe he's innocent.
+
+People who read the indictment may already
+believe he's guilty.
+
+Neither one is the legal standard.
+
+A headline isn't a conviction.
+A rap lyric isn't automatically a confession.
+And a cooperating witness isn't automatically
+telling the truth or lying simply because
+he took a deal.
+
+The question is whether prosecutors can connect
+Durk to this alleged murder-for-hire plot
+with evidence strong enough to prove the charges
+beyond a reasonable doubt.
+
+That's what this trial is supposed to determine.
+
+</p>
+
+</div>
+
+<div class="sources">
+
+<h3>Evidence & Reporting</h3>
+
+<p>
+
+This developing article is based on federal case
+reporting, court proceedings and reporting from
+the Los Angeles Times and City News Service/MyNewsLA.
+
+The Blind Truth will update the story as testimony,
+evidence and rulings emerge during the trial.
+
+</p>
+
+</div>
+
+</div>
+
+</div>
+
+</article>
+
+<footer>
+
+<strong>THE BLIND TRUTH</strong>
+
+<p>
+Question Everything. Follow the Evidence.
+</p>
+
+<p style="margin-top:10px;font-size:.8rem;">
+© 2026 The Blind Truth.
+</p>
+
+</footer>
+
+</body>
+
+</html>
