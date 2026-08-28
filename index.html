@@ -862,6 +862,642 @@ dialog::backdrop {
         padding:
         30px;
     }
+}/* =========================================================
+   THE BLIND TRUTH — URBAN / STREET VISUAL UPGRADE
+   Paste this at the BOTTOM of your existing <style> block.
+   ========================================================= */
+
+:root{
+  --street-black:#050505;
+  --street-panel:#111111;
+  --street-green:#63ff36;
+  --street-red:#ff3434;
+  --street-yellow:#ffd93d;
+  --street-blue:#39d7ff;
+  --street-purple:#a86bff;
+  --street-white:#f7f7f7;
+  --street-gray:#b8b8b8;
+}
+
+/* ---------- GLOBAL STREET BACKGROUND ---------- */
+
+body{
+  background:
+    radial-gradient(circle at 12% 8%, rgba(99,255,54,.13), transparent 24%),
+    radial-gradient(circle at 87% 12%, rgba(255,52,52,.12), transparent 23%),
+    radial-gradient(circle at 52% 45%, rgba(57,215,255,.045), transparent 26%),
+    linear-gradient(rgba(0,0,0,.72), rgba(0,0,0,.86)),
+    repeating-linear-gradient(
+      0deg,
+      rgba(255,255,255,.015) 0px,
+      rgba(255,255,255,.015) 1px,
+      transparent 1px,
+      transparent 5px
+    ),
+    #050505 !important;
+
+  background-attachment:fixed;
+}
+
+/* Subtle concrete/grit texture without using an image file */
+body::before{
+  content:"";
+  position:fixed;
+  inset:0;
+  pointer-events:none;
+  z-index:-1;
+
+  background:
+    repeating-radial-gradient(
+      circle at 20% 30%,
+      rgba(255,255,255,.018) 0px,
+      rgba(255,255,255,.018) 1px,
+      transparent 1px,
+      transparent 7px
+    ),
+    repeating-linear-gradient(
+      115deg,
+      transparent 0px,
+      transparent 28px,
+      rgba(255,255,255,.012) 29px,
+      transparent 30px
+    );
+
+  opacity:.7;
+}
+
+/* ---------- HEADER / LOGO ---------- */
+
+header{
+  background:rgba(3,3,3,.95) !important;
+  border-bottom:2px solid rgba(99,255,54,.25) !important;
+}
+
+.logo-circle,
+.brand-mark,
+.mark{
+  position:relative;
+  transform:rotate(-4deg);
+  border:2px solid var(--street-green) !important;
+  box-shadow:
+    0 0 18px rgba(99,255,54,.18),
+    inset 0 0 14px rgba(99,255,54,.05);
+}
+
+.logo-circle::after,
+.brand-mark::after,
+.mark::after{
+  content:"";
+  position:absolute;
+  width:9px;
+  height:9px;
+  right:-5px;
+  bottom:4px;
+  background:var(--street-red);
+  border-radius:50%;
+  box-shadow:
+    -8px -5px 0 -2px var(--street-green),
+    -14px 4px 0 -3px var(--street-yellow);
+}
+
+.logo-text strong,
+.brand strong{
+  font-family:"Arial Black", Impact, sans-serif !important;
+  letter-spacing:.05em !important;
+  text-shadow:
+    2px 2px 0 rgba(255,52,52,.18),
+    -1px -1px 0 rgba(99,255,54,.12);
+}
+
+nav a{
+  position:relative;
+  padding:5px 2px;
+}
+
+nav a::after{
+  content:"";
+  position:absolute;
+  left:0;
+  right:100%;
+  bottom:0;
+  height:3px;
+  background:var(--street-green);
+  transform:rotate(-1deg);
+  transition:.2s ease;
+}
+
+nav a:hover::after{
+  right:0;
+}
+
+/* ---------- HERO / MAIN STORY ---------- */
+
+.main-story,
+.lead{
+  position:relative;
+  overflow:hidden;
+  border:1px solid rgba(99,255,54,.35) !important;
+
+  background:
+    linear-gradient(120deg, rgba(0,0,0,.25), rgba(0,0,0,.83)),
+    radial-gradient(circle at 18% 25%, rgba(99,255,54,.13), transparent 28%),
+    radial-gradient(circle at 80% 18%, rgba(255,52,52,.16), transparent 22%),
+    linear-gradient(150deg, #181818 0%, #080808 70%) !important;
+
+  box-shadow:
+    0 20px 60px rgba(0,0,0,.42),
+    inset 0 0 60px rgba(255,255,255,.015);
+}
+
+/* Graffiti paint strokes */
+.main-story::before,
+.lead::before{
+  content:"";
+  position:absolute;
+  width:320px;
+  height:90px;
+  right:-40px;
+  top:55px;
+  background:
+    linear-gradient(
+      7deg,
+      transparent 0%,
+      transparent 15%,
+      rgba(255,52,52,.42) 16%,
+      rgba(255,52,52,.42) 64%,
+      transparent 65%
+    );
+  transform:rotate(-8deg);
+  filter:blur(.2px);
+  opacity:.7;
+}
+
+.main-story::after,
+.lead::after{
+  content:"";
+  position:absolute;
+  width:260px;
+  height:64px;
+  left:-30px;
+  bottom:85px;
+  background:
+    linear-gradient(
+      -5deg,
+      transparent 0%,
+      transparent 15%,
+      rgba(99,255,54,.22) 16%,
+      rgba(99,255,54,.22) 64%,
+      transparent 65%
+    );
+  transform:rotate(4deg);
+  opacity:.75;
+}
+
+.main-story > *,
+.lead > *{
+  position:relative;
+  z-index:2;
+}
+
+.main-story h1,
+.lead h1{
+  font-family:"Arial Black", Impact, sans-serif !important;
+  text-transform:uppercase;
+  letter-spacing:-.045em !important;
+  text-shadow:
+    3px 3px 0 rgba(255,52,52,.10),
+    -2px -1px 0 rgba(99,255,54,.08);
+}
+
+/* ---------- BREAKING LABEL ---------- */
+
+.main-label,
+.flag{
+  position:relative;
+  border-radius:8px !important;
+  transform:rotate(-1deg);
+  box-shadow:
+    5px 5px 0 rgba(0,0,0,.5),
+    0 0 18px rgba(255,52,52,.2);
+}
+
+.main-label::after,
+.flag::after{
+  content:"";
+  position:absolute;
+  left:8px;
+  right:8px;
+  bottom:-7px;
+  height:4px;
+  background:var(--street-yellow);
+  transform:rotate(-2deg);
+}
+
+/* ---------- SECTION TITLES ---------- */
+
+.section-header h2,
+.section-head h2{
+  position:relative;
+  display:inline-block;
+  font-family:"Arial Black", Impact, sans-serif !important;
+  text-transform:uppercase;
+  letter-spacing:-.035em !important;
+}
+
+.section-header h2::after,
+.section-head h2::after{
+  content:"";
+  position:absolute;
+  left:-4px;
+  right:-12px;
+  bottom:-6px;
+  height:7px;
+  z-index:-1;
+  transform:rotate(-1deg);
+
+  background:
+    linear-gradient(
+      90deg,
+      var(--street-green) 0%,
+      var(--street-green) 58%,
+      var(--street-red) 58%,
+      var(--street-red) 82%,
+      var(--street-yellow) 82%
+    );
+
+  opacity:.75;
+}
+
+/* ---------- STORY CARDS ---------- */
+
+.story-card,
+.card{
+  position:relative;
+  overflow:hidden;
+  border:1px solid #353535 !important;
+  background:
+    linear-gradient(145deg,#151515 0%,#0c0c0c 100%) !important;
+
+  box-shadow:
+    0 12px 34px rgba(0,0,0,.32),
+    inset 0 1px 0 rgba(255,255,255,.025);
+
+  transition:
+    transform .22s ease,
+    border-color .22s ease,
+    box-shadow .22s ease;
+}
+
+.story-card::before,
+.card::before{
+  content:"";
+  position:absolute;
+  width:120px;
+  height:22px;
+  top:18px;
+  right:-28px;
+
+  background:rgba(255,255,255,.035);
+
+  transform:rotate(12deg);
+}
+
+.story-card:nth-child(3n+1),
+.card:nth-child(3n+1){
+  border-top:3px solid var(--street-green) !important;
+}
+
+.story-card:nth-child(3n+2),
+.card:nth-child(3n+2){
+  border-top:3px solid var(--street-red) !important;
+}
+
+.story-card:nth-child(3n+3),
+.card:nth-child(3n+3){
+  border-top:3px solid var(--street-yellow) !important;
+}
+
+.story-card:hover,
+.card:hover{
+  transform:
+    translateY(-5px)
+    rotate(-.25deg);
+
+  border-color:#565656 !important;
+
+  box-shadow:
+    0 18px 44px rgba(0,0,0,.48),
+    0 0 25px rgba(99,255,54,.05);
+}
+
+.story-card h3,
+.card h3{
+  font-family:"Arial Black", Impact, sans-serif !important;
+  letter-spacing:-.025em !important;
+}
+
+/* ---------- CATEGORY PILLS ---------- */
+
+.category,
+.kicker,
+.section-kicker,
+.story-meta{
+  display:inline-block;
+  width:max-content;
+  max-width:100%;
+
+  padding:5px 8px;
+
+  border-radius:5px;
+
+  background:
+    rgba(99,255,54,.08);
+
+  border:
+    1px solid rgba(99,255,54,.22);
+
+  color:
+    var(--street-green) !important;
+
+  transform:
+    rotate(-.4deg);
+}
+
+.story-card:nth-child(3n+2) .category,
+.story-card:nth-child(3n+2) .kicker,
+.card:nth-child(3n+2) .kicker{
+  color:#ff6767 !important;
+  border-color:rgba(255,52,52,.3);
+  background:rgba(255,52,52,.08);
+}
+
+.story-card:nth-child(3n+3) .category,
+.story-card:nth-child(3n+3) .kicker,
+.card:nth-child(3n+3) .kicker{
+  color:var(--street-yellow) !important;
+  border-color:rgba(255,217,61,.3);
+  background:rgba(255,217,61,.07);
+}
+
+/* ---------- BUTTONS ---------- */
+
+.read-button,
+.read-btn,
+.read{
+  position:relative;
+  font-family:"Arial Black", Impact, sans-serif !important;
+  letter-spacing:.02em;
+  text-transform:uppercase;
+}
+
+.read-button::after,
+.read-btn::after,
+.read::after{
+  content:"";
+  position:absolute;
+  left:0;
+  bottom:-4px;
+  width:42%;
+  height:4px;
+  background:var(--street-green);
+  transform:rotate(-1deg);
+  transition:.2s ease;
+}
+
+.read-button:hover::after,
+.read-btn:hover::after,
+.read:hover::after{
+  width:100%;
+  background:var(--street-red);
+}
+
+/* ---------- FEATURE / SIDE CARDS ---------- */
+
+.feature-card,
+.side-card,
+.side{
+  position:relative;
+  overflow:hidden;
+  background:
+    linear-gradient(145deg,#161616,#0d0d0d) !important;
+}
+
+.feature-card::after,
+.side-card::after,
+.side::after{
+  content:"";
+  position:absolute;
+  width:90px;
+  height:90px;
+  right:-26px;
+  bottom:-26px;
+
+  border:10px solid rgba(99,255,54,.08);
+
+  transform:rotate(17deg);
+}
+
+/* ---------- INVESTIGATION SECTION ---------- */
+
+.investigation,
+.case-banner,
+.casebox{
+  position:relative;
+  overflow:hidden;
+
+  background:
+    linear-gradient(110deg,rgba(0,0,0,.28),rgba(0,0,0,.75)),
+    repeating-linear-gradient(
+      90deg,
+      rgba(99,255,54,.025) 0px,
+      rgba(99,255,54,.025) 1px,
+      transparent 1px,
+      transparent 22px
+    ),
+    #111 !important;
+
+  border:
+    2px solid rgba(99,255,54,.38) !important;
+
+  box-shadow:
+    0 20px 60px rgba(0,0,0,.36),
+    inset 0 0 80px rgba(99,255,54,.025);
+}
+
+.investigation::before,
+.case-banner::before,
+.casebox::before{
+  content:"CASE FILE";
+  position:absolute;
+  right:-18px;
+  top:42px;
+
+  font-family:"Arial Black", Impact, sans-serif;
+
+  font-size:84px;
+  line-height:1;
+
+  color:rgba(99,255,54,.035);
+
+  transform:rotate(-7deg);
+}
+
+.investigation h2,
+.case-banner h2,
+.casebox h2{
+  font-family:"Arial Black", Impact, sans-serif !important;
+  text-transform:uppercase;
+}
+
+/* ---------- SECTION-SPECIFIC COLOR FEEL ---------- */
+
+#breaking .section-header h2::after,
+#breaking .section-head h2::after{
+  background:var(--street-red);
+}
+
+#sports .section-header h2::after,
+#sports .section-head h2::after{
+  background:var(--street-green);
+}
+
+#entertainment .section-header h2::after,
+#entertainment .section-head h2::after{
+  background:
+    linear-gradient(
+      90deg,
+      var(--street-red),
+      var(--street-purple)
+    );
+}
+
+#gaming .section-header h2::after,
+#gaming .section-head h2::after{
+  background:
+    linear-gradient(
+      90deg,
+      var(--street-green),
+      var(--street-blue)
+    );
+}
+
+#community .section-header h2::after,
+#community .section-head h2::after{
+  background:
+    linear-gradient(
+      90deg,
+      var(--street-yellow),
+      var(--street-green)
+    );
+}
+
+/* ---------- ARTICLE MODALS ---------- */
+
+dialog{
+  border:
+    1px solid rgba(99,255,54,.35) !important;
+
+  background:
+    linear-gradient(145deg,#111,#080808) !important;
+
+  box-shadow:
+    0 30px 120px rgba(0,0,0,.85),
+    0 0 35px rgba(99,255,54,.06);
+}
+
+.article h2,
+.article-dialog h2{
+  font-family:"Arial Black", Impact, sans-serif !important;
+  text-transform:uppercase;
+}
+
+.verdict{
+  position:relative;
+  border-left:
+    5px solid var(--street-green) !important;
+
+  background:
+    linear-gradient(
+      90deg,
+      rgba(99,255,54,.09),
+      rgba(255,52,52,.035)
+    ) !important;
+}
+
+.verdict::before{
+  content:"BLIND TRUTH VERDICT";
+  display:block;
+  margin-bottom:10px;
+
+  color:var(--street-green);
+
+  font-family:"Arial Black", Impact, sans-serif;
+
+  font-size:12px;
+
+  letter-spacing:1.4px;
+}
+
+/* ---------- FOOTER ---------- */
+
+footer{
+  position:relative;
+  background:
+    linear-gradient(
+      180deg,
+      transparent,
+      rgba(99,255,54,.025)
+    );
+}
+
+footer::before{
+  content:"";
+  display:block;
+  width:110px;
+  height:6px;
+  margin-bottom:18px;
+  background:
+    linear-gradient(
+      90deg,
+      var(--street-green) 0 45%,
+      var(--street-red) 45% 75%,
+      var(--street-yellow) 75%
+    );
+  transform:rotate(-1deg);
+}
+
+/* ---------- MOBILE STREET ADJUSTMENTS ---------- */
+
+@media(max-width:650px){
+
+  .main-story h1,
+  .lead h1{
+    letter-spacing:-2px !important;
+  }
+
+  .main-story::before,
+  .lead::before{
+    width:220px;
+    height:70px;
+    right:-70px;
+  }
+
+  .investigation::before,
+  .case-banner::before,
+  .casebox::before{
+    font-size:58px;
+    right:-20px;
+  }
+
+  .story-card,
+  .card{
+    border-radius:16px !important;
+  }
+
+  .section-header h2,
+  .section-head h2{
+    font-size:30px !important;
+  }
 }
 
 </style>
