@@ -12,14 +12,14 @@ content="width=device-width, initial-scale=1.0">
 content="#050505">
 
 <meta name="google-site-verification"
-content="_RCvea5xnx3tGhqx8Z1qYD7VLB3qBeYT7mluwthCMOE">
+content="_RCvea5xnx3tGhqx8Z1qYD7VLB3qBeYT7mWuwthCMOE">
 
 <title>
-The Blind Truth | News, Sports, Entertainment, Gaming & Investigations
+The Blind Truth | September 5, 2026
 </title>
 
 <meta name="description"
-content="The Blind Truth covers breaking news, sports, entertainment, gaming, culture, court cases and evidence-first investigations. Question everything. Follow the evidence.">
+content="The Blind Truth covers breaking news, sports, entertainment, gaming, hip-hop, court cases, rumors, fact checks and evidence-first investigations. Question everything. Follow the evidence.">
 
 <meta name="robots"
 content="index, follow, max-image-preview:large">
@@ -42,6 +42,9 @@ content="https://theblindtruth202-ui.github.io/the-blind-truth/">
 <meta property="og:site_name"
 content="The Blind Truth">
 
+<meta property="og:image"
+content="https://theblindtruth202-ui.github.io/the-blind-truth/blind-truth-logo.png">
+
 <meta name="twitter:card"
 content="summary_large_image">
 
@@ -50,6 +53,9 @@ content="The Blind Truth">
 
 <meta name="twitter:description"
 content="Question everything. Follow the evidence.">
+
+<meta name="twitter:image"
+content="https://theblindtruth202-ui.github.io/the-blind-truth/blind-truth-logo.png">
 
 
 <style>
@@ -65,6 +71,7 @@ content="Question everything. Follow the evidence.">
     --yellow:#ffd93d;
     --blue:#39d7ff;
     --purple:#a86bff;
+    --pink:#ff5bbd;
     --border:#303030;
 }
 
@@ -82,9 +89,24 @@ body {
     background:
     radial-gradient(
         circle at 10% 0%,
-        rgba(99,255,54,.08),
+        rgba(99,255,54,.10),
         transparent 28%
     ),
+
+    radial-gradient(
+        circle at 90% 8%,
+        rgba(255,52,52,.08),
+        transparent 24%
+    ),
+
+    repeating-linear-gradient(
+        0deg,
+        rgba(255,255,255,.012) 0px,
+        rgba(255,255,255,.012) 1px,
+        transparent 1px,
+        transparent 5px
+    ),
+
     #050505;
 
     color:var(--white);
@@ -95,8 +117,6 @@ body {
     sans-serif;
 
     line-height:1.6;
-
-    overflow-x:hidden;
 }
 
 a {
@@ -114,7 +134,7 @@ button {
 }
 
 
-/* TOP NEWS BAR */
+/* NEWSROOM BAR */
 
 .newsbar {
     background:#000;
@@ -125,17 +145,24 @@ button {
 
 .newsbar-inner {
     min-height:38px;
+
     display:flex;
     align-items:center;
     justify-content:space-between;
+
+    gap:10px;
 }
 
 .live-dot {
     display:inline-block;
+
     width:8px;
     height:8px;
+
     border-radius:50%;
+
     background:var(--red);
+
     margin-right:8px;
 }
 
@@ -144,21 +171,25 @@ button {
 
 header {
     position:sticky;
+
     top:0;
+
     z-index:100;
 
     background:
     rgba(5,5,5,.96);
 
     border-bottom:
-    1px solid #292929;
+    2px solid rgba(99,255,54,.25);
 }
 
 .header-inner {
     min-height:78px;
 
     display:flex;
+
     align-items:center;
+
     gap:20px;
 }
 
@@ -167,8 +198,11 @@ header {
 
 .logo {
     display:flex;
+
     align-items:center;
+
     gap:12px;
+
     min-width:max-content;
 }
 
@@ -182,19 +216,30 @@ header {
     border-radius:50%;
 
     display:flex;
+
     align-items:center;
+
     justify-content:center;
 
     color:var(--green);
 
     font-weight:900;
-    font-size:17px;
 
     background:#080808;
+
+    transform:rotate(-4deg);
+
+    box-shadow:
+    0 0 18px rgba(99,255,54,.18);
 }
 
 .logo-text strong {
     display:block;
+
+    font-family:
+    "Arial Black",
+    Impact,
+    sans-serif;
 
     font-size:20px;
 
@@ -223,7 +268,7 @@ nav {
 
     display:flex;
 
-    gap:18px;
+    gap:16px;
 
     overflow-x:auto;
 
@@ -235,9 +280,13 @@ nav::-webkit-scrollbar {
 }
 
 nav a {
-    font-size:14px;
-    font-weight:bold;
+    font-size:13px;
+
+    font-weight:900;
+
     white-space:nowrap;
+
+    text-transform:uppercase;
 }
 
 nav a:hover {
@@ -248,12 +297,7 @@ nav a:hover {
 /* HERO */
 
 .hero {
-    padding:
-    40px 0 25px;
-
-    position:relative;
-
-    isolation:isolate;
+    padding:40px 0 25px;
 }
 
 .hero-grid {
@@ -266,11 +310,10 @@ nav a:hover {
 }
 
 .main-story {
-
-    min-height:500px;
+    min-height:510px;
 
     border:
-    1px solid var(--border);
+    1px solid rgba(99,255,54,.35);
 
     border-radius:22px;
 
@@ -285,7 +328,7 @@ nav a:hover {
 
     position:relative;
 
-    z-index:3;
+    overflow:hidden;
 
     background:
 
@@ -293,12 +336,37 @@ nav a:hover {
         135deg,
         rgba(99,255,54,.13),
         rgba(15,15,15,.98) 48%,
-        rgba(255,52,52,.08)
+        rgba(255,52,52,.09)
     );
+
+    box-shadow:
+    0 20px 60px rgba(0,0,0,.42);
+}
+
+.main-story::before {
+    content:"";
+
+    position:absolute;
+
+    width:330px;
+    height:90px;
+
+    right:-45px;
+    top:55px;
+
+    background:
+    rgba(255,52,52,.14);
+
+    transform:
+    rotate(-9deg);
+}
+
+.main-story > * {
+    position:relative;
+    z-index:2;
 }
 
 .main-label {
-
     display:inline-block;
 
     width:max-content;
@@ -306,8 +374,7 @@ nav a:hover {
     padding:
     7px 13px;
 
-    border-radius:
-    999px;
+    border-radius:7px;
 
     background:
     var(--red);
@@ -320,288 +387,334 @@ nav a:hover {
 
     letter-spacing:1px;
 
-    margin-bottom:
-    15px;
+    margin-bottom:15px;
+
+    transform:
+    rotate(-1deg);
 }
 
 .category {
+    display:inline-block;
+
+    width:max-content;
+
+    max-width:100%;
+
+    padding:
+    5px 8px;
+
+    border-radius:5px;
+
+    background:
+    rgba(99,255,54,.08);
+
+    border:
+    1px solid rgba(99,255,54,.22);
 
     color:
     var(--green);
 
-    font-size:
-    12px;
+    font-size:12px;
 
-    font-weight:
-    900;
+    font-weight:900;
 
-    text-transform:
-    uppercase;
+    text-transform:uppercase;
 
-    letter-spacing:
-    1.5px;
+    letter-spacing:1.2px;
 }
 
 .main-story h1 {
+    font-family:
+    "Arial Black",
+    Impact,
+    sans-serif;
 
     font-size:
-    clamp(38px,6vw,72px);
+    clamp(38px,6vw,70px);
 
-    line-height:
-    .98;
+    line-height:.98;
 
-    letter-spacing:
-    -3px;
+    letter-spacing:-3px;
+
+    text-transform:uppercase;
 
     margin:
-    8px 0 18px;
+    10px 0 18px;
 }
 
 .main-story p {
+    color:#c1c1c1;
 
-    color:
-    #c1c1c1;
+    font-size:18px;
 
-    font-size:
-    18px;
-
-    max-width:
-    760px;
+    max-width:760px;
 }
 
 
-/* FEATURED CARDS */
+/* FEATURE CARDS */
 
 .side-column {
-
     display:grid;
-
     gap:20px;
 }
 
 .feature-card {
-
     background:
-    var(--panel);
+    linear-gradient(
+        145deg,
+        #161616,
+        #0d0d0d
+    );
 
     border:
     1px solid var(--border);
 
-    border-radius:
-    22px;
+    border-radius:22px;
 
-    padding:
-    28px;
+    padding:28px;
 
     position:relative;
 
-    z-index:3;
+    overflow:hidden;
 }
 
 .feature-card h2 {
-
     margin:
     7px 0 12px;
 
-    line-height:
-    1.1;
+    line-height:1.08;
 
-    font-size:
-    28px;
+    font-family:
+    "Arial Black",
+    Impact,
+    sans-serif;
+
+    font-size:27px;
+
+    text-transform:uppercase;
 }
 
 .feature-card p {
-
-    color:
-    var(--gray);
+    color:var(--gray);
 }
 
 
 /* BUTTONS */
 
 .read-button {
+    background:none;
 
-    background:
-    none;
+    border:none;
 
-    border:
-    none;
+    padding:0;
 
-    padding:
-    0;
+    color:white;
 
-    color:
-    white;
+    font-family:
+    "Arial Black",
+    Impact,
+    sans-serif;
 
-    font-weight:
-    900;
+    font-weight:900;
 
-    cursor:
-    pointer;
+    cursor:pointer;
 
-    margin-top:
-    15px;
+    margin-top:15px;
+
+    text-transform:uppercase;
 }
 
 .read-button:hover {
+    color:var(--green);
 
-    color:
-    var(--green);
+    transform:
+    translateX(3px);
 }
 
 
 /* SECTIONS */
 
 .news-section {
+    padding:38px 0;
 
-    padding:
-    38px 0;
-
-    scroll-margin-top:
-    100px;
-
-    position:relative;
-
-    isolation:isolate;
+    scroll-margin-top:100px;
 }
 
 .section-header {
-
     display:flex;
 
     justify-content:
     space-between;
 
-    align-items:
-    flex-end;
+    align-items:flex-end;
 
-    gap:
-    20px;
+    gap:20px;
 
     border-bottom:
     1px solid var(--border);
 
-    padding-bottom:
-    13px;
+    padding-bottom:13px;
 
-    margin-bottom:
-    20px;
-
-    position:relative;
-
-    z-index:5;
+    margin-bottom:20px;
 }
 
 .section-header h2 {
+    position:relative;
+
+    display:inline-block;
 
     margin:
     3px 0 0;
 
-    font-size:
-    36px;
+    font-family:
+    "Arial Black",
+    Impact,
+    sans-serif;
+
+    font-size:36px;
+
+    text-transform:uppercase;
+}
+
+.section-header h2::after {
+    content:"";
+
+    position:absolute;
+
+    left:0;
+    right:-12px;
+
+    bottom:-6px;
+
+    height:6px;
+
+    z-index:-1;
+
+    background:
+
+    linear-gradient(
+        90deg,
+        var(--green) 0%,
+        var(--green) 58%,
+        var(--red) 58%,
+        var(--red) 82%,
+        var(--yellow) 82%
+    );
+
+    opacity:.7;
 }
 
 .section-description {
+    color:#999;
 
-    color:
-    #999;
+    font-size:14px;
 
-    font-size:
-    14px;
-
-    text-align:
-    right;
+    text-align:right;
 }
 
-.story-grid {
 
+/* STORY GRID */
+
+.story-grid {
     display:grid;
 
     grid-template-columns:
     repeat(3,1fr);
 
-    gap:
-    18px;
-
-    position:relative;
-
-    z-index:4;
+    gap:18px;
 }
 
 .story-card {
+    min-height:265px;
 
-    min-height:
-    270px;
-
-    padding:
-    24px;
+    padding:24px;
 
     border:
-    1px solid var(--border);
+    1px solid #353535;
 
-    border-radius:
-    20px;
+    border-radius:20px;
 
     background:
-    var(--panel);
+
+    linear-gradient(
+        145deg,
+        #151515,
+        #0c0c0c
+    );
 
     display:flex;
 
-    flex-direction:
-    column;
+    flex-direction:column;
 
-    position:relative;
+    box-shadow:
+    0 12px 34px rgba(0,0,0,.32);
 
-    z-index:3;
+    transition:.2s;
+}
+
+.story-card:nth-child(3n+1) {
+    border-top:
+    3px solid var(--green);
+}
+
+.story-card:nth-child(3n+2) {
+    border-top:
+    3px solid var(--red);
+}
+
+.story-card:nth-child(3n+3) {
+    border-top:
+    3px solid var(--yellow);
+}
+
+.story-card:hover {
+    transform:
+    translateY(-4px);
 }
 
 .story-card h3 {
-
     margin:
     9px 0 12px;
 
-    line-height:
-    1.15;
+    line-height:1.12;
 
-    font-size:
-    22px;
+    font-family:
+    "Arial Black",
+    Impact,
+    sans-serif;
+
+    font-size:22px;
+
+    text-transform:uppercase;
 }
 
 .story-card p {
-
-    color:
-    var(--gray);
+    color:var(--gray);
 
     margin:
     0 0 20px;
 }
 
 .story-card .read-button {
-
-    margin-top:
-    auto;
+    margin-top:auto;
 }
 
 
 /* INVESTIGATION */
 
 .investigation {
-
-    padding:
-    55px;
+    padding:55px;
 
     border:
-    1px solid
-    rgba(99,255,54,.4);
+    2px solid rgba(99,255,54,.38);
 
-    border-radius:
-    24px;
+    border-radius:24px;
 
     background:
 
     linear-gradient(
-        125deg,
-        rgba(99,255,54,.12),
+        110deg,
+        rgba(99,255,54,.10),
         #101010 60%,
         rgba(255,52,52,.07)
     );
@@ -610,316 +723,241 @@ nav a:hover {
 
     position:relative;
 
-    z-index:3;
+    overflow:hidden;
+}
+
+.investigation::before {
+    content:"CASE FILE";
+
+    position:absolute;
+
+    right:-18px;
+
+    top:42px;
+
+    font-family:
+    "Arial Black",
+    Impact,
+    sans-serif;
+
+    font-size:84px;
+
+    color:
+    rgba(99,255,54,.035);
+
+    transform:
+    rotate(-7deg);
+}
+
+.investigation > * {
+    position:relative;
+    z-index:2;
 }
 
 .investigation h2 {
+    font-family:
+    "Arial Black",
+    Impact,
+    sans-serif;
 
     font-size:
-    clamp(40px,6vw,68px);
+    clamp(38px,6vw,65px);
 
-    line-height:
-    1;
+    line-height:1;
 
-    letter-spacing:
-    -3px;
+    letter-spacing:-3px;
+
+    text-transform:uppercase;
 
     margin:
     10px 0;
 }
 
 .case-status {
-
     display:inline-block;
 
-    color:
-    var(--green);
+    color:var(--green);
 
     border:
-    1px solid
-    rgba(99,255,54,.5);
+    1px solid rgba(99,255,54,.5);
 
-    border-radius:
-    999px;
+    border-radius:999px;
 
     padding:
     7px 12px;
 
-    font-size:
-    12px;
+    font-size:12px;
 
-    font-weight:
-    bold;
+    font-weight:bold;
 
     margin:
     10px 0 15px;
 }
 
 .investigation p {
+    color:#c1c1c1;
 
-    color:
-    #c1c1c1;
-
-    font-size:
-    18px;
+    font-size:18px;
 }
 
-
-/* UPDATE BOX */
-
-.case-update {
-
-    margin:
-    26px 0;
+.verdict-tag {
+    display:inline-block;
 
     padding:
-    22px;
-
-    background:
-    rgba(255,52,52,.07);
+    6px 10px;
 
     border:
-    1px solid rgba(255,52,52,.4);
-
-    border-left:
-    5px solid var(--red);
-
-    font-family:
-    Arial,
-    Helvetica,
-    sans-serif;
-}
-
-.case-update strong {
+    1px solid var(--yellow);
 
     color:
     var(--yellow);
 
-    display:block;
+    border-radius:6px;
 
-    margin-bottom:
-    8px;
+    font-size:12px;
 
-    font-size:
-    15px;
+    font-weight:900;
 
-    letter-spacing:
-    1px;
+    text-transform:uppercase;
 }
 
 
-/* FOOTER */
-
-footer {
-
-    border-top:
-    1px solid var(--border);
-
-    margin-top:
-    50px;
-
-    padding:
-    40px 0 60px;
-
-    color:
-    #999;
-}
-
-footer strong {
-
-    color:white;
-}
-
-
-/* ARTICLE POPUPS */
+/* ARTICLE WINDOWS */
 
 dialog {
-
     width:
     min(900px, calc(100% - 20px));
 
-    max-height:
-    92vh;
+    max-height:92vh;
 
-    padding:
-    0;
+    padding:0;
 
     background:
-    #0d0d0d;
 
-    color:
-    white;
+    linear-gradient(
+        145deg,
+        #111,
+        #080808
+    );
+
+    color:white;
 
     border:
-    1px solid #333;
+    1px solid rgba(99,255,54,.35);
 
-    border-radius:
-    22px;
+    border-radius:22px;
+
+    box-shadow:
+    0 30px 120px rgba(0,0,0,.85);
 }
 
 dialog::backdrop {
-
     background:
     rgba(0,0,0,.88);
 }
 
 .article {
-
-    position:
-    relative;
-
     padding:
     clamp(28px,5vw,55px);
 
-    max-height:
-    92vh;
+    max-height:92vh;
 
-    overflow-y:
-    auto;
+    overflow-y:auto;
 }
 
 .close {
-
     float:right;
 
-    width:
-    44px;
+    width:44px;
+    height:44px;
 
-    height:
-    44px;
-
-    border-radius:
-    50%;
+    border-radius:50%;
 
     border:
     1px solid #444;
 
-    background:
-    #181818;
+    background:#181818;
 
-    color:
-    white;
+    color:white;
 
-    font-size:
-    24px;
+    font-size:24px;
 
-    cursor:
-    pointer;
+    cursor:pointer;
 }
 
 .article h2 {
+    font-family:
+    "Arial Black",
+    Impact,
+    sans-serif;
 
     font-size:
     clamp(35px,6vw,58px);
 
-    line-height:
-    1;
+    line-height:1;
 
-    letter-spacing:
-    -2px;
+    letter-spacing:-2px;
+
+    text-transform:uppercase;
 
     margin:
     10px 0 15px;
 }
 
 .article-intro {
+    color:#ccc;
 
-    color:
-    #ccc;
-
-    font-size:
-    19px;
+    font-size:19px;
 
     border-bottom:
     1px solid #333;
 
-    padding-bottom:
-    20px;
+    padding-bottom:20px;
 }
 
 .article-body {
-
     font-family:
     Georgia,
     "Times New Roman",
     serif;
 
-    font-size:
-    18px;
+    font-size:18px;
 
-    line-height:
-    1.85;
-}
-
-.article-body p {
-
-    margin-bottom:
-    22px;
+    line-height:1.85;
 }
 
 .article-body h3 {
-
     font-family:
-    Arial,
-    Helvetica,
+    "Arial Black",
+    Impact,
     sans-serif;
 
-    font-size:
-    26px;
+    font-size:27px;
 
-    margin-top:
-    38px;
+    margin-top:38px;
 
-    margin-bottom:
-    15px;
-
-    line-height:
-    1.2;
-
-    color:
-    white;
-}
-
-.article-body h4 {
-
-    font-family:
-    Arial,
-    Helvetica,
-    sans-serif;
-
-    color:
-    var(--green);
-
-    margin-top:
-    30px;
-
-    margin-bottom:
-    10px;
+    text-transform:uppercase;
 }
 
 .verdict {
-
     border-left:
-    4px solid
-    var(--green);
+    5px solid var(--green);
 
     background:
-    #151515;
+    linear-gradient(
+        90deg,
+        rgba(99,255,54,.09),
+        rgba(255,52,52,.035)
+    );
 
-    padding:
-    20px;
+    padding:20px;
 
     margin:
     25px 0;
 }
 
-
-/* SPECIAL JORDAN STAT BOX */
-
-.jordan-stat {
-
-    background:
-    #080808;
+.evidence {
+    background:#080808;
 
     border:
     1px solid #333;
@@ -927,8 +965,7 @@ dialog::backdrop {
     border-left:
     5px solid var(--red);
 
-    padding:
-    20px;
+    padding:20px;
 
     margin:
     25px 0;
@@ -939,1292 +976,80 @@ dialog::backdrop {
     sans-serif;
 }
 
-.jordan-stat strong {
-
+.evidence strong {
     display:block;
 
-    color:
-    var(--green);
+    color:var(--green);
 
-    font-size:
-    26px;
+    font-size:20px;
 
-    margin-bottom:
-    8px;
+    margin-bottom:6px;
 }
 
 
-/* COMPARISON TABLE */
+/* SECTION COLORS */
 
-.goat-table-wrap {
-
-    overflow-x:auto;
-
-    margin:
-    25px 0;
+#breaking .section-header h2::after {
+    background:var(--red);
 }
 
-.goat-table {
-
-    width:
-    100%;
-
-    border-collapse:
-    collapse;
-
-    min-width:
-    620px;
-
-    font-family:
-    Arial,
-    Helvetica,
-    sans-serif;
+#sports .section-header h2::after {
+    background:var(--green);
 }
 
-.goat-table th,
-.goat-table td {
+#entertainment .section-header h2::after {
+    background:
 
-    border:
-    1px solid #333;
+    linear-gradient(
+        90deg,
+        var(--red),
+        var(--purple)
+    );
+}
+
+#gaming .section-header h2::after {
+    background:
+
+    linear-gradient(
+        90deg,
+        var(--green),
+        var(--blue)
+    );
+}
+
+#gossip .section-header h2::after {
+    background:var(--pink);
+}
+
+#factchecks .section-header h2::after {
+    background:var(--yellow);
+}
+
+
+/* FOOTER */
+
+footer {
+    border-top:
+    1px solid var(--border);
+
+    margin-top:50px;
 
     padding:
-    12px;
+    40px 0 60px;
 
-    text-align:
-    center;
-}
-
-.goat-table th {
+    color:#999;
 
     background:
-    var(--red);
 
-    color:
-    white;
-}
-
-.goat-table tr:nth-child(even) {
-
-    background:
-    #151515;
-}
-
-.goat-table td:first-child {
-
-    text-align:
-    left;
-
-    font-weight:
-    bold;
-}
-
-
-/* =========================================================
-   THE BLIND TRUTH — URBAN / STREET VISUAL UPGRADE
-   ========================================================= */
-
-:root{
-  --street-black:#050505;
-  --street-panel:#111111;
-  --street-green:#63ff36;
-  --street-red:#ff3434;
-  --street-yellow:#ffd93d;
-  --street-blue:#39d7ff;
-  --street-purple:#a86bff;
-  --street-white:#f7f7f7;
-  --street-gray:#b8b8b8;
-}
-
-
-body{
-  background:
-    radial-gradient(circle at 12% 8%, rgba(99,255,54,.13), transparent 24%),
-    radial-gradient(circle at 87% 12%, rgba(255,52,52,.12), transparent 23%),
-    radial-gradient(circle at 52% 45%, rgba(57,215,255,.045), transparent 26%),
-    linear-gradient(rgba(0,0,0,.72), rgba(0,0,0,.86)),
-    repeating-linear-gradient(
-      0deg,
-      rgba(255,255,255,.015) 0px,
-      rgba(255,255,255,.015) 1px,
-      transparent 1px,
-      transparent 5px
-    ),
-    #050505 !important;
-
-  background-attachment:fixed;
-}
-
-
-body::before{
-  content:"";
-  position:fixed;
-  inset:0;
-  pointer-events:none;
-  z-index:-1;
-
-  background:
-    repeating-radial-gradient(
-      circle at 20% 30%,
-      rgba(255,255,255,.018) 0px,
-      rgba(255,255,255,.018) 1px,
-      transparent 1px,
-      transparent 7px
-    ),
-    repeating-linear-gradient(
-      115deg,
-      transparent 0px,
-      transparent 28px,
-      rgba(255,255,255,.012) 29px,
-      transparent 30px
-    );
-
-  opacity:.7;
-}
-
-
-body::after{
-  content:"";
-  position:fixed;
-  inset:0;
-  z-index:-1;
-  pointer-events:none;
-
-  background:
-    radial-gradient(
-      circle at 8% 22%,
-      rgba(255,52,52,.08) 0 2px,
-      transparent 3px
-    ),
-    radial-gradient(
-      circle at 92% 28%,
-      rgba(99,255,54,.08) 0 2px,
-      transparent 3px
-    ),
-    radial-gradient(
-      circle at 18% 72%,
-      rgba(255,217,61,.05) 0 2px,
-      transparent 3px
-    );
-
-  background-size:
-    38px 38px,
-    46px 46px,
-    55px 55px;
-
-  opacity:.7;
-}
-
-
-header{
-  background:rgba(3,3,3,.95) !important;
-  border-bottom:2px solid rgba(99,255,54,.25) !important;
-}
-
-
-.logo-circle{
-  position:relative;
-  transform:rotate(-4deg);
-  border:2px solid var(--street-green) !important;
-  box-shadow:
-    0 0 18px rgba(99,255,54,.18),
-    inset 0 0 14px rgba(99,255,54,.05);
-}
-
-
-.logo-circle::after{
-  content:"";
-  position:absolute;
-  width:9px;
-  height:9px;
-  right:-5px;
-  bottom:4px;
-  background:var(--street-red);
-  border-radius:50%;
-  box-shadow:
-    -8px -5px 0 -2px var(--street-green),
-    -14px 4px 0 -3px var(--street-yellow);
-}
-
-
-.logo-text strong{
-  font-family:"Arial Black", Impact, sans-serif !important;
-  letter-spacing:.05em !important;
-  text-shadow:
-    2px 2px 0 rgba(255,52,52,.18),
-    -1px -1px 0 rgba(99,255,54,.12);
-}
-
-
-nav a{
-  position:relative;
-  padding:5px 2px;
-}
-
-
-nav a::after{
-  content:"";
-  position:absolute;
-  left:0;
-  right:100%;
-  bottom:0;
-  height:3px;
-  background:var(--street-green);
-  transform:rotate(-1deg);
-  transition:.2s ease;
-}
-
-
-nav a:hover::after{
-  right:0;
-}
-
-
-.main-story{
-  position:relative;
-  overflow:hidden;
-  border:1px solid rgba(99,255,54,.35) !important;
-
-  background:
-    linear-gradient(120deg, rgba(0,0,0,.25), rgba(0,0,0,.83)),
-    radial-gradient(circle at 18% 25%, rgba(99,255,54,.13), transparent 28%),
-    radial-gradient(circle at 80% 18%, rgba(255,52,52,.16), transparent 22%),
-    linear-gradient(150deg, #181818 0%, #080808 70%) !important;
-
-  box-shadow:
-    0 20px 60px rgba(0,0,0,.42),
-    inset 0 0 60px rgba(255,255,255,.015);
-}
-
-
-.main-story::before{
-  content:"";
-  position:absolute;
-  width:320px;
-  height:90px;
-  right:-40px;
-  top:55px;
-
-  background:
     linear-gradient(
-      7deg,
-      transparent 0%,
-      transparent 15%,
-      rgba(255,52,52,.42) 16%,
-      rgba(255,52,52,.42) 64%,
-      transparent 65%
-    );
-
-  transform:rotate(-8deg);
-  opacity:.7;
-}
-
-
-.main-story::after{
-  content:"";
-  position:absolute;
-  width:260px;
-  height:64px;
-  left:-30px;
-  bottom:85px;
-
-  background:
-    linear-gradient(
-      -5deg,
-      transparent 0%,
-      transparent 15%,
-      rgba(99,255,54,.22) 16%,
-      rgba(99,255,54,.22) 64%,
-      transparent 65%
-    );
-
-  transform:rotate(4deg);
-  opacity:.75;
-}
-
-
-.main-story > *{
-  position:relative;
-  z-index:2;
-}
-
-
-.main-story h1{
-  font-family:"Arial Black", Impact, sans-serif !important;
-  text-transform:uppercase;
-  letter-spacing:-.045em !important;
-  position:relative;
-}
-
-
-.main-story h1::before{
-  content:"";
-  position:absolute;
-  left:-12px;
-  bottom:-12px;
-  width:170px;
-  height:8px;
-
-  background:
-    linear-gradient(
-      90deg,
-      var(--street-green),
-      var(--street-red),
-      transparent
-    );
-
-  transform:rotate(-2deg);
-  opacity:.85;
-}
-
-
-.main-label{
-  position:relative;
-  border-radius:8px !important;
-  transform:rotate(-1deg);
-
-  box-shadow:
-    5px 5px 0 rgba(0,0,0,.5),
-    0 0 18px rgba(255,52,52,.2);
-}
-
-
-.main-label::after{
-  content:"";
-  position:absolute;
-  left:8px;
-  right:8px;
-  bottom:-7px;
-  height:4px;
-  background:var(--street-yellow);
-  transform:rotate(-2deg);
-}
-
-
-.section-header h2{
-  position:relative;
-  display:inline-block;
-  font-family:"Arial Black", Impact, sans-serif !important;
-  text-transform:uppercase;
-  letter-spacing:-.035em !important;
-}
-
-
-.section-header h2::after{
-  content:"";
-  position:absolute;
-  left:-4px;
-  right:-12px;
-  bottom:-6px;
-  height:7px;
-  z-index:-1;
-  transform:rotate(-1deg);
-
-  background:
-    linear-gradient(
-      90deg,
-      var(--street-green) 0%,
-      var(--street-green) 58%,
-      var(--street-red) 58%,
-      var(--street-red) 82%,
-      var(--street-yellow) 82%
-    );
-
-  opacity:.75;
-}
-
-
-.story-card{
-  position:relative;
-  overflow:hidden;
-  border:1px solid #353535 !important;
-
-  background:
-    linear-gradient(145deg,#151515 0%,#0c0c0c 100%) !important;
-
-  box-shadow:
-    0 12px 34px rgba(0,0,0,.32),
-    inset 0 1px 0 rgba(255,255,255,.025);
-
-  transition:
-    transform .22s ease,
-    border-color .22s ease,
-    box-shadow .22s ease;
-}
-
-
-.story-card:nth-child(3n+1){
-  border-top:3px solid var(--street-green) !important;
-}
-
-
-.story-card:nth-child(3n+2){
-  border-top:3px solid var(--street-red) !important;
-}
-
-
-.story-card:nth-child(3n+3){
-  border-top:3px solid var(--street-yellow) !important;
-}
-
-
-.story-card:hover{
-  transform:
-    translateY(-5px)
-    rotate(-.25deg);
-
-  border-color:#565656 !important;
-
-  box-shadow:
-    0 18px 44px rgba(0,0,0,.48),
-    0 0 25px rgba(99,255,54,.05);
-}
-
-
-.story-card h3{
-  font-family:"Arial Black", Impact, sans-serif !important;
-}
-
-
-.category{
-  display:inline-block;
-  width:max-content;
-  max-width:100%;
-
-  padding:5px 8px;
-
-  border-radius:5px;
-
-  background:
-    rgba(99,255,54,.08);
-
-  border:
-    1px solid rgba(99,255,54,.22);
-
-  color:
-    var(--street-green) !important;
-
-  transform:
-    rotate(-.4deg);
-}
-
-
-.read-button{
-  position:relative;
-  font-family:"Arial Black", Impact, sans-serif !important;
-  letter-spacing:.02em;
-  text-transform:uppercase;
-
-  transition:
-    color .2s ease,
-    transform .2s ease;
-}
-
-
-.read-button::after{
-  content:"";
-  position:absolute;
-  left:0;
-  bottom:-4px;
-  width:42%;
-  height:4px;
-  background:var(--street-green);
-  transform:rotate(-1deg);
-  transition:.2s ease;
-}
-
-
-.read-button:hover::after{
-  width:100%;
-  background:var(--street-red);
-}
-
-
-.read-button:hover{
-  transform:translateX(3px);
-}
-
-
-.feature-card{
-  position:relative;
-  overflow:hidden;
-
-  background:
-    linear-gradient(145deg,#161616,#0d0d0d) !important;
-}
-
-
-.feature-card::after{
-  content:"";
-  position:absolute;
-  width:90px;
-  height:90px;
-  right:-26px;
-  bottom:-26px;
-
-  border:
-  10px solid rgba(99,255,54,.08);
-
-  transform:rotate(17deg);
-}
-
-
-.feature-card::before{
-  content:"";
-  position:absolute;
-
-  width:10px;
-  height:10px;
-
-  top:18px;
-  right:18px;
-
-  border-radius:50%;
-
-  background:
-    var(--street-green);
-
-  box-shadow:
-    -18px 9px 0 -2px var(--street-red),
-    8px 16px 0 -3px var(--street-yellow),
-    -8px -13px 0 -4px var(--street-blue);
-
-  opacity:.6;
-}
-
-
-.investigation{
-  position:relative;
-  overflow:hidden;
-
-  background:
-    linear-gradient(110deg,rgba(0,0,0,.28),rgba(0,0,0,.75)),
-    repeating-linear-gradient(
-      90deg,
-      rgba(99,255,54,.025) 0px,
-      rgba(99,255,54,.025) 1px,
-      transparent 1px,
-      transparent 22px
-    ),
-    #111 !important;
-
-  border:
-    2px solid rgba(99,255,54,.38) !important;
-
-  box-shadow:
-    0 20px 60px rgba(0,0,0,.36),
-    inset 0 0 80px rgba(99,255,54,.025);
-}
-
-
-.investigation > *{
-  position:relative;
-  z-index:2;
-}
-
-
-.investigation h2{
-  font-family:"Arial Black", Impact, sans-serif !important;
-  text-transform:uppercase;
-}
-
-
-.investigation::after{
-  content:
-  "CONFIDENTIAL • EVIDENCE • CASE FILE";
-
-  position:absolute;
-
-  bottom:18px;
-  right:24px;
-
-  font-family:
-    Impact,
-    "Arial Black",
-    sans-serif;
-
-  font-size:12px;
-
-  letter-spacing:2px;
-
-  color:
-    rgba(99,255,54,.18);
-
-  transform:rotate(-3deg);
-}
-
-
-.case-status{
-  background:
-    rgba(99,255,54,.07);
-
-  box-shadow:
-    inset 0 0 18px rgba(99,255,54,.05),
-    0 0 16px rgba(99,255,54,.08);
-
-  text-shadow:
-    0 0 6px rgba(99,255,54,.2);
-}
-
-
-#breaking .section-header h2::after{
-  background:var(--street-red);
-}
-
-
-#sports .section-header h2::after{
-  background:var(--street-green);
-}
-
-
-#entertainment .section-header h2::after{
-  background:
-    linear-gradient(
-      90deg,
-      var(--street-red),
-      var(--street-purple)
+        180deg,
+        transparent,
+        rgba(99,255,54,.025)
     );
 }
 
-
-#gaming .section-header h2::after{
-  background:
-    linear-gradient(
-      90deg,
-      var(--street-green),
-      var(--street-blue)
-    );
-}
-
-
-#community .section-header h2::after{
-  background:
-    linear-gradient(
-      90deg,
-      var(--street-yellow),
-      var(--street-green)
-    );
-}
-
-
-#investigations .section-header h2::after{
-  background:
-    linear-gradient(
-      90deg,
-      var(--street-green),
-      var(--street-red)
-    );
-}
-
-
-#breaking .story-card{
-  background:
-    linear-gradient(
-      145deg,
-      rgba(255,52,52,.055),
-      #101010 45%
-    ) !important;
-}
-
-
-#sports .story-card{
-  background:
-    linear-gradient(
-      145deg,
-      rgba(99,255,54,.045),
-      #101010 45%
-    ) !important;
-}
-
-
-#entertainment .story-card{
-  background:
-    linear-gradient(
-      145deg,
-      rgba(168,107,255,.055),
-      #101010 45%
-    ) !important;
-}
-
-
-#gaming .story-card{
-  background:
-    linear-gradient(
-      145deg,
-      rgba(57,215,255,.055),
-      #101010 45%
-    ) !important;
-}
-
-
-#community .story-card{
-  background:
-    linear-gradient(
-      145deg,
-      rgba(255,217,61,.045),
-      #101010 45%
-    ) !important;
-}
-
-
-#breaking .category{
-  color:#ff6666 !important;
-  border-color:rgba(255,52,52,.35) !important;
-  background:rgba(255,52,52,.08) !important;
-}
-
-
-#sports .category{
-  color:#78ff58 !important;
-}
-
-
-#entertainment .category{
-  color:#c28cff !important;
-  border-color:rgba(168,107,255,.35) !important;
-  background:rgba(168,107,255,.08) !important;
-}
-
-
-#gaming .category{
-  color:#62e5ff !important;
-  border-color:rgba(57,215,255,.35) !important;
-  background:rgba(57,215,255,.08) !important;
-}
-
-
-#community .category{
-  color:#ffe46b !important;
-  border-color:rgba(255,217,61,.35) !important;
-  background:rgba(255,217,61,.08) !important;
-}
-
-
-dialog{
-  border:
-    1px solid rgba(99,255,54,.35) !important;
-
-  background:
-    linear-gradient(145deg,#111,#080808) !important;
-
-  box-shadow:
-    0 30px 120px rgba(0,0,0,.85),
-    0 0 35px rgba(99,255,54,.06);
-}
-
-
-.article{
-  background:
-    repeating-linear-gradient(
-      0deg,
-      transparent 0 4px,
-      rgba(255,255,255,.008) 5px
-    );
-}
-
-
-.article h2{
-  font-family:"Arial Black", Impact, sans-serif !important;
-  text-transform:uppercase;
-}
-
-
-.verdict{
-  position:relative;
-
-  overflow:hidden;
-
-  border-left:
-    5px solid var(--street-green) !important;
-
-  background:
-    linear-gradient(
-      90deg,
-      rgba(99,255,54,.09),
-      rgba(255,52,52,.035)
-    ) !important;
-}
-
-
-.verdict::before{
-  content:"BLIND TRUTH VERDICT";
-
-  display:block;
-
-  margin-bottom:10px;
-
-  color:
-  var(--street-green);
-
-  font-family:
-  "Arial Black",
-  Impact,
-  sans-serif;
-
-  font-size:12px;
-
-  letter-spacing:1.4px;
-}
-
-
-.verdict::after{
-  content:"VERIFIED / REVIEWED";
-
-  position:absolute;
-
-  right:12px;
-
-  top:12px;
-
-  color:
-    rgba(255,255,255,.05);
-
-  font-family:
-    Impact,
-    "Arial Black",
-    sans-serif;
-
-  font-size:24px;
-
-  transform:rotate(-10deg);
-
-  letter-spacing:2px;
-}
-
-
-footer{
-  position:relative;
-
-  background:
-    linear-gradient(
-      180deg,
-      transparent,
-      rgba(99,255,54,.025)
-    );
-}
-
-
-footer::before{
-  content:"";
-
-  display:block;
-
-  width:110px;
-
-  height:6px;
-
-  margin-bottom:18px;
-
-  background:
-    linear-gradient(
-      90deg,
-      var(--street-green) 0 45%,
-      var(--street-red) 45% 75%,
-      var(--street-yellow) 75%
-    );
-
-  transform:rotate(-1deg);
-}
-
-
-footer::after{
-  content:"TBT";
-
-  position:absolute;
-
-  right:4%;
-
-  bottom:12px;
-
-  font-family:
-    Impact,
-    "Arial Black",
-    sans-serif;
-
-  font-size:54px;
-
-  color:
-    rgba(99,255,54,.035);
-
-  transform:
-    rotate(-8deg);
-}
-
-
-/* =========================================================
-   BLIND TRUTH GRAFFITI BACKGROUND
-   ========================================================= */
-
-
-.hero::before{
-
-    content:"BLIND TRUTH";
-
-    position:absolute;
-
-    left:-4%;
-
-    top:18%;
-
-    z-index:-2;
-
-    pointer-events:none;
-
-    white-space:nowrap;
-
-    font-family:
-        Impact,
-        "Arial Black",
-        Arial,
-        sans-serif;
-
-    font-size:
-        clamp(90px,18vw,240px);
-
-    line-height:.8;
-
-    letter-spacing:-8px;
-
-    color:
-        rgba(99,255,54,.065);
-
-    transform:
-        rotate(-8deg)
-        skewX(-5deg);
-
-    text-shadow:
-        7px 5px 0 rgba(255,52,52,.045),
-        -6px -3px 0 rgba(57,215,255,.03);
-}
-
-
-.hero::after{
-
-    content:"";
-
-    position:absolute;
-
-    width:68%;
-
-    height:70px;
-
-    left:8%;
-
-    top:53%;
-
-    z-index:-3;
-
-    pointer-events:none;
-
-    transform:rotate(-7deg);
-
-    background:
-        linear-gradient(
-            90deg,
-            transparent 0%,
-            rgba(255,52,52,.08) 12%,
-            rgba(255,52,52,.13) 42%,
-            rgba(255,217,61,.07) 67%,
-            transparent 94%
-        );
-
-    filter:blur(2px);
-
-    border-radius:50%;
-}
-
-
-.news-section::after{
-
-    content:"BLIND TRUTH";
-
-    position:absolute;
-
-    z-index:-2;
-
-    pointer-events:none;
-
-    white-space:nowrap;
-
-    font-family:
-        Impact,
-        "Arial Black",
-        Arial,
-        sans-serif;
-
-    font-size:
-        clamp(92px,17vw,230px);
-
-    line-height:.8;
-
-    letter-spacing:-8px;
-
-    transform:
-        rotate(-7deg)
-        skewX(-7deg);
-
-    -webkit-text-stroke:
-        2px rgba(255,255,255,.018);
-}
-
-
-#breaking::after{
-
-    left:-7%;
-    top:20%;
-
-    color:
-        rgba(255,52,52,.09);
-
-    text-shadow:
-        8px 4px 0 rgba(255,217,61,.035),
-        -5px -3px 0 rgba(99,255,54,.02);
-}
-
-
-#sports::after{
-
-    right:-7%;
-    left:auto;
-    top:28%;
-
-    color:
-        rgba(99,255,54,.08);
-
-    transform:
-        rotate(6deg)
-        skewX(-8deg);
-
-    text-shadow:
-        -7px 5px 0 rgba(255,217,61,.03),
-        5px -2px 0 rgba(57,215,255,.02);
-}
-
-
-#entertainment::after{
-
-    left:-4%;
-    top:20%;
-
-    color:
-        rgba(168,107,255,.09);
-
-    transform:
-        rotate(-5deg)
-        skewX(-6deg);
-
-    text-shadow:
-        8px 5px 0 rgba(255,52,52,.04);
-}
-
-
-#gaming::after{
-
-    right:-5%;
-    left:auto;
-    top:16%;
-
-    color:
-        rgba(57,215,255,.085);
-
-    transform:
-        rotate(7deg)
-        skewX(-6deg);
-
-    text-shadow:
-        -8px 4px 0 rgba(99,255,54,.03);
-}
-
-
-#community::after{
-
-    left:-5%;
-    top:22%;
-
-    color:
-        rgba(255,217,61,.08);
-
-    text-shadow:
-        7px 4px 0 rgba(99,255,54,.03);
-}
-
-
-#investigations::after{
-
-    right:-8%;
-    left:auto;
-    top:13%;
-
-    color:
-        rgba(99,255,54,.09);
-
-    transform:
-        rotate(6deg)
-        skewX(-7deg);
-
-    text-shadow:
-        -9px 4px 0 rgba(255,52,52,.045);
-}
-
-
-.news-section{
-
-    background-image:
-
-        radial-gradient(
-            circle at 5% 18%,
-            rgba(255,52,52,.13) 0 2px,
-            transparent 3px
-        ),
-
-        radial-gradient(
-            circle at 95% 33%,
-            rgba(99,255,54,.12) 0 2px,
-            transparent 3px
-        ),
-
-        radial-gradient(
-            circle at 16% 88%,
-            rgba(255,217,61,.08) 0 2px,
-            transparent 3px
-        ),
-
-        radial-gradient(
-            circle at 82% 73%,
-            rgba(57,215,255,.07) 0 2px,
-            transparent 3px
-        );
-
-    background-size:
-        55px 55px,
-        68px 68px,
-        74px 74px,
-        63px 63px;
-}
-
-
-.news-section::before{
-
-    content:"";
-
-    position:absolute;
-
-    pointer-events:none;
-
-    z-index:-3;
-
-    width:52%;
-
-    height:32px;
-
-    top:54%;
-
-    border-radius:50%;
-
-    filter:blur(1px);
-
-    opacity:.55;
-}
-
-
-#breaking::before{
-
-    left:-8%;
-
-    background:
-        linear-gradient(
-            90deg,
-            transparent,
-            rgba(255,52,52,.13),
-            rgba(255,217,61,.06),
-            transparent
-        );
-
-    transform:rotate(-4deg);
-}
-
-
-#sports::before{
-
-    right:-7%;
-
-    background:
-        linear-gradient(
-            90deg,
-            transparent,
-            rgba(99,255,54,.13),
-            rgba(255,217,61,.06),
-            transparent
-        );
-
-    transform:rotate(5deg);
-}
-
-
-#entertainment::before{
-
-    left:-6%;
-
-    background:
-        linear-gradient(
-            90deg,
-            transparent,
-            rgba(168,107,255,.14),
-            rgba(255,52,52,.06),
-            transparent
-        );
-
-    transform:rotate(-5deg);
-}
-
-
-#gaming::before{
-
-    right:-8%;
-
-    background:
-        linear-gradient(
-            90deg,
-            transparent,
-            rgba(57,215,255,.13),
-            rgba(99,255,54,.06),
-            transparent
-        );
-
-    transform:rotate(5deg);
-}
-
-
-#community::before{
-
-    left:-8%;
-
-    background:
-        linear-gradient(
-            90deg,
-            transparent,
-            rgba(255,217,61,.12),
-            rgba(99,255,54,.06),
-            transparent
-        );
-
-    transform:rotate(-4deg);
-}
-
-
-#investigations::before{
-
-    right:-8%;
-
-    background:
-        linear-gradient(
-            90deg,
-            transparent,
-            rgba(255,52,52,.08),
-            rgba(99,255,54,.14),
-            transparent
-        );
-
-    transform:rotate(4deg);
+footer strong {
+    color:white;
 }
 
 
@@ -2233,8 +1058,7 @@ footer::after{
 @media(max-width:900px) {
 
     .hero-grid {
-        grid-template-columns:
-        1fr;
+        grid-template-columns:1fr;
     }
 
     .side-column {
@@ -2248,7 +1072,6 @@ footer::after{
     }
 }
 
-
 @media(max-width:650px) {
 
     .container {
@@ -2256,22 +1079,13 @@ footer::after{
         calc(100% - 20px);
     }
 
-    .header-inner {
-        min-height:
-        68px;
-    }
-
     .logo-circle {
-        width:
-        42px;
-
-        height:
-        42px;
+        width:42px;
+        height:42px;
     }
 
     .logo-text strong {
-        font-size:
-        17px;
+        font-size:17px;
     }
 
     .logo-text small {
@@ -2279,36 +1093,25 @@ footer::after{
     }
 
     nav {
-        gap:
-        13px;
+        gap:13px;
     }
 
     .hero {
-        padding-top:
-        20px;
+        padding-top:20px;
     }
 
     .main-story {
-        min-height:
-        450px;
+        min-height:450px;
     }
 
-    .side-column {
-        grid-template-columns:
-        1fr;
-    }
-
+    .side-column,
     .story-grid {
-        grid-template-columns:
-        1fr;
+        grid-template-columns:1fr;
     }
 
     .section-header {
-        align-items:
-        flex-start;
-
-        flex-direction:
-        column;
+        align-items:flex-start;
+        flex-direction:column;
     }
 
     .section-description {
@@ -2316,98 +1119,11 @@ footer::after{
     }
 
     .investigation {
-        padding:
-        30px;
+        padding:30px;
     }
 
-
-    .hero::before{
-
-        font-size:105px;
-
-        left:-22px;
-
-        top:24%;
-
-        letter-spacing:-5px;
-    }
-
-
-    .news-section::after{
-
-        font-size:102px;
-
-        letter-spacing:-5px;
-    }
-
-
-    #breaking::after{
-
-        left:-30px;
-
-        top:19%;
-    }
-
-
-    #sports::after{
-
-        right:-40px;
-
-        top:31%;
-    }
-
-
-    #entertainment::after{
-
-        left:-30px;
-    }
-
-
-    #gaming::after{
-
-        right:-40px;
-    }
-
-
-    #community::after{
-
-        left:-35px;
-    }
-
-
-    #investigations::after{
-
-        right:-45px;
-    }
-
-
-    .news-section::before{
-
-        width:70%;
-
-        height:25px;
-    }
-
-
-    .main-story h1::before{
-
-        width:120px;
-    }
-
-
-    .investigation::after{
-
-        font-size:9px;
-
-        right:12px;
-
-        bottom:10px;
-    }
-
-
-    footer::after{
-
-        font-size:38px;
+    .newsbar-inner {
+        font-size:11px;
     }
 }
 
@@ -2424,17 +1140,12 @@ footer::after{
 <div class="container newsbar-inner">
 
 <div>
-
 <span class="live-dot"></span>
-
 THE BLIND TRUTH NEWSROOM
-
 </div>
 
 <div>
-
-UPDATED SEPTEMBER 1, 2026
-
+UPDATED SEPTEMBER 5, 2026
 </div>
 
 </div>
@@ -2450,13 +1161,9 @@ UPDATED SEPTEMBER 1, 2026
 <a href="#top"
 class="logo">
 
-
 <div class="logo-circle">
-
 TBT
-
 </div>
-
 
 <div class="logo-text">
 
@@ -2465,7 +1172,7 @@ THE BLIND TRUTH
 </strong>
 
 <small>
-INVESTIGATE EVERYTHING
+QUESTION EVERYTHING • FOLLOW THE EVIDENCE
 </small>
 
 </div>
@@ -2479,8 +1186,16 @@ INVESTIGATE EVERYTHING
 Breaking
 </a>
 
+<a href="#trending">
+Trending
+</a>
+
 <a href="#sports">
 Sports
+</a>
+
+<a href="#hiphop">
+Hip-Hop
 </a>
 
 <a href="#entertainment">
@@ -2491,12 +1206,16 @@ Entertainment
 Gaming
 </a>
 
-<a href="#community">
-Community
+<a href="#gossip">
+Gossip
+</a>
+
+<a href="#factchecks">
+Fact Checks
 </a>
 
 <a href="#investigations">
-Investigations
+Case Files
 </a>
 
 </nav>
@@ -2512,7 +1231,9 @@ id="top"
 class="container">
 
 
-<!-- MAIN STORY -->
+<!-- =====================================================
+     HERO
+     ===================================================== -->
 
 
 <section class="hero">
@@ -2523,28 +1244,29 @@ class="container">
 <article class="main-story">
 
 <div class="main-label">
-MAIN STORY
+BREAKING NEWS
 </div>
 
 <div class="category">
-BREAKING NEWS • COURT • HIP-HOP
+WORLD • U.S. • IRAN • DEVELOPING
 </div>
 
 <h1>
-Keffe D Found Guilty
-in Tupac Shakur Murder
+U.S. AND IRAN
+EXCHANGE FIRE
+AT SEA
 </h1>
 
 <p>
-Thirty years after Tupac Shakur was
-fatally shot in Las Vegas,
-Duane “Keffe D” Davis has been
-convicted of first-degree murder.
+A new naval confrontation raises
+the risk of wider escalation around
+Iran, the Strait of Hormuz and
+global energy supplies.
 </p>
 
 <button
 class="read-button"
-onclick="openArticle('tupac')">
+onclick="openArticle('iran')">
 
 READ MAIN STORY →
 
@@ -2559,24 +1281,31 @@ READ MAIN STORY →
 <article class="feature-card">
 
 <div class="category">
-ACTIVE INVESTIGATION
+NEW INVESTIGATION • CASE FILE 003
 </div>
 
 <h2>
-Case File 001:
-Who Killed Charlie Kirk?
+Did Diddy Have a Role
+in Tupac Shakur's Murder?
 </h2>
 
 <p>
-A Utah judge is weighing whether
-Tyler Robinson should be ordered
-to stand trial as the preliminary
-hearing reaches a critical stage.
+The million-dollar allegation,
+Keffe D's statements,
+gang politics,
+police corroboration efforts
+and 30 years of conspiracy.
 </p>
+
+<div class="verdict-tag">
+VERDICT: UNPROVEN
+</div>
+
+<br>
 
 <button
 class="read-button"
-onclick="openArticle('kirk')">
+onclick="openArticle('diddy')">
 
 OPEN CASE FILE →
 
@@ -2588,27 +1317,26 @@ OPEN CASE FILE →
 <article class="feature-card">
 
 <div class="category">
-INVESTIGATION COMPLETE
+HIP-HOP • COURT
 </div>
 
 <h2>
-Case File 002:
-Michael Jordan —
-A Real Choke Job?
+Keffe D Convicted
+in Tupac Murder
 </h2>
 
 <p>
-Six rings. Zero Finals losses.
-But what happens when Jordan's
-entire playoff record and GOAT
-argument are put under investigation?
+The historic verdict establishes
+Duane Davis's criminal responsibility
+but does not prove every allegation
+surrounding the case.
 </p>
 
 <button
 class="read-button"
-onclick="openArticle('jordan')">
+onclick="openArticle('keffe')">
 
-OPEN CASE FILE →
+READ STORY →
 
 </button>
 
@@ -2623,7 +1351,9 @@ OPEN CASE FILE →
 
 
 
-<!-- BREAKING NEWS -->
+<!-- =====================================================
+     BREAKING NEWS
+     ===================================================== -->
 
 
 <section
@@ -2658,25 +1388,23 @@ Major developing stories
 <article class="story-card">
 
 <div class="category">
-COURT • HIP-HOP
+WORLD • DEVELOPING
 </div>
 
 <h3>
-Lil Durk Trial:
-Former Assistant
-Takes the Stand
+U.S.–Iran Naval
+Confrontation Escalates
 </h3>
 
 <p>
-Kavon Grant directly implicated
-Durk while the defense continues
-attacking cooperating witnesses
-and their credibility.
+U.S. and Iranian forces exchange
+attacks as fears grow over wider
+escalation and energy disruption.
 </p>
 
 <button
 class="read-button"
-onclick="openArticle('durk')">
+onclick="openArticle('iran')">
 
 READ STORY →
 
@@ -2685,118 +1413,47 @@ READ STORY →
 </article>
 
 
-
 <article class="story-card">
 
 <div class="category">
-WORLD NEWS
+RUSSIA • UKRAINE
 </div>
 
 <h3>
-Nepal Flood Death Toll
-Passes 1,000
+New Peace Push
+Faces Major Obstacles
 </h3>
 
 <p>
-Thousands remain missing as
-rescue teams dig through mud,
-debris and devastated mountain
-communities.
+Diplomatic efforts continue
+while major disagreements over
+the war remain unresolved.
 </p>
-
-<button
-class="read-button"
-onclick="openArticle('nepal')">
-
-READ STORY →
-
-</button>
 
 </article>
 
 
-
 <article class="story-card">
 
 <div class="category">
-ENTERTAINMENT • HEALTH
+HIP-HOP • COURT
 </div>
 
 <h3>
-Lionel Richie
-Hospitalized
-After Concert
+Keffe D Guilty
+in Tupac Murder
 </h3>
 
 <p>
-The 77-year-old singer checked
-himself into a St. Louis hospital
-after performing over the weekend.
+A Las Vegas jury returns
+the case's first murder conviction
+nearly 30 years after
+Tupac's death.
 </p>
 
 <button
 class="read-button"
-onclick="openArticle('richie')">
-
-READ STORY →
-
-</button>
-
-</article>
-
-
-
-<article class="story-card">
-
-<div class="category">
-ENTERTAINMENT
-</div>
-
-<h3>
-Tim Curry Dies at 80
-</h3>
-
-<p>
-The legendary actor and performer
-behind unforgettable roles across
-film, theater and television
-has died at 80.
-</p>
-
-<button
-class="read-button"
-onclick="openArticle('curry')">
-
-READ STORY →
-
-</button>
-
-</article>
-
-
-
-<article class="story-card">
-
-<div class="category">
-TECHNOLOGY • LEGAL
-</div>
-
-<h3>
-Meta Settlement
-Puts Youth Safety
-Under Scrutiny
-</h3>
-
-<p>
-The legal fight over Facebook,
-Instagram and younger users
-raises new questions about
-platform accountability.
-</p>
-
-<button
-class="read-button"
-onclick="openArticle('meta')">
+onclick="openArticle('keffe')">
 
 READ STORY →
 
@@ -2811,7 +1468,136 @@ READ STORY →
 
 
 
-<!-- SPORTS -->
+<!-- =====================================================
+     TRENDING
+     ===================================================== -->
+
+
+<section
+class="news-section"
+id="trending">
+
+
+<div class="section-header">
+
+<div>
+
+<div class="category">
+VIRAL NOW
+</div>
+
+<h2>
+Trending
+</h2>
+
+</div>
+
+<div class="section-description">
+Culture • Conversation • Viral
+</div>
+
+</div>
+
+
+<div class="story-grid">
+
+
+<article class="story-card">
+
+<div class="category">
+TUPAC • DIDDY
+</div>
+
+<h3>
+Diddy Questions Return
+After Keffe D Verdict
+</h3>
+
+<p>
+Old allegations are circulating again.
+Case File 003 separates documented
+claims from actual proof.
+</p>
+
+<button
+class="read-button"
+onclick="openArticle('diddy')">
+
+INVESTIGATE →
+
+</button>
+
+</article>
+
+
+<article class="story-card">
+
+<div class="category">
+GAMING
+</div>
+
+<h3>
+NBA 2K27 Launch
+Conversation Explodes
+</h3>
+
+<p>
+Gameplay,
+shooting,
+builds,
+badges,
+VC and the new City
+dominate early discussion.
+</p>
+
+<button
+class="read-button"
+onclick="openArticle('2k27')">
+
+READ STORY →
+
+</button>
+
+</article>
+
+
+<article class="story-card">
+
+<div class="category">
+NBA
+</div>
+
+<h3>
+Ben Simmons Gets
+Another NBA Opportunity
+</h3>
+
+<p>
+The former No. 1 pick
+gets another opportunity
+with Sacramento.
+</p>
+
+<button
+class="read-button"
+onclick="openArticle('simmons')">
+
+READ STORY →
+
+</button>
+
+</article>
+
+
+</div>
+
+</section>
+
+
+
+<!-- =====================================================
+     SPORTS
+     ===================================================== -->
 
 
 <section
@@ -2834,7 +1620,7 @@ Sports
 </div>
 
 <div class="section-description">
-NFL • NBA • Tennis • Investigations
+NBA • Tennis • MLB
 </div>
 
 </div>
@@ -2846,161 +1632,29 @@ NFL • NBA • Tennis • Investigations
 <article class="story-card">
 
 <div class="category">
-NBA • INVESTIGATION
+NBA • COMEBACK
 </div>
 
 <h3>
-Michael Jordan:
-A Real Choke Job?
+Ben Simmons
+Joins Sacramento
 </h3>
 
 <p>
-We investigate Jordan's playoff
-failures, 6–0 Finals mythology,
-Chicago's success without him
-and the standards used to crown
-basketball's GOAT.
+Simmons returns to the NBA
+and receives another opportunity
+to revive his career.
 </p>
 
 <button
 class="read-button"
-onclick="openArticle('jordan')">
+onclick="openArticle('simmons')">
 
-READ INVESTIGATION →
+READ STORY →
 
 </button>
 
 </article>
-
-
-
-<article class="story-card">
-
-<div class="category">
-NFL
-</div>
-
-<h3>
-NFL Ends Traditional
-Pro Bowl Game
-</h3>
-
-<p>
-The traditional exhibition game
-is ending while players will
-continue receiving Pro Bowl
-honors.
-</p>
-
-</article>
-
-
-
-<article class="story-card">
-
-<div class="category">
-NFL • INJURY
-</div>
-
-<h3>
-Calvin Austin III
-Suffers Torn ACL
-</h3>
-
-<p>
-The knee injury creates a major
-setback and forces new roster
-decisions.
-</p>
-
-</article>
-
-
-
-<article class="story-card">
-
-<div class="category">
-NFL • TRADE
-</div>
-
-<h3>
-Chiefs Acquire
-Joshua Ezeudu
-</h3>
-
-<p>
-Kansas City adds offensive-line
-depth in a trade with the
-New York Giants.
-</p>
-
-</article>
-
-
-
-<article class="story-card">
-
-<div class="category">
-NFL • LEGAL
-</div>
-
-<h3>
-Jed York Arrest
-Draws NFL Review
-</h3>
-
-<p>
-The 49ers owner faces league
-scrutiny following a reported
-arrest connected to an
-undercover operation.
-</p>
-
-</article>
-
-
-
-<article class="story-card">
-
-<div class="category">
-NBA • BUSINESS
-</div>
-
-<h3>
-Buss Family
-Lakers Dispute
-Heads to Court
-</h3>
-
-<p>
-Jeanie Buss is fighting family
-moves involving control and
-ownership of the Lakers.
-</p>
-
-</article>
-
-
-
-<article class="story-card">
-
-<div class="category">
-NBA
-</div>
-
-<h3>
-Jonathan Kuminga
-Heads to Minnesota
-</h3>
-
-<p>
-The young forward gets a new
-opportunity and a fresh role
-alongside Minnesota's core.
-</p>
-
-</article>
-
 
 
 <article class="story-card">
@@ -3010,15 +1664,35 @@ TENNIS
 </div>
 
 <h3>
-Jannik Sinner
-Withdraws From
-U.S. Open
+Williams Sisters'
+U.S. Open Run Ends
 </h3>
 
 <p>
-A knee injury removes one of
-the tournament's leading
-contenders from the field.
+Serena and Venus Williams'
+doubles return ends in
+a dramatic deciding tiebreak.
+</p>
+
+</article>
+
+
+<article class="story-card">
+
+<div class="category">
+MLB
+</div>
+
+<h3>
+September Playoff
+Races Heat Up
+</h3>
+
+<p>
+Cleveland's dramatic
+doubleheader sweep adds
+another twist to the
+postseason race.
 </p>
 
 </article>
@@ -3030,7 +1704,130 @@ contenders from the field.
 
 
 
-<!-- ENTERTAINMENT -->
+<!-- =====================================================
+     HIP-HOP
+     ===================================================== -->
+
+
+<section
+class="news-section"
+id="hiphop">
+
+
+<div class="section-header">
+
+<div>
+
+<div class="category">
+MUSIC & CULTURE
+</div>
+
+<h2>
+Hip-Hop / Music
+</h2>
+
+</div>
+
+<div class="section-description">
+Artists • Court • Culture
+</div>
+
+</div>
+
+
+<div class="story-grid">
+
+
+<article class="story-card">
+
+<div class="category">
+TUPAC • COURT
+</div>
+
+<h3>
+Keffe D Conviction
+Changes Tupac Case
+</h3>
+
+<p>
+The first murder conviction
+closes one legal chapter
+while leaving other questions
+unresolved.
+</p>
+
+<button
+class="read-button"
+onclick="openArticle('keffe')">
+
+READ STORY →
+
+</button>
+
+</article>
+
+
+<article class="story-card">
+
+<div class="category">
+TUPAC • DIDDY
+</div>
+
+<h3>
+The Million-Dollar
+Allegation
+</h3>
+
+<p>
+Keffe D alleged that
+Sean Combs offered money
+for Tupac and Suge Knight
+to be killed.
+
+The allegation remains unproven.
+</p>
+
+<button
+class="read-button"
+onclick="openArticle('diddy')">
+
+CASE FILE 003 →
+
+</button>
+
+</article>
+
+
+<article class="story-card">
+
+<div class="category">
+MUSIC • CULTURE
+</div>
+
+<h3>
+Oasis Reunion Story
+Reaches Venice
+</h3>
+
+<p>
+A new documentary puts
+the Gallagher brothers'
+reconciliation and reunion
+back in the spotlight.
+</p>
+
+</article>
+
+
+</div>
+
+</section>
+
+
+
+<!-- =====================================================
+     ENTERTAINMENT
+     ===================================================== -->
 
 
 <section
@@ -3053,7 +1850,7 @@ Entertainment
 </div>
 
 <div class="section-description">
-Movies • Music • Culture
+Movies • Television • Celebrity
 </div>
 
 </div>
@@ -3065,57 +1862,61 @@ Movies • Music • Culture
 <article class="story-card">
 
 <div class="category">
-MUSIC • HEALTH
+FILM
 </div>
 
 <h3>
-Lionel Richie
-Hospitalized
-Following St. Louis Show
+Venice Film Festival
+Drives Awards Talk
 </h3>
 
 <p>
-Richie's hospitalization follows
-another health scare earlier in
-his summer tour.
+Major premieres and star
+appearances shape the early
+awards-season conversation.
 </p>
 
-<button
-class="read-button"
-onclick="openArticle('richie')">
-
-READ STORY →
-
-</button>
-
 </article>
-
 
 
 <article class="story-card">
 
 <div class="category">
-MARVEL • MOVIES
+MUSIC • FILM
 </div>
 
 <h3>
-Black Panther 3
-Moves Forward
+Oasis Reunion
+Documentary Premieres
 </h3>
 
 <p>
-Ryan Coogler returns as Marvel
-prepares the next chapter of
-the Black Panther franchise.
+The Gallagher brothers'
+reconciliation becomes
+the subject of a new
+documentary.
 </p>
 
-<button
-class="read-button"
-onclick="openArticle('panther')">
+</article>
 
-READ STORY →
 
-</button>
+<article class="story-card">
+
+<div class="category">
+MOVIES
+</div>
+
+<h3>
+Fall Movie
+Season Begins
+</h3>
+
+<p>
+The September calendar
+opens the next stage
+of the 2026 box-office
+and awards race.
+</p>
 
 </article>
 
@@ -3126,7 +1927,9 @@ READ STORY →
 
 
 
-<!-- GAMING -->
+<!-- =====================================================
+     GAMING
+     ===================================================== -->
 
 
 <section
@@ -3149,7 +1952,7 @@ Gaming
 </div>
 
 <div class="section-description">
-Releases • Reviews • Community
+Releases • Community • Industry
 </div>
 
 </div>
@@ -3161,25 +1964,350 @@ Releases • Reviews • Community
 <article class="story-card">
 
 <div class="category">
-NBA 2K27
+NBA 2K27 • RELEASE
 </div>
 
 <h3>
-NBA 2K27:
-Early Player Reaction
-and Release Coverage
+NBA 2K27
+Now Available Worldwide
 </h3>
 
 <p>
-Gameplay, shooting,
-movement, MyPLAYER Builder,
-badges and VC dominate
-the opening conversation.
+NBA 2K27 has moved
+from early access
+into worldwide release.
 </p>
 
 <button
 class="read-button"
 onclick="openArticle('2k27')">
+
+READ STORY →
+
+</button>
+
+</article>
+
+
+<article class="story-card">
+
+<div class="category">
+NBA 2K27 • MYPLAYER
+</div>
+
+<h3>
+Builders Hunt
+for Best Thresholds
+</h3>
+
+<p>
+Badge requirements,
+animations and efficient
+attribute stopping points
+become central to
+the early meta.
+</p>
+
+<button
+class="read-button"
+onclick="openArticle('2k27')">
+
+READ MORE →
+
+</button>
+
+</article>
+
+
+<article class="story-card">
+
+<div class="category">
+NBA 2K27 • COMMUNITY
+</div>
+
+<h3>
+Day-One Verdict
+Still Too Early
+</h3>
+
+<p>
+Patches,
+server performance,
+VC economics and
+the evolving online meta
+will determine the
+long-term verdict.
+</p>
+
+<button
+class="read-button"
+onclick="openArticle('2k27')">
+
+EARLY VERDICT →
+
+</button>
+
+</article>
+
+
+</div>
+
+</section>
+
+
+
+<!-- =====================================================
+     GOSSIP AND RUMORS
+     ===================================================== -->
+
+
+<section
+class="news-section"
+id="gossip">
+
+
+<div class="section-header">
+
+<div>
+
+<div class="category">
+RUMOR DESK
+</div>
+
+<h2>
+Gossip & Rumors
+</h2>
+
+</div>
+
+<div class="section-description">
+Claims labeled by evidence status
+</div>
+
+</div>
+
+
+<div class="story-grid">
+
+
+<article class="story-card">
+
+<div class="category">
+DOCUMENTED ALLEGATION
+</div>
+
+<h3>
+Did Diddy Offer
+$1 Million?
+</h3>
+
+<p>
+Keffe D made the allegation.
+
+Law enforcement investigated it.
+
+Public evidence has not established
+that Combs ordered or paid
+for the murder.
+</p>
+
+<button
+class="read-button"
+onclick="openArticle('diddy')">
+
+SEE THE EVIDENCE →
+
+</button>
+
+</article>
+
+
+<article class="story-card">
+
+<div class="category">
+UNRESOLVED
+</div>
+
+<h3>
+Who Actually
+Shot Tupac?
+</h3>
+
+<p>
+The 2026 verdict established
+Davis's criminal responsibility
+but did not judicially establish
+the shooter's identity.
+</p>
+
+<button
+class="read-button"
+onclick="openArticle('diddy')">
+
+INVESTIGATE →
+
+</button>
+
+</article>
+
+
+<article class="story-card">
+
+<div class="category">
+DISCREDITED EVIDENCE
+</div>
+
+<h3>
+Fake FBI Documents
+Fueled Old Theories
+</h3>
+
+<p>
+A 2008 Los Angeles Times story
+about the 1994 Quad Studios attack
+was formally retracted after
+source documents proved unreliable.
+</p>
+
+<button
+class="read-button"
+onclick="openArticle('diddy')">
+
+READ CASE FILE →
+
+</button>
+
+</article>
+
+
+</div>
+
+</section>
+
+
+
+<!-- =====================================================
+     FACT CHECKS
+     ===================================================== -->
+
+
+<section
+class="news-section"
+id="factchecks">
+
+
+<div class="section-header">
+
+<div>
+
+<div class="category">
+VERIFY BEFORE YOU SHARE
+</div>
+
+<h2>
+Fact Checks
+</h2>
+
+</div>
+
+<div class="section-description">
+Verified • Unproven • Misleading • False
+</div>
+
+</div>
+
+
+<div class="story-grid">
+
+
+<article class="story-card">
+
+<div class="category">
+FALSE
+</div>
+
+<h3>
+"Diddy Was Proven
+Involved by the Verdict"
+</h3>
+
+<p>
+False.
+
+Davis's conviction does not
+establish that Sean Combs
+ordered,
+funded or participated
+in Tupac's murder.
+</p>
+
+<button
+class="read-button"
+onclick="openArticle('diddy')">
+
+SEE WHY →
+
+</button>
+
+</article>
+
+
+<article class="story-card">
+
+<div class="category">
+MISLEADING
+</div>
+
+<h3>
+"The Jury Proved
+Orlando Anderson
+Was the Shooter"
+</h3>
+
+<p>
+Misleading.
+
+Davis identified Anderson
+in past statements,
+but the verdict did not require
+the jury to establish
+the shooter's identity.
+</p>
+
+<button
+class="read-button"
+onclick="openArticle('diddy')">
+
+SEE EVIDENCE →
+
+</button>
+
+</article>
+
+
+<article class="story-card">
+
+<div class="category">
+VERIFIED
+</div>
+
+<h3>
+"Keffe D Was Convicted
+of Tupac's Murder"
+</h3>
+
+<p>
+Verified.
+
+A Las Vegas jury found
+Duane Davis guilty
+of first-degree murder
+with a deadly weapon.
+</p>
+
+<button
+class="read-button"
+onclick="openArticle('keffe')">
 
 READ STORY →
 
@@ -3194,89 +2322,9 @@ READ STORY →
 
 
 
-<!-- COMMUNITY -->
-
-
-<section
-class="news-section"
-id="community">
-
-
-<div class="section-header">
-
-<div>
-
-<div class="category">
-POSITIVE IMPACT
-</div>
-
-<h2>
-Community & Good News
-</h2>
-
-</div>
-
-<div class="section-description">
-Relief • Giving • Community
-</div>
-
-</div>
-
-
-<div class="story-grid">
-
-
-<article class="story-card">
-
-<div class="category">
-GARY • INDIANA
-</div>
-
-<h3>
-Keith Lee and
-Tyrese Haliburton
-Support Gary
-</h3>
-
-<p>
-Food and essential supplies
-reach residents following
-severe storms and prolonged
-power outages.
-</p>
-
-</article>
-
-
-
-<article class="story-card">
-
-<div class="category">
-RELIEF EFFORTS
-</div>
-
-<h3>
-Beyoncé Announces
-$1 Million Donation
-for Colombia Relief
-</h3>
-
-<p>
-The donation is directed
-toward earthquake relief
-and emergency assistance.
-</p>
-
-</article>
-
-
-</div>
-
-</section>
-
-
-
-<!-- INVESTIGATIONS -->
+<!-- =====================================================
+     INVESTIGATIONS
+     ===================================================== -->
 
 
 <section
@@ -3293,7 +2341,7 @@ THE BLIND TRUTH
 </div>
 
 <h2>
-Investigations
+Investigations / Case Files
 </h2>
 
 </div>
@@ -3306,45 +2354,46 @@ Evidence • Myth • Verdict
 
 
 
-<!-- CASE FILE 001 -->
+<!-- CASE FILE 003 -->
 
 
 <div class="investigation">
 
 <div class="category">
-THE BLIND TRUTH INVESTIGATIONS
+NEW • CASE FILE 003
 </div>
 
 <h2>
-CASE FILE 001:
-WHO KILLED
-CHARLIE KIRK?
+DID DIDDY HAVE A ROLE
+IN TUPAC SHAKUR'S MURDER?
 </h2>
 
 <div class="case-status">
-● CASE STATUS: OPEN
+● INVESTIGATION COMPLETE
+</div>
+
+<br>
+
+<div class="verdict-tag">
+FINAL VERDICT: UNPROVEN
 </div>
 
 <p>
-We examine the publicly described
-physical evidence, digital evidence,
-timeline, accused suspect,
-forensic limitations and the major
-conspiracy theories surrounding
-Charlie Kirk's killing.
-</p>
+The documented million-dollar
+allegation is real.
 
-<p>
-September 1 brings a major court
-development as Judge Tony Graf
-considers whether prosecutors have
-shown enough probable cause to move
-the case toward trial.
+Police attempted to corroborate
+parts of Keffe D's account.
+
+But a documented allegation
+is not proof that Sean Combs
+ordered or financed
+Tupac's murder.
 </p>
 
 <button
 class="read-button"
-onclick="openArticle('kirk')">
+onclick="openArticle('diddy')">
 
 READ FULL INVESTIGATION →
 
@@ -3360,42 +2409,73 @@ READ FULL INVESTIGATION →
 <div class="investigation">
 
 <div class="category">
-THE BLIND TRUTH INVESTIGATIONS
+CASE FILE 002 • NBA
 </div>
 
 <h2>
-CASE FILE 002:
 MICHAEL JORDAN —
 A REAL CHOKE JOB?
 </h2>
 
 <div class="case-status">
-● CASE STATUS: INVESTIGATION COMPLETE
+● INVESTIGATION COMPLETE
 </div>
 
 <p>
-Michael Jordan's six championships,
-undefeated Finals record and legendary
-clutch reputation have become central
-to the argument that he is basketball's
-undisputed GOAT.
-</p>
+Jordan's 6–0 Finals record
+is real.
 
-<p>
-We investigate the part of the story
-the 6–0 argument leaves out:
-playoff eliminations, documented failures,
-Chicago's success after Jordan retired,
-the strength of his supporting cast and
-players whose championship and MVP résumés
-complicate the GOAT formula.
+So are the playoff losses,
+bad games and context
+often erased by the mythology
+of invincibility.
 </p>
 
 <button
 class="read-button"
 onclick="openArticle('jordan')">
 
-READ FULL INVESTIGATION →
+READ CASE FILE →
+
+</button>
+
+</div>
+
+
+
+<!-- CASE FILE 001 -->
+
+
+<div class="investigation">
+
+<div class="category">
+CASE FILE 001
+</div>
+
+<h2>
+WHO KILLED
+CHARLIE KIRK?
+</h2>
+
+<div class="case-status">
+● CASE STATUS: OPEN
+</div>
+
+<p>
+The accused,
+publicly described evidence,
+forensic questions,
+alternative theories
+and what has —
+and has not —
+been established.
+</p>
+
+<button
+class="read-button"
+onclick="openArticle('kirk')">
+
+READ CASE FILE →
 
 </button>
 
@@ -3422,46 +2502,64 @@ THE BLIND TRUTH
 Question everything.
 Follow the evidence.
 
+<br><br>
+
+<small>
+
+Developing stories,
+allegations and rumors
+are labeled by evidence status.
+
+The Blind Truth updates
+classifications when credible
+new evidence changes the record.
+
+</small>
+
 </div>
 
 </footer>
 
 
 
-<!-- ======================================================
-     TUPAC MAIN STORY
-     ====================================================== -->
+<!-- =====================================================
+     CASE FILE 003
+     ===================================================== -->
 
 
-<dialog id="tupac">
+<dialog id="diddy">
 
 <div class="article">
 
 
 <button
 class="close"
-onclick="closeArticle('tupac')">
+onclick="closeArticle('diddy')">
 ×
 </button>
 
 
 <div class="category">
-BREAKING NEWS • COURT • HIP-HOP
+CASE FILE 003 • TUPAC • DIDDY • INVESTIGATION
 </div>
 
 
 <h2>
-Keffe D Found Guilty
-in Tupac Shakur Murder
+Did Diddy Have a Role
+in Tupac Shakur's Murder?
 </h2>
 
 
 <p class="article-intro">
 
-Thirty years after one of the most
-famous murders in music history,
-a Las Vegas jury has returned
-a guilty verdict.
+The million-dollar allegation,
+Keffe D's statements,
+gang politics,
+police evidence
+and 30 years of conspiracy —
+
+separated from what
+the evidence actually proves.
 
 </p>
 
@@ -3469,95 +2567,179 @@ a guilty verdict.
 <div class="article-body">
 
 
-<p>
-
-Duane “Keffe D” Davis has been
-convicted of first-degree murder
-with a deadly weapon in connection
-with the 1996 killing of
-Tupac Shakur.
-
-</p>
+<h3>
+THE QUESTION
+</h3>
 
 
 <p>
-
-Shakur was shot in a drive-by attack
-in Las Vegas in September 1996
-and died several days later.
 
 For decades,
-the killing became one of the most
-discussed unsolved cases in
-American music history.
+one of the most explosive claims
+surrounding Tupac Shakur's murder
+has been that Sean "Diddy" Combs
+offered money to have Tupac
+and Death Row Records co-founder
+Marion "Suge" Knight killed.
 
 </p>
 
 
+<p>
+
+The allegation did not begin
+as a random internet rumor.
+
+Duane "Keffe D" Davis
+made versions of the claim
+in accounts of the murder.
+
+</p>
+
+
+<p>
+
+That makes the allegation
+documented.
+
+It does not make
+the allegation proven.
+
+</p>
+
+
+
 <h3>
-THE PROSECUTION'S THEORY
+EXHIBIT 1 —
+WHAT HAPPENED
+IN LAS VEGAS
 </h3>
 
 
 <p>
 
-Prosecutors did not have to prove
-that Davis personally fired
-the fatal bullets.
-
-Their case focused on the allegation
-that Davis helped organize and
-facilitate the retaliatory attack.
+On September 7, 1996,
+Tupac was riding in a BMW
+driven by Suge Knight
+when a white Cadillac
+pulled alongside the vehicle
+and gunfire erupted.
 
 </p>
 
 
 <p>
 
-Davis's own public statements,
-interviews and writings became
-important pieces of the case.
-
-Prosecutors argued that those statements
-helped establish his role in the events
-leading to the shooting.
+Tupac died six days later.
 
 </p>
 
 
+<p>
+
+Hours earlier,
+Tupac,
+Knight
+and others
+had been involved
+in an MGM Grand casino fight
+with Orlando "Baby Lane" Anderson,
+Davis's nephew.
+
+</p>
+
+
+<div class="evidence">
+
+<strong>
+CORE PROSECUTION THEORY
+</strong>
+
+The 2026 prosecution treated
+the shooting as gang retaliation
+following the MGM Grand beating.
+
+</div>
+
+
+
 <h3>
-THE DEFENSE
+EXHIBIT 2 —
+WHO WAS IN
+THE CADILLAC?
 </h3>
 
 
 <p>
 
-The defense argued that Davis had
-exaggerated or fabricated stories
-about the killing for publicity,
-money and attention.
+Davis's accounts placed
+himself,
+Orlando Anderson,
+Deandrae "Freaky" Smith
+and Terrence Brown
+inside the Cadillac.
 
 </p>
 
 
 <p>
 
-That created one of the central
-questions for jurors:
-
-Were Davis's own stories entertainment
-and exaggeration,
-or admissions describing his actual
-participation in the crime?
+Davis is the only one
+of those four still alive.
 
 </p>
 
 
 <p>
 
-The jury ultimately accepted the
-prosecution's case and returned
-a guilty verdict.
+His conviction did not require
+prosecutors to prove that Davis
+personally pulled the trigger.
+
+</p>
+
+
+<p>
+
+Nevada accomplice liability
+allowed the jury to hold him
+responsible for orchestrating
+and facilitating the attack.
+
+</p>
+
+
+
+<h3>
+EXHIBIT 3 —
+WHO PULLED
+THE TRIGGER?
+</h3>
+
+
+<p>
+
+Davis has identified
+Orlando Anderson as the shooter
+in recorded accounts.
+
+</p>
+
+
+<p>
+
+Other theories have named
+Deandrae Smith.
+
+</p>
+
+
+<p>
+
+The prosecution did not need
+to resolve that dispute
+to establish Davis's
+criminal responsibility.
 
 </p>
 
@@ -3565,231 +2747,167 @@ a guilty verdict.
 <div class="verdict">
 
 <strong>
-THE BLIND TRUTH STATUS:
-GUILTY VERDICT RETURNED
+BLIND TRUTH FINDING
 </strong>
 
 <br><br>
 
-The decades-long criminal case has
-now produced a jury verdict.
-
-A conviction is not necessarily
-the final step in the legal process.
-
-Sentencing,
-post-trial motions and an expected
-appeal can continue the case.
+The shooter's identity
+was not judicially established
+by the 2026 verdict.
 
 </div>
 
-
-</div>
-
-</div>
-
-</dialog>
-
-
-
-<!-- LIL DURK ARTICLE -->
-
-
-<dialog id="durk">
-
-<div class="article">
-
-
-<button
-class="close"
-onclick="closeArticle('durk')">
-×
-</button>
-
-
-<div class="category">
-COURT • HIP-HOP • TRIAL UPDATE
-</div>
-
-
-<h2>
-Lil Durk Trial:
-Former Assistant
-Directly Implicates Rapper
-</h2>
-
-
-<p class="article-intro">
-
-The government's cooperating witnesses
-are now directly connecting Durk
-to the alleged murder-for-hire plot,
-while the defense attacks their
-credibility and motives.
-
-</p>
-
-
-<div class="article-body">
-
-
-<p>
-
-Lil Durk,
-whose legal name is Durk Devontay Banks,
-is fighting federal allegations tied
-to an alleged murder-for-hire plot.
-
-He has pleaded not guilty.
-
-</p>
-
-
-<p>
-
-Prosecutors allege the plot was
-connected to retaliation following
-the 2020 killing of King Von.
-
-The government has attempted to connect
-travel records,
-communications,
-vehicles,
-surveillance,
-financial activity
-and cooperating witnesses to its
-theory of the case.
-
-</p>
 
 
 <h3>
-KAVON GRANT TAKES THE STAND
+EXHIBIT 4 —
+THE DIDDY ALLEGATION
 </h3>
 
 
 <p>
 
-Former Durk personal assistant
-Kavon Grant,
-also known as Vonnie,
-has become one of the government's
-most important witnesses.
+Davis alleged that
+Sean Combs offered
+$1 million
+for Tupac and Suge Knight
+to be killed.
 
 </p>
 
 
 <p>
 
-Grant acknowledged his own participation
-in the August 2022 shooting that killed
-Saviay’a Robinson,
-the cousin of rapper Quando Rondo.
+This is the central claim
+behind decades of speculation
+about Combs.
 
 </p>
 
 
 <p>
 
-When prosecutors asked why the group
-carried out the attack,
-Grant testified that Durk had instructed them.
-
-That testimony represents one of the
-government's most direct attempts to
-connect Durk personally to the alleged plot.
+But there is a critical distinction.
 
 </p>
+
+
+<p>
+
+Evidence that somebody
+made an allegation
+is not the same thing
+as evidence proving
+the allegation itself.
+
+</p>
+
+
+<p>
+
+The first exists.
+
+Publicly established proof
+of the second does not.
+
+</p>
+
 
 
 <h3>
-WHY GRANT'S CREDIBILITY MATTERS
+EXHIBIT 5 —
+POLICE INVESTIGATED
+THE CLAIM
 </h3>
 
 
 <p>
 
-The defense has argued that Grant himself
-organized and planned the shooting.
-
-That makes his testimony unusually important.
+Law enforcement did not simply
+ignore Davis's account.
 
 </p>
 
 
 <p>
 
-If jurors believe Grant,
-his testimony could significantly strengthen
-the prosecution's case.
-
-If jurors believe he is shifting blame
-to reduce his own punishment,
-the same testimony could become
-a major weakness.
+Investigators attempted
+to corroborate parts
+of what he told them.
 
 </p>
 
 
+<p>
+
+Davis became a confidential
+informant and traveled
+with detectives to New York
+in an effort to reconnect
+with an associate he said
+connected him to Combs
+and provided a gun.
+
+</p>
+
+
+<p>
+
+The attempted operation
+did not produce public proof
+establishing Combs's involvement.
+
+</p>
+
+
+<div class="evidence">
+
+<strong>
+DOCUMENTED INVESTIGATION
+</strong>
+
+Police investigating an allegation
+shows that the allegation
+was taken seriously.
+
+It does not mean
+police proved it.
+
+</div>
+
+
+
 <h3>
-KEITH JONES
+EXHIBIT 6 —
+WHERE IS
+THE MILLION DOLLARS?
 </h3>
 
 
 <p>
 
-Keith “Flacka” Jones has also testified
-for prosecutors.
-
-His testimony included allegations
-about money connected to the attempted
-attack on Quando Rondo and later
-conversations involving Durk.
+An alleged offer
+and an actual payment
+are two separate claims.
 
 </p>
 
 
 <p>
 
-But Jones has admitted that he lied
-during an earlier interview with
-law enforcement.
-
-The defense has used those earlier
-statements and his cooperation agreement
-to challenge his reliability.
-
-</p>
-
-
-<h3>
-THE QUESTION FOR THE JURY
-</h3>
-
-
-<p>
-
-A cooperating witness does not become
-automatically truthful simply because
-he testifies for the government.
-
-He also does not become automatically
-untruthful because he received
-a plea agreement.
+Davis said he never received
+the alleged payment.
 
 </p>
 
 
 <p>
 
-Jurors must determine whether
-the witnesses' stories are corroborated
-by independent evidence such as
-communications,
-travel records,
-surveillance,
-financial evidence
-and other testimony.
+No publicly established
+financial trail has demonstrated
+that Combs transferred
+$1 million for Tupac's murder.
 
 </p>
 
@@ -3797,386 +2915,521 @@ and other testimony.
 <div class="verdict">
 
 <strong>
-THE BLIND TRUTH STATUS:
-TRIAL ACTIVE — TOO EARLY TO CALL
+BLIND TRUTH FINDING:
+PAYMENT NOT ESTABLISHED
 </strong>
 
-<br><br>
-
-The prosecution has now presented
-direct testimony connecting Durk
-to the alleged plot.
-
-<br><br>
-
-But the witnesses making those claims
-have their own criminal exposure
-and credibility issues that the defense
-is actively challenging.
-
-<br><br>
-
-Durk remains presumed innocent unless
-the government proves guilt beyond
-a reasonable doubt.
-
 </div>
 
 
-</div>
 
-</div>
-
-</dialog>
-
-
-
-<!-- CHARLIE KIRK INVESTIGATION -->
+<h3>
+EXHIBIT 7 —
+THE ALLEGED INTERMEDIARY
+</h3>
 
 
-<dialog id="kirk">
+<p>
 
-<div class="article">
-
-
-<button
-class="close"
-onclick="closeArticle('kirk')">
-×
-</button>
-
-
-<div class="category">
-CASE FILE 001 • INVESTIGATION
-</div>
-
-
-<h2>
-Who Killed Charlie Kirk?
-</h2>
-
-
-<p class="article-intro">
-
-Evidence first.
-Rumors second.
-Verdict last.
+Davis's account identified
+Eric "Von Zip" Martin
+as an alleged intermediary.
 
 </p>
 
 
-<div class="article-body">
+<p>
+
+Investigators attempted
+to use Davis to reconnect
+with Martin.
+
+</p>
 
 
-<div class="case-update">
+<p>
+
+The effort did not produce
+the corroboration investigators
+were seeking.
+
+</p>
+
+
+<p>
+
+Martin later died in 2012.
+
+</p>
+
+
+
+<h3>
+EXHIBIT 8 —
+KEFFE D'S
+CREDIBILITY PROBLEM
+</h3>
+
+
+<p>
+
+Davis repeatedly discussed
+Tupac's murder
+in interviews
+and later in his memoir.
+
+</p>
+
+
+<p>
+
+Those statements eventually
+became powerful evidence
+against Davis himself.
+
+</p>
+
+
+<p>
+
+His defense argued
+that he exaggerated
+or fictionalized stories
+for attention and money.
+
+</p>
+
+
+<p>
+
+The jury nevertheless
+found enough evidence
+to convict Davis
+beyond a reasonable doubt.
+
+</p>
+
+
+<p>
+
+But that does not logically mean
+every statement Davis ever made
+about every other person
+must also be true.
+
+</p>
+
+
+
+<h3>
+EXHIBIT 9 —
+THE QUAD STUDIOS TRAP
+</h3>
+
+
+<p>
+
+Conversations about Tupac
+and Combs often reach backward
+to the 1994 Quad Recording Studios
+attack in New York.
+
+</p>
+
+
+<p>
+
+In 2008,
+the Los Angeles Times
+published a story relying
+on purported FBI documents
+while connecting associates
+of Combs to that attack.
+
+</p>
+
+
+<p>
+
+The newspaper later
+formally retracted the story
+after the documents were
+determined to be unreliable.
+
+</p>
+
+
+<div class="evidence">
 
 <strong>
-SEPTEMBER 1, 2026 — COURT UPDATE
+DISCREDITED EVIDENCE
 </strong>
 
-Judge Tony Graf is considering whether
-prosecutors have established enough
-probable cause to order Tyler Robinson
-to stand trial.
-
-This stage does not determine whether
-Robinson is guilty.
-
-The question is whether the evidence
-is sufficient for the criminal case
-to proceed toward trial.
-
-The defense is also challenging
-the prosecution's case and arguments
-connected to the potential death penalty.
-
-Until the court rules and the case
-progresses further,
-Case File 001 remains OPEN.
+Those documents cannot responsibly
+be used as proof that Combs
+was involved in Tupac's
+later murder.
 
 </div>
 
 
-<p>
-
-Charlie Kirk was shot and killed
-while appearing at Utah Valley
-University in Orem, Utah,
-on September 10, 2025.
-
-</p>
-
-
-<p>
-
-Tyler James Robinson has been
-accused in connection with the killing.
-
-An accusation is not the same
-as a conviction,
-and the case must ultimately
-be judged on admissible evidence.
-
-</p>
-
 
 <h3>
-THE PHYSICAL EVIDENCE
+EXHIBIT 10 —
+BAD BOY,
+DEATH ROW
+AND GANG POLITICS
 </h3>
 
 
 <p>
 
-Publicly described evidence has
-included surveillance footage,
-a rooftop escape route,
-a recovered rifle,
-DNA evidence,
-vehicle evidence,
-witness statements,
-ammunition evidence
-and alleged digital communications.
+The Bad Boy–Death Row rivalry,
+Tupac's feud with
+the Notorious B.I.G.
+and real gang affiliations
+surrounding people
+in the music industry
+created a volatile environment.
 
 </p>
 
 
 <p>
 
-Each category of evidence must be
-examined independently before being
-combined into a larger theory.
-
-One weak piece does not automatically
-destroy an entire case,
-and one strong piece does not
-automatically prove every allegation.
+But association,
+rivalry
+and motive speculation
+are not substitutes
+for evidence of
+a murder solicitation.
 
 </p>
 
 
+
 <h3>
-THE RIFLE AND DNA
+THE MAJOR THEORIES
+</h3>
+
+
+<div class="evidence">
+
+<strong>
+THEORY:
+DIDDY ORDERED THE HIT
+</strong>
+
+Documented allegation.
+
+Investigated by police.
+
+Not proven by publicly
+established evidence.
+
+</div>
+
+
+<div class="evidence">
+
+<strong>
+THEORY:
+THE MURDER WAS
+GANG RETALIATION
+</strong>
+
+Strongly supported.
+
+This was the core prosecution
+theory that resulted
+in Davis's conviction.
+
+</div>
+
+
+<div class="evidence">
+
+<strong>
+THEORY:
+DIDDY PAID $1 MILLION
+</strong>
+
+Not established.
+
+Davis said he never received
+the alleged money.
+
+</div>
+
+
+<div class="evidence">
+
+<strong>
+THEORY:
+BIGGIE WAS INVOLVED
+</strong>
+
+Not established
+by the Davis prosecution.
+
+</div>
+
+
+<div class="evidence">
+
+<strong>
+THEORY:
+SUGE KNIGHT
+WAS BEHIND IT
+</strong>
+
+Not established
+in the Davis case.
+
+Knight was inside
+the targeted vehicle
+and was wounded.
+
+</div>
+
+
+
+<h3>
+WHAT THE 2026 VERDICT
+ESTABLISHES
 </h3>
 
 
 <p>
 
-Investigators recovered a
-Mauser Model 98 .30-06 rifle
-wrapped in a towel in a wooded area.
+The verdict establishes
+Duane Davis's criminal
+responsibility for
+Tupac Shakur's murder.
 
 </p>
 
 
 <p>
 
-Prosecutors have described DNA evidence
-linking Robinson to multiple parts
-of the recovered firearm.
+Prosecutors successfully argued
+that Davis orchestrated
+and facilitated
+the retaliatory attack.
 
 </p>
 
-
-<p>
-
-DNA can establish that a person
-likely contacted an object.
-
-By itself,
-DNA does not automatically establish
-exactly when or why that contact occurred.
-
-That distinction matters.
-
-</p>
 
 
 <h3>
-BALLISTICS
+WHAT THE VERDICT
+DOES NOT ESTABLISH
 </h3>
 
 
 <p>
 
-Forensic reporting concerning
-projectile comparison has also
-raised questions.
-
-The publicly described comparison
-of a bullet fragment recovered from
-Kirk's body was inconclusive.
+The verdict does not establish
+that Sean Combs ordered
+Tupac's killing.
 
 </p>
 
 
 <p>
 
-An inconclusive result does not mean
-the recovered rifle has been proven
-to be the murder weapon.
-
-But it also does not prove
-the rifle was uninvolved.
+It does not establish
+that Combs paid $1 million.
 
 </p>
+
+
+<p>
+
+It does not establish
+that Combs supplied
+the murder weapon.
+
+</p>
+
+
+<p>
+
+It does not establish
+that the Notorious B.I.G.
+participated.
+
+</p>
+
+
+<p>
+
+It does not establish
+that Bad Boy Records
+commissioned the murder.
+
+</p>
+
+
+<p>
+
+And it does not establish
+the exact identity
+of the shooter.
+
+</p>
+
 
 
 <h3>
-DIGITAL EVIDENCE
+THE EVIDENCE BOARD
 </h3>
 
 
-<p>
+<div class="evidence">
 
-Prosecutors have described digital
-communications and writings they say
-connect Robinson to the killing.
+<strong>
+VERIFIED
+</strong>
 
-</p>
+Tupac was shot
+September 7, 1996
+and died six days later.
 
+Orlando Anderson was beaten
+at the MGM Grand
+before the shooting.
 
-<p>
+Duane Davis was convicted
+in 2026.
 
-The defense is entitled to challenge
-how those messages were obtained,
-whether they are authentic,
-whether they are admissible
-and what they actually prove.
-
-</p>
-
-
-<h3>
-SURVEILLANCE AND TIMELINE
-</h3>
+</div>
 
 
-<p>
+<div class="evidence">
 
-Prosecutors say surveillance footage
-tracks a person connected to Robinson
-arriving in the area,
-changing clothing,
-reaching the roof of the Losee Center
-and fleeing after the shot.
+<strong>
+DOCUMENTED ALLEGATION
+</strong>
 
-</p>
+Davis alleged that
+Sean Combs offered money
+for Tupac and Suge Knight
+to be killed.
 
-
-<p>
-
-Investigators have also described
-physical impressions and evidence
-on the rooftop.
-
-</p>
+</div>
 
 
-<h3>
-CONSPIRACY CLAIMS
-</h3>
+<div class="evidence">
+
+<strong>
+DOCUMENTED INVESTIGATION
+</strong>
+
+Law enforcement attempted
+to corroborate Davis's account,
+including using Davis
+as an informant.
+
+</div>
 
 
-<p>
+<div class="evidence">
 
-The investigation must also examine
-alternative theories that have
-circulated online,
-including claims of another shooter,
-planted evidence,
-fabricated messages,
-security involvement,
-government involvement,
-foreign intelligence involvement
-and an inside operation.
+<strong>
+NOT PROVEN
+</strong>
 
-</p>
+Sean Combs ordered
+Tupac's murder.
+
+</div>
 
 
-<p>
+<div class="evidence">
 
-Those theories require affirmative
-evidence.
+<strong>
+NOT PROVEN
+</strong>
 
-A theory cannot become fact simply
-because unanswered questions remain.
+Sean Combs paid
+$1 million
+for the killing.
 
-</p>
-
-
-<h3>
-THE PRELIMINARY HEARING
-</h3>
+</div>
 
 
-<p>
+<div class="evidence">
 
-The current court proceeding is not
-the murder trial.
+<strong>
+NO TUPAC MURDER CHARGE
+</strong>
 
-</p>
+Sean Combs has not been
+charged with Tupac Shakur's murder.
 
-
-<p>
-
-At this stage,
-the judge must determine whether
-the prosecution has presented enough
-evidence to establish probable cause
-and move the charges forward.
-
-</p>
+</div>
 
 
-<p>
+<div class="evidence">
 
-That is a substantially lower legal
-standard than proving guilt beyond
-a reasonable doubt at trial.
+<strong>
+DISCREDITED EVIDENCE
+</strong>
 
-</p>
+The purported FBI documents
+behind the retracted
+2008 Los Angeles Times
+Quad Studios story
+should not be treated
+as evidence.
+
+</div>
+
 
 
 <div class="verdict">
 
 <strong>
 THE BLIND TRUTH
-PROVISIONAL VERDICT
+FINAL VERDICT
 </strong>
-
-<br><br>
-
-Based only on the publicly described
-evidence,
-the prosecution theory appears
-substantially supported by multiple
-categories of evidence.
-
-<br><br>
-
-However,
-the allegations have not been
-proven at trial.
-
-<br><br>
-
-Questions remain concerning motive,
-forensic interpretation,
-witness credibility
-and the weight individual pieces
-of evidence should receive.
 
 <br><br>
 
 <strong>
-CASE FILE 001 — OPEN
+UNPROVEN
 </strong>
 
 <br><br>
 
-The verdict will change if credible
-new evidence materially changes
-the record.
+DOCUMENTED ALLEGATION —
+
+INSUFFICIENT PUBLIC EVIDENCE
+TO ESTABLISH
+DIDDY'S INVOLVEMENT.
+
+<br><br>
+
+Keffe D's allegation deserves
+to be documented because
+it existed,
+was investigated
+and became part of
+the historical record.
+
+<br><br>
+
+But evidence-first reporting
+requires stopping
+where the evidence stops.
+
+<br><br>
+
+<strong>
+Question Everything.
+Follow the Evidence.
+</strong>
 
 </div>
 
@@ -4189,14 +3442,443 @@ the record.
 
 
 
-<!-- ======================================================
-     MICHAEL JORDAN INVESTIGATION
+<!-- =====================================================
+     KEFFE D
+     ===================================================== -->
+
+
+<dialog id="keffe">
+
+<div class="article">
+
+
+<button
+class="close"
+onclick="closeArticle('keffe')">
+×
+</button>
+
+
+<div class="category">
+HIP-HOP • COURT • VERIFIED
+</div>
+
+
+<h2>
+Keffe D Convicted
+in Tupac Shakur Murder
+</h2>
+
+
+<p class="article-intro">
+
+Nearly three decades
+after Tupac's killing,
+a Las Vegas jury returned
+the case's first
+murder conviction.
+
+</p>
+
+
+<div class="article-body">
+
+
+<p>
+
+Duane "Keffe D" Davis
+was convicted of
+first-degree murder
+with a deadly weapon
+in the 1996 killing
+of Tupac Shakur.
+
+</p>
+
+
+<p>
+
+Prosecutors did not accuse Davis
+of personally firing
+the fatal shots.
+
+</p>
+
+
+<p>
+
+Their case was that Davis
+orchestrated and facilitated
+the retaliatory attack.
+
+</p>
+
+
+<p>
+
+The prosecution connected
+the shooting to the
+MGM Grand fight involving
+Tupac,
+members of his entourage
+and Davis's nephew
+Orlando Anderson.
+
+</p>
+
+
+<p>
+
+Davis's recorded statements,
+interviews and memoir
+became important evidence.
+
+</p>
+
+
+<div class="verdict">
+
+<strong>
+WHAT THE VERDICT PROVES
+</strong>
+
+<br><br>
+
+Davis was found criminally
+responsible for
+Tupac's murder.
+
+<br><br>
+
+<strong>
+WHAT IT DOES NOT PROVE
+</strong>
+
+<br><br>
+
+It does not automatically prove
+every allegation Davis made
+about other people,
+including Sean "Diddy" Combs.
+
+</div>
+
+
+</div>
+
+</div>
+
+</dialog>
+
+
+
+<!-- =====================================================
+     IRAN STORY
+     ===================================================== -->
+
+
+<dialog id="iran">
+
+<div class="article">
+
+
+<button
+class="close"
+onclick="closeArticle('iran')">
+×
+</button>
+
+
+<div class="category">
+BREAKING • WORLD • DEVELOPING
+</div>
+
+
+<h2>
+U.S. and Iran
+Exchange Fire at Sea
+</h2>
+
+
+<p class="article-intro">
+
+A naval confrontation raises
+the risk of wider escalation
+around Iran
+and the Strait of Hormuz.
+
+</p>
+
+
+<div class="article-body">
+
+
+<p>
+
+U.S. and Iranian forces
+were involved in a new
+military confrontation
+around waters near Iran.
+
+</p>
+
+
+<p>
+
+The confrontation matters
+beyond the immediate
+military exchange because
+the Strait of Hormuz
+is one of the world's
+most important energy routes.
+
+</p>
+
+
+<p>
+
+Any sustained disruption
+could affect oil markets,
+shipping,
+fuel prices
+and the wider regional conflict.
+
+</p>
+
+
+<p>
+
+Because claims from active
+conflicts can change quickly,
+damage assessments,
+casualty claims
+and operational details
+should remain classified
+as developing until
+independently confirmed.
+
+</p>
+
+
+<div class="verdict">
+
+<strong>
+BLIND TRUTH STATUS:
+DEVELOPING
+</strong>
+
+<br><br>
+
+The military confrontation
+is a breaking story.
+
+Specific battlefield claims
+remain subject to verification.
+
+</div>
+
+
+</div>
+
+</div>
+
+</dialog>
+
+
+
+<!-- =====================================================
+     BEN SIMMONS
+     ===================================================== -->
+
+
+<dialog id="simmons">
+
+<div class="article">
+
+
+<button
+class="close"
+onclick="closeArticle('simmons')">
+×
+</button>
+
+
+<div class="category">
+SPORTS • NBA
+</div>
+
+
+<h2>
+Ben Simmons
+Gets Another NBA Opportunity
+</h2>
+
+
+<div class="article-body">
+
+
+<p>
+
+Ben Simmons has agreed
+to join Sacramento,
+giving the former
+No. 1 overall pick
+another opportunity
+to revive his NBA career.
+
+</p>
+
+
+<p>
+
+Simmons has previously
+been an NBA All-Star
+and one of the league's
+most versatile defenders.
+
+</p>
+
+
+<p>
+
+His comeback will be judged
+on health,
+availability,
+defense,
+playmaking
+and whether he can establish
+a consistent role.
+
+</p>
+
+
+<div class="verdict">
+
+<strong>
+BLIND TRUTH STATUS:
+VERIFIED SIGNING
+</strong>
+
+</div>
+
+
+</div>
+
+</div>
+
+</dialog>
+
+
+
+<!-- =====================================================
+     NBA 2K27
+     ===================================================== -->
+
+
+<dialog id="2k27">
+
+<div class="article">
+
+
+<button
+class="close"
+onclick="closeArticle('2k27')">
+×
+</button>
+
+
+<div class="category">
+GAMING • NBA 2K27
+</div>
+
+
+<h2>
+NBA 2K27
+Worldwide Release
+</h2>
+
+
+<div class="article-body">
+
+
+<p>
+
+NBA 2K27 has moved
+from early access
+into worldwide release.
+
+</p>
+
+
+<p>
+
+Players are now testing
+gameplay,
+shooting,
+movement,
+MyPLAYER builds,
+badges,
+VC systems
+and the new City
+at much larger scale.
+
+</p>
+
+
+<p>
+
+For MyPLAYER builders,
+the smartest early strategy
+is identifying exact
+badge,
+animation
+and attribute thresholds
+instead of wasting points
+that do not unlock
+a meaningful benefit.
+
+</p>
+
+
+<div class="verdict">
+
+<strong>
+RELEASE STATUS:
+VERIFIED
+</strong>
+
+<br><br>
+
+<strong>
+GAMEPLAY VERDICT:
+DEVELOPING
+</strong>
+
+<br><br>
+
+Early impressions matter,
+but patches
+and the evolving online meta
+will determine
+the long-term verdict.
+
+</div>
+
+
+</div>
+
+</div>
+
+</dialog>
+
+
+
+<!-- =====================================================
      CASE FILE 002
-     ====================================================== -->
+     ===================================================== -->
 
 
 <dialog id="jordan">
-
 
 <div class="article">
 
@@ -4222,14 +3904,15 @@ A Real Choke Job?
 <p class="article-intro">
 
 Six rings.
+
 Zero Finals losses.
+
 Six Finals MVPs.
 
-But does Michael Jordan's mythology
-survive when we stop counting only
-the six seasons that ended with
-championships and investigate
-everything else?
+But Finals record
+is not the same thing
+as an undefeated
+postseason career.
 
 </p>
 
@@ -4239,1367 +3922,60 @@ everything else?
 
 <p>
 
-Michael Jordan is one of the greatest
-basketball players who ever lived.
-
-That is not what this investigation
-is trying to disprove.
-
-The question is whether Jordan's
-greatness has been transformed into
-something much bigger:
-
-a mythology where Jordan never failed,
-never choked,
-always delivered when everything was
-on the line
-and therefore owns an unquestionable
-claim to being the greatest player
-in NBA history.
-
-</p>
-
-
-<p>
-
-The Blind Truth is putting that claim
-under investigation.
-
-Not because Jordan wasn't great.
-
-Because greatness should survive
-the evidence.
-
-</p>
-
-
-
-<h3>
-EXHIBIT 1 —
-THE MOST POWERFUL NUMBERS
-IN THE JORDAN ARGUMENT:
-6–0
-</h3>
-
-
-<p>
-
-Michael Jordan reached six NBA Finals
-with the Chicago Bulls.
-
-Chicago won all six.
-
-Jordan won Finals MVP all six times.
-
-That is one of the strongest
-accomplishments in NBA history.
-
-</p>
-
-
-<div class="jordan-stat">
-
-<strong>
-6–0
-</strong>
-
-Michael Jordan's record
-in NBA Finals series.
-
-</div>
-
-
-<p>
-
-But 6–0 does not mean Michael Jordan
-was undefeated in the postseason.
-
-It does not mean Jordan never lost
-when a championship was at stake.
-
-It means that during the six seasons
-Chicago advanced all the way to the
-NBA Finals,
-Chicago finished the job.
-
-</p>
-
-
-<p>
-
-Jordan experienced playoff elimination
-multiple times before reaching those Finals.
-
-Those losses simply don't appear
-inside the statistic “6–0.”
-
-</p>
-
-
-<div class="verdict">
-
-<strong>
-BLIND TRUTH FINDING:
-TRUE — BUT INCOMPLETE
-</strong>
-
-<br><br>
-
-Jordan was undefeated in NBA Finals series.
-
-That should not be rewritten as
-Jordan being undefeated in postseason
-competition.
-
-</div>
-
-
-
-<h3>
-EXHIBIT 2 —
-WHY DOES LOSING LATER
-COUNT AGAINST YOU MORE?
-</h3>
-
-
-<p>
-
-Imagine two superstar players.
-
-Player A reaches the conference finals
-and loses.
-
-Player B wins his conference,
-reaches the NBA Finals
-and loses there.
-
-</p>
-
-
-<p>
-
-Player A's Finals record remains untouched.
-
-Player B receives a Finals loss.
-
-</p>
-
-
-<p>
-
-Yet Player B actually advanced farther
-toward a championship.
-
-</p>
-
-
-<p>
-
-That creates a major weakness in using
-Finals record by itself as a measurement
-of greatness.
-
-Losing before the Finals protects
-your Finals record.
-
-Reaching the Finals and losing hurts it.
-
-</p>
-
-
-<div class="verdict">
-
-Six-and-zero is a legitimate
-accomplishment.
-
-It is not a complete description
-of a player's postseason career.
-
-</div>
-
-
-
-<h3>
-EXHIBIT 3 —
-BEFORE THE DYNASTY,
-JORDAN LOST TOO
-</h3>
-
-
-<p>
-
-Jordan's championship career did not begin
-the moment he entered the NBA.
-
-Chicago suffered multiple postseason
-eliminations before becoming a dynasty.
-
-</p>
-
-
-<div class="jordan-stat">
-
-<strong>
-1985
-</strong>
-
-Milwaukee eliminated Chicago
-in the first round.
-
-</div>
-
-
-<div class="jordan-stat">
-
-<strong>
-1986
-</strong>
-
-Boston swept Chicago 3–0.
-
-Jordan was spectacular in the series,
-including his famous 63-point performance.
-
-This is not classified as a Jordan choke.
-
-</div>
-
-
-<div class="jordan-stat">
-
-<strong>
-1987
-</strong>
-
-Boston swept Chicago again.
-
-</div>
-
-
-<div class="jordan-stat">
-
-<strong>
-1988
-</strong>
-
-Detroit eliminated Chicago 4–1.
-
-</div>
-
-
-<div class="jordan-stat">
-
-<strong>
-1989
-</strong>
-
-Detroit eliminated Chicago again.
-
-</div>
-
-
-<div class="jordan-stat">
-
-<strong>
-1990
-</strong>
-
-Detroit eliminated Chicago
-for a third consecutive year.
-
-</div>
-
-
-<p>
-
-None of those facts make Jordan
-a bad basketball player.
-
-Many of Jordan's individual performances
-during those losses were extraordinary.
-
-</p>
-
-
-<p>
-
-They establish something simpler:
-
-Michael Jordan experienced postseason
-failure just like every other superstar.
-
-</p>
-
-
-
-<h3>
-EXHIBIT 4 —
-NOT EVERY LOSS
-WAS A JORDAN CHOKE
-</h3>
-
-
-<p>
-
-An evidence-first investigation cannot
-simply blame Jordan every time Chicago lost.
-
-</p>
-
-
-<p>
-
-Chicago's 1990 Game 7 loss against Detroit
-provides a perfect example.
-
-Jordan produced:
-
-</p>
-
-
-<div class="jordan-stat">
-
-<strong>
-31 POINTS
-</strong>
-
-9 assists
-
-<br>
-
-8 rebounds
-
-</div>
-
-
-<p>
-
-Scottie Pippen finished with only
-two points on 1-for-10 shooting.
-
-</p>
-
-
-<p>
-
-Calling that particular game
-a Michael Jordan choke would ignore
-the evidence.
-
-</p>
-
-
-<div class="verdict">
-
-<strong>
-BLIND TRUTH RATING:
-NOT A JORDAN CHOKE
-</strong>
-
-</div>
-
-
-
-<h3>
-EXHIBIT 5 —
-ORLANDO 1995:
-NOW THIS ONE COUNTS
-</h3>
-
-
-<p>
-
-Game 1 of the 1995 Eastern Conference
-semifinals presents a much different story.
-
-</p>
-
-
-<p>
-
-Chicago held a late lead.
-
-Nick Anderson stripped Michael Jordan.
-
-Orlando converted the turnover.
-
-Chicago then got another opportunity.
-
-Jordan committed another turnover.
-
-</p>
-
-
-<div class="jordan-stat">
-
-<strong>
-19 POINTS
-</strong>
-
-8-for-22 shooting
-
-<br>
-
-8 turnovers
-
-<br>
-
-Two damaging late-game turnovers
-
-</div>
-
-
-<p>
-
-Chicago lost the game.
-
-Orlando eventually eliminated Chicago
-from the playoffs 4–2.
-
-</p>
-
-
-<p>
-
-If another superstar scored 19 points,
-turned the ball over eight times
-and committed critical late-game mistakes
-during a playoff loss,
-the word “choke” would almost certainly
-enter the conversation.
-
-</p>
-
-
-<div class="verdict">
-
-<strong>
-BLIND TRUTH RATING:
-CONFIRMED FAILURE
-</strong>
-
-<br><br>
-
-Jordan's overall career does not make
-this individual performance disappear.
-
-</div>
-
-
-
-<h3>
-EXHIBIT 6 —
-JORDAN RETIRED.
-
-CHICAGO DID NOT COLLAPSE.
-</h3>
-
-
-<p>
-
-The 1992–93 Chicago Bulls finished
-the regular season 57–25.
-
-They won the NBA championship.
-
-Then Michael Jordan retired.
-
-</p>
-
-
-<div class="jordan-stat">
-
-<strong>
-55–27
-</strong>
-
-Chicago Bulls record
-without Michael Jordan
-during the 1993–94 season.
-
-</div>
-
-
-<p>
-
-That was only two fewer victories
-than the previous championship season.
-
-</p>
-
-
-<p>
-
-Chicago defeated Cleveland
-in the opening playoff round.
-
-They then pushed the New York Knicks
-to Game 7 of the Eastern Conference
-semifinals.
-
-</p>
-
-
-<p>
-
-Those Knicks eventually reached
-the NBA Finals.
-
-</p>
-
-
-<div class="verdict">
-
-<strong>
-BLIND TRUTH FINDING:
-CHICAGO REMAINED A CONTENDER
-WITHOUT JORDAN
-</strong>
-
-<br><br>
-
-Jordan's absence hurt the Bulls,
-especially offensively.
-
-But his retirement did not transform
-Chicago into a lottery team.
-
-</div>
-
-
-
-<h3>
-EXHIBIT 7 —
-SCOTTIE PIPPEN WAS MORE
-THAN “JORDAN'S SIDEKICK”
-</h3>
-
-
-<p>
-
-When Jordan retired,
-Scottie Pippen became Chicago's
-primary superstar.
-
-The Bulls remained one of the
-NBA's best teams.
-
-</p>
-
-
-<p>
-
-Chicago also added players such as
-Toni Kukoč and Steve Kerr,
-while Phil Jackson remained head coach
-and the triangle offense remained intact.
-
-</p>
-
-
-<p>
-
-That context matters.
-
-It would be inaccurate to say
-the exact same roster simply removed
-Michael Jordan and won 55 games.
-
-</p>
-
-
-<p>
-
-But it is completely accurate to say:
-
-Chicago lost Michael Jordan
-and remained a 55-win contender.
-
-</p>
-
-
-
-<h3>
-EXHIBIT 8 —
-THE NEXT SEASON SHOWS
-JORDAN'S VALUE TOO
-</h3>
-
-
-<p>
-
-The evidence does not all point
-against Jordan.
-
-And we aren't going to hide
-the evidence that helps him.
-
-</p>
-
-
-<p>
-
-Chicago was less dominant during
-the following 1994–95 season.
-
-Jordan returned in March 1995
-and Chicago immediately became
-more dangerous.
-
-</p>
-
-
-<p>
-
-That is powerful evidence of
-Jordan's enormous value.
-
-</p>
-
-
-<p>
-
-But another fact remains:
-
-Jordan returned.
-
-Chicago entered the playoffs.
-
-And Orlando eliminated them.
-
-</p>
-
-
-<p>
-
-Jordan's Finals record stayed 6–0
-because Chicago never reached
-the Finals that season.
-
-</p>
-
-
-<div class="verdict">
-
-That is exactly why Finals record
-should not be confused with
-total postseason record.
-
-</div>
-
-
-
-<h3>
-EXHIBIT 9 —
-THEN CHICAGO ADDED
-DENNIS RODMAN
-</h3>
-
-
-<p>
-
-The Bulls added Dennis Rodman
-before the 1995–96 season.
-
-</p>
-
-
-<p>
-
-Chicago now featured:
-
-Michael Jordan.
-
-Scottie Pippen.
-
-Dennis Rodman.
-
-Toni Kukoč.
-
-Ron Harper.
-
-Steve Kerr.
-
-Luc Longley.
-
-And Phil Jackson.
-
-</p>
-
-
-<div class="jordan-stat">
-
-<strong>
-72–10
-</strong>
-
-Chicago Bulls
-1995–96 regular-season record.
-
-</div>
-
-
-<p>
-
-Jordan was the centerpiece
-of one of basketball's greatest teams.
-
-But it was still exactly that:
-
-a team.
-
-</p>
-
-
-
-<h3>
-EXHIBIT 10 —
-IF SIX RINGS MAKE JORDAN
-THE GOAT,
-WHAT DO WE DO WITH BILL RUSSELL?
-</h3>
-
-
-<div class="goat-table-wrap">
-
-<table class="goat-table">
-
-<thead>
-
-<tr>
-
-<th>
-PLAYER
-</th>
-
-<th>
-CHAMPIONSHIPS
-</th>
-
-<th>
-REGULAR-SEASON MVP
-</th>
-
-</tr>
-
-</thead>
-
-
-<tbody>
-
-<tr>
-
-<td>
-Bill Russell
-</td>
-
-<td>
-11
-</td>
-
-<td>
-5
-</td>
-
-</tr>
-
-
-<tr>
-
-<td>
-Michael Jordan
-</td>
-
-<td>
-6
-</td>
-
-<td>
-5
-</td>
-
-</tr>
-
-</tbody>
-
-</table>
-
-</div>
-
-
-<p>
-
-Russell won five more NBA championships
-than Jordan while matching Jordan's
-five regular-season MVP awards.
-
-</p>
-
-
-<p>
-
-The response is usually:
-
-Different era.
-
-Smaller league.
-
-Great teammates.
-
-Different competition.
-
-</p>
-
-
-<p>
-
-Those arguments may be valid.
-
-But once context is introduced
-for Russell,
-context must also be introduced
-for Jordan.
-
-</p>
-
-
-
-<h3>
-EXHIBIT 11 —
-KAREEM CREATES
-ANOTHER PROBLEM
-</h3>
-
-
-<div class="goat-table-wrap">
-
-<table class="goat-table">
-
-<thead>
-
-<tr>
-
-<th>
-PLAYER
-</th>
-
-<th>
-CHAMPIONSHIPS
-</th>
-
-<th>
-MVP
-</th>
-
-<th>
-FINALS MVP
-</th>
-
-</tr>
-
-</thead>
-
-
-<tbody>
-
-<tr>
-
-<td>
-Michael Jordan
-</td>
-
-<td>
-6
-</td>
-
-<td>
-5
-</td>
-
-<td>
-6
-</td>
-
-</tr>
-
-
-<tr>
-
-<td>
-Kareem Abdul-Jabbar
-</td>
-
-<td>
-6
-</td>
-
-<td>
-6
-</td>
-
-<td>
-2
-</td>
-
-</tr>
-
-</tbody>
-
-</table>
-
-</div>
-
-
-<p>
-
-Kareem won exactly the same number
-of championships as Jordan.
-
-Six.
-
-</p>
-
-
-<p>
-
-But Kareem won six regular-season
-MVP awards.
-
-Jordan won five.
-
-</p>
-
-
-<p>
-
-Jordan has the enormous advantage
-in Finals MVP awards.
-
-Six to two.
-
-</p>
-
-
-<p>
-
-Again,
-the discussion must extend beyond
-“Jordan was 6–0.”
-
-</p>
-
-
-
-<h3>
-EXHIBIT 12 —
-ROBERT HORRY PROVES
-RINGS CANNOT BE EVERYTHING
-</h3>
-
-
-<div class="jordan-stat">
-
-<strong>
-ROBERT HORRY:
-7 CHAMPIONSHIPS
-</strong>
-
-Michael Jordan:
-6 championships.
-
-</div>
-
-
-<p>
-
-Is Robert Horry greater
-than Michael Jordan?
-
-Of course not.
-
-</p>
-
-
-<p>
-
-Because basketball fans already
-understand that championships
-are team accomplishments.
-
-</p>
-
-
-<p>
-
-Individual greatness requires
-a much deeper evaluation.
-
-</p>
-
-
-
-<h3>
-EXHIBIT 13 —
-THE GOAT DOUBLE STANDARD
-</h3>
-
-
-<div class="jordan-stat">
-
-<strong>
-JORDAN LOSES BEFORE THE FINALS
-</strong>
-
-His 6–0 Finals record remains untouched.
-
-</div>
-
-
-<div class="jordan-stat">
-
-<strong>
-ANOTHER SUPERSTAR REACHES THE FINALS
-AND LOSES
-</strong>
-
-The Finals loss becomes part of
-his permanent legacy.
-
-</div>
-
-
-<div class="jordan-stat">
-
-<strong>
-JORDAN HAS A BAD PLAYOFF GAME
-</strong>
-
-Great players sometimes have bad nights.
-
-</div>
-
-
-<div class="jordan-stat">
-
-<strong>
-ANOTHER SUPERSTAR HAS A BAD PLAYOFF GAME
-</strong>
-
-Choker.
-
-</div>
-
-
-<p>
-
-The question is whether every GOAT
-candidate is being evaluated using
-the same measuring stick.
-
-</p>
-
-
-
-<h3>
-EXHIBIT 14 —
-SO WAS MICHAEL JORDAN
-ACTUALLY A CHOKER?
-</h3>
-
-
-<p>
-
-If “choker” means a superstar
-who routinely disappeared
-when pressure became greatest,
-the evidence does not support
-describing Michael Jordan's
-entire career that way.
-
-</p>
-
-
-<p>
-
-Jordan's postseason résumé is
-far too dominant.
-
-</p>
-
-
-<p>
-
-But if the question is whether
-Michael Jordan ever failed during
-critical moments,
-played badly in important games
-or contributed directly to
-major playoff losses:
-
-</p>
-
-
-<div class="jordan-stat">
-
-<strong>
-YES.
-</strong>
-
-Michael Jordan was human too.
-
-</div>
-
-
-<p>
-
-Those conclusions are not contradictory.
-
-</p>
-
-
-<p>
-
-Michael Jordan was not
-a career choker.
-
-</p>
-
-
-<p>
-
-Michael Jordan absolutely had
-individual failures,
-bad playoff performances
-and postseason losses.
-
-</p>
-
-
-
-<h3>
-THE SIX-AND-ZERO PROBLEM
-</h3>
-
-
-<p>
-
-Jordan's undefeated Finals record
-is one of the strongest pieces
-of evidence supporting his
-GOAT case.
-
-</p>
-
-
-<p>
-
-But the record is sometimes used
-to create something it does not prove:
-
-basketball perfection.
-
-</p>
-
-
-<p>
-
-Once we accept that,
-the GOAT debate has to examine
-the complete résumé.
-
-</p>
-
-
-<p>
-
-Peak.
-
-Longevity.
-
-Scoring.
-
-Defense.
-
-Playmaking.
-
-Championships.
-
-MVP awards.
-
-Finals performance.
-
-Playoff failures.
-
-Supporting cast.
-
-Competition.
-
-Era.
-
-And individual impact.
-
-</p>
-
-
-
-<div class="verdict">
-
-<strong>
-THE BLIND TRUTH VERDICT
-</strong>
-
-<br><br>
-
-<strong>
-WAS MICHAEL JORDAN GREAT?
-</strong>
-
-<br>
-
-VERIFIED.
-
-One of the greatest basketball
+Michael Jordan is one
+of the greatest basketball
 players who ever lived.
 
-<br><br>
-
-<strong>
-WAS MICHAEL JORDAN
-6–0 IN NBA FINALS SERIES?
-</strong>
-
-<br>
-
-VERIFIED.
-
-Six appearances.
-Six championships.
-
-<br><br>
-
-<strong>
-DID MICHAEL JORDAN
-NEVER LOSE WHEN A CHAMPIONSHIP
-WAS AT STAKE?
-</strong>
-
-<br>
-
-FALSE.
-
-Jordan's teams suffered postseason
-eliminations before reaching
-the Finals.
-
-<br><br>
-
-<strong>
-DID MICHAEL JORDAN
-EVER HAVE BAD PLAYOFF PERFORMANCES
-AND CRITICAL FAILURES?
-</strong>
-
-<br>
-
-VERIFIED.
-
-<br><br>
-
-<strong>
-DID CHICAGO IMMEDIATELY
-COLLAPSE AFTER JORDAN RETIRED?
-</strong>
-
-<br>
-
-FALSE.
-
-The Bulls went 55–27 during
-their first full season without him.
-
-<br><br>
-
-<strong>
-DOES 6–0 MATHEMATICALLY PROVE
-JORDAN IS THE GOAT?
-</strong>
-
-<br>
-
-NO.
-
-GOAT status depends on how
-different categories of basketball
-greatness are weighted.
-
-</div>
-
-
-
-<h3>
-FINAL FINDING
-</h3>
+</p>
 
 
 <p>
 
-Michael Jordan doesn't need
-mythology to be great.
+Case File 002 examines
+whether the mythology
+surrounding his 6–0 Finals record
+sometimes erases playoff failures
+and applies a different standard
+to other all-time greats.
 
 </p>
 
 
 <p>
 
-The real Michael Jordan
-is impressive enough.
+Jordan's Bulls lost
+multiple playoff series
+before the championship years.
 
 </p>
 
 
 <p>
 
-But the real Michael Jordan lost.
+In 1995,
+after Jordan returned
+from retirement,
+Orlando eliminated Chicago.
 
 </p>
 
 
 <p>
 
-The real Michael Jordan got swept.
+Chicago also went 55–27
+during the first full season
+after Jordan retired.
 
 </p>
 
 
 <p>
 
-The real Michael Jordan had
-bad playoff games.
-
-</p>
-
-
-<p>
-
-The real Michael Jordan made
-critical mistakes.
-
-</p>
-
-
-<p>
-
-The real Michael Jordan
-needed teammates.
-
-</p>
-
-
-<p>
-
-And the real Michael Jordan
-eventually climbed to the top
-of basketball six different times.
+That demonstrated the strength
+of Scottie Pippen,
+Phil Jackson,
+the roster
+and the larger Bulls system.
 
 </p>
 
@@ -5607,44 +3983,26 @@ of basketball six different times.
 <div class="verdict">
 
 <strong>
-CASE FILE 002 FINAL STATUS:
+CASE FILE 002
+FINAL STATUS
+</strong>
+
+<br><br>
+
+<strong>
 MYTH OF INVINCIBILITY —
 DEBUNKED
 </strong>
 
 <br><br>
 
-Michael Jordan's case for being
-the greatest basketball player
-of all time is legitimate.
+Jordan's GOAT case
+is legitimate.
 
-<br><br>
-
-His claim to basketball perfection
+The claim that 6–0
+proves basketball perfection
 is not.
 
-<br><br>
-
-Six-and-zero proves that every time
-Jordan reached the NBA Finals,
-his Bulls finished the job.
-
-<br><br>
-
-It does not erase everything
-that happened before those Finals.
-
-<br><br>
-
-If every player is going on trial
-for the GOAT crown,
-then every player should be judged
-under the same rules.
-
-<br><br>
-
-Including Michael Jordan.
-
 </div>
 
 
@@ -5656,38 +4014,41 @@ Including Michael Jordan.
 
 
 
-<!-- LIONEL RICHIE -->
+<!-- =====================================================
+     CASE FILE 001
+     ===================================================== -->
 
 
-<dialog id="richie">
+<dialog id="kirk">
 
 <div class="article">
 
 
 <button
 class="close"
-onclick="closeArticle('richie')">
+onclick="closeArticle('kirk')">
 ×
 </button>
 
 
 <div class="category">
-ENTERTAINMENT • HEALTH
+CASE FILE 001 • INVESTIGATION
 </div>
 
 
 <h2>
-Lionel Richie
-Hospitalized After
-St. Louis Concert
+Who Killed
+Charlie Kirk?
 </h2>
 
 
 <p class="article-intro">
 
-The music legend checked himself
-into a hospital following a weekend
-performance in St. Louis.
+Evidence first.
+
+Rumors second.
+
+Verdict last.
 
 </p>
 
@@ -5697,73 +4058,56 @@ performance in St. Louis.
 
 <p>
 
-Lionel Richie,
-77,
-was hospitalized following his
-August 29 performance at The Muny
-in St. Louis.
+Charlie Kirk was shot
+and killed while appearing
+at Utah Valley University
+in Orem,
+Utah,
+on September 10, 2025.
 
 </p>
 
 
 <p>
 
-A source close to Richie's tour
-told ABC News that the singer
-checked himself into the hospital
-out of an abundance of caution.
+Tyler James Robinson
+has been accused
+in connection with the killing.
 
 </p>
 
 
 <p>
 
-Audience members reported that
-Richie appeared to struggle near
-the end of the performance
-and completed his final song
-while seated.
+Publicly described evidence
+has included surveillance footage,
+a rooftop escape route,
+a recovered rifle,
+DNA evidence,
+vehicle evidence,
+witness statements,
+ammunition evidence
+and alleged digital communications.
 
 </p>
 
 
 <p>
 
-Other reports have described
-Richie as receiving intensive-care
-treatment,
-although detailed medical information
-has not been publicly released.
+An accusation is not
+the same thing as a conviction.
 
 </p>
 
 
 <p>
 
-Possible dehydration has been
-discussed in reporting,
-but The Blind Truth will not treat
-a suspected cause as a confirmed
-diagnosis unless Richie's medical
-team or representatives confirm it.
+Alternative theories
+require affirmative evidence.
 
-</p>
-
-
-<h3>
-SECOND HEALTH SCARE
-</h3>
-
-
-<p>
-
-The hospitalization follows another
-incident earlier this summer.
-
-Richie experienced dizziness during
-a June concert in Minnesota
-and subsequently postponed shows
-while doctors advised him to rest.
+Unanswered questions alone
+do not prove
+an alternative theory.
 
 </p>
 
@@ -5771,475 +4115,21 @@ while doctors advised him to rest.
 <div class="verdict">
 
 <strong>
-THE BLIND TRUTH STATUS:
-CONFIRMED HOSPITALIZATION
+CASE FILE 001 —
+OPEN
 </strong>
 
 <br><br>
 
-Richie's hospitalization is confirmed.
-
-Specific medical conclusions should
-remain provisional until more information
-is released by Richie,
-his representatives
-or his doctors.
-
-</div>
-
-
-</div>
-
-</div>
-
-</dialog>
-
-
-
-<!-- TIM CURRY -->
-
-
-<dialog id="curry">
-
-<div class="article">
-
-
-<button
-class="close"
-onclick="closeArticle('curry')">
-×
-</button>
-
-
-<div class="category">
-ENTERTAINMENT
-</div>
-
-
-<h2>
-Tim Curry Dies at 80
-</h2>
-
-
-<div class="article-body">
-
-
-<p>
-
-Tim Curry built a career across
-film,
-television,
-theater,
-music
-and voice acting.
-
-</p>
-
-
-<p>
-
-His most recognizable performances
-include Dr. Frank-N-Furter in
-The Rocky Horror Picture Show,
-Pennywise in the 1990 television
-adaptation of It
-and Wadsworth in Clue.
-
-</p>
-
-
-<p>
-
-His work reached multiple generations
-and crossed genres in a way
-few performers achieve.
-
-</p>
-
-
-</div>
-
-</div>
-
-</dialog>
-
-
-
-<!-- NEPAL -->
-
-
-<dialog id="nepal">
-
-<div class="article">
-
-
-<button
-class="close"
-onclick="closeArticle('nepal')">
-×
-</button>
-
-
-<div class="category">
-WORLD NEWS • DISASTER
-</div>
-
-
-<h2>
-Nepal Flood Death Toll
-Passes 1,000
-</h2>
-
-
-<p class="article-intro">
-
-One of the region's worst recent
-natural disasters continues to grow
-as rescuers reach previously
-isolated areas.
-
-</p>
-
-
-<div class="article-body">
-
-
-<p>
-
-More than 1,000 people have now been
-confirmed dead in Nepal following
-catastrophic flooding and debris flows
-in the Himalayan region.
-
-</p>
-
-
-<div class="jordan-stat">
-
-<strong>
-1,003 DEAD
-</strong>
-
-Reported in Nepal
-as of the September 1 update.
-
-</div>
-
-
-<div class="jordan-stat">
-
-<strong>
-3,916 MISSING
-</strong>
-
-Authorities continue searching
-for thousands of people.
-
-</div>
-
-
-<p>
-
-Rescue teams are using soldiers,
-heavy machinery,
-temporary bridges
-and search crews to reach communities
-cut off by destroyed roads
-and damaged infrastructure.
-
-</p>
-
-
-<p>
-
-Hydropower facilities and tunnels
-have become major search areas
-because workers were trapped
-or missing following the disaster.
-
-</p>
-
-
-<p>
-
-The flooding carried enormous amounts
-of ice,
-water,
-rock
-and debris down the mountain valleys.
-
-Some destruction extended many miles
-downstream.
-
-</p>
-
-
-<p>
-
-During a disaster of this scale,
-death and missing-person totals
-can change rapidly as new areas
-become accessible.
-
-</p>
-
-
-<div class="verdict">
-
-<strong>
-THE BLIND TRUTH STATUS:
-ACTIVE DISASTER
-</strong>
-
-<br><br>
-
-The current numbers are confirmed
-developing totals,
-not final totals.
-
-Future updates may substantially
-change the number of dead,
-missing
-and rescued.
-
-</div>
-
-
-</div>
-
-</div>
-
-</dialog>
-
-
-
-<!-- META -->
-
-
-<dialog id="meta">
-
-<div class="article">
-
-
-<button
-class="close"
-onclick="closeArticle('meta')">
-×
-</button>
-
-
-<div class="category">
-TECHNOLOGY • LEGAL
-</div>
-
-
-<h2>
-Meta Settlement
-and Youth Safety
-</h2>
-
-
-<div class="article-body">
-
-
-<p>
-
-Legal scrutiny surrounding
-Facebook and Instagram has
-intensified the debate over
-how social-media products
-affect younger users.
-
-</p>
-
-
-<p>
-
-The larger issue extends beyond
-one company:
-
-how much responsibility
-should technology platforms carry
-for design decisions intended
-to increase engagement?
-
-</p>
-
-
-<p>
-
-A settlement does not establish
-that social media caused every
-mental-health problem attributed
-to it.
-
-It does demonstrate that
-youth safety and platform design
-have become major legal and
-regulatory issues.
-
-</p>
-
-
-</div>
-
-</div>
-
-</dialog>
-
-
-
-<!-- BLACK PANTHER -->
-
-
-<dialog id="panther">
-
-<div class="article">
-
-
-<button
-class="close"
-onclick="closeArticle('panther')">
-×
-</button>
-
-
-<div class="category">
-MARVEL • ENTERTAINMENT
-</div>
-
-
-<h2>
-Black Panther 3
-Moves Forward
-</h2>
-
-
-<div class="article-body">
-
-
-<p>
-
-Another chapter in the
-Black Panther franchise has
-been widely discussed,
-with Ryan Coogler central
-to the future of the series.
-
-</p>
-
-
-<p>
-
-The major creative question is
-how the franchise continues
-T'Challa's legacy following
-Chadwick Boseman's death while
-building Wakanda's next generation.
-
-</p>
-
-
-<p>
-
-Casting reports and speculation
-about T'Challa's son should be
-separated from anything Marvel
-has officially confirmed.
-
-</p>
-
-
-</div>
-
-</div>
-
-</dialog>
-
-
-
-<!-- NBA 2K27 -->
-
-
-<dialog id="2k27">
-
-<div class="article">
-
-
-<button
-class="close"
-onclick="closeArticle('2k27')">
-×
-</button>
-
-
-<div class="category">
-GAMING • NBA 2K27
-</div>
-
-
-<h2>
-NBA 2K27:
-What Players Are Saying
-</h2>
-
-
-<div class="article-body">
-
-
-<p>
-
-NBA 2K27 has entered its opening
-release period,
-putting gameplay,
-shooting,
-movement,
-defense,
-MyPLAYER builds
-and VC under immediate scrutiny.
-
-</p>
-
-
-<p>
-
-Early reactions should always be
-treated cautiously because the
-online meta changes once more
-players gain access and developers
-begin releasing patches.
-
-</p>
-
-
-<p>
-
-For MyPLAYER builders,
-the smartest early strategy is
-to identify exact badge,
-animation
-and attribute thresholds
-instead of blindly copying
-viral day-one builds.
-
-</p>
-
-
-<div class="verdict">
-
-<strong>
-EARLY VERDICT:
-PROMISING — BUT UNPROVEN
-</strong>
-
-<br><br>
-
-Gameplay balance,
-server performance,
-VC economics
-and future patches
-will determine the long-term
-verdict.
+The prosecution theory
+appears substantially supported
+by publicly described evidence.
+
+However,
+the allegations must ultimately
+be judged through
+the legal process
+and admissible evidence.
 
 </div>
 
@@ -6253,7 +4143,6 @@ verdict.
 
 
 <script>
-
 
 function openArticle(id) {
 
@@ -6301,7 +4190,6 @@ document
     );
 
 });
-
 
 </script>
 
