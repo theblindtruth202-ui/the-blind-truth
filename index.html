@@ -134,17 +134,23 @@ button {
 }
 
 
-/* NEWSROOM BAR */
+/* =====================================================
+   TOP NEWSROOM BAR
+   ===================================================== */
 
 .newsbar {
     background:#000;
-    border-bottom:1px solid #222;
+
+    border-bottom:
+    1px solid #222;
+
     color:#aaa;
+
     font-size:13px;
 }
 
 .newsbar-inner {
-    min-height:38px;
+    min-height:42px;
 
     display:flex;
 
@@ -152,7 +158,29 @@ button {
 
     justify-content:space-between;
 
-    gap:10px;
+    gap:15px;
+}
+
+.newsbar-left {
+    display:flex;
+
+    align-items:center;
+
+    gap:8px;
+
+    min-width:max-content;
+}
+
+.newsbar-right {
+    display:flex;
+
+    align-items:center;
+
+    justify-content:flex-end;
+
+    gap:18px;
+
+    flex-wrap:wrap;
 }
 
 .live-dot {
@@ -166,11 +194,71 @@ button {
 
     background:var(--red);
 
-    margin-right:8px;
+    box-shadow:
+    0 0 10px rgba(255,52,52,.6);
 }
 
 
-/* HEADER */
+/* =====================================================
+   VISITOR COUNTER
+   ===================================================== */
+
+.visitor-counter {
+    display:flex;
+
+    align-items:center;
+
+    gap:7px;
+
+    color:#ddd;
+
+    font-weight:900;
+
+    white-space:nowrap;
+
+    padding:
+    4px 10px;
+
+    border:
+    1px solid rgba(99,255,54,.25);
+
+    border-radius:999px;
+
+    background:
+    rgba(99,255,54,.05);
+}
+
+.counter-eye {
+    color:var(--green);
+
+    font-size:14px;
+}
+
+.counter-label {
+    color:#999;
+
+    font-size:10px;
+
+    letter-spacing:1px;
+
+    text-transform:uppercase;
+}
+
+#visitor-count {
+    color:var(--green);
+
+    font-family:
+    "Arial Black",
+    Impact,
+    sans-serif;
+
+    letter-spacing:.5px;
+}
+
+
+/* =====================================================
+   HEADER
+   ===================================================== */
 
 header {
     position:sticky;
@@ -284,6 +372,8 @@ nav::-webkit-scrollbar {
 }
 
 nav a {
+    position:relative;
+
     font-size:13px;
 
     font-weight:900;
@@ -291,17 +381,45 @@ nav a {
     white-space:nowrap;
 
     text-transform:uppercase;
+
+    padding:
+    5px 1px;
+}
+
+nav a::after {
+    content:"";
+
+    position:absolute;
+
+    left:0;
+
+    right:100%;
+
+    bottom:0;
+
+    height:3px;
+
+    background:var(--green);
+
+    transition:.2s ease;
 }
 
 nav a:hover {
     color:var(--green);
 }
 
+nav a:hover::after {
+    right:0;
+}
 
-/* HERO */
+
+/* =====================================================
+   HERO
+   ===================================================== */
 
 .hero {
-    padding:40px 0 25px;
+    padding:
+    40px 0 25px;
 }
 
 .hero-grid {
@@ -365,6 +483,26 @@ nav a:hover {
 
     transform:
     rotate(-9deg);
+}
+
+.main-story::after {
+    content:"";
+
+    position:absolute;
+
+    width:260px;
+
+    height:64px;
+
+    left:-30px;
+
+    bottom:85px;
+
+    background:
+    rgba(99,255,54,.08);
+
+    transform:
+    rotate(4deg);
 }
 
 .main-story > * {
@@ -458,7 +596,9 @@ nav a:hover {
 }
 
 
-/* FEATURE CARDS */
+/* =====================================================
+   FEATURE CARDS
+   ===================================================== */
 
 .side-column {
     display:grid;
@@ -508,7 +648,9 @@ nav a:hover {
 }
 
 
-/* BUTTONS */
+/* =====================================================
+   BUTTONS
+   ===================================================== */
 
 .read-button {
     background:none;
@@ -531,6 +673,8 @@ nav a:hover {
     margin-top:15px;
 
     text-transform:uppercase;
+
+    transition:.2s;
 }
 
 .read-button:hover {
@@ -541,10 +685,13 @@ nav a:hover {
 }
 
 
-/* SECTIONS */
+/* =====================================================
+   SECTIONS
+   ===================================================== */
 
 .news-section {
-    padding:38px 0;
+    padding:
+    38px 0;
 
     scroll-margin-top:100px;
 }
@@ -623,7 +770,9 @@ nav a:hover {
 }
 
 
-/* STORY GRID */
+/* =====================================================
+   STORY CARDS
+   ===================================================== */
 
 .story-grid {
     display:grid;
@@ -710,7 +859,9 @@ nav a:hover {
 }
 
 
-/* INVESTIGATION */
+/* =====================================================
+   INVESTIGATIONS
+   ===================================================== */
 
 .investigation {
     padding:55px;
@@ -833,7 +984,9 @@ nav a:hover {
 }
 
 
-/* ARTICLE WINDOWS */
+/* =====================================================
+   ARTICLE POPUPS
+   ===================================================== */
 
 dialog {
     width:
@@ -1016,6 +1169,7 @@ dialog::backdrop {
 
 #entertainment .section-header h2::after {
     background:
+
     linear-gradient(
         90deg,
         var(--red),
@@ -1025,6 +1179,7 @@ dialog::backdrop {
 
 #gaming .section-header h2::after {
     background:
+
     linear-gradient(
         90deg,
         var(--green),
@@ -1068,7 +1223,9 @@ footer strong {
 }
 
 
-/* MOBILE */
+/* =====================================================
+   MOBILE
+   ===================================================== */
 
 @media(max-width:900px) {
 
@@ -1087,11 +1244,37 @@ footer strong {
     }
 }
 
+
 @media(max-width:650px) {
 
     .container {
         width:
         calc(100% - 20px);
+    }
+
+    .newsbar-inner {
+        padding:
+        7px 0;
+
+        align-items:flex-start;
+
+        flex-direction:column;
+
+        gap:5px;
+    }
+
+    .newsbar-right {
+        width:100%;
+
+        justify-content:
+        space-between;
+
+        gap:8px;
+    }
+
+    .visitor-counter {
+        padding:
+        3px 8px;
     }
 
     .logo-circle {
@@ -1138,10 +1321,6 @@ footer strong {
     .investigation {
         padding:30px;
     }
-
-    .newsbar-inner {
-        font-size:11px;
-    }
 }
 
 </style>
@@ -1152,27 +1331,64 @@ footer strong {
 <body>
 
 
+<!-- =====================================================
+     NEWSROOM + LIVE PAGE COUNTER
+     ===================================================== -->
+
+
 <div class="newsbar">
 
 <div class="container newsbar-inner">
 
-<div>
+
+<div class="newsbar-left">
 
 <span class="live-dot"></span>
 
+<strong>
 THE BLIND TRUTH NEWSROOM
+</strong>
 
 </div>
+
+
+<div class="newsbar-right">
+
+
+<div class="visitor-counter"
+aria-label="Website visit counter">
+
+<span class="counter-eye">
+●
+</span>
+
+<span class="counter-label">
+SITE VISITS
+</span>
+
+<span id="visitor-count">
+LOADING...
+</span>
+
+</div>
+
 
 <div>
-
 UPDATED SEPTEMBER 9, 2026
+</div>
+
 
 </div>
 
 </div>
 
 </div>
+
+
+
+<!-- =====================================================
+     HEADER
+     ===================================================== -->
 
 
 <header>
@@ -1184,11 +1400,8 @@ UPDATED SEPTEMBER 9, 2026
 class="logo">
 
 <div class="logo-circle">
-
 TBT
-
 </div>
-
 
 <div class="logo-text">
 
@@ -1251,6 +1464,7 @@ Case Files
 </header>
 
 
+
 <main
 id="top"
 class="container">
@@ -1286,7 +1500,7 @@ CONFLICT ESCALATES
 Brent crude pushes above
 $100 per barrel as escalating
 Middle East conflict,
-shipping disruptions
+shipping disruption
 and threats to major energy routes
 raise fears of higher fuel prices
 and renewed inflation.
@@ -1301,6 +1515,7 @@ READ MAIN STORY →
 </button>
 
 </article>
+
 
 
 <div class="side-column">
@@ -1318,10 +1533,11 @@ Carlos Alcaraz
 </h2>
 
 <p>
-Shelton defeats the defending
-U.S. Open champion in five sets
-after the latest finish
-in tournament history.
+Shelton defeats
+the defending champion
+in a five-set thriller
+and moves into
+the U.S. Open semifinal.
 </p>
 
 <button
@@ -1333,6 +1549,7 @@ READ STORY →
 </button>
 
 </article>
+
 
 
 <article class="feature-card">
@@ -1381,7 +1598,7 @@ OPEN CASE FILE →
 
 
 <!-- =====================================================
-     BREAKING
+     BREAKING NEWS
      ===================================================== -->
 
 
@@ -1426,8 +1643,8 @@ Breaks $100
 </h3>
 
 <p>
-Oil prices climb above
-$100 as escalating conflict
+Oil prices climb
+as escalating conflict
 and shipping risks pressure
 global energy markets.
 </p>
@@ -1441,6 +1658,7 @@ READ STORY →
 </button>
 
 </article>
+
 
 
 <article class="story-card">
@@ -1457,7 +1675,7 @@ Remains Disrupted
 <p>
 Commercial vessel traffic
 through the Strait of Hormuz
-remains below recent averages
+remains under pressure
 as regional conflict intensifies.
 </p>
 
@@ -1470,6 +1688,7 @@ READ STORY →
 </button>
 
 </article>
+
 
 
 <article class="story-card">
@@ -1486,8 +1705,8 @@ Leaves Questions Behind
 <p>
 Keffe D's conviction
 brings legal accountability,
-but several long-running questions
-about the murder remain unresolved.
+but several long-running
+questions remain unresolved.
 </p>
 
 <button
@@ -1554,9 +1773,9 @@ Knocks Out Alcaraz
 
 <p>
 The American reaches
-his first Grand Slam semifinal
-after a five-set thriller
-ending at 3:33 a.m.
+a Grand Slam semifinal
+after a dramatic
+five-set battle.
 </p>
 
 <button
@@ -1568,6 +1787,7 @@ READ STORY →
 </button>
 
 </article>
+
 
 
 <article class="story-card">
@@ -1582,10 +1802,10 @@ for Historic Australia Game
 </h3>
 
 <p>
-The 49ers and Rams
-prepare for the NFL's
-first regular-season game
-in Australia.
+The league prepares
+for a major international
+regular-season matchup
+in Melbourne.
 </p>
 
 <button
@@ -1599,6 +1819,7 @@ READ STORY →
 </article>
 
 
+
 <article class="story-card">
 
 <div class="category">
@@ -1606,15 +1827,15 @@ HIP-HOP • COURT
 </div>
 
 <h3>
-Diddy's Prison
+Diddy Prison
 Release Date Moves
 </h3>
 
 <p>
 Federal prison records
-now list a projected
-February 5, 2028
-release date for Sean Combs.
+list a new projected
+February 2028
+release date.
 </p>
 
 <button
@@ -1675,19 +1896,15 @@ TENNIS • U.S. OPEN
 </div>
 
 <h3>
-Shelton Beats Alcaraz
-in Five-Set Thriller
+Shelton Beats
+Alcaraz
 </h3>
 
 <p>
 Ben Shelton defeats
 Carlos Alcaraz
-6-7,
-6-1,
-6-3,
-1-6,
-7-6
-to reach the semifinals.
+in a dramatic
+five-set U.S. Open battle.
 </p>
 
 <button
@@ -1701,33 +1918,27 @@ READ STORY →
 </article>
 
 
+
 <article class="story-card">
 
 <div class="category">
-TENNIS • U.S. OPEN
+TENNIS
 </div>
 
 <h3>
-Tiafoe Completes
-Massive Comeback
+American Tennis
+Pushes Deeper
+into U.S. Open
 </h3>
 
 <p>
-Frances Tiafoe rallies
-from two sets down
-to advance to
-the U.S. Open semifinal.
+American players continue
+making noise late
+in the tournament.
 </p>
 
-<button
-class="read-button"
-onclick="openArticle('tiafoe')">
-
-READ STORY →
-
-</button>
-
 </article>
+
 
 
 <article class="story-card">
@@ -1743,9 +1954,9 @@ Take NFL to Melbourne
 
 <p>
 The league prepares
-for its first regular-season
-game in Australia
-at the Melbourne Cricket Ground.
+for another major step
+in its international
+expansion.
 </p>
 
 <button
@@ -1828,6 +2039,7 @@ READ UPDATE →
 </article>
 
 
+
 <article class="story-card">
 
 <div class="category">
@@ -1842,8 +2054,8 @@ Moves to February 2028
 <p>
 Federal prison records
 show a new projected
-release date for
-Sean Combs.
+release date
+for Sean Combs.
 </p>
 
 <button
@@ -1857,6 +2069,7 @@ READ STORY →
 </article>
 
 
+
 <article class="story-card">
 
 <div class="category">
@@ -1864,12 +2077,12 @@ CASE FILE 003
 </div>
 
 <h3>
-The Diddy-Tupac Claim
+Diddy-Tupac Claim
 Remains Unproven
 </h3>
 
 <p>
-No new verified evidence
+No verified evidence
 changes The Blind Truth's
 Case File 003 verdict.
 </p>
@@ -1939,12 +2152,12 @@ Story Continues
 <p>
 The Gallagher brothers'
 reconciliation remains
-a major entertainment story
-following the Venice premiere
-of their reunion documentary.
+a major entertainment
+and music story.
 </p>
 
 </article>
+
 
 
 <article class="story-card">
@@ -1961,7 +2174,7 @@ Update Draws Attention
 <p>
 Sean Combs's projected
 federal prison release
-has moved again.
+has changed.
 </p>
 
 <button
@@ -1975,6 +2188,7 @@ READ STORY →
 </article>
 
 
+
 <article class="story-card">
 
 <div class="category">
@@ -1983,13 +2197,13 @@ FILM
 
 <h3>
 Awards Season
-Begins to Take Shape
+Begins Taking Shape
 </h3>
 
 <p>
 Major festival premieres
 continue shaping
-the early 2026–27
+the upcoming
 awards conversation.
 </p>
 
@@ -2068,43 +2282,64 @@ READ STORY →
 </article>
 
 
+
 <article class="story-card">
 
 <div class="category">
-RPG • PLAYSTATION
+MYPLAYER
 </div>
 
 <h3>
-Final Fantasy VII:
-Revelation Announced
+Builders Hunt
+for Efficient Thresholds
 </h3>
 
 <p>
-The next Final Fantasy VII
-project enters the gaming
-conversation with an
-April 2027 release target.
+Exact badge,
+animation
+and attribute thresholds
+are becoming central
+to the early builder meta.
 </p>
+
+<button
+class="read-button"
+onclick="openArticle('2k27')">
+
+READ STORY →
+
+</button>
 
 </article>
 
 
+
 <article class="story-card">
 
 <div class="category">
-MONSTER HUNTER
+NBA 2K27 • COMMUNITY
 </div>
 
 <h3>
-Monster Hunter Wilds
-Expansion Announced
+Long-Term Verdict
+Still Developing
 </h3>
 
 <p>
-Capcom's next major
-Wilds expansion is positioned
-for release in 2027.
+Patches,
+server performance,
+VC economics
+and gameplay balance
+will shape the final verdict.
 </p>
+
+<button
+class="read-button"
+onclick="openArticle('2k27')">
+
+READ STORY →
+
+</button>
 
 </article>
 
@@ -2161,7 +2396,8 @@ $1 Million?
 </h3>
 
 <p>
-Keffe D made the allegation.
+Keffe D made
+the allegation.
 
 Police investigated it.
 
@@ -2182,6 +2418,7 @@ SEE EVIDENCE →
 </article>
 
 
+
 <article class="story-card">
 
 <div class="category">
@@ -2196,9 +2433,8 @@ Fired at Tupac?
 <p>
 The Davis conviction
 does not judicially establish
-the identity of
-the person who fired
-the fatal shots.
+the exact person
+who fired the fatal shots.
 </p>
 
 <button
@@ -2212,6 +2448,7 @@ INVESTIGATE →
 </article>
 
 
+
 <article class="story-card">
 
 <div class="category">
@@ -2220,14 +2457,14 @@ DISCREDITED EVIDENCE
 
 <h3>
 Fake FBI Documents
-Still Circulate Online
+Still Circulate
 </h3>
 
 <p>
-Purported documents linked
-to the 1994 Quad Studios attack
-remain unreliable evidence
-despite continued circulation.
+Purported documents
+linked to the
+1994 Quad Studios attack
+remain unreliable evidence.
 </p>
 
 <button
@@ -2315,6 +2552,7 @@ SEE WHY →
 </article>
 
 
+
 <article class="story-card">
 
 <div class="category">
@@ -2331,8 +2569,9 @@ Misleading.
 
 Davis has been convicted,
 but questions about
-the shooter and possible
-broader involvement remain.
+the shooter
+and possible broader
+involvement remain.
 </p>
 
 <button
@@ -2346,6 +2585,7 @@ READ UPDATE →
 </article>
 
 
+
 <article class="story-card">
 
 <div class="category">
@@ -2353,17 +2593,17 @@ VERIFIED
 </div>
 
 <h3>
-"Oil Has Crossed
+"Oil Crossed
 $100 Per Barrel"
 </h3>
 
 <p>
 Verified.
 
-Brent crude moved
-above $100 amid
-escalating Middle East
-conflict and supply fears.
+Brent crude crossed
+the $100 level
+amid conflict
+and supply fears.
 </p>
 
 <button
@@ -2446,14 +2686,15 @@ The Blind Truth's verdict
 on Sean Combs.
 
 The allegation that Combs
-offered money for
-Tupac and Suge Knight
-to be killed is documented.
+offered money
+for Tupac and Suge Knight
+to be killed
+is documented.
 
 Publicly established evidence
 still does not prove
-Combs ordered or financed
-the murder.
+Combs ordered
+or financed the murder.
 </p>
 
 <button
@@ -2590,7 +2831,7 @@ new evidence changes the record.
 
 
 <!-- =====================================================
-     OIL STORY
+     OIL ARTICLE
      ===================================================== -->
 
 
@@ -2598,18 +2839,15 @@ new evidence changes the record.
 
 <div class="article">
 
-
 <button
 class="close"
 onclick="closeArticle('oil')">
 ×
 </button>
 
-
 <div class="category">
 BREAKING • WORLD • MONEY
 </div>
-
 
 <h2>
 Oil Breaks $100
@@ -2617,71 +2855,33 @@ as Middle East
 Conflict Escalates
 </h2>
 
-
 <p class="article-intro">
-
 Energy markets are reacting
 to escalating conflict,
 shipping disruption
 and threats to major
 oil routes.
-
 </p>
-
 
 <div class="article-body">
 
-
 <p>
-
-Brent crude moved above
-$100 per barrel
-on September 9,
-reaching its highest levels
-in weeks.
-
+Brent crude moved
+above the $100-per-barrel
+level as energy markets
+reacted to conflict
+and supply concerns.
 </p>
 
-
 <p>
-
-The move is being driven
-by escalating military conflict
-across the Middle East,
-attacks affecting energy
-infrastructure
-and growing concern
-about major shipping routes.
-
-</p>
-
-
-<p>
-
 The Strait of Hormuz
-remains especially important.
-
-A large share of
-the world's oil
-and liquefied natural gas
-normally moves through
-the narrow waterway.
-
+remains especially important
+because it is one
+of the world's key
+energy shipping routes.
 </p>
 
-
 <p>
-
-Shipping activity through Hormuz
-has remained below recent averages
-as conflict in the region
-continues to disrupt trade.
-
-</p>
-
-
-<p>
-
 Higher crude prices
 can eventually affect
 gasoline,
@@ -2689,9 +2889,7 @@ diesel,
 airline costs,
 shipping prices
 and inflation.
-
 </p>
-
 
 <div class="verdict">
 
@@ -2702,17 +2900,14 @@ DEVELOPING
 
 <br><br>
 
-The rise above
-$100 per barrel
+The price move
 is verified.
 
 The duration
-and economic consequences
-of the spike
+and wider economic impact
 remain uncertain.
 
 </div>
-
 
 </div>
 
@@ -2723,7 +2918,7 @@ remain uncertain.
 
 
 <!-- =====================================================
-     HORMUZ
+     HORMUZ ARTICLE
      ===================================================== -->
 
 
@@ -2731,68 +2926,45 @@ remain uncertain.
 
 <div class="article">
 
-
 <button
 class="close"
 onclick="closeArticle('hormuz')">
 ×
 </button>
 
-
 <div class="category">
 WORLD • ENERGY • SHIPPING
 </div>
 
-
 <h2>
 Strait of Hormuz
-Traffic Remains Disrupted
+Traffic Under Pressure
 </h2>
-
 
 <div class="article-body">
 
-
 <p>
-
 Commercial shipping
 through the Strait of Hormuz
-remains below
-recent traffic levels.
-
+has faced disruption
+as regional military tensions
+continue.
 </p>
-
 
 <p>
-
-The waterway is one
-of the most important
-energy routes in the world.
-
+The waterway
+is one of the world's
+most important routes
+for oil
+and liquefied natural gas.
 </p>
-
 
 <p>
-
-Disruption matters because
-oil and liquefied natural gas
-from major Gulf producers
-normally travel through
-the strait.
-
+Sustained disruption
+could affect
+global energy supplies
+and prices.
 </p>
-
-
-<p>
-
-Lower traffic,
-military attacks
-and uncertainty surrounding
-the region have contributed
-to higher energy prices.
-
-</p>
-
 
 <div class="verdict">
 
@@ -2803,16 +2975,11 @@ DEVELOPING
 
 <br><br>
 
-Shipping disruption
-is verified.
-
-The long-term effect
-on global supply
-depends on how long
-the conflict continues.
+The long-term impact
+depends heavily
+on how the conflict develops.
 
 </div>
-
 
 </div>
 
@@ -2823,7 +2990,7 @@ the conflict continues.
 
 
 <!-- =====================================================
-     BEN SHELTON
+     SHELTON ARTICLE
      ===================================================== -->
 
 
@@ -2831,226 +2998,53 @@ the conflict continues.
 
 <div class="article">
 
-
 <button
 class="close"
 onclick="closeArticle('shelton')">
 ×
 </button>
 
-
 <div class="category">
 SPORTS • TENNIS • U.S. OPEN
 </div>
-
 
 <h2>
 Ben Shelton
 Stuns Carlos Alcaraz
 </h2>
 
-
 <p class="article-intro">
-
-One of the biggest
-U.S. Open results
-of the tournament
-ends with the latest finish
-in event history.
-
+A major U.S. Open upset
+sends Shelton deeper
+into the tournament.
 </p>
-
 
 <div class="article-body">
 
-
 <p>
-
 Ben Shelton defeated
-defending champion
 Carlos Alcaraz
 in a five-set
-U.S. Open quarterfinal.
-
+U.S. Open battle.
 </p>
-
 
 <p>
-
-Shelton won:
-
+The result gives Shelton
+one of the biggest victories
+of his career
+and pushes him
+into the late stages
+of the tournament.
 </p>
-
-
-<div class="evidence">
-
-<strong>
-FINAL SCORE
-</strong>
-
-6-7
-
-<br>
-
-6-1
-
-<br>
-
-6-3
-
-<br>
-
-1-6
-
-<br>
-
-7-6
-
-</div>
-
-
-<p>
-
-The match lasted
-four hours
-and 29 minutes.
-
-</p>
-
-
-<p>
-
-It ended at
-3:33 a.m.,
-the latest finish
-in U.S. Open history.
-
-</p>
-
-
-<p>
-
-The victory sends Shelton
-into his first
-Grand Slam semifinal.
-
-</p>
-
-
-<p>
-
-He will face
-fellow American
-Frances Tiafoe.
-
-</p>
-
 
 <div class="verdict">
 
 <strong>
 BLIND TRUTH STATUS:
-VERIFIED
-</strong>
-
-<br><br>
-
-Shelton eliminates
-the defending champion
-and advances
-to the U.S. Open semifinal.
-
-</div>
-
-
-</div>
-
-</div>
-
-</dialog>
-
-
-
-<!-- =====================================================
-     TIAFOE
-     ===================================================== -->
-
-
-<dialog id="tiafoe">
-
-<div class="article">
-
-
-<button
-class="close"
-onclick="closeArticle('tiafoe')">
-×
-</button>
-
-
-<div class="category">
-SPORTS • TENNIS
-</div>
-
-
-<h2>
-Tiafoe Completes
-Massive U.S. Open Comeback
-</h2>
-
-
-<div class="article-body">
-
-
-<p>
-
-Frances Tiafoe
-came back from
-two sets down
-against fellow American
-Alex Michelsen.
-
-</p>
-
-
-<p>
-
-The match lasted
-four hours
-and 38 minutes.
-
-</p>
-
-
-<p>
-
-Michelsen moved close
-to finishing the match
-before Tiafoe
-turned the quarterfinal around.
-
-</p>
-
-
-<p>
-
-Tiafoe advanced
-to the semifinal,
-where he will meet
-Ben Shelton.
-
-</p>
-
-
-<div class="verdict">
-
-<strong>
-RESULT:
-VERIFIED
+VERIFIED RESULT
 </strong>
 
 </div>
-
 
 </div>
 
@@ -3069,97 +3063,47 @@ VERIFIED
 
 <div class="article">
 
-
 <button
 class="close"
 onclick="closeArticle('australia')">
 ×
 </button>
 
-
 <div class="category">
 NFL • INTERNATIONAL
 </div>
 
-
 <h2>
-NFL Prepares
-for First Regular-Season
-Game in Australia
+NFL Expands
+Further into Australia
 </h2>
-
 
 <div class="article-body">
 
-
 <p>
-
-The San Francisco 49ers
-and Los Angeles Rams
-are preparing to play
-the NFL's first
-regular-season game
-in Australia.
-
+The NFL's push
+into international markets
+continues with
+a major Australian
+regular-season event.
 </p>
 
-
 <p>
-
-The matchup
-will be played
-at the Melbourne Cricket Ground.
-
+The league's expansion
+outside the United States
+is part of a larger effort
+to build
+a global audience.
 </p>
-
-
-<p>
-
-The league is using
-the event as part
-of a broader effort
-to expand American football
-internationally.
-
-</p>
-
-
-<p>
-
-The NFL is also
-promoting flag football
-through Australian schools.
-
-</p>
-
-
-<p>
-
-Flag football
-is scheduled to make
-its Olympic debut
-at the 2028
-Los Angeles Games.
-
-</p>
-
 
 <div class="verdict">
 
 <strong>
 BLIND TRUTH STATUS:
-VERIFIED
+DEVELOPING
 </strong>
 
-<br><br>
-
-The Australia game
-represents another major step
-in the NFL's
-international expansion.
-
 </div>
-
 
 </div>
 
@@ -3170,7 +3114,7 @@ international expansion.
 
 
 <!-- =====================================================
-     DIDDY RELEASE
+     DIDDY RELEASE ARTICLE
      ===================================================== -->
 
 
@@ -3178,71 +3122,40 @@ international expansion.
 
 <div class="article">
 
-
 <button
 class="close"
 onclick="closeArticle('diddyrelease')">
 ×
 </button>
 
-
 <div class="category">
 HIP-HOP • COURT • FEDERAL PRISON
 </div>
 
-
 <h2>
 Diddy's Projected
-Prison Release Date
-Moves Again
+Release Date Moves
 </h2>
-
 
 <div class="article-body">
 
-
 <p>
-
 Federal prison records
-reviewed by People
-now list
-February 5, 2028
-as Sean Combs's projected
-release date.
-
+have listed
+a revised projected
+release date
+for Sean Combs.
 </p>
-
 
 <p>
-
-Combs is serving
-a 50-month federal sentence
-after being convicted
-on two transportation
-to engage in prostitution
-counts.
-
+That date can change
+because federal release projections
+may be affected
+by credited time,
+program participation
+and other Bureau of Prisons
+calculations.
 </p>
-
-
-<p>
-
-He was acquitted
-of more serious
-racketeering
-and sex-trafficking charges.
-
-</p>
-
-
-<p>
-
-His legal team
-has appealed
-the conviction.
-
-</p>
-
 
 <div class="verdict">
 
@@ -3253,17 +3166,15 @@ IMPORTANT DISTINCTION
 <br><br>
 
 Combs's federal criminal case
-is separate from
-Case File 003.
+is separate
+from Case File 003.
 
-His conviction
-and prison sentence
-do not constitute evidence
+His federal conviction
+does not constitute evidence
 that he participated
 in Tupac Shakur's murder.
 
 </div>
-
 
 </div>
 
@@ -3274,7 +3185,7 @@ in Tupac Shakur's murder.
 
 
 <!-- =====================================================
-     KEFFE D UPDATE
+     KEFFE D ARTICLE
      ===================================================== -->
 
 
@@ -3282,145 +3193,83 @@ in Tupac Shakur's murder.
 
 <div class="article">
 
-
 <button
 class="close"
 onclick="closeArticle('keffe')">
 ×
 </button>
 
-
 <div class="category">
 HIP-HOP • TUPAC • COURT
 </div>
 
-
 <h2>
-Tupac Murder:
-What the Verdict
+What the Tupac Verdict
 Solved —
 and What It Didn't
 </h2>
 
-
 <p class="article-intro">
-
 Keffe D's conviction
-creates legal accountability
-after nearly three decades.
+creates legal accountability.
 
 It does not answer
-every question surrounding
-Tupac's death.
-
+every question
+surrounding Tupac's death.
 </p>
-
 
 <div class="article-body">
 
-
 <p>
-
 Duane "Keffe D" Davis
 was convicted
 of first-degree murder
-in Tupac Shakur's
-1996 killing.
-
+in Tupac Shakur's killing.
 </p>
 
-
 <p>
-
 The verdict establishes
 Davis's criminal responsibility
 for orchestrating
-and facilitating
-the retaliatory attack.
-
+or facilitating
+the attack.
 </p>
-
-
-<p>
-
-Prosecutors did not need
-to prove that Davis
-personally fired
-the fatal shots.
-
-</p>
-
-
-<p>
-
-Davis's own interviews,
-recorded statements
-and memoir
-became important evidence
-against him.
-
-</p>
-
 
 <h3>
 WHAT WAS SOLVED
 </h3>
 
-
 <p>
-
 A jury determined
-beyond a reasonable doubt
 that Davis was criminally
-responsible for
-Tupac's murder.
-
+responsible
+for Tupac's murder.
 </p>
-
 
 <h3>
 WHAT REMAINS
 UNRESOLVED
 </h3>
 
-
 <p>
-
 The verdict does not
-judicially establish
-the exact shooter.
-
-</p>
-
-
-<p>
-
-It does not establish
+by itself establish
 that Sean Combs
 ordered the murder.
-
 </p>
 
-
 <p>
-
 It does not establish
 that Combs paid
 for the murder.
-
 </p>
-
 
 <p>
-
-It does not resolve
-every conspiracy theory
-that developed during
-the nearly 30 years
-before the conviction.
-
+It also does not automatically
+prove every historical claim
+Davis made
+about other people.
 </p>
-
 
 <div class="verdict">
 
@@ -3430,17 +3279,15 @@ THE BLIND TRUTH FINDING
 
 <br><br>
 
-The legal question
-of Duane Davis's responsibility
-has been answered
-by the jury.
+Davis's legal responsibility
+has been established
+by the verdict.
 
 The broader historical story
 still contains
 unanswered questions.
 
 </div>
-
 
 </div>
 
@@ -3459,36 +3306,29 @@ unanswered questions.
 
 <div class="article">
 
-
 <button
 class="close"
 onclick="closeArticle('diddy')">
 ×
 </button>
 
-
 <div class="category">
 CASE FILE 003 • TUPAC • DIDDY
 </div>
-
 
 <h2>
 Did Diddy Have a Role
 in Tupac Shakur's Murder?
 </h2>
 
-
 <p class="article-intro">
-
 The million-dollar allegation,
 Keffe D's statements,
 gang politics,
 police evidence
-and 30 years
+and decades
 of conspiracy.
-
 </p>
-
 
 <div class="article-body">
 
@@ -3497,9 +3337,7 @@ of conspiracy.
 THE QUESTION
 </h3>
 
-
 <p>
-
 Duane "Keffe D" Davis
 alleged that
 Sean "Diddy" Combs
@@ -3507,101 +3345,62 @@ offered $1 million
 for Tupac Shakur
 and Suge Knight
 to be killed.
-
 </p>
 
-
 <p>
-
 That allegation
 is documented.
-
 </p>
-
 
 <p>
-
 It is not proven.
-
 </p>
-
 
 
 <h3>
 WHAT POLICE DID
 </h3>
 
-
 <p>
-
 Law enforcement
 attempted to corroborate
 parts of Davis's account.
-
 </p>
 
-
 <p>
-
 Davis became
 a confidential informant
-and traveled
-with investigators
-to New York
-during an effort
-to reconnect
-with an associate
-he said linked him
-to Combs.
-
+and worked with investigators
+during efforts
+to verify his claims.
 </p>
 
-
 <p>
-
-That operation
+Those efforts
 did not publicly establish
 that Combs ordered
 Tupac's murder.
-
 </p>
-
 
 
 <h3>
-THE MONEY PROBLEM
+THE MONEY QUESTION
 </h3>
 
-
 <p>
-
 An alleged offer
 is not the same
 as an actual payment.
-
 </p>
 
-
 <p>
-
-Davis said
-he never received
-the alleged money.
-
-</p>
-
-
-<p>
-
 No publicly established
 financial trail
 has demonstrated
 that Combs transferred
 $1 million
 for Tupac's murder.
-
 </p>
-
 
 
 <div class="evidence">
@@ -3670,38 +3469,28 @@ with Tupac Shakur's murder.
 </div>
 
 
-
 <h3>
 SEPTEMBER 9 UPDATE
 </h3>
 
-
 <p>
-
 Keffe D's conviction
 does not materially change
 the evidence
-against Sean Combs.
-
+concerning Sean Combs.
 </p>
 
-
 <p>
-
 The jury found
 Davis criminally responsible.
-
 </p>
 
-
 <p>
-
 The verdict did not establish
 that Combs ordered,
 financed
 or participated
 in Tupac's murder.
-
 </p>
 
 
@@ -3725,12 +3514,6 @@ DOCUMENTED ALLEGATION —
 INSUFFICIENT PUBLIC EVIDENCE
 TO ESTABLISH
 DIDDY'S INVOLVEMENT.
-
-<br><br>
-
-No credible September 9
-development changes
-that classification.
 
 <br><br>
 
@@ -3759,40 +3542,30 @@ Follow the Evidence.
 
 <div class="article">
 
-
 <button
 class="close"
 onclick="closeArticle('2k27')">
 ×
 </button>
 
-
 <div class="category">
 GAMING • NBA 2K27
 </div>
-
 
 <h2>
 NBA 2K27
 Post-Launch Coverage
 </h2>
 
-
 <div class="article-body">
 
-
 <p>
-
 NBA 2K27
-is now in
-its worldwide
+is in its
 post-launch period.
-
 </p>
 
-
 <p>
-
 Players continue testing
 shooting,
 movement,
@@ -3801,31 +3574,15 @@ MyPLAYER builds,
 badges,
 animations
 and VC systems.
-
 </p>
 
-
 <p>
-
 For MyPLAYER builders,
 exact badge thresholds
 remain more valuable
 than blindly copying
 viral builds.
-
 </p>
-
-
-<p>
-
-The strongest builds
-will normally stop attributes
-at meaningful thresholds
-unless the next rating
-creates another real benefit.
-
-</p>
-
 
 <div class="verdict">
 
@@ -3836,15 +3593,14 @@ DEVELOPING
 
 <br><br>
 
-The game is fully released.
+The game is released.
 
 Its long-term balance
 will continue changing
 through patches
-and the evolving online meta.
+and the evolving meta.
 
 </div>
-
 
 </div>
 
@@ -3863,27 +3619,22 @@ and the evolving online meta.
 
 <div class="article">
 
-
 <button
 class="close"
 onclick="closeArticle('jordan')">
 ×
 </button>
 
-
 <div class="category">
 CASE FILE 002 • NBA
 </div>
-
 
 <h2>
 Michael Jordan:
 A Real Choke Job?
 </h2>
 
-
 <p class="article-intro">
-
 Six rings.
 
 Zero Finals losses.
@@ -3892,63 +3643,41 @@ But Finals record
 is not the same thing
 as an undefeated
 postseason career.
-
 </p>
-
 
 <div class="article-body">
 
-
 <p>
-
 Michael Jordan
 is one of
 the greatest basketball players
 who ever lived.
-
 </p>
 
-
 <p>
-
 Case File 002
 examines whether
 the mythology surrounding
 his 6–0 Finals record
 sometimes erases
 postseason failures.
-
 </p>
 
-
 <p>
-
 Jordan's Bulls
 lost multiple playoff series
 before the championship years.
-
 </p>
-
 
 <p>
-
-In 1995,
-after Jordan returned
-from retirement,
-Orlando eliminated Chicago.
-
+Chicago also remained
+a strong team
+during Jordan's absence,
+demonstrating that
+Jordan was the centerpiece
+of an elite organization
+rather than a one-man team.
 </p>
-
-
-<p>
-
-Chicago also went
-55–27
-during the first full season
-after Jordan retired.
-
-</p>
-
 
 <div class="verdict">
 
@@ -3976,7 +3705,6 @@ is not.
 
 </div>
 
-
 </div>
 
 </div>
@@ -3994,24 +3722,20 @@ is not.
 
 <div class="article">
 
-
 <button
 class="close"
 onclick="closeArticle('kirk')">
 ×
 </button>
 
-
 <div class="category">
 CASE FILE 001 • INVESTIGATION
 </div>
-
 
 <h2>
 Who Killed
 Charlie Kirk?
 </h2>
-
 
 <p class="article-intro">
 
@@ -4023,12 +3747,9 @@ Verdict last.
 
 </p>
 
-
 <div class="article-body">
 
-
 <p>
-
 Charlie Kirk
 was shot and killed
 while appearing
@@ -4036,55 +3757,40 @@ at Utah Valley University
 in Orem,
 Utah,
 on September 10, 2025.
-
 </p>
 
-
 <p>
-
 Tyler James Robinson
 has been accused
 in connection
 with the killing.
-
 </p>
 
-
 <p>
-
 Publicly described evidence
 has included
 surveillance footage,
-a rooftop escape route,
-a recovered rifle,
+a recovered firearm,
 DNA evidence,
 vehicle evidence,
-witness statements,
-ammunition evidence
-and alleged digital communications.
-
+witness statements
+and alleged
+digital communications.
 </p>
 
-
 <p>
-
 An accusation
 is not a conviction.
-
 </p>
 
-
 <p>
-
 Alternative theories
 require affirmative evidence.
 
 Unanswered questions alone
 do not prove
 an alternative theory.
-
 </p>
-
 
 <div class="verdict">
 
@@ -4095,18 +3801,13 @@ OPEN
 
 <br><br>
 
-The prosecution theory
-appears substantially supported
-by publicly described evidence.
-
-However,
-the allegations must ultimately
+The allegations
+must ultimately
 be judged through
 the legal process
 and admissible evidence.
 
 </div>
-
 
 </div>
 
@@ -4116,8 +3817,17 @@ and admissible evidence.
 
 
 
+<!-- =====================================================
+     JAVASCRIPT
+     ===================================================== -->
+
+
 <script>
 
+
+/* =====================================================
+   ARTICLE POPUPS
+   ===================================================== */
 
 function openArticle(id) {
 
@@ -4163,6 +3873,80 @@ document
 
         }
     );
+
+});
+
+
+/* =====================================================
+   THE BLIND TRUTH LIVE PAGE-VIEW COUNTER
+
+   Every successful page load sends one "hit"
+   to the shared online counter.
+
+   IMPORTANT:
+   This measures PAGE LOADS / VISITS.
+   Refreshing the website can increase the number.
+   ===================================================== */
+
+
+const visitorCount =
+document.getElementById("visitor-count");
+
+
+const counterURL =
+"https://abacus.jasoncameron.dev/hit/the-blind-truth-202-ui/homepage";
+
+
+fetch(counterURL, {
+    method:"GET",
+    cache:"no-store"
+})
+
+.then(function(response) {
+
+    if(!response.ok) {
+
+        throw new Error(
+            "Counter service unavailable"
+        );
+
+    }
+
+    return response.json();
+
+})
+
+.then(function(data) {
+
+    if(
+        data &&
+        typeof data.value === "number"
+    ) {
+
+        visitorCount.textContent =
+        data.value.toLocaleString();
+
+    }
+
+    else {
+
+        throw new Error(
+            "Invalid counter response"
+        );
+
+    }
+
+})
+
+.catch(function(error) {
+
+    console.log(
+        "Visitor counter error:",
+        error
+    );
+
+    visitorCount.textContent =
+    "UNAVAILABLE";
 
 });
 
