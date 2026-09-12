@@ -5,18 +5,14 @@
 
 <meta charset="UTF-8">
 
-<meta name="viewport"
-content="width=device-width, initial-scale=1.0">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<meta name="theme-color"
-content="#050505">
+<meta name="theme-color" content="#050505">
 
 <meta name="google-site-verification"
 content="_RCvea5xnx3tGhqx8Z1qYD7VLB3qBeYT7mWuwthCMOE">
 
-<title>
-The Blind Truth | September 11, 2026
-</title>
+<title>The Blind Truth | September 12, 2026</title>
 
 <meta name="description"
 content="The Blind Truth covers breaking news, sports, entertainment, gaming, hip-hop, court cases, rumors, fact checks and evidence-first investigations. Question everything. Follow the evidence.">
@@ -27,11 +23,10 @@ content="index, follow, max-image-preview:large">
 <link rel="canonical"
 href="https://theblindtruth202-ui.github.io/the-blind-truth/">
 
-<meta property="og:type"
-content="website">
+<meta property="og:type" content="website">
 
 <meta property="og:title"
-content="The Blind Truth | September 11, 2026">
+content="The Blind Truth | September 12, 2026">
 
 <meta property="og:description"
 content="Breaking news, sports, entertainment, gaming and evidence-first investigations.">
@@ -60,1267 +55,685 @@ content="https://theblindtruth202-ui.github.io/the-blind-truth/blind-truth-logo.
 
 <style>
 
-:root {
-    --black:#050505;
-    --panel:#111111;
-    --panel2:#171717;
-    --white:#f5f5f5;
-    --gray:#b8b8b8;
-    --green:#63ff36;
-    --red:#ff3434;
-    --yellow:#ffd93d;
-    --blue:#39d7ff;
-    --purple:#a86bff;
-    --pink:#ff5bbd;
-    --border:#303030;
+:root{
+--black:#050505;
+--panel:#111;
+--panel2:#171717;
+--white:#f5f5f5;
+--gray:#b8b8b8;
+--green:#63ff36;
+--red:#ff3434;
+--yellow:#ffd93d;
+--blue:#39d7ff;
+--purple:#a86bff;
+--pink:#ff5bbd;
+--border:#303030;
 }
 
-* {
-    box-sizing:border-box;
-}
-
-html {
-    scroll-behavior:smooth;
-}
-
-body {
-    margin:0;
-
-    background:
-    radial-gradient(
-        circle at 10% 0%,
-        rgba(99,255,54,.10),
-        transparent 28%
-    ),
-
-    radial-gradient(
-        circle at 90% 8%,
-        rgba(255,52,52,.08),
-        transparent 24%
-    ),
-
-    repeating-linear-gradient(
-        0deg,
-        rgba(255,255,255,.012) 0px,
-        rgba(255,255,255,.012) 1px,
-        transparent 1px,
-        transparent 5px
-    ),
-
-    #050505;
-
-    color:var(--white);
-
-    font-family:
-    Arial,
-    Helvetica,
-    sans-serif;
-
-    line-height:1.6;
-}
-
-a {
-    color:inherit;
-    text-decoration:none;
-}
-
-button {
-    font:inherit;
-}
-
-.container {
-    width:min(1180px, calc(100% - 30px));
-    margin:auto;
-}
-
-
-/* =====================================================
-   TOP NEWSROOM BAR
-   ===================================================== */
-
-.newsbar {
-    background:#000;
-
-    border-bottom:
-    1px solid #222;
-
-    color:#aaa;
-
-    font-size:13px;
-}
-
-.newsbar-inner {
-    min-height:42px;
-
-    display:flex;
-
-    align-items:center;
-
-    justify-content:space-between;
-
-    gap:15px;
-}
-
-.newsbar-left {
-    display:flex;
-
-    align-items:center;
-
-    gap:8px;
-
-    min-width:max-content;
-}
-
-.newsbar-right {
-    display:flex;
-
-    align-items:center;
-
-    justify-content:flex-end;
-
-    gap:18px;
-
-    flex-wrap:wrap;
-}
-
-.live-dot {
-    display:inline-block;
-
-    width:8px;
-
-    height:8px;
-
-    border-radius:50%;
-
-    background:var(--red);
-
-    box-shadow:
-    0 0 10px rgba(255,52,52,.6);
-}
-
-
-/* =====================================================
-   VISITOR COUNTER
-   ===================================================== */
-
-.visitor-counter {
-    display:flex;
-
-    align-items:center;
-
-    gap:7px;
-
-    color:#ddd;
-
-    font-weight:900;
-
-    white-space:nowrap;
-
-    padding:
-    4px 10px;
-
-    border:
-    1px solid rgba(99,255,54,.25);
-
-    border-radius:999px;
-
-    background:
-    rgba(99,255,54,.05);
-}
-
-.counter-eye {
-    color:var(--green);
-
-    font-size:14px;
-}
-
-.counter-label {
-    color:#999;
-
-    font-size:10px;
-
-    letter-spacing:1px;
-
-    text-transform:uppercase;
-}
-
-#visitor-count {
-    color:var(--green);
-
-    font-family:
-    "Arial Black",
-    Impact,
-    sans-serif;
-
-    letter-spacing:.5px;
-}
-
-
-/* =====================================================
-   HEADER
-   ===================================================== */
-
-header {
-    position:sticky;
-
-    top:0;
-
-    z-index:100;
-
-    background:
-    rgba(5,5,5,.96);
-
-    border-bottom:
-    2px solid rgba(99,255,54,.25);
-}
-
-.header-inner {
-    min-height:78px;
-
-    display:flex;
-
-    align-items:center;
-
-    gap:20px;
-}
-
-
-/* LOGO */
-
-.logo {
-    display:flex;
-
-    align-items:center;
-
-    gap:12px;
-
-    min-width:max-content;
-}
-
-.logo-circle {
-    width:48px;
-
-    height:48px;
-
-    border:
-    2px solid var(--green);
-
-    border-radius:50%;
-
-    display:flex;
-
-    align-items:center;
-
-    justify-content:center;
-
-    color:var(--green);
-
-    font-weight:900;
-
-    background:#080808;
-
-    transform:rotate(-4deg);
-
-    box-shadow:
-    0 0 18px rgba(99,255,54,.18);
-}
-
-.logo-text strong {
-    display:block;
-
-    font-family:
-    "Arial Black",
-    Impact,
-    sans-serif;
-
-    font-size:20px;
-
-    letter-spacing:1px;
-
-    line-height:1;
-}
-
-.logo-text small {
-    display:block;
-
-    color:#999;
-
-    font-size:10px;
-
-    margin-top:5px;
-
-    letter-spacing:2px;
-}
-
-
-/* NAVIGATION */
-
-nav {
-    margin-left:auto;
-
-    display:flex;
-
-    gap:16px;
-
-    overflow-x:auto;
-
-    scrollbar-width:none;
-}
-
-nav::-webkit-scrollbar {
-    display:none;
-}
-
-nav a {
-    position:relative;
-
-    font-size:13px;
-
-    font-weight:900;
-
-    white-space:nowrap;
-
-    text-transform:uppercase;
-
-    padding:
-    5px 1px;
-}
-
-nav a::after {
-    content:"";
-
-    position:absolute;
-
-    left:0;
-
-    right:100%;
-
-    bottom:0;
-
-    height:3px;
-
-    background:var(--green);
-
-    transition:.2s ease;
-}
-
-nav a:hover {
-    color:var(--green);
-}
-
-nav a:hover::after {
-    right:0;
-}
-
-
-/* =====================================================
-   HERO
-   ===================================================== */
-
-.hero {
-    padding:
-    40px 0 25px;
-}
-
-.hero-grid {
-    display:grid;
-
-    grid-template-columns:
-    1.35fr .65fr;
-
-    gap:20px;
-}
-
-.main-story {
-    min-height:510px;
-
-    border:
-    1px solid rgba(99,255,54,.35);
-
-    border-radius:22px;
-
-    padding:
-    clamp(30px,5vw,58px);
-
-    display:flex;
-
-    flex-direction:column;
-
-    justify-content:flex-end;
-
-    position:relative;
-
-    overflow:hidden;
-
-    background:
-
-    linear-gradient(
-        135deg,
-        rgba(99,255,54,.13),
-        rgba(15,15,15,.98) 48%,
-        rgba(255,52,52,.09)
-    );
-
-    box-shadow:
-    0 20px 60px rgba(0,0,0,.42);
-}
-
-.main-story::before {
-    content:"";
-
-    position:absolute;
-
-    width:330px;
-
-    height:90px;
-
-    right:-45px;
-
-    top:55px;
-
-    background:
-    rgba(255,52,52,.14);
-
-    transform:
-    rotate(-9deg);
-}
-
-.main-story::after {
-    content:"";
-
-    position:absolute;
-
-    width:260px;
-
-    height:64px;
-
-    left:-30px;
-
-    bottom:85px;
-
-    background:
-    rgba(99,255,54,.08);
-
-    transform:
-    rotate(4deg);
-}
-
-.main-story > * {
-    position:relative;
-
-    z-index:2;
-}
-
-.main-label {
-    display:inline-block;
-
-    width:max-content;
-
-    padding:
-    7px 13px;
-
-    border-radius:7px;
-
-    background:
-    var(--red);
-
-    color:white;
-
-    font-weight:900;
-
-    font-size:12px;
-
-    letter-spacing:1px;
-
-    margin-bottom:15px;
-
-    transform:
-    rotate(-1deg);
-}
-
-.category {
-    display:inline-block;
-
-    width:max-content;
+*{box-sizing:border-box}
 
-    max-width:100%;
+html{scroll-behavior:smooth}
 
-    padding:
-    5px 8px;
-
-    border-radius:5px;
-
-    background:
-    rgba(99,255,54,.08);
-
-    border:
-    1px solid rgba(99,255,54,.22);
-
-    color:
-    var(--green);
-
-    font-size:12px;
-
-    font-weight:900;
-
-    text-transform:uppercase;
-
-    letter-spacing:1.2px;
-}
-
-.main-story h1 {
-    font-family:
-    "Arial Black",
-    Impact,
-    sans-serif;
-
-    font-size:
-    clamp(38px,6vw,70px);
-
-    line-height:.98;
-
-    letter-spacing:-3px;
-
-    text-transform:uppercase;
-
-    margin:
-    10px 0 18px;
-}
-
-.main-story p {
-    color:#c1c1c1;
-
-    font-size:18px;
-
-    max-width:760px;
-}
-
-
-/* =====================================================
-   FEATURE CARDS
-   ===================================================== */
-
-.side-column {
-    display:grid;
-
-    gap:20px;
-}
-
-.feature-card {
-    background:
-
-    linear-gradient(
-        145deg,
-        #161616,
-        #0d0d0d
-    );
-
-    border:
-    1px solid var(--border);
-
-    border-radius:22px;
-
-    padding:28px;
-
-    position:relative;
-
-    overflow:hidden;
-}
-
-.feature-card h2 {
-    margin:
-    7px 0 12px;
-
-    line-height:1.08;
-
-    font-family:
-    "Arial Black",
-    Impact,
-    sans-serif;
-
-    font-size:27px;
-
-    text-transform:uppercase;
-}
-
-.feature-card p {
-    color:var(--gray);
-}
-
-
-/* =====================================================
-   BUTTONS
-   ===================================================== */
-
-.read-button {
-    background:none;
-
-    border:none;
-
-    padding:0;
-
-    color:white;
-
-    font-family:
-    "Arial Black",
-    Impact,
-    sans-serif;
-
-    font-weight:900;
-
-    cursor:pointer;
-
-    margin-top:15px;
-
-    text-transform:uppercase;
-
-    transition:.2s;
+body{
+margin:0;
+background:
+radial-gradient(circle at 10% 0%,rgba(99,255,54,.10),transparent 28%),
+radial-gradient(circle at 90% 8%,rgba(255,52,52,.08),transparent 24%),
+repeating-linear-gradient(0deg,rgba(255,255,255,.012) 0px,rgba(255,255,255,.012) 1px,transparent 1px,transparent 5px),
+#050505;
+color:var(--white);
+font-family:Arial,Helvetica,sans-serif;
+line-height:1.6;
 }
 
-.read-button:hover {
-    color:var(--green);
+a{color:inherit;text-decoration:none}
+button{font:inherit}
 
-    transform:
-    translateX(3px);
+.container{
+width:min(1180px,calc(100% - 30px));
+margin:auto;
+}
+
+/* NEWSROOM */
+
+.newsbar{
+background:#000;
+border-bottom:1px solid #222;
+color:#aaa;
+font-size:13px;
+}
+
+.newsbar-inner{
+min-height:42px;
+display:flex;
+align-items:center;
+justify-content:space-between;
+gap:15px;
+}
+
+.newsbar-left,
+.newsbar-right{
+display:flex;
+align-items:center;
+gap:10px;
+}
+
+.newsbar-right{
+justify-content:flex-end;
+gap:18px;
+flex-wrap:wrap;
 }
-
 
-/* =====================================================
-   SECTIONS
-   ===================================================== */
-
-.news-section {
-    padding:
-    38px 0;
-
-    scroll-margin-top:100px;
+.live-dot{
+width:8px;
+height:8px;
+border-radius:50%;
+background:var(--red);
+box-shadow:0 0 10px rgba(255,52,52,.7);
 }
-
-.section-header {
-    display:flex;
 
-    justify-content:
-    space-between;
-
-    align-items:flex-end;
-
-    gap:20px;
-
-    border-bottom:
-    1px solid var(--border);
-
-    padding-bottom:13px;
-
-    margin-bottom:20px;
+.visitor-counter{
+display:flex;
+align-items:center;
+gap:7px;
+color:#ddd;
+font-weight:900;
+white-space:nowrap;
+padding:4px 10px;
+border:1px solid rgba(99,255,54,.25);
+border-radius:999px;
+background:rgba(99,255,54,.05);
 }
-
-.section-header h2 {
-    position:relative;
 
-    display:inline-block;
+.counter-eye{color:var(--green)}
 
-    margin:
-    3px 0 0;
-
-    font-family:
-    "Arial Black",
-    Impact,
-    sans-serif;
-
-    font-size:36px;
-
-    text-transform:uppercase;
+.counter-label{
+color:#999;
+font-size:10px;
+letter-spacing:1px;
 }
-
-.section-header h2::after {
-    content:"";
-
-    position:absolute;
-
-    left:0;
 
-    right:-12px;
-
-    bottom:-6px;
-
-    height:6px;
-
-    z-index:-1;
-
-    background:
-
-    linear-gradient(
-        90deg,
-        var(--green) 0%,
-        var(--green) 58%,
-        var(--red) 58%,
-        var(--red) 82%,
-        var(--yellow) 82%
-    );
-
-    opacity:.7;
+#visitor-count{
+color:var(--green);
+font-family:"Arial Black",Impact,sans-serif;
 }
-
-.section-description {
-    color:#999;
 
-    font-size:14px;
+/* HEADER */
 
-    text-align:right;
+header{
+position:sticky;
+top:0;
+z-index:100;
+background:rgba(5,5,5,.96);
+border-bottom:2px solid rgba(99,255,54,.25);
 }
 
-
-/* =====================================================
-   STORY CARDS
-   ===================================================== */
-
-.story-grid {
-    display:grid;
-
-    grid-template-columns:
-    repeat(3,1fr);
-
-    gap:18px;
+.header-inner{
+min-height:78px;
+display:flex;
+align-items:center;
+gap:20px;
 }
-
-.story-card {
-    min-height:270px;
-
-    padding:24px;
-
-    border:
-    1px solid #353535;
-
-    border-radius:20px;
-
-    background:
-
-    linear-gradient(
-        145deg,
-        #151515,
-        #0c0c0c
-    );
-
-    display:flex;
-
-    flex-direction:column;
-
-    box-shadow:
-    0 12px 34px rgba(0,0,0,.32);
 
-    transition:.2s;
+.logo{
+display:flex;
+align-items:center;
+gap:12px;
+min-width:max-content;
 }
 
-.story-card:nth-child(3n+1) {
-    border-top:
-    3px solid var(--green);
+.logo-circle{
+width:48px;
+height:48px;
+border:2px solid var(--green);
+border-radius:50%;
+display:flex;
+align-items:center;
+justify-content:center;
+color:var(--green);
+font-weight:900;
+background:#080808;
+transform:rotate(-4deg);
+box-shadow:0 0 18px rgba(99,255,54,.18);
+}
+
+.logo-text strong{
+display:block;
+font-family:"Arial Black",Impact,sans-serif;
+font-size:20px;
+letter-spacing:1px;
+line-height:1;
+}
+
+.logo-text small{
+display:block;
+color:#999;
+font-size:10px;
+margin-top:5px;
+letter-spacing:2px;
+}
+
+nav{
+margin-left:auto;
+display:flex;
+gap:16px;
+overflow-x:auto;
+scrollbar-width:none;
+}
+
+nav::-webkit-scrollbar{display:none}
+
+nav a{
+font-size:13px;
+font-weight:900;
+white-space:nowrap;
+text-transform:uppercase;
+}
+
+nav a:hover{color:var(--green)}
+
+/* HERO */
+
+.hero{padding:40px 0 25px}
+
+.hero-grid{
+display:grid;
+grid-template-columns:1.35fr .65fr;
+gap:20px;
+}
+
+.main-story{
+min-height:650px;
+border:1px solid rgba(99,255,54,.35);
+border-radius:22px;
+padding:clamp(28px,5vw,55px);
+display:flex;
+flex-direction:column;
+justify-content:flex-end;
+position:relative;
+overflow:hidden;
+background:
+linear-gradient(135deg,rgba(99,255,54,.13),rgba(15,15,15,.98) 48%,rgba(255,52,52,.09));
+box-shadow:0 20px 60px rgba(0,0,0,.42);
+}
+
+/* SEPTEMBER 12 HERO GRAFFITI LOGO */
+
+.hero-brand-art{
+width:100%;
+display:flex;
+justify-content:center;
+align-items:center;
+margin:auto auto 20px;
+position:relative;
+z-index:3;
 }
-
-.story-card:nth-child(3n+2) {
-    border-top:
-    3px solid var(--red);
+
+.hero-graffiti-logo{
+display:block;
+width:min(100%,650px);
+max-height:245px;
+height:auto;
+object-fit:contain;
+filter:drop-shadow(0 0 12px rgba(99,255,54,.38));
+}
+
+.main-label{
+display:inline-block;
+width:max-content;
+padding:7px 13px;
+border-radius:7px;
+background:var(--red);
+color:#fff;
+font-weight:900;
+font-size:12px;
+letter-spacing:1px;
+margin-bottom:15px;
 }
 
-.story-card:nth-child(3n+3) {
-    border-top:
-    3px solid var(--yellow);
+.category{
+display:inline-block;
+width:max-content;
+max-width:100%;
+padding:5px 8px;
+border-radius:5px;
+background:rgba(99,255,54,.08);
+border:1px solid rgba(99,255,54,.22);
+color:var(--green);
+font-size:12px;
+font-weight:900;
+text-transform:uppercase;
+letter-spacing:1.2px;
 }
 
-.story-card:hover {
-    transform:
-    translateY(-4px);
+.main-story h1{
+font-family:"Arial Black",Impact,sans-serif;
+font-size:clamp(38px,6vw,70px);
+line-height:.98;
+letter-spacing:-3px;
+text-transform:uppercase;
+margin:10px 0 18px;
 }
-
-.story-card h3 {
-    margin:
-    9px 0 12px;
-
-    line-height:1.12;
 
-    font-family:
-    "Arial Black",
-    Impact,
-    sans-serif;
-
-    font-size:22px;
-
-    text-transform:uppercase;
+.main-story p{
+color:#c1c1c1;
+font-size:18px;
+max-width:760px;
 }
-
-.story-card p {
-    color:var(--gray);
 
-    margin:
-    0 0 20px;
-}
+.side-column{
+display:grid;
+gap:20px;
+}
 
-.story-card .read-button {
-    margin-top:auto;
+.feature-card{
+background:linear-gradient(145deg,#161616,#0d0d0d);
+border:1px solid var(--border);
+border-radius:22px;
+padding:28px;
+position:relative;
+overflow:hidden;
 }
-
-
-/* =====================================================
-   INVESTIGATIONS
-   ===================================================== */
-
-.investigation {
-    padding:55px;
-
-    border:
-    2px solid rgba(99,255,54,.38);
-
-    border-radius:24px;
-
-    background:
 
-    linear-gradient(
-        110deg,
-        rgba(99,255,54,.10),
-        #101010 60%,
-        rgba(255,52,52,.07)
-    );
-
-    margin-bottom:25px;
-
-    position:relative;
-
-    overflow:hidden;
+.feature-card h2{
+margin:7px 0 12px;
+line-height:1.08;
+font-family:"Arial Black",Impact,sans-serif;
+font-size:27px;
+text-transform:uppercase;
 }
-
-.investigation::before {
-    content:"CASE FILE";
-
-    position:absolute;
-
-    right:-18px;
 
-    top:42px;
+.feature-card p{color:var(--gray)}
 
-    font-family:
-    "Arial Black",
-    Impact,
-    sans-serif;
-
-    font-size:84px;
-
-    color:
-    rgba(99,255,54,.035);
-
-    transform:
-    rotate(-7deg);
+.breaking-feature{
+border:1px solid rgba(255,52,52,.6);
+box-shadow:0 0 25px rgba(255,52,52,.08);
 }
 
-.investigation > * {
-    position:relative;
-
-    z-index:2;
+.read-button{
+background:none;
+border:none;
+padding:0;
+color:white;
+font-family:"Arial Black",Impact,sans-serif;
+font-weight:900;
+cursor:pointer;
+margin-top:15px;
+text-transform:uppercase;
 }
-
-.investigation h2 {
-    font-family:
-    "Arial Black",
-    Impact,
-    sans-serif;
-
-    font-size:
-    clamp(38px,6vw,65px);
 
-    line-height:1;
+.read-button:hover{color:var(--green)}
 
-    letter-spacing:-3px;
-
-    text-transform:uppercase;
-
-    margin:
-    10px 0;
+/* SECTIONS */
+
+.news-section{
+padding:38px 0;
+scroll-margin-top:100px;
 }
-
-.case-status {
-    display:inline-block;
-
-    color:var(--green);
-
-    border:
-    1px solid rgba(99,255,54,.5);
-
-    border-radius:999px;
 
-    padding:
-    7px 12px;
-
-    font-size:12px;
-
-    font-weight:bold;
-
-    margin:
-    10px 0 15px;
+.section-header{
+display:flex;
+justify-content:space-between;
+align-items:flex-end;
+gap:20px;
+border-bottom:1px solid var(--border);
+padding-bottom:13px;
+margin-bottom:20px;
 }
+
+.section-header h2{
+margin:3px 0 0;
+font-family:"Arial Black",Impact,sans-serif;
+font-size:36px;
+text-transform:uppercase;
+}
 
-.investigation p {
-    color:#c1c1c1;
-
-    font-size:18px;
+.section-description{
+color:#999;
+font-size:14px;
+text-align:right;
+}
+
+.story-grid{
+display:grid;
+grid-template-columns:repeat(3,1fr);
+gap:18px;
+}
+
+.story-card{
+min-height:270px;
+padding:24px;
+border:1px solid #353535;
+border-radius:20px;
+background:linear-gradient(145deg,#151515,#0c0c0c);
+display:flex;
+flex-direction:column;
+box-shadow:0 12px 34px rgba(0,0,0,.32);
+transition:.2s;
+}
+
+.story-card:nth-child(3n+1){border-top:3px solid var(--green)}
+.story-card:nth-child(3n+2){border-top:3px solid var(--red)}
+.story-card:nth-child(3n+3){border-top:3px solid var(--yellow)}
+
+.story-card:hover{transform:translateY(-4px)}
+
+.story-card h3{
+margin:9px 0 12px;
+line-height:1.12;
+font-family:"Arial Black",Impact,sans-serif;
+font-size:22px;
+text-transform:uppercase;
+}
+
+.story-card p{
+color:var(--gray);
+margin:0 0 20px;
+}
+
+.story-card .read-button{margin-top:auto}
+
+/* JOIN THE CLUB */
+
+.join-club-section{
+width:100%;
+margin:55px auto;
+scroll-margin-top:100px;
+}
+
+.join-club-box{
+position:relative;
+overflow:hidden;
+text-align:center;
+padding:60px 28px;
+border:2px solid var(--green);
+border-radius:25px;
+background:
+radial-gradient(circle at top,rgba(99,255,54,.18),transparent 46%),
+linear-gradient(145deg,#111,#050505);
+box-shadow:
+0 0 22px rgba(99,255,54,.28),
+inset 0 0 45px rgba(99,255,54,.05);
+}
+
+.join-club-box::before{
+content:"TBT";
+position:absolute;
+font-family:"Arial Black",Impact,sans-serif;
+font-size:240px;
+color:rgba(99,255,54,.025);
+left:50%;
+top:50%;
+transform:translate(-50%,-50%) rotate(-7deg);
+pointer-events:none;
+}
+
+.join-kicker{
+position:relative;
+color:var(--red);
+font-weight:900;
+letter-spacing:3px;
+font-size:12px;
+}
+
+.join-club-box h2{
+position:relative;
+margin:5px 0 10px;
+font-family:"Arial Black",Impact,sans-serif;
+font-size:clamp(55px,10vw,105px);
+line-height:.95;
+letter-spacing:-4px;
+color:var(--green);
+text-shadow:0 0 25px rgba(99,255,54,.38);
+}
+
+.join-club-tagline{
+position:relative;
+font-family:"Arial Black",Impact,sans-serif;
+font-size:clamp(19px,3vw,28px);
+text-transform:uppercase;
+}
+
+.join-club-copy{
+position:relative;
+max-width:720px;
+margin:15px auto 28px;
+color:#bbb;
+font-size:17px;
+}
+
+.join-club-button{
+position:relative;
+display:inline-block;
+background:var(--green);
+color:#050505;
+border:2px solid var(--green);
+padding:16px 28px;
+border-radius:10px;
+font-family:"Arial Black",Impact,sans-serif;
+font-weight:900;
+text-transform:uppercase;
+box-shadow:0 0 25px rgba(99,255,54,.35);
+}
+
+.join-club-button:hover{
+background:#050505;
+color:var(--green);
+}
+
+/* INVESTIGATIONS */
+
+.investigation{
+padding:55px;
+border:2px solid rgba(99,255,54,.38);
+border-radius:24px;
+background:linear-gradient(110deg,rgba(99,255,54,.10),#101010 60%,rgba(255,52,52,.07));
+margin-bottom:25px;
+position:relative;
+overflow:hidden;
+}
+
+.investigation h2{
+font-family:"Arial Black",Impact,sans-serif;
+font-size:clamp(38px,6vw,65px);
+line-height:1;
+letter-spacing:-3px;
+text-transform:uppercase;
+margin:10px 0;
+}
+
+.case-status{
+display:inline-block;
+color:var(--green);
+border:1px solid rgba(99,255,54,.5);
+border-radius:999px;
+padding:7px 12px;
+font-size:12px;
+font-weight:bold;
+margin:10px 0 15px;
+}
+
+.investigation p{
+color:#c1c1c1;
+font-size:18px;
+}
+
+.verdict-tag{
+display:inline-block;
+padding:6px 10px;
+border:1px solid var(--yellow);
+color:var(--yellow);
+border-radius:6px;
+font-size:12px;
+font-weight:900;
+text-transform:uppercase;
 }
-
-.verdict-tag {
-    display:inline-block;
-
-    padding:
-    6px 10px;
-
-    border:
-    1px solid var(--yellow);
+
+/* DIALOGS */
 
-    color:
-    var(--yellow);
-
-    border-radius:6px;
-
-    font-size:12px;
-
-    font-weight:900;
-
-    text-transform:uppercase;
+dialog{
+width:min(900px,calc(100% - 20px));
+max-height:92vh;
+padding:0;
+background:linear-gradient(145deg,#111,#080808);
+color:white;
+border:1px solid rgba(99,255,54,.35);
+border-radius:22px;
+box-shadow:0 30px 120px rgba(0,0,0,.85);
 }
-
-
-/* =====================================================
-   ARTICLE POPUPS
-   ===================================================== */
-
-dialog {
-    width:
-    min(900px, calc(100% - 20px));
-
-    max-height:92vh;
-
-    padding:0;
-
-    background:
-
-    linear-gradient(
-        145deg,
-        #111,
-        #080808
-    );
-
-    color:white;
-
-    border:
-    1px solid rgba(99,255,54,.35);
 
-    border-radius:22px;
+dialog::backdrop{background:rgba(0,0,0,.88)}
 
-    box-shadow:
-    0 30px 120px rgba(0,0,0,.85);
+.article{
+padding:clamp(28px,5vw,55px);
+max-height:92vh;
+overflow-y:auto;
 }
 
-dialog::backdrop {
-    background:
-    rgba(0,0,0,.88);
+.close{
+float:right;
+width:44px;
+height:44px;
+border-radius:50%;
+border:1px solid #444;
+background:#181818;
+color:white;
+font-size:24px;
+cursor:pointer;
 }
 
-.article {
-    padding:
-    clamp(28px,5vw,55px);
-
-    max-height:92vh;
-
-    overflow-y:auto;
+.article h2{
+font-family:"Arial Black",Impact,sans-serif;
+font-size:clamp(35px,6vw,58px);
+line-height:1;
+letter-spacing:-2px;
+text-transform:uppercase;
+margin:10px 0 15px;
 }
-
-.close {
-    float:right;
-
-    width:44px;
-
-    height:44px;
-
-    border-radius:50%;
 
-    border:
-    1px solid #444;
-
-    background:#181818;
-
-    color:white;
-
-    font-size:24px;
-
-    cursor:pointer;
+.article-intro{
+color:#ccc;
+font-size:19px;
+border-bottom:1px solid #333;
+padding-bottom:20px;
 }
-
-.article h2 {
-    font-family:
-    "Arial Black",
-    Impact,
-    sans-serif;
-
-    font-size:
-    clamp(35px,6vw,58px);
-
-    line-height:1;
 
-    letter-spacing:-2px;
-
-    text-transform:uppercase;
-
-    margin:
-    10px 0 15px;
+.article-body{
+font-family:Georgia,"Times New Roman",serif;
+font-size:18px;
+line-height:1.85;
 }
-
-.article-intro {
-    color:#ccc;
 
-    font-size:19px;
+.article-body p{margin-bottom:22px}
 
-    border-bottom:
-    1px solid #333;
-
-    padding-bottom:20px;
+.article-body h3{
+font-family:"Arial Black",Impact,sans-serif;
+font-size:27px;
+margin-top:38px;
+text-transform:uppercase;
 }
-
-.article-body {
-    font-family:
-    Georgia,
-    "Times New Roman",
-    serif;
-
-    font-size:18px;
 
-    line-height:1.85;
+.verdict{
+border-left:5px solid var(--green);
+background:linear-gradient(90deg,rgba(99,255,54,.09),rgba(255,52,52,.035));
+padding:20px;
+margin:25px 0;
 }
 
-.article-body p {
-    margin-bottom:22px;
+.evidence{
+background:#080808;
+border:1px solid #333;
+border-left:5px solid var(--red);
+padding:20px;
+margin:25px 0;
+font-family:Arial,Helvetica,sans-serif;
 }
 
-.article-body h3 {
-    font-family:
-    "Arial Black",
-    Impact,
-    sans-serif;
-
-    font-size:27px;
-
-    margin-top:38px;
-
-    text-transform:uppercase;
+.evidence strong{
+display:block;
+color:var(--green);
+font-size:20px;
+margin-bottom:6px;
 }
-
-.verdict {
-    border-left:
-    5px solid var(--green);
-
-    background:
-
-    linear-gradient(
-        90deg,
-        rgba(99,255,54,.09),
-        rgba(255,52,52,.035)
-    );
-
-    padding:20px;
 
-    margin:
-    25px 0;
+footer{
+border-top:1px solid var(--border);
+margin-top:50px;
+padding:40px 0 60px;
+color:#999;
 }
 
-.evidence {
-    background:#080808;
+footer strong{color:white}
 
-    border:
-    1px solid #333;
-
-    border-left:
-    5px solid var(--red);
-
-    padding:20px;
-
-    margin:
-    25px 0;
-
-    font-family:
-    Arial,
-    Helvetica,
-    sans-serif;
+@media(max-width:900px){
+.hero-grid{grid-template-columns:1fr}
+.side-column{grid-template-columns:1fr 1fr}
+.story-grid{grid-template-columns:repeat(2,1fr)}
 }
 
-.evidence strong {
-    display:block;
+@media(max-width:650px){
 
-    color:var(--green);
+.container{width:calc(100% - 20px)}
 
-    font-size:20px;
-
-    margin-bottom:6px;
+.newsbar-inner{
+padding:7px 0;
+align-items:flex-start;
+flex-direction:column;
+gap:5px;
 }
-
 
-/* SECTION COLORS */
-
-#breaking .section-header h2::after {
-    background:var(--red);
+.newsbar-right{
+width:100%;
+justify-content:space-between;
+gap:8px;
 }
 
-#sports .section-header h2::after {
-    background:var(--green);
+.logo-circle{
+width:42px;
+height:42px;
 }
 
-#entertainment .section-header h2::after {
-    background:
+.logo-text strong{font-size:17px}
+.logo-text small{display:none}
 
-    linear-gradient(
-        90deg,
-        var(--red),
-        var(--purple)
-    );
-}
+nav{gap:13px}
 
-#gaming .section-header h2::after {
-    background:
+.hero{padding-top:20px}
 
-    linear-gradient(
-        90deg,
-        var(--green),
-        var(--blue)
-    );
+.main-story{
+min-height:620px;
+padding:24px;
 }
 
-#gossip .section-header h2::after {
-    background:var(--pink);
+.hero-brand-art{
+margin:auto auto 15px;
 }
 
-#factchecks .section-header h2::after {
-    background:var(--yellow);
+.hero-graffiti-logo{
+width:100%;
+max-height:190px;
 }
-
-
-/* FOOTER */
-
-footer {
-    border-top:
-    1px solid var(--border);
-
-    margin-top:50px;
-
-    padding:
-    40px 0 60px;
 
-    color:#999;
-
-    background:
-
-    linear-gradient(
-        180deg,
-        transparent,
-        rgba(99,255,54,.025)
-    );
+.side-column,
+.story-grid{
+grid-template-columns:1fr;
 }
 
-footer strong {
-    color:white;
+.section-header{
+align-items:flex-start;
+flex-direction:column;
 }
-
 
-/* =====================================================
-   MOBILE
-   ===================================================== */
+.section-description{text-align:left}
 
-@media(max-width:900px) {
+.investigation{padding:30px}
 
-    .hero-grid {
-        grid-template-columns:1fr;
-    }
+.join-club-box{padding:45px 18px}
 
-    .side-column {
-        grid-template-columns:
-        1fr 1fr;
-    }
-
-    .story-grid {
-        grid-template-columns:
-        repeat(2,1fr);
-    }
+.join-club-box h2{
+letter-spacing:-2px;
 }
-
-
-@media(max-width:650px) {
-
-    .container {
-        width:
-        calc(100% - 20px);
-    }
-
-    .newsbar-inner {
-        padding:
-        7px 0;
-
-        align-items:flex-start;
-
-        flex-direction:column;
-
-        gap:5px;
-    }
-
-    .newsbar-right {
-        width:100%;
-
-        justify-content:
-        space-between;
-
-        gap:8px;
-    }
-
-    .visitor-counter {
-        padding:
-        3px 8px;
-    }
-
-    .logo-circle {
-        width:42px;
-
-        height:42px;
-    }
-
-    .logo-text strong {
-        font-size:17px;
-    }
-
-    .logo-text small {
-        display:none;
-    }
-
-    nav {
-        gap:13px;
-    }
-
-    .hero {
-        padding-top:20px;
-    }
-
-    .main-story {
-        min-height:450px;
-    }
-
-    .side-column,
-    .story-grid {
-        grid-template-columns:1fr;
-    }
-
-    .section-header {
-        align-items:flex-start;
-
-        flex-direction:column;
-    }
-
-    .section-description {
-        text-align:left;
-    }
 
-    .investigation {
-        padding:30px;
-    }
 }
 
 </style>
@@ -1331,156 +744,91 @@ footer strong {
 <body>
 
 
-<!-- =====================================================
-     NEWSROOM + LIVE PAGE COUNTER
-     ===================================================== -->
-
-
 <div class="newsbar">
 
 <div class="container newsbar-inner">
 
-
 <div class="newsbar-left">
-
 <span class="live-dot"></span>
-
-<strong>
-THE BLIND TRUTH NEWSROOM
-</strong>
-
+<strong>THE BLIND TRUTH NEWSROOM</strong>
 </div>
-
 
 <div class="newsbar-right">
 
-
-<div class="visitor-counter"
-aria-label="Website visit counter">
-
-<span class="counter-eye">
-●
-</span>
-
-<span class="counter-label">
-SITE VISITS
-</span>
-
-<span id="visitor-count">
-LOADING...
-</span>
-
+<div class="visitor-counter" aria-label="Website visit counter">
+<span class="counter-eye">●</span>
+<span class="counter-label">SITE VISITS</span>
+<span id="visitor-count">LOADING...</span>
 </div>
-
 
 <div>
-UPDATED SEPTEMBER 11, 2026
-</div>
-
-
+UPDATED SEPTEMBER 12, 2026
 </div>
 
 </div>
 
 </div>
 
-
-
-<!-- =====================================================
-     HEADER
-     ===================================================== -->
+</div>
 
 
 <header>
 
 <div class="container header-inner">
 
-
-<a href="#top"
-class="logo">
+<a href="#top" class="logo">
 
 <div class="logo-circle">
 TBT
 </div>
 
 <div class="logo-text">
-
-<strong>
-THE BLIND TRUTH
-</strong>
-
-<small>
-QUESTION EVERYTHING • FOLLOW THE EVIDENCE
-</small>
-
+<strong>THE BLIND TRUTH</strong>
+<small>QUESTION EVERYTHING • FOLLOW THE EVIDENCE</small>
 </div>
 
 </a>
 
-
 <nav>
 
-<a href="#breaking">
-Breaking
-</a>
-
-<a href="#trending">
-Trending
-</a>
-
-<a href="#sports">
-Sports
-</a>
-
-<a href="#hiphop">
-Hip-Hop
-</a>
-
-<a href="#entertainment">
-Entertainment
-</a>
-
-<a href="#gaming">
-Gaming
-</a>
-
-<a href="#gossip">
-Claims
-</a>
-
-<a href="#factchecks">
-Fact Checks
-</a>
-
-<a href="#investigations">
-Case Files
-</a>
+<a href="#breaking">Breaking</a>
+<a href="#trending">Trending</a>
+<a href="#sports">Sports</a>
+<a href="#hiphop">Hip-Hop</a>
+<a href="#entertainment">Entertainment</a>
+<a href="#gaming">Gaming</a>
+<a href="#gossip">Claims</a>
+<a href="#factchecks">Fact Checks</a>
+<a href="#investigations">Case Files</a>
 
 </nav>
-
 
 </div>
 
 </header>
 
 
-
-<main
-id="top"
-class="container">
+<main id="top" class="container">
 
 
 <!-- =====================================================
-     HERO
-     ===================================================== -->
-
+     HERO — CASE FILE 004
+===================================================== -->
 
 <section class="hero">
 
 <div class="hero-grid">
 
-
 <article class="main-story">
+
+<div class="hero-brand-art">
+
+<img
+src="tbt-graffiti-logo.png"
+alt="TBT - The Blind Truth"
+class="hero-graffiti-logo">
+
+</div>
 
 <div class="main-label">
 25 YEARS LATER
@@ -1497,65 +845,51 @@ ABOUT 9/11?
 </h1>
 
 <p>
-Twenty-five years after
-the September 11 attacks,
-The Blind Truth separates
-documented intelligence failures,
-the al-Qaeda plot,
-Saudi-linked questions,
-the money trail,
-Iraq,
-structural claims
-and conspiracy theories
-from what the evidence
-actually proves.
+Twenty-five years after the September 11 attacks,
+The Blind Truth separates documented intelligence failures,
+the al-Qaeda plot, Saudi-linked questions, the money trail,
+Iraq, structural claims and conspiracy theories from what
+the evidence actually proves.
 </p>
 
-<button
-class="read-button"
+<button class="read-button"
 onclick="openArticle('nineeleven')">
-
 OPEN CASE FILE 004 →
-
 </button>
 
 </article>
-
 
 
 <div class="side-column">
 
 
-<article class="feature-card">
+<article class="feature-card breaking-feature">
 
 <div class="category">
-HIP-HOP • FEDERAL COURT
+BREAKING • HIP-HOP • FEDERAL COURT
 </div>
 
 <h2>
-Lil Durk Case
-Now in Jury Hands
+Lil Durk Acquitted
+on All Charges
 </h2>
 
 <p>
-Closing arguments are over.
+A federal jury has found Lil Durk
+not guilty on every charge in his
+murder-for-hire trial.
 
-Jurors are deliberating
-whether prosecutors proved
-the murder-for-hire case
-beyond a reasonable doubt.
+The verdict clears him in this case,
+but he remains in federal custody
+because a separate case is still pending.
 </p>
 
-<button
-class="read-button"
+<button class="read-button"
 onclick="openArticle('durk')">
-
-READ TRIAL UPDATE →
-
+READ VERDICT →
 </button>
 
 </article>
-
 
 
 <article class="feature-card">
@@ -1570,24 +904,18 @@ in Historic Melbourne Game
 </h2>
 
 <p>
-San Francisco wins
-27–7 before more than
-100,000 spectators
-in the NFL's first
-regular-season game
-in Australia.
+San Francisco wins 27–7
+before more than 100,000 spectators
+in the NFL's first regular-season
+game in Australia.
 </p>
 
-<button
-class="read-button"
+<button class="read-button"
 onclick="openArticle('australia')">
-
 READ STORY →
-
 </button>
 
 </article>
-
 
 </div>
 
@@ -1596,29 +924,17 @@ READ STORY →
 </section>
 
 
-
 <!-- =====================================================
-     BREAKING NEWS
-     ===================================================== -->
+     BREAKING
+===================================================== -->
 
-
-<section
-class="news-section"
-id="breaking">
-
+<section class="news-section" id="breaking">
 
 <div class="section-header">
 
 <div>
-
-<div class="category">
-LATEST
-</div>
-
-<h2>
-Breaking News
-</h2>
-
+<div class="category">LATEST</div>
+<h2>Breaking News</h2>
 </div>
 
 <div class="section-description">
@@ -1634,6 +950,33 @@ Major developing stories
 <article class="story-card">
 
 <div class="category">
+LIL DURK • NOT GUILTY
+</div>
+
+<h3>
+Lil Durk Acquitted
+on Every Charge
+</h3>
+
+<p>
+Jurors found Durk Banks
+not guilty on all charges
+in the federal murder-for-hire case
+that had accused him of orchestrating
+a 2022 attack targeting Quando Rondo.
+</p>
+
+<button class="read-button"
+onclick="openArticle('durk')">
+READ VERDICT →
+</button>
+
+</article>
+
+
+<article class="story-card">
+
+<div class="category">
 SEPTEMBER 11 • 25 YEARS
 </div>
 
@@ -1644,55 +987,17 @@ America Marks
 
 <p>
 Ceremonies in New York,
-at the Pentagon
-and in Pennsylvania
-honor the nearly 3,000
-people killed
+at the Pentagon and in Pennsylvania
+honor the nearly 3,000 people killed
 in the attacks.
 </p>
 
-<button
-class="read-button"
+<button class="read-button"
 onclick="openArticle('anniversary')">
-
 READ STORY →
-
 </button>
 
 </article>
-
-
-
-<article class="story-card">
-
-<div class="category">
-LIL DURK • FEDERAL TRIAL
-</div>
-
-<h3>
-Jury Deliberates
-Lil Durk Case
-</h3>
-
-<p>
-Jurors are weighing
-federal charges
-after weeks of testimony,
-cooperating witnesses
-and competing theories
-of who directed the plot.
-</p>
-
-<button
-class="read-button"
-onclick="openArticle('durk')">
-
-READ UPDATE →
-
-</button>
-
-</article>
-
 
 
 <article class="story-card">
@@ -1707,19 +1012,15 @@ as Conflict Continues
 </h3>
 
 <p>
-Energy markets remain
-under pressure as conflict,
-shipping disruption
-and instability around
-major trade routes continue.
+Energy markets remain under pressure
+as conflict, shipping disruption
+and instability around major
+trade routes continue.
 </p>
 
-<button
-class="read-button"
+<button class="read-button"
 onclick="openArticle('oil')">
-
 READ STORY →
-
 </button>
 
 </article>
@@ -1730,29 +1031,17 @@ READ STORY →
 </section>
 
 
-
 <!-- =====================================================
      TRENDING
-     ===================================================== -->
+===================================================== -->
 
-
-<section
-class="news-section"
-id="trending">
-
+<section class="news-section" id="trending">
 
 <div class="section-header">
 
 <div>
-
-<div class="category">
-VIRAL NOW
-</div>
-
-<h2>
-Trending
-</h2>
-
+<div class="category">VIRAL NOW</div>
+<h2>Trending</h2>
 </div>
 
 <div class="section-description">
@@ -1768,33 +1057,27 @@ Culture • Conversation • Developing
 <article class="story-card">
 
 <div class="category">
-U.S. OPEN • HISTORY
+LIL DURK • VERDICT
 </div>
 
 <h3>
-Shelton vs. Tiafoe
-Makes Tennis History
+Durk Verdict Changes
+the Federal Case
 </h3>
 
 <p>
-Ben Shelton
-and Frances Tiafoe
-meet in the first
-Grand Slam semifinal
-between two Black American men
-in the Open Era.
+After weeks of testimony
+and roughly three days of deliberations,
+jurors rejected the government's case
+against Lil Durk.
 </p>
 
-<button
-class="read-button"
-onclick="openArticle('mensopen')">
-
-READ STORY →
-
+<button class="read-button"
+onclick="openArticle('durk')">
+READ VERDICT →
 </button>
 
 </article>
-
 
 
 <article class="story-card">
@@ -1809,24 +1092,17 @@ Clippers Dealings
 </h3>
 
 <p>
-Federal investigators
-are examining
-the Clippers'
-dealings involving
-Kawhi Leonard
-after major NBA penalties.
+Federal investigators are examining
+the Clippers' dealings involving
+Kawhi Leonard after major NBA penalties.
 </p>
 
-<button
-class="read-button"
+<button class="read-button"
 onclick="openArticle('clippers')">
-
 READ STORY →
-
 </button>
 
 </article>
-
 
 
 <article class="story-card">
@@ -1841,19 +1117,15 @@ Still Isn't Fully Closed
 </h3>
 
 <p>
-Newer declassified material
-and civil litigation
-continue to raise questions
-about Saudi-linked individuals
-who assisted future hijackers.
+Declassified material and civil litigation
+continue to raise questions about
+Saudi-linked individuals who assisted
+future hijackers.
 </p>
 
-<button
-class="read-button"
+<button class="read-button"
 onclick="openArticle('nineeleven')">
-
 OPEN INVESTIGATION →
-
 </button>
 
 </article>
@@ -1864,29 +1136,17 @@ OPEN INVESTIGATION →
 </section>
 
 
-
 <!-- =====================================================
      SPORTS
-     ===================================================== -->
+===================================================== -->
 
-
-<section
-class="news-section"
-id="sports">
-
+<section class="news-section" id="sports">
 
 <div class="section-header">
 
 <div>
-
-<div class="category">
-SPORTS DESK
-</div>
-
-<h2>
-Sports
-</h2>
-
+<div class="category">SPORTS DESK</div>
+<h2>Sports</h2>
 </div>
 
 <div class="section-description">
@@ -1911,24 +1171,18 @@ NFL • AUSTRALIA
 </h3>
 
 <p>
-Brock Purdy throws
-three touchdowns
+Brock Purdy throws three touchdowns
 as San Francisco dominates
-the NFL's first
-regular-season game
-in Australia.
+the NFL's first regular-season
+game in Australia.
 </p>
 
-<button
-class="read-button"
+<button class="read-button"
 onclick="openArticle('australia')">
-
 READ STORY →
-
 </button>
 
 </article>
-
 
 
 <article class="story-card">
@@ -1938,28 +1192,23 @@ U.S. OPEN • MEN
 </div>
 
 <h3>
-Tiafoe and Shelton
-Play for the Final
+Shelton vs. Tiafoe
+Makes Tennis History
 </h3>
 
 <p>
-One American
-is guaranteed
-a place
-in the men's
-U.S. Open final.
+The matchup becomes a historic
+Grand Slam meeting between
+two Black American men's
+tennis stars.
 </p>
 
-<button
-class="read-button"
+<button class="read-button"
 onclick="openArticle('mensopen')">
-
 READ STORY →
-
 </button>
 
 </article>
-
 
 
 <article class="story-card">
@@ -1975,18 +1224,13 @@ Coco Gauff's Run
 
 <p>
 Elena Rybakina rallies
-from a set down
-to defeat Coco Gauff
-and reach
-the U.S. Open final.
+from a set down to defeat
+Coco Gauff and advance.
 </p>
 
-<button
-class="read-button"
+<button class="read-button"
 onclick="openArticle('gauff')">
-
 READ STORY →
-
 </button>
 
 </article>
@@ -1997,29 +1241,17 @@ READ STORY →
 </section>
 
 
-
 <!-- =====================================================
      HIP-HOP
-     ===================================================== -->
+===================================================== -->
 
-
-<section
-class="news-section"
-id="hiphop">
-
+<section class="news-section" id="hiphop">
 
 <div class="section-header">
 
 <div>
-
-<div class="category">
-MUSIC & CULTURE
-</div>
-
-<h2>
-Hip-Hop / Music
-</h2>
-
+<div class="category">MUSIC & CULTURE</div>
+<h2>Hip-Hop / Music</h2>
 </div>
 
 <div class="section-description">
@@ -2035,32 +1267,26 @@ Artists • Court • Culture
 <article class="story-card">
 
 <div class="category">
-LIL DURK • TRIAL
+LIL DURK • ACQUITTED
 </div>
 
 <h3>
-Lil Durk Verdict
-Could Come Next
+Lil Durk Found
+Not Guilty
 </h3>
 
 <p>
-The federal case
-has reached
-jury deliberations
-after testimony
-from multiple cooperating witnesses.
+The Grammy-winning rapper
+was acquitted on every charge
+in his federal murder-for-hire trial.
 </p>
 
-<button
-class="read-button"
+<button class="read-button"
 onclick="openArticle('durk')">
-
-READ TRIAL UPDATE →
-
+READ VERDICT →
 </button>
 
 </article>
-
 
 
 <article class="story-card">
@@ -2081,16 +1307,12 @@ in Tupac Shakur's killing
 and is awaiting sentencing.
 </p>
 
-<button
-class="read-button"
+<button class="read-button"
 onclick="openArticle('keffe')">
-
 READ UPDATE →
-
 </button>
 
 </article>
-
 
 
 <article class="story-card">
@@ -2105,19 +1327,14 @@ Still Unproven
 </h3>
 
 <p>
-Keffe D's conviction
-did not establish
-that Sean Combs
-ordered or financed
+Keffe D's conviction did not establish
+that Sean Combs ordered or financed
 Tupac's murder.
 </p>
 
-<button
-class="read-button"
+<button class="read-button"
 onclick="openArticle('diddy')">
-
 OPEN CASE FILE →
-
 </button>
 
 </article>
@@ -2128,29 +1345,59 @@ OPEN CASE FILE →
 </section>
 
 
+<!-- =====================================================
+     JOIN THE CLUB
+===================================================== -->
+
+<section class="join-club-section" id="newsletter">
+
+<div class="join-club-box">
+
+<div class="join-kicker">
+THE BLIND TRUTH NEWSROOM
+</div>
+
+<h2>
+JOIN THE CLUB
+</h2>
+
+<div class="join-club-tagline">
+QUESTION EVERYTHING. FOLLOW THE EVIDENCE.
+</div>
+
+<p class="join-club-copy">
+Don't miss the next story.
+Get The Blind Truth breaking news,
+investigations, trending stories,
+hip-hop, entertainment, sports,
+gaming, rumors, fact checks
+and evidence breakdowns.
+</p>
+
+<a
+href="https://buttondown.com/TheBlindTruth"
+target="_blank"
+rel="noopener noreferrer"
+class="join-club-button">
+JOIN THE BLIND TRUTH →
+</a>
+
+</div>
+
+</section>
+
 
 <!-- =====================================================
      ENTERTAINMENT
-     ===================================================== -->
+===================================================== -->
 
-
-<section
-class="news-section"
-id="entertainment">
-
+<section class="news-section" id="entertainment">
 
 <div class="section-header">
 
 <div>
-
-<div class="category">
-CULTURE
-</div>
-
-<h2>
-Entertainment
-</h2>
-
+<div class="category">CULTURE</div>
+<h2>Entertainment</h2>
 </div>
 
 <div class="section-description">
@@ -2176,23 +1423,17 @@ Near Emmy Milestones
 </h3>
 
 <p>
-Smart could win
-a fifth consecutive
-comedy-actress Emmy,
-while Ford seeks
-his first Emmy win.
+Smart could win another major
+comedy-actress Emmy while
+Ford seeks his first Emmy win.
 </p>
 
-<button
-class="read-button"
+<button class="read-button"
 onclick="openArticle('emmys')">
-
 READ STORY →
-
 </button>
 
 </article>
-
 
 
 <article class="story-card">
@@ -2207,24 +1448,17 @@ Makes Emergency Landing
 </h3>
 
 <p>
-A Delta flight
-carrying Andrew Garfield,
-Owen Thiele
-and other entertainers
-diverted safely
-after a smoky odor.
+A Delta flight carrying entertainers
+diverted safely after passengers
+reported a smoky odor.
 </p>
 
-<button
-class="read-button"
+<button class="read-button"
 onclick="openArticle('delta')">
-
 READ STORY →
-
 </button>
 
 </article>
-
 
 
 <article class="story-card">
@@ -2239,20 +1473,15 @@ Amid Hollywood Change
 </h3>
 
 <p>
-Television's biggest night
-arrives as Hollywood
-continues confronting
-AI,
+Television's biggest night arrives
+as Hollywood confronts AI,
 production pressures
 and industry consolidation.
 </p>
 
-<button
-class="read-button"
+<button class="read-button"
 onclick="openArticle('emmys')">
-
 READ STORY →
-
 </button>
 
 </article>
@@ -2263,29 +1492,17 @@ READ STORY →
 </section>
 
 
-
 <!-- =====================================================
      GAMING
-     ===================================================== -->
+===================================================== -->
 
-
-<section
-class="news-section"
-id="gaming">
-
+<section class="news-section" id="gaming">
 
 <div class="section-header">
 
 <div>
-
-<div class="category">
-GAMING
-</div>
-
-<h2>
-Gaming
-</h2>
-
+<div class="category">GAMING</div>
+<h2>Gaming</h2>
 </div>
 
 <div class="section-description">
@@ -2310,24 +1527,16 @@ Launches Worldwide
 </h3>
 
 <p>
-NBA 2K27 is now
-fully released
-on PS5,
-Xbox Series X|S,
-PC
-and Nintendo Switch 2.
+NBA 2K27 is now fully released
+on current-generation platforms.
 </p>
 
-<button
-class="read-button"
+<button class="read-button"
 onclick="openArticle('2k27')">
-
 READ STORY →
-
 </button>
 
 </article>
-
 
 
 <article class="story-card">
@@ -2342,24 +1551,17 @@ Starts Taking Shape
 </h3>
 
 <p>
-Players are testing
-badge thresholds,
-Cap Breakers,
-animations
-and efficient
-attribute combinations.
+Players are testing badge thresholds,
+Cap Breakers, animations
+and efficient attribute combinations.
 </p>
 
-<button
-class="read-button"
+<button class="read-button"
 onclick="openArticle('2k27')">
-
 READ STORY →
-
 </button>
 
 </article>
-
 
 
 <article class="story-card">
@@ -2375,18 +1577,13 @@ Now Underway
 
 <p>
 The first season includes
-a 40-level reward ladder,
-Cap Breakers,
-Badge Tokens
-and City rewards.
+a reward ladder, Cap Breakers,
+Badge Tokens and City rewards.
 </p>
 
-<button
-class="read-button"
+<button class="read-button"
 onclick="openArticle('2k27')">
-
 READ STORY →
-
 </button>
 
 </article>
@@ -2397,29 +1594,17 @@ READ STORY →
 </section>
 
 
-
 <!-- =====================================================
-     CLAIMS & RUMORS
-     ===================================================== -->
+     CLAIMS
+===================================================== -->
 
-
-<section
-class="news-section"
-id="gossip">
-
+<section class="news-section" id="gossip">
 
 <div class="section-header">
 
 <div>
-
-<div class="category">
-CLAIMS DESK
-</div>
-
-<h2>
-Claims & Rumors
-</h2>
-
+<div class="category">CLAIMS DESK</div>
+<h2>Claims & Rumors</h2>
 </div>
 
 <div class="section-description">
@@ -2449,53 +1634,41 @@ assisted future hijackers.
 
 Whether that assistance
 was knowingly connected
-to the 9/11 plot
-remains disputed.
+to the 9/11 plot remains disputed.
 </p>
 
-<button
-class="read-button"
+<button class="read-button"
 onclick="openArticle('nineeleven')">
-
 SEE EVIDENCE →
-
 </button>
 
 </article>
-
 
 
 <article class="story-card">
 
 <div class="category">
-ALLEGATION • NOT VERDICT
+VERDICT • NOT GUILTY
 </div>
 
 <h3>
-Lil Durk Witness Claims
-Remain Contested
+Jurors Reject
+Lil Durk Allegations
 </h3>
 
 <p>
-Cooperating witnesses
-implicated Durk.
-
-His defense attacked
-their credibility,
-motives
-and prior statements.
+Cooperating witnesses implicated Durk,
+but the jury ultimately found him
+not guilty on every charge
+in this federal trial.
 </p>
 
-<button
-class="read-button"
+<button class="read-button"
 onclick="openArticle('durk')">
-
-READ CASE UPDATE →
-
+READ VERDICT →
 </button>
 
 </article>
-
 
 
 <article class="story-card">
@@ -2510,20 +1683,14 @@ Moves Beyond NBA
 </h3>
 
 <p>
-Federal investigators
-are examining
-the team's dealings,
-but an investigation
-is not proof
-of a federal crime.
+Federal investigators are examining
+the team's dealings, but an investigation
+is not proof of a federal crime.
 </p>
 
-<button
-class="read-button"
+<button class="read-button"
 onclick="openArticle('clippers')">
-
 READ STORY →
-
 </button>
 
 </article>
@@ -2534,29 +1701,17 @@ READ STORY →
 </section>
 
 
-
 <!-- =====================================================
      FACT CHECKS
-     ===================================================== -->
+===================================================== -->
 
-
-<section
-class="news-section"
-id="factchecks">
-
+<section class="news-section" id="factchecks">
 
 <div class="section-header">
 
 <div>
-
-<div class="category">
-VERIFY BEFORE YOU SHARE
-</div>
-
-<h2>
-Fact Checks
-</h2>
-
+<div class="category">VERIFY BEFORE YOU SHARE</div>
+<h2>Fact Checks</h2>
 </div>
 
 <div class="section-description">
@@ -2581,23 +1736,17 @@ Planned 9/11"
 </h3>
 
 <p>
-No credible public evidence
-establishes that
-U.S. officials designed
-or executed
-the attacks.
+No credible public evidence establishes
+that U.S. officials designed
+or executed the attacks.
 </p>
 
-<button
-class="read-button"
+<button class="read-button"
 onclick="openArticle('nineeleven')">
-
 SEE EVIDENCE →
-
 </button>
 
 </article>
-
 
 
 <article class="story-card">
@@ -2611,23 +1760,17 @@ FALSE
 </h3>
 
 <p>
-The 9/11 Commission
-found no evidence
+The 9/11 Commission found no evidence
 that Saddam Hussein's government
-participated
-in the attacks.
+participated in the attacks.
 </p>
 
-<button
-class="read-button"
+<button class="read-button"
 onclick="openArticle('nineeleven')">
-
 SEE EVIDENCE →
-
 </button>
 
 </article>
-
 
 
 <article class="story-card">
@@ -2644,21 +1787,16 @@ Has Been Found Guilty"
 <p>
 False.
 
-A judge ordered
-Tyler Robinson
+A judge ordered Tyler Robinson
 to stand trial.
 
-That establishes
-probable cause,
+That establishes probable cause,
 not guilt.
 </p>
 
-<button
-class="read-button"
+<button class="read-button"
 onclick="openArticle('kirk')">
-
 READ CASE FILE →
-
 </button>
 
 </article>
@@ -2669,29 +1807,17 @@ READ CASE FILE →
 </section>
 
 
-
 <!-- =====================================================
      INVESTIGATIONS
-     ===================================================== -->
+===================================================== -->
 
-
-<section
-class="news-section"
-id="investigations">
-
+<section class="news-section" id="investigations">
 
 <div class="section-header">
 
 <div>
-
-<div class="category">
-THE BLIND TRUTH
-</div>
-
-<h2>
-Investigations / Case Files
-</h2>
-
+<div class="category">THE BLIND TRUTH</div>
+<h2>Investigations / Case Files</h2>
 </div>
 
 <div class="section-description">
@@ -2699,10 +1825,6 @@ Evidence • Myth • Verdict
 </div>
 
 </div>
-
-
-
-<!-- CASE FILE 004 -->
 
 
 <div class="investigation">
@@ -2729,43 +1851,27 @@ PARTIALLY RESOLVED
 </div>
 
 <p>
-The evidence overwhelmingly
-identifies al-Qaeda
-as the organization
-behind the attacks.
+The evidence overwhelmingly identifies
+al-Qaeda as the organization behind the attacks.
 
-The government also had
-serious warning signs,
-missed opportunities
-and intelligence failures.
+The government also had serious warning signs,
+missed opportunities and intelligence failures.
 
-What the public evidence
-does not establish
-is that the U.S. government
-planned
-or deliberately permitted
-the attacks.
+What the public evidence does not establish
+is that the U.S. government planned
+or deliberately permitted the attacks.
 
-Questions surrounding
-Saudi-linked assistance
-to future hijackers
-remain worthy
+Questions surrounding Saudi-linked assistance
+to future hijackers remain worthy
 of continued investigation.
 </p>
 
-<button
-class="read-button"
+<button class="read-button"
 onclick="openArticle('nineeleven')">
-
 READ FULL INVESTIGATION →
-
 </button>
 
 </div>
-
-
-
-<!-- CASE FILE 003 -->
 
 
 <div class="investigation">
@@ -2790,28 +1896,17 @@ FINAL VERDICT: UNPROVEN
 </div>
 
 <p>
-Keffe D's conviction
-does not establish
-that Sean Combs
-ordered,
-funded
-or participated
-in Tupac Shakur's murder.
+Keffe D's conviction does not establish
+that Sean Combs ordered, funded
+or participated in Tupac Shakur's murder.
 </p>
 
-<button
-class="read-button"
+<button class="read-button"
 onclick="openArticle('diddy')">
-
 READ FULL INVESTIGATION →
-
 </button>
 
 </div>
-
-
-
-<!-- CASE FILE 002 -->
 
 
 <div class="investigation">
@@ -2830,29 +1925,19 @@ A REAL CHOKE JOB?
 </div>
 
 <p>
-Jordan's 6–0 Finals record
-is real.
+Jordan's 6–0 Finals record is real.
 
 So are the playoff losses,
-bad games
-and context often erased
-by the mythology
-of invincibility.
+bad games and context often erased
+by the mythology of invincibility.
 </p>
 
-<button
-class="read-button"
+<button class="read-button"
 onclick="openArticle('jordan')">
-
 READ CASE FILE →
-
 </button>
 
 </div>
-
-
-
-<!-- CASE FILE 001 -->
 
 
 <div class="investigation">
@@ -2871,26 +1956,19 @@ CHARLIE KIRK?
 </div>
 
 <p>
-Tyler James Robinson
-has now been ordered
-to stand trial
-after a judge found
+Tyler James Robinson has been ordered
+to stand trial after a judge found
 sufficient probable cause.
 
-That ruling
-is not a finding of guilt.
+That ruling is not a finding of guilt.
 
-The case remains open
-until the evidence
-is tested at trial.
+The case remains open until
+the evidence is tested at trial.
 </p>
 
-<button
-class="read-button"
+<button class="read-button"
 onclick="openArticle('kirk')">
-
 READ CASE FILE →
-
 </button>
 
 </div>
@@ -2898,18 +1976,14 @@ READ CASE FILE →
 
 </section>
 
-
 </main>
-
 
 
 <footer>
 
 <div class="container">
 
-<strong>
-THE BLIND TRUTH
-</strong>
+<strong>THE BLIND TRUTH</strong>
 
 <br>
 
@@ -2918,17 +1992,21 @@ Follow the evidence.
 
 <br><br>
 
-<small>
+<a href="https://buttondown.com/TheBlindTruth"
+target="_blank"
+rel="noopener noreferrer"
+style="color:#63ff36;font-weight:900;">
+JOIN THE CLUB
+</a>
 
-Developing stories,
-allegations
-and rumors
+<br><br>
+
+<small>
+Developing stories, allegations and rumors
 are labeled by evidence status.
 
-The Blind Truth updates
-classifications when credible
-new evidence changes the record.
-
+The Blind Truth updates classifications
+when credible new evidence changes the record.
 </small>
 
 </div>
@@ -2936,21 +2014,205 @@ new evidence changes the record.
 </footer>
 
 
+<!-- =====================================================
+     LIL DURK — SEPTEMBER 12 VERDICT
+===================================================== -->
+
+<dialog id="durk">
+
+<div class="article">
+
+<button class="close"
+onclick="closeArticle('durk')">×</button>
+
+<div class="category">
+BREAKING • HIP-HOP • FEDERAL COURT
+</div>
+
+<h2>
+Lil Durk Acquitted
+on All Charges
+in Murder-for-Hire Trial
+</h2>
+
+<p class="article-intro">
+A Los Angeles federal jury
+has found Grammy-winning rapper
+Lil Durk not guilty on every charge
+in the murder-for-hire case against him.
+</p>
+
+<div class="article-body">
+
+<p>
+Durk Banks, professionally known as Lil Durk,
+was acquitted on September 11, 2026
+of all charges in the federal case accusing him
+of orchestrating and financing a 2022 attack
+targeting rapper Quando Rondo.
+</p>
+
+<p>
+Quando Rondo, whose legal name is Tyquian Bowman,
+survived the shooting.
+
+His 24-year-old cousin,
+Saviay'a Robinson,
+was killed.
+</p>
+
+<h3>
+THE GOVERNMENT'S THEORY
+</h3>
+
+<p>
+Federal prosecutors alleged that Durk
+ordered and financed the attack
+as retaliation connected to the 2020 killing
+of his close friend King Von.
+</p>
+
+<p>
+The government relied in part
+on testimony from cooperating witnesses,
+including former associates
+who had reached plea agreements.
+</p>
+
+<h3>
+THE DEFENSE
+</h3>
+
+<p>
+Durk's attorneys argued that he did not
+order the attack and attacked the credibility
+of cooperating witnesses.
+</p>
+
+<p>
+The defense maintained that a former
+personal assistant was responsible
+for the plot without Durk's knowledge.
+</p>
+
+<h3>
+THE VERDICT
+</h3>
+
+<p>
+After the case went to the jury,
+Durk was found not guilty
+on every charge against him
+in this trial.
+</p>
+
+<div class="evidence">
+
+<strong>
+VERIFIED VERDICT
+</strong>
+
+LIL DURK:
+
+NOT GUILTY ON ALL CHARGES
+IN THIS MURDER-FOR-HIRE TRIAL.
+
+</div>
+
+<h3>
+IS LIL DURK FREE?
+</h3>
+
+<p>
+No.
+</p>
+
+<p>
+The acquittal ends this particular
+murder-for-hire prosecution,
+but it does not currently mean
+Durk has been released from federal custody.
+</p>
+
+<p>
+He remains in custody because he faces
+a separate federal case involving
+racketeering, murder-related
+and weapons allegations.
+</p>
+
+<p>
+That separate trial is currently scheduled
+for October 5, 2026.
+</p>
+
+<p>
+Those allegations are separate
+from the charges on which Durk
+has now been acquitted,
+and he remains presumed innocent
+in the pending case unless proven guilty.
+</p>
+
+<h3>
+CO-DEFENDANTS
+</h3>
+
+<p>
+Deandre Wilson and David Lindsey,
+who were tried alongside Durk,
+were acquitted of the central
+murder-for-hire allegations
+but convicted on stalking-related charges.
+</p>
+
+<div class="verdict">
+
+<strong>
+THE BLIND TRUTH STATUS:
+VERIFIED
+</strong>
+
+<br><br>
+
+<strong>
+LIL DURK ACQUITTED
+ON ALL CHARGES
+IN THIS TRIAL.
+</strong>
+
+<br><br>
+
+The allegations were presented
+to a federal jury.
+
+The jury rejected the charges
+against Durk.
+
+<br><br>
+
+The separate pending federal case
+must be evaluated on its own evidence.
+
+</div>
+
+</div>
+
+</div>
+
+</dialog>
+
 
 <!-- =====================================================
-     9/11 ANNIVERSARY ARTICLE
-     ===================================================== -->
-
+     ANNIVERSARY
+===================================================== -->
 
 <dialog id="anniversary">
 
 <div class="article">
 
-<button
-class="close"
-onclick="closeArticle('anniversary')">
-×
-</button>
+<button class="close"
+onclick="closeArticle('anniversary')">×</button>
 
 <div class="category">
 SEPTEMBER 11 • 25 YEARS
@@ -2962,76 +2224,47 @@ America Marks
 </h2>
 
 <p class="article-intro">
-September 11, 2026
-marks a quarter-century
-since the attacks
-that transformed
-American life,
-foreign policy
+September 11, 2026 marks a quarter-century
+since the attacks that transformed
+American life, foreign policy
 and national security.
 </p>
 
 <div class="article-body">
 
 <p>
-Nearly 3,000 people
-were killed on September 11, 2001
-when four hijacked aircraft
-were used in coordinated
-terrorist attacks
-against the United States.
+Nearly 3,000 people were killed
+on September 11, 2001 when four hijacked
+aircraft were used in coordinated
+terrorist attacks against the United States.
 </p>
 
 <p>
-Two aircraft struck
-the World Trade Center
+Two aircraft struck the World Trade Center
 in New York.
 
-American Airlines Flight 77
-struck the Pentagon.
+American Airlines Flight 77 struck the Pentagon.
 
-United Airlines Flight 93
-crashed in Pennsylvania
-after passengers
-and crew fought back
+United Airlines Flight 93 crashed in Pennsylvania
+after passengers and crew fought back
 against the hijackers.
 </p>
 
 <p>
-Commemorations
-on the 25th anniversary
+Commemorations on the 25th anniversary
 were held at Ground Zero,
-the Pentagon
-and the Flight 93
+the Pentagon and the Flight 93
 National Memorial.
-</p>
-
-<p>
-The human cost
-did not end in 2001.
-
-Hundreds of firefighters
-and many other responders,
-survivors
-and workers
-have died in later years
-from illnesses
-linked to exposure
-at the disaster sites.
 </p>
 
 <div class="verdict">
 
-<strong>
-THE BLIND TRUTH
-</strong>
+<strong>THE BLIND TRUTH</strong>
 
 <br><br>
 
-Twenty-five years later,
-remembering the victims
-and investigating
-the unanswered questions
+Remembering the victims
+and investigating unanswered questions
 are not mutually exclusive.
 
 Both matter.
@@ -3045,21 +2278,16 @@ Both matter.
 </dialog>
 
 
-
 <!-- =====================================================
      CASE FILE 004 — 9/11
-     ===================================================== -->
-
+===================================================== -->
 
 <dialog id="nineeleven">
 
 <div class="article">
 
-<button
-class="close"
-onclick="closeArticle('nineeleven')">
-×
-</button>
+<button class="close"
+onclick="closeArticle('nineeleven')">×</button>
 
 <div class="category">
 CASE FILE 004 • 9/11 • INVESTIGATION
@@ -3074,323 +2302,157 @@ or Something More?
 
 <p class="article-intro">
 Twenty-five years later,
-we separate
-what is proven,
+we separate what is proven,
 what is unresolved,
 what was missed
-and what remains
-unsupported.
+and what remains unsupported.
 </p>
 
 <div class="article-body">
 
-
-<h3>
-THE CENTRAL QUESTION
-</h3>
+<h3>THE CENTRAL QUESTION</h3>
 
 <p>
-Did the United States
-government plan
+Did the United States government plan
 the September 11 attacks?
 
-Did officials know
-what was coming
-and deliberately
-allow it?
+Did officials know what was coming
+and deliberately allow it?
 
-Did intelligence agencies
-possess enough information
-to stop the plot?
+Did intelligence agencies possess enough
+information to stop the plot?
 
-Did another government
-assist the hijackers?
+Did another government assist the hijackers?
 
-And was America later
-directed toward enemies
-that had little
-or nothing to do
-with the attack?
+Those are separate questions
+and require separate evidence.
 </p>
 
-<p>
-Those are separate questions.
-
-They require
-separate evidence.
-</p>
-
-
-<h3>
-EXHIBIT 1 —
-WHO PLANNED 9/11?
-</h3>
+<h3>WHO PLANNED 9/11?</h3>
 
 <p>
-The strongest available
-documentary record
+The strongest available documentary record
 identifies Osama bin Laden,
 Khalid Sheikh Mohammed,
-Mohammed Atef
-and the al-Qaeda network
-as the principal organizers
-of the aircraft plot.
+Mohammed Atef and the al-Qaeda network
+as the principal organizers.
 </p>
-
-<p>
-Nineteen hijackers
-carried out the attacks.
-
-Mohammed Atta
-served as the operational leader
-of the hijacking team
-inside the United States.
-</p>
-
 
 <div class="evidence">
 
-<strong>
-FINDING:
-STRONGLY SUPPORTED
-</strong>
+<strong>STRONGLY SUPPORTED</strong>
 
-Al-Qaeda planned
-and carried out
+Al-Qaeda planned and carried out
 the September 11 attacks.
 
 </div>
 
-
-<h3>
-EXHIBIT 2 —
-THE SYSTEM WAS BLINKING RED
-</h3>
+<h3>THE SYSTEM WAS BLINKING RED</h3>
 
 <p>
-During the spring
-and summer of 2001,
-American intelligence agencies
-received repeated reporting
-warning that al-Qaeda
-was preparing
-a major operation.
+During the spring and summer of 2001,
+American intelligence agencies received
+repeated reporting warning that al-Qaeda
+was preparing a major operation.
 </p>
 
 <p>
-The later 9/11 Commission
-described the threat environment
-as one in which
-the system was effectively
-blinking red.
-</p>
-
-<p>
-Those warnings
-did not identify
+Those warnings did not identify
 the complete operational plan,
-date
-and targets.
-</p>
+date and targets.
 
-<p>
-But they clearly established
-that al-Qaeda posed
-an immediate
-and serious threat.
+They did establish that al-Qaeda
+posed a serious threat.
 </p>
-
 
 <h3>
-EXHIBIT 3 —
 BIN LADEN DETERMINED
 TO STRIKE IN U.S.
 </h3>
 
 <p>
 On August 6, 2001,
-President George W. Bush
-received a presidential
-intelligence briefing
-titled
-"Bin Ladin Determined
-to Strike in US."
+President George W. Bush received
+a presidential intelligence briefing titled
+"Bin Ladin Determined to Strike in US."
 </p>
 
 <p>
-The briefing discussed
-bin Laden's desire
-to attack inside
-the United States
-and referenced
-possible hijacking activity
-and an al-Qaeda support structure
-inside the country.
+The document did not state that four aircraft
+would be hijacked on September 11,
+but claims that the administration
+had no warning whatsoever are inaccurate.
 </p>
 
-<p>
-The document did not say
-that four aircraft
-would be hijacked
-on September 11.
-</p>
+<h3>MIHDHAR AND HAZMI</h3>
 
 <p>
-But claims that
-the administration had
-no warning whatsoever
-are inaccurate.
-</p>
-
-
-<h3>
-EXHIBIT 4 —
-MIHDHAR AND HAZMI
-</h3>
-
-<p>
-Future hijackers
-Khalid al-Mihdhar
-and Nawaf al-Hazmi
-were known to American
-intelligence before 9/11.
-</p>
-
-<p>
-Mihdhar possessed
-a valid U.S. visa.
-
-Both men eventually entered
-the United States.
+Future hijackers Khalid al-Mihdhar
+and Nawaf al-Hazmi were known
+to American intelligence before 9/11.
 </p>
 
 <p>
 Information concerning them
-was not effectively
-shared with FBI personnel
+was not effectively shared with FBI personnel
 at critical moments.
 </p>
 
-<p>
-They lived openly
-inside America
-under their real names.
-</p>
-
-
 <div class="evidence">
 
-<strong>
-MAJOR DOCUMENTED FAILURE
-</strong>
+<strong>MAJOR DOCUMENTED FAILURE</strong>
 
 The 9/11 Commission concluded
-that locating
-and detaining
-Mihdhar and Hazmi
-might have disrupted
-the plot.
+that locating and detaining Mihdhar and Hazmi
+might have disrupted the plot.
 
 </div>
 
-
-<h3>
-EXHIBIT 5 —
-THE PHOENIX MEMO
-</h3>
+<h3>THE PHOENIX MEMO</h3>
 
 <p>
-In July 2001,
-an FBI agent in Phoenix
-raised concerns
-about individuals
+In July 2001 an FBI agent in Phoenix
+raised concerns about individuals
 connected to radical activity
-attending American
-aviation schools.
+attending American aviation schools.
 </p>
 
 <p>
-He recommended
-deeper investigation
-of flight schools
-and visa information.
-</p>
-
-<p>
-The warning
-was not developed
+The warning was not developed
 into a nationwide investigation
 before September 11.
 </p>
 
-
-<h3>
-EXHIBIT 6 —
-MOUSSAOUI
-</h3>
+<h3>ZACARIAS MOUSSAOUI</h3>
 
 <p>
-Zacarias Moussaoui
-was arrested
-in Minnesota
-in August 2001
-after flight instructors
-became suspicious
-of his interest
-in training involving
+Zacarias Moussaoui was arrested
+in Minnesota in August 2001
+after flight instructors became suspicious
+of his interest in training involving
 large commercial aircraft.
 </p>
 
 <p>
-FBI personnel suspected
-a possible terrorism connection.
+The information was not integrated
+with the Phoenix warning and broader
+al-Qaeda threat picture in time.
 </p>
 
-<p>
-The information
-was never integrated
-with the Phoenix warning
-and the broader
-al-Qaeda threat picture
-in time.
-</p>
-
-
-<h3>
-EXHIBIT 7 —
-DID THE GOVERNMENT
-LET IT HAPPEN?
-</h3>
+<h3>DID THE GOVERNMENT LET IT HAPPEN?</h3>
 
 <p>
-The public record
-demonstrates severe failures
+The public record demonstrates severe failures
 of intelligence sharing,
 bureaucratic coordination,
-watchlisting,
-analysis
-and urgency.
+watchlisting, analysis and urgency.
 </p>
 
 <p>
-What it does not establish
-is an intentional order
-from U.S. officials
-to allow the attack
-to occur.
+What it does not establish is an intentional
+order from U.S. officials to allow
+the attack to occur.
 </p>
-
-<p>
-There is no publicly verified
-stand-down order,
-operational directive,
-payment trail
-or authenticated communication
-showing American officials
-knowingly facilitated
-the attack.
-</p>
-
 
 <div class="verdict">
 
@@ -3402,10 +2464,7 @@ DELIBERATELY ALLOWED 9/11
 
 <br><br>
 
-<strong>
-VERDICT:
-UNPROVEN
-</strong>
+<strong>VERDICT: UNPROVEN</strong>
 
 <br><br>
 
@@ -3416,358 +2475,113 @@ has not been established.
 
 </div>
 
-
-<h3>
-EXHIBIT 8 —
-THE SAUDI QUESTION
-</h3>
+<h3>THE SAUDI QUESTION</h3>
 
 <p>
-Fifteen of the nineteen
-hijackers
+Fifteen of the nineteen hijackers
 were Saudi citizens.
-</p>
 
-<p>
-Nationality alone
-does not establish
+Nationality alone does not establish
 government involvement.
 </p>
 
 <p>
-However,
-future hijackers
-Mihdhar and Hazmi
+Future hijackers Mihdhar and Hazmi
 received substantial assistance
-after arriving
-in California
-from Saudi national
-Omar al-Bayoumi.
+after arriving in California
+from Saudi national Omar al-Bayoumi.
 </p>
 
 <p>
-Bayoumi helped them
-find housing,
-co-signed a lease
-and assisted them
-in establishing themselves
-in San Diego.
+Bayoumi helped them find housing,
+co-signed a lease and assisted them
+in establishing themselves in San Diego.
 </p>
 
-
-<h3>
-EXHIBIT 9 —
-OMAR AL-BAYOUMI
-</h3>
+<h3>OPERATION ENCORE</h3>
 
 <p>
-Later declassified
-FBI material
-complicated the earlier
-public understanding
-of Bayoumi.
+The FBI later conducted a deeper investigation
+known as Operation Encore,
+examining Bayoumi and other Saudi-linked
+individuals to determine whether a network
+knowingly assisted the hijackers.
 </p>
 
 <p>
-Investigators examined
-whether Bayoumi
-had connections
-to Saudi intelligence
-and whether assistance
-provided to the hijackers
-was knowingly connected
-to their mission.
+No public finding has established
+that Saudi Arabia as a government ordered 9/11.
 </p>
 
-<p>
-That question
-remains disputed.
-</p>
-
-
-<h3>
-EXHIBIT 10 —
-OPERATION ENCORE
-</h3>
-
-<p>
-Years after the attacks,
-the FBI conducted
-a deeper investigation
-known as Operation Encore.
-</p>
-
-<p>
-Investigators examined
-Bayoumi,
-Saudi diplomat
-Fahad al-Thumairy
-and Saudi embassy official
-Musaed al-Jarrah
-to determine
-whether a network
-knowingly assisted
-the hijackers.
-</p>
-
-<p>
-No public finding
-has established
-that Saudi Arabia
-as a government
-ordered 9/11.
-</p>
-
-<p>
-But the assistance
-provided to future hijackers
-remains one of
-the most important
-unresolved portions
-of the case.
-</p>
-
-
-<h3>
-EXHIBIT 11 —
-THE CAPITOL VIDEO
-</h3>
-
-<p>
-A video made
-by Bayoumi
-before the attacks
-showed him recording
-areas around
-the U.S. Capitol.
-</p>
-
-<p>
-Later investigators
-have questioned
-whether the footage
-resembled
-pre-operational surveillance.
-</p>
-
-<p>
-Bayoumi has maintained
-that it was innocent
-tourist footage.
-</p>
-
-<p>
-The video alone
-does not prove
-participation
-in the 9/11 conspiracy.
-</p>
-
-
-<h3>
-EXHIBIT 12 —
-THE MONEY TRAIL
-</h3>
+<h3>THE MONEY TRAIL</h3>
 
 <p>
 The September 11 operation
-is estimated
-to have cost roughly
+is estimated to have cost roughly
 $400,000 to $500,000.
 </p>
 
 <p>
 Much of the operational money
-has been traced
-through Khalid Sheikh Mohammed
+has been traced through Khalid Sheikh Mohammed
 and the al-Qaeda network.
 </p>
 
-<p>
-The hijackers
-used ordinary
-financial institutions
-and American bank accounts.
-</p>
-
-<p>
-Investigators did not
-identify every original donor
-behind every dollar
-that ultimately reached
-al-Qaeda.
-</p>
-
-
 <div class="evidence">
 
-<strong>
-MONEY TRAIL:
-STRONG TO AL-QAEDA
-</strong>
+<strong>MONEY TRAIL: STRONG TO AL-QAEDA</strong>
 
-The operational financing
-is strongly linked
+The operational financing is strongly linked
 to the al-Qaeda network.
 
-The ultimate source
-of every dollar
+The ultimate source of every dollar
 was not established.
 
 </div>
 
-
-<h3>
-EXHIBIT 13 —
-INSIDER TRADING
-</h3>
+<h3>THE TWIN TOWERS</h3>
 
 <p>
-Unusual trading activity,
-including put options
-connected to airline stocks,
-was investigated
-after the attacks.
-</p>
-
-<p>
-Investigators traced
-the suspicious trades
-they examined
-and reported
-no established connection
-between profitable trading
-and terrorist foreknowledge.
-</p>
-
-
-<div class="verdict">
-
-<strong>
-CLAIM:
-INSIDERS PROFITED
-FROM SECRET KNOWLEDGE
-OF 9/11
-</strong>
-
-<br><br>
-
-<strong>
-VERDICT:
-NOT SUBSTANTIATED
-BY THE INVESTIGATION
-</strong>
-
-</div>
-
-
-<h3>
-EXHIBIT 14 —
-THE TWIN TOWERS
-</h3>
-
-<p>
-The National Institute
-of Standards and Technology
-concluded that aircraft impact,
-structural damage,
-loss of fireproofing
-and prolonged fires
-caused the collapses
+The National Institute of Standards
+and Technology concluded that aircraft impact,
+structural damage, loss of fireproofing
+and prolonged fires caused the collapses
 of the Twin Towers.
 </p>
 
 <p>
-NIST reported
-no evidence supporting
+NIST reported no evidence supporting
 controlled demolition.
 </p>
 
-<p>
-NIST did not,
-however,
-perform chemical testing
-of recovered Twin Tower steel
-for thermite
-or explosive residue.
-</p>
+<h3>WORLD TRADE CENTER 7</h3>
 
 <p>
-That fact should be stated
-accurately.
-</p>
-
-<p>
-The absence
-of that specific test
-is not itself proof
-that explosives were used.
-</p>
-
-
-<h3>
-EXHIBIT 15 —
-WORLD TRADE CENTER 7
-</h3>
-
-<p>
-World Trade Center 7
-was not struck
+World Trade Center 7 was not struck
 by an aircraft.
+
+NIST concluded that fire and progressive
+structural failure caused its collapse.
 </p>
 
 <p>
-NIST concluded
-that fire
-and progressive structural failure
-caused the building's collapse.
-</p>
-
-<p>
-Because the building
-was not hit by a plane,
-its collapse
-has remained central
-to many conspiracy theories.
-</p>
-
-<p>
-No verified evidence
-has established
-that demolition charges
-were installed
+No verified evidence has established
+that demolition charges were installed
 inside the building.
 </p>
 
-
-<h3>
-EXHIBIT 16 —
-IRAQ
-</h3>
+<h3>IRAQ</h3>
 
 <p>
-The 9/11 Commission
-found no evidence
-that Saddam Hussein's government
-developed
-an operational partnership
-with al-Qaeda
-to conduct
-the September 11 attacks.
+The 9/11 Commission found no evidence
+that Saddam Hussein's government developed
+an operational partnership with al-Qaeda
+to conduct the September 11 attacks.
 </p>
 
 <p>
 Iraq did not carry out 9/11.
 </p>
-
-<p>
-The United States nevertheless
-invaded Iraq
-in 2003
-during the broader
-post-9/11 War on Terror.
-</p>
-
 
 <div class="verdict">
 
@@ -3778,169 +2592,15 @@ IRAQ HELPED CARRY OUT 9/11
 
 <br><br>
 
-<strong>
-VERDICT:
-NOT SUPPORTED
-</strong>
+<strong>VERDICT: NOT SUPPORTED</strong>
 
 </div>
 
-
-<h3>
-EXHIBIT 17 —
-AFGHANISTAN
-</h3>
-
-<p>
-Afghanistan
-was different.
-</p>
-
-<p>
-Al-Qaeda operated
-from Afghan territory
-while receiving sanctuary
-from the Taliban.
-</p>
-
-<p>
-That created
-a direct connection
-between Afghanistan
-and the organization
-responsible for 9/11.
-</p>
-
-<p>
-Whether the entire
-twenty-year war
-was successful
-or justified
-at every stage
-is a separate question.
-</p>
-
-
-<h3>
-WHAT IS PROVEN?
-</h3>
-
-<div class="evidence">
-
-<strong>
-PROVEN OR STRONGLY SUPPORTED
-</strong>
-
-Al-Qaeda organized
-and carried out
-the September 11 attacks.
-
-</div>
-
-
-<div class="evidence">
-
-<strong>
-PROVEN
-</strong>
-
-American intelligence agencies
-possessed significant
-warning information
-before the attacks.
-
-</div>
-
-
-<div class="evidence">
-
-<strong>
-PROVEN
-</strong>
-
-Major intelligence
-and information-sharing failures
-occurred.
-
-</div>
-
-
-<div class="evidence">
-
-<strong>
-STRONGLY SUPPORTED
-</strong>
-
-Missed opportunities
-involving future hijackers
-could potentially
-have disrupted
-the plot.
-
-</div>
-
-
-<div class="evidence">
-
-<strong>
-NOT PROVEN
-</strong>
-
-The United States government
-planned the attacks.
-
-</div>
-
-
-<div class="evidence">
-
-<strong>
-NOT PROVEN
-</strong>
-
-U.S. officials
-knowingly allowed
-the attacks
-to happen.
-
-</div>
-
-
-<div class="evidence">
-
-<strong>
-UNRESOLVED
-</strong>
-
-Whether Saudi-linked individuals
-knowingly provided
-operational assistance
-to the hijackers.
-
-</div>
-
-
-<div class="evidence">
-
-<strong>
-NOT SUPPORTED
-</strong>
-
-Iraq participated
-in the September 11 attacks.
-
-</div>
-
-
-<h3>
-THE BLIND TRUTH VERDICT
-</h3>
+<h3>THE BLIND TRUTH VERDICT</h3>
 
 <div class="verdict">
 
-<strong>
-CASE FILE 004
-</strong>
+<strong>CASE FILE 004</strong>
 
 <br><br>
 
@@ -3951,246 +2611,62 @@ CONTINUING INVESTIGATION
 
 <br><br>
 
-The evidence overwhelmingly
-supports the conclusion
-that 9/11 was
+The evidence overwhelmingly supports
+the conclusion that 9/11 was
 an al-Qaeda operation.
 
 <br><br>
 
-The United States
-also experienced
+The United States also experienced
 catastrophic intelligence,
-security
-and information-sharing failures
-before the attacks.
+security and information-sharing failures.
 
 <br><br>
 
-Those failures
-do not by themselves
-prove that American officials
-wanted the attacks
-to occur.
+Those failures do not by themselves prove
+that American officials wanted
+the attacks to occur.
 
 <br><br>
 
-There is currently
-insufficient credible evidence
-to conclude
-that the U.S. government
-planned
-or deliberately permitted
-9/11.
+There is insufficient credible public evidence
+to conclude that the U.S. government planned
+or deliberately permitted 9/11.
 
 <br><br>
 
 The Saudi-support question,
-particularly the assistance
-provided to Mihdhar
-and Hazmi
-and the later evidence
-surrounding Bayoumi,
-remains worthy
-of continued scrutiny.
+particularly assistance provided
+to Mihdhar and Hazmi
+and later evidence surrounding Bayoumi,
+remains worthy of continued scrutiny.
 
 <br><br>
 
 <strong>
 QUESTION EVERYTHING.
-
 FOLLOW THE EVIDENCE.
 </strong>
 
 </div>
 
-
 </div>
 
 </div>
 
 </dialog>
-
-
-
-<!-- =====================================================
-     LIL DURK
-     ===================================================== -->
-
-
-<dialog id="durk">
-
-<div class="article">
-
-<button
-class="close"
-onclick="closeArticle('durk')">
-×
-</button>
-
-<div class="category">
-HIP-HOP • FEDERAL COURT
-</div>
-
-<h2>
-Lil Durk Trial
-Now in Jury Hands
-</h2>
-
-<p class="article-intro">
-After testimony,
-cross-examination
-and closing arguments,
-jurors are now deciding
-whether prosecutors
-proved their case
-beyond a reasonable doubt.
-</p>
-
-<div class="article-body">
-
-<p>
-Durk Devontay Banks,
-known professionally
-as Lil Durk,
-has pleaded not guilty
-to federal charges
-arising from an alleged
-murder-for-hire plot.
-</p>
-
-<p>
-Prosecutors allege
-that the plot
-was retaliation
-connected to the killing
-of King Von
-and was aimed
-at rapper Quando Rondo.
-</p>
-
-<p>
-Rondo survived.
-
-His cousin
-Saviay'a "Lul Pab" Robinson
-was killed.
-</p>
-
-
-<h3>
-THE PROSECUTION
-</h3>
-
-<p>
-The government called
-multiple cooperating witnesses
-who described
-the alleged planning,
-travel
-and execution
-of the attack.
-</p>
-
-<p>
-Some witnesses
-directly implicated Durk.
-</p>
-
-
-<h3>
-THE DEFENSE
-</h3>
-
-<p>
-Durk's attorneys
-have argued
-that other individuals,
-including former assistant
-Kavon Grant,
-were responsible
-for directing
-the operation.
-</p>
-
-<p>
-The defense attacked
-the credibility
-of cooperating witnesses,
-highlighting plea agreements,
-sentencing incentives,
-inconsistencies
-and earlier statements
-that conflicted
-with later testimony.
-</p>
-
-
-<h3>
-WHERE THE CASE STANDS
-</h3>
-
-<p>
-Closing arguments
-have concluded.
-
-The jury
-is deliberating.
-</p>
-
-<p>
-Until a verdict
-is returned,
-Durk remains
-presumed innocent.
-</p>
-
-
-<div class="verdict">
-
-<strong>
-THE BLIND TRUTH STATUS:
-JURY DELIBERATING
-</strong>
-
-<br><br>
-
-Witness testimony
-is evidence.
-
-It is not automatically
-the truth.
-
-The jury must determine
-credibility
-and whether the government
-proved every required element
-beyond a reasonable doubt.
-
-</div>
-
-</div>
-
-</div>
-
-</dialog>
-
 
 
 <!-- =====================================================
      OIL
-     ===================================================== -->
-
+===================================================== -->
 
 <dialog id="oil">
 
 <div class="article">
 
-<button
-class="close"
-onclick="closeArticle('oil')">
-×
-</button>
+<button class="close"
+onclick="closeArticle('oil')">×</button>
 
 <div class="category">
 WORLD • ENERGY • DEVELOPING
@@ -4204,55 +2680,21 @@ as Middle East Conflict Continues
 <div class="article-body">
 
 <p>
-Oil markets remain
-under pressure
-as military conflict
-and disruption
-to regional shipping
-continue affecting
+Oil markets remain under pressure
+as military conflict and disruption
+to regional shipping continue affecting
 global energy supplies.
 </p>
 
 <p>
-The Strait of Hormuz
-and other shipping routes
-remain central
-because large volumes
-of global oil
-and natural gas
-move through
-the region.
-</p>
-
-<p>
-Higher crude prices
-can eventually
-increase costs
-for gasoline,
-diesel,
-air travel,
-shipping
+Higher crude prices can eventually
+increase costs for gasoline,
+diesel, air travel, shipping
 and consumer goods.
 </p>
 
 <div class="verdict">
-
-<strong>
-STATUS:
-DEVELOPING
-</strong>
-
-<br><br>
-
-Oil prices
-have moved above
-the $100 level.
-
-The duration
-of the disruption
-and its full economic impact
-remain uncertain.
-
+<strong>STATUS: DEVELOPING</strong>
 </div>
 
 </div>
@@ -4262,21 +2704,16 @@ remain uncertain.
 </dialog>
 
 
-
 <!-- =====================================================
      NFL AUSTRALIA
-     ===================================================== -->
-
+===================================================== -->
 
 <dialog id="australia">
 
 <div class="article">
 
-<button
-class="close"
-onclick="closeArticle('australia')">
-×
-</button>
+<button class="close"
+onclick="closeArticle('australia')">×</button>
 
 <div class="category">
 NFL • AUSTRALIA
@@ -4290,54 +2727,24 @@ in Historic Melbourne Game
 <div class="article-body">
 
 <p>
-The San Francisco 49ers
-defeated
-the Los Angeles Rams
-27–7
+The San Francisco 49ers defeated
+the Los Angeles Rams 27–7
 at the Melbourne Cricket Ground
-in the NFL's first
-regular-season game
+in the NFL's first regular-season game
 played in Australia.
 </p>
 
 <p>
-Brock Purdy
-completed 25 of 34 passes
-for 205 yards
-and three touchdowns.
+Brock Purdy completed 25 of 34 passes
+for 205 yards and three touchdowns.
 </p>
 
 <p>
-San Francisco
-rushed for 174 yards
-and scored
-24 unanswered points
-after the Rams
-initially took
-a 7–3 lead.
-</p>
-
-<p>
-The crowd exceeded
-100,000 spectators,
-giving the NFL
-one of its largest
-international showcases.
+The crowd exceeded 100,000 spectators.
 </p>
 
 <div class="verdict">
-
-<strong>
-BLIND TRUTH STATUS:
-FINAL RESULT
-</strong>
-
-<br><br>
-
-49ERS 27
-
-RAMS 7
-
+<strong>FINAL: 49ERS 27 — RAMS 7</strong>
 </div>
 
 </div>
@@ -4347,21 +2754,16 @@ RAMS 7
 </dialog>
 
 
-
 <!-- =====================================================
-     MEN'S US OPEN
-     ===================================================== -->
-
+     TENNIS
+===================================================== -->
 
 <dialog id="mensopen">
 
 <div class="article">
 
-<button
-class="close"
-onclick="closeArticle('mensopen')">
-×
-</button>
+<button class="close"
+onclick="closeArticle('mensopen')">×</button>
 
 <div class="category">
 SPORTS • TENNIS • U.S. OPEN
@@ -4375,58 +2777,14 @@ Makes Grand Slam History
 <div class="article-body">
 
 <p>
-Ben Shelton
-and Frances Tiafoe
-meet in the
-U.S. Open semifinal
-with a place
-in the championship match
-on the line.
-</p>
-
-<p>
-The matchup
-is historic.
-
-They are the first
-two Black American men
-to face each other
-in a Grand Slam semifinal
-during the Open Era.
-</p>
-
-<p>
-Shelton reached
-the semifinal
-after defeating
-defending champion
-Carlos Alcaraz
-in a marathon
-five-set quarterfinal.
-</p>
-
-<p>
-Tiafoe advanced
-after fighting back
-from two sets down
-against Alex Michelsen.
-</p>
-
-<p>
-No American man
-has won
-the U.S. Open singles title
-since Andy Roddick
-in 2003.
+Ben Shelton and Frances Tiafoe
+meet in a historic U.S. Open matchup
+with major implications
+for American men's tennis.
 </p>
 
 <div class="verdict">
-
-<strong>
-BLIND TRUTH STATUS:
-HISTORY IN PROGRESS
-</strong>
-
+<strong>BLIND TRUTH STATUS: HISTORY</strong>
 </div>
 
 </div>
@@ -4436,21 +2794,12 @@ HISTORY IN PROGRESS
 </dialog>
 
 
-
-<!-- =====================================================
-     COCO GAUFF
-     ===================================================== -->
-
-
 <dialog id="gauff">
 
 <div class="article">
 
-<button
-class="close"
-onclick="closeArticle('gauff')">
-×
-</button>
+<button class="close"
+onclick="closeArticle('gauff')">×</button>
 
 <div class="category">
 SPORTS • U.S. OPEN
@@ -4464,45 +2813,12 @@ Coco Gauff's U.S. Open Run
 <div class="article-body">
 
 <p>
-Elena Rybakina
-defeated Coco Gauff
-3–6,
-6–4,
-6–4
-in the women's
-U.S. Open semifinal.
-</p>
-
-<p>
-Gauff won
-the opening set,
-but Rybakina
-recovered
-and increasingly pressured
-Gauff's forehand
-during the final
-two sets.
-</p>
-
-<p>
-Rybakina advances
-to the championship match
-against Aryna Sabalenka.
+Elena Rybakina defeated Coco Gauff
+3–6, 6–4, 6–4.
 </p>
 
 <div class="verdict">
-
-<strong>
-BLIND TRUTH STATUS:
-FINAL RESULT
-</strong>
-
-<br><br>
-
-RYBAKINA
-DEFEATS GAUFF
-IN THREE SETS.
-
+<strong>BLIND TRUTH STATUS: FINAL RESULT</strong>
 </div>
 
 </div>
@@ -4512,21 +2828,16 @@ IN THREE SETS.
 </dialog>
 
 
-
 <!-- =====================================================
-     CLIPPERS / KAWHI
-     ===================================================== -->
-
+     CLIPPERS
+===================================================== -->
 
 <dialog id="clippers">
 
 <div class="article">
 
-<button
-class="close"
-onclick="closeArticle('clippers')">
-×
-</button>
+<button class="close"
+onclick="closeArticle('clippers')">×</button>
 
 <div class="category">
 NBA • LEGAL • DEVELOPING
@@ -4541,57 +2852,20 @@ Around Kawhi Leonard
 <div class="article-body">
 
 <p>
-Federal investigators
-are examining
-the Los Angeles Clippers'
-dealings involving
-Kawhi Leonard
-after the NBA
-imposed major penalties
-over alleged
-salary-cap circumvention.
+Federal investigators are examining
+the Los Angeles Clippers' dealings
+involving Kawhi Leonard.
 </p>
 
 <p>
-The reported federal inquiry
-includes examination
-of financial
-and sponsorship arrangements.
-</p>
-
-<p>
-The existence
-of a criminal investigation
-does not mean
-that the Clippers,
-Leonard
-or any individual
-has been convicted
-of a federal crime.
-</p>
-
-<p>
-The Clippers
-have disputed wrongdoing.
+The existence of an investigation
+does not establish that the Clippers,
+Leonard or any individual
+committed a federal crime.
 </p>
 
 <div class="verdict">
-
-<strong>
-BLIND TRUTH STATUS:
-UNDER INVESTIGATION
-</strong>
-
-<br><br>
-
-NBA penalties
-and a federal investigation
-are significant.
-
-They are not
-the same thing
-as a criminal conviction.
-
+<strong>STATUS: UNDER INVESTIGATION</strong>
 </div>
 
 </div>
@@ -4601,76 +2875,40 @@ as a criminal conviction.
 </dialog>
 
 
-
 <!-- =====================================================
-     EMMYS
-     ===================================================== -->
-
+     ENTERTAINMENT
+===================================================== -->
 
 <dialog id="emmys">
 
 <div class="article">
 
-<button
-class="close"
-onclick="closeArticle('emmys')">
-×
-</button>
+<button class="close"
+onclick="closeArticle('emmys')">×</button>
 
 <div class="category">
 ENTERTAINMENT • TELEVISION
 </div>
 
 <h2>
-Jean Smart
-and Harrison Ford
-Approach Emmy Milestones
+2026 Emmy Awards
+and Hollywood's Changing Landscape
 </h2>
 
 <div class="article-body">
 
 <p>
-The 2026 Emmy Awards
-could produce
-several major milestones.
+The Emmy Awards arrive during a period
+of major change across television
+and Hollywood.
 </p>
 
 <p>
-Jean Smart
-could win
-her fifth consecutive
-best comedy actress Emmy
-for "Hacks."
-</p>
-
-<p>
-Harrison Ford,
-at age 84,
-is seeking
-his first Emmy victory
-for "Shrinking."
-</p>
-
-<p>
-The ceremony
-also arrives
-during a period
-of major change
-in Hollywood,
-including debates
-over artificial intelligence,
+Artificial intelligence,
 production economics
-and media consolidation.
+and media consolidation
+remain major industry issues.
 </p>
-
-<div class="verdict">
-
-<strong>
-BLIND TRUTH STATUS:
-UPCOMING EVENT
-</strong>
-
-</div>
 
 </div>
 
@@ -4679,21 +2917,12 @@ UPCOMING EVENT
 </dialog>
 
 
-
-<!-- =====================================================
-     DELTA FLIGHT
-     ===================================================== -->
-
-
 <dialog id="delta">
 
 <div class="article">
 
-<button
-class="close"
-onclick="closeArticle('delta')">
-×
-</button>
+<button class="close"
+onclick="closeArticle('delta')">×</button>
 
 <div class="category">
 ENTERTAINMENT • TRAVEL
@@ -4707,44 +2936,18 @@ Makes Emergency Landing
 <div class="article-body">
 
 <p>
-A Delta flight
-traveling from Los Angeles
-to New York
-was diverted
-to Albuquerque
-after passengers
-noticed a smoky odor
-inside the aircraft.
+A Delta flight traveling from Los Angeles
+to New York was diverted to Albuquerque
+after passengers noticed a smoky odor.
 </p>
 
 <p>
-The flight
-carried 235 people.
-</p>
-
-<p>
-Among the passengers
-were Andrew Garfield,
-Owen Thiele,
-Nick Robinson
-and other entertainers.
-</p>
-
-<p>
-The aircraft
-landed safely.
-
-No injuries
-were reported.
+The aircraft landed safely
+and no injuries were reported.
 </p>
 
 <div class="verdict">
-
-<strong>
-BLIND TRUTH STATUS:
-RESOLVED SAFELY
-</strong>
-
+<strong>STATUS: RESOLVED SAFELY</strong>
 </div>
 
 </div>
@@ -4754,21 +2957,16 @@ RESOLVED SAFELY
 </dialog>
 
 
-
 <!-- =====================================================
      KEFFE D
-     ===================================================== -->
-
+===================================================== -->
 
 <dialog id="keffe">
 
 <div class="article">
 
-<button
-class="close"
-onclick="closeArticle('keffe')">
-×
-</button>
+<button class="close"
+onclick="closeArticle('keffe')">×</button>
 
 <div class="category">
 HIP-HOP • TUPAC • COURT
@@ -4779,70 +2977,31 @@ Keffe D
 Awaits Sentencing
 </h2>
 
-<p class="article-intro">
-The murder verdict
-has been reached.
-
-The next major stage
-is sentencing
-and the expected appeal.
-</p>
-
 <div class="article-body">
 
 <p>
-Duane "Keffe D" Davis
-was convicted
-of first-degree murder
-with a deadly weapon
+Duane "Keffe D" Davis was convicted
+of first-degree murder with a deadly weapon
 in Tupac Shakur's killing.
 </p>
 
 <p>
-The jury determined
-that Davis
-was criminally responsible
-for organizing
-or facilitating
-the retaliatory attack.
-</p>
+The verdict established Davis's
+criminal responsibility.
 
-<p>
-The verdict
-does not automatically
-establish every claim
-Davis has made
-during decades
-of interviews
-and public statements.
+It does not automatically establish
+every claim Davis has made
+during decades of interviews.
 </p>
 
 <p>
 It also does not establish
-that Sean Combs
-ordered
-or financed
-Tupac's murder.
+that Sean Combs ordered
+or financed Tupac's murder.
 </p>
 
 <div class="verdict">
-
-<strong>
-THE BLIND TRUTH STATUS:
-AWAITING SENTENCING
-</strong>
-
-<br><br>
-
-Davis's criminal responsibility
-has been established
-by the jury verdict.
-
-Broader allegations
-must still stand
-or fall
-on their own evidence.
-
+<strong>STATUS: AWAITING SENTENCING</strong>
 </div>
 
 </div>
@@ -4852,21 +3011,16 @@ on their own evidence.
 </dialog>
 
 
-
 <!-- =====================================================
      NBA 2K27
-     ===================================================== -->
-
+===================================================== -->
 
 <dialog id="2k27">
 
 <div class="article">
 
-<button
-class="close"
-onclick="closeArticle('2k27')">
-×
-</button>
+<button class="close"
+onclick="closeArticle('2k27')">×</button>
 
 <div class="category">
 GAMING • NBA 2K27
@@ -4880,87 +3034,20 @@ Now Available Worldwide
 <div class="article-body">
 
 <p>
-NBA 2K27
-officially launched
-worldwide
-on September 4, 2026.
+NBA 2K27 officially launched
+worldwide in September 2026.
 </p>
 
 <p>
-The game
-is available
-on PlayStation 5,
-Xbox Series X|S,
-PC through Steam
-and Nintendo Switch 2.
-</p>
-
-<p>
-Major additions include
-a co-ed City,
-MyCAREER Eras,
-expanded MyPLAYER options,
-new gameplay systems
-and a 100-year
-MyNBA universe.
-</p>
-
-<p>
-Season 1
-is also underway
-with a 40-level
-reward structure
-including cosmetics,
-Badge Tokens,
-Badge Slots,
-Cap Breakers
-and MyTEAM rewards.
-</p>
-
-<h3>
-THE BUILDER META
-</h3>
-
-<p>
-The community
-is now moving
-from pre-release speculation
-to real testing.
-</p>
-
-<p>
-Exact badge thresholds,
-animations,
-Cap Breaker efficiency,
-shooting,
-defense,
-movement
-and physical attributes
-are becoming
-the foundation
-of the early meta.
+Players are now testing
+MyPLAYER builds,
+badge thresholds,
+Cap Breakers,
+animations and gameplay systems.
 </p>
 
 <div class="verdict">
-
-<strong>
-BLIND TRUTH STATUS:
-RELEASED / META DEVELOPING
-</strong>
-
-<br><br>
-
-The game
-is available now.
-
-The long-term verdict
-will depend
-on patches,
-balance,
-servers,
-VC economics
-and how the competitive meta evolves.
-
+<strong>STATUS: RELEASED / META DEVELOPING</strong>
 </div>
 
 </div>
@@ -4970,21 +3057,16 @@ and how the competitive meta evolves.
 </dialog>
 
 
-
 <!-- =====================================================
      CASE FILE 003
-     ===================================================== -->
-
+===================================================== -->
 
 <dialog id="diddy">
 
 <div class="article">
 
-<button
-class="close"
-onclick="closeArticle('diddy')">
-×
-</button>
+<button class="close"
+onclick="closeArticle('diddy')">×</button>
 
 <div class="category">
 CASE FILE 003 • TUPAC • DIDDY
@@ -5000,205 +3082,102 @@ The million-dollar allegation,
 Keffe D's statements,
 gang politics,
 police evidence
-and decades
-of conspiracy.
+and decades of conspiracy.
 </p>
 
 <div class="article-body">
 
-
-<h3>
-THE QUESTION
-</h3>
+<h3>THE QUESTION</h3>
 
 <p>
-Duane "Keffe D" Davis
-alleged that
-Sean "Diddy" Combs
-offered $1 million
-for Tupac Shakur
-and Suge Knight
+Duane "Keffe D" Davis alleged that
+Sean "Diddy" Combs offered $1 million
+for Tupac Shakur and Suge Knight
 to be killed.
 </p>
 
 <p>
-That allegation
-is documented.
-</p>
+That allegation is documented.
 
-<p>
 It is not proven.
 </p>
 
-
-<h3>
-WHAT POLICE DID
-</h3>
+<h3>WHAT POLICE DID</h3>
 
 <p>
-Law enforcement
-attempted to corroborate
+Law enforcement attempted to corroborate
 parts of Davis's account.
+
+Those efforts did not publicly establish
+that Combs ordered Tupac's murder.
 </p>
+
+<h3>THE MONEY QUESTION</h3>
 
 <p>
-Davis became
-a confidential informant
-and worked with investigators
-during efforts
-to verify his claims.
+No publicly established financial trail
+has demonstrated that Combs transferred
+$1 million for Tupac's murder.
 </p>
-
-<p>
-Those efforts
-did not publicly establish
-that Combs ordered
-Tupac's murder.
-</p>
-
-
-<h3>
-THE MONEY QUESTION
-</h3>
-
-<p>
-An alleged offer
-is not the same
-as an actual payment.
-</p>
-
-<p>
-No publicly established
-financial trail
-has demonstrated
-that Combs transferred
-$1 million
-for Tupac's murder.
-</p>
-
 
 <div class="evidence">
 
-<strong>
-DOCUMENTED ALLEGATION
-</strong>
+<strong>DOCUMENTED ALLEGATION</strong>
 
-Davis alleged
-that Combs offered money
-for Tupac
-and Suge Knight
-to be killed.
+Davis alleged that Combs offered money
+for Tupac and Suge Knight to be killed.
 
 </div>
 
-
 <div class="evidence">
 
-<strong>
-DOCUMENTED INVESTIGATION
-</strong>
+<strong>NOT PROVEN</strong>
 
-Police attempted
-to corroborate
-Davis's account.
+Sean Combs ordered Tupac's murder.
 
 </div>
 
-
 <div class="evidence">
 
-<strong>
-NOT PROVEN
-</strong>
+<strong>NOT PROVEN</strong>
 
-Sean Combs ordered
-Tupac's murder.
-
-</div>
-
-
-<div class="evidence">
-
-<strong>
-NOT PROVEN
-</strong>
-
-Sean Combs paid
-$1 million
+Sean Combs paid $1 million
 for Tupac's murder.
 
 </div>
 
-
 <div class="evidence">
 
-<strong>
-NO TUPAC MURDER CHARGE
-</strong>
+<strong>NO TUPAC MURDER CHARGE</strong>
 
-Sean Combs
-has not been charged
+Sean Combs has not been charged
 with Tupac Shakur's murder.
 
 </div>
 
-
-<h3>
-SEPTEMBER 11 STATUS
-</h3>
-
-<p>
-Keffe D's conviction
-does not materially change
-the evidence
-concerning Sean Combs.
-</p>
-
-<p>
-The verdict
-established Davis's
-criminal responsibility.
-</p>
-
-<p>
-It did not establish
-that Combs ordered,
-financed
-or participated
-in Tupac's murder.
-</p>
-
-
 <div class="verdict">
 
-<strong>
-THE BLIND TRUTH
-FINAL VERDICT
-</strong>
+<strong>CASE FILE 003 — FINAL VERDICT</strong>
 
 <br><br>
 
-<strong>
-UNPROVEN
-</strong>
+<strong>UNPROVEN</strong>
 
 <br><br>
 
 DOCUMENTED ALLEGATION —
 
 INSUFFICIENT PUBLIC EVIDENCE
-TO ESTABLISH
-DIDDY'S INVOLVEMENT.
+TO ESTABLISH DIDDY'S INVOLVEMENT.
 
 <br><br>
 
 <strong>
-Question Everything.
-Follow the Evidence.
+QUESTION EVERYTHING.
+FOLLOW THE EVIDENCE.
 </strong>
 
 </div>
-
 
 </div>
 
@@ -5207,21 +3186,16 @@ Follow the Evidence.
 </dialog>
 
 
-
 <!-- =====================================================
      CASE FILE 002
-     ===================================================== -->
-
+===================================================== -->
 
 <dialog id="jordan">
 
 <div class="article">
 
-<button
-class="close"
-onclick="closeArticle('jordan')">
-×
-</button>
+<button class="close"
+onclick="closeArticle('jordan')">×</button>
 
 <div class="category">
 CASE FILE 002 • NBA
@@ -5234,90 +3208,47 @@ A Real Choke Job?
 
 <p class="article-intro">
 Six rings.
-
 Zero Finals losses.
 
-But Finals record
-is not the same thing
-as an undefeated
+But Finals record is not
+the same thing as an undefeated
 postseason career.
 </p>
 
 <div class="article-body">
 
 <p>
-Michael Jordan
-is one of
+Michael Jordan is one of
 the greatest basketball players
 who ever lived.
 </p>
 
 <p>
-Case File 002
-examines whether
-the mythology surrounding
-his 6–0 Finals record
-sometimes erases
-postseason failures.
+He won six NBA championships,
+six Finals MVP awards,
+five league MVP awards
+and ten scoring titles.
 </p>
 
 <h3>
-THE RECORD
+6–0 IS ONLY THE FINALS
 </h3>
 
 <p>
-Jordan won
-six NBA championships
-and six Finals MVP awards.
-</p>
-
-<p>
-He also won
-five league MVP awards,
-ten scoring titles
-and one
-Defensive Player
-of the Year award.
-</p>
-
-<p>
-Those accomplishments
-are real.
-</p>
-
-
-<h3>
-BUT 6–0
-IS ONLY THE FINALS
-</h3>
-
-<p>
-Jordan played
-37 playoff series
-and won 30.
-</p>
-
-<p>
-That means
-his teams lost
-seven playoff series.
-</p>
-
-<p>
-The famous
-6–0 record
-describes only
+Jordan's teams also lost
+playoff series before reaching
 the NBA Finals.
+
+The famous 6–0 record
+describes the Finals,
+not every postseason series
+of his career.
 </p>
 
-
-<h3>
-1990 DETROIT
-</h3>
+<h3>1990 DETROIT</h3>
 
 <p>
-In Game 7
-of the 1990
+In Game 7 of the 1990
 Eastern Conference Finals,
 Jordan scored 31 points
 with eight rebounds
@@ -5325,121 +3256,60 @@ and nine assists.
 </p>
 
 <p>
-Scottie Pippen
-scored two points
+Scottie Pippen scored two points
 on 1-of-10 shooting.
+
+Calling that game a Jordan choke
+ignores the actual box score.
 </p>
 
-<p>
-Horace Grant
-scored ten points
-on 3-of-17 shooting.
-</p>
-
-<p>
-Calling that game
-a Jordan choke
-ignores the actual
-box score.
-</p>
-
-
-<h3>
-1995 ORLANDO
-</h3>
-
-<p>
-The 1995 Orlando series
-is more damaging
-to the invincibility myth.
-</p>
+<h3>1995 ORLANDO</h3>
 
 <p>
 In Game 1,
 Jordan scored 19 points,
 shot 8-for-22
-and committed
-eight turnovers.
+and committed eight turnovers.
 </p>
 
 <p>
-He also made
-critical late-game mistakes.
+Chicago eventually lost
+the series four games to two.
 </p>
 
-<p>
-Chicago lost
-94–91
-and eventually lost
-the series
-four games to two.
-</p>
-
-
-<h3>
-THE BULLS
-WITHOUT JORDAN
-</h3>
+<h3>THE BULLS WITHOUT JORDAN</h3>
 
 <p>
 In 1993–94,
 with Jordan retired,
-Chicago still finished
-55–27.
+Chicago finished 55–27
+and reached Game 7
+of the Eastern Conference semifinals.
 </p>
 
 <p>
-The Bulls reached
-Game 7
-of the Eastern Conference
-semifinals
-before losing
-to New York.
-</p>
+That does not prove Jordan
+was unnecessary.
 
-<p>
-That does not prove
-Jordan was unnecessary.
-</p>
-
-<p>
-It proves
-that Chicago
-was a legitimate
-high-level team
+It demonstrates that Chicago
+remained a high-level team
 around him.
 </p>
 
-
-<h3>
-THE RODMAN ADDITION
-</h3>
+<h3>THE RODMAN ADDITION</h3>
 
 <p>
-After Chicago's
-1995 playoff loss,
-the Bulls added
-Dennis Rodman.
-</p>
+After Chicago's 1995 playoff loss,
+the Bulls added Dennis Rodman.
 
-<p>
 The following season,
 Chicago went 72–10
-and won
-the championship.
+and won the championship.
 </p>
-
-<p>
-Context matters.
-</p>
-
 
 <div class="verdict">
 
-<strong>
-CASE FILE 002
-FINAL STATUS
-</strong>
+<strong>CASE FILE 002 FINAL STATUS</strong>
 
 <br><br>
 
@@ -5450,25 +3320,19 @@ DEBUNKED
 
 <br><br>
 
-Michael Jordan's
-GOAT argument
+Michael Jordan's GOAT argument
 is legitimate.
 
-His greatness
-does not require
-pretending
-he never lost,
+His greatness does not require
+pretending he never lost,
 never struggled
-or never had
-an elite supporting cast.
+or never had an elite supporting cast.
 
 <br><br>
 
-6–0 in the Finals
-is historic.
+6–0 in the Finals is historic.
 
-It is not
-an undefeated
+It is not an undefeated
 postseason career.
 
 </div>
@@ -5480,21 +3344,16 @@ postseason career.
 </dialog>
 
 
-
 <!-- =====================================================
      CASE FILE 001
-     ===================================================== -->
-
+===================================================== -->
 
 <dialog id="kirk">
 
 <div class="article">
 
-<button
-class="close"
-onclick="closeArticle('kirk')">
-×
-</button>
+<button class="close"
+onclick="closeArticle('kirk')">×</button>
 
 <div class="category">
 CASE FILE 001 • INVESTIGATION
@@ -5506,192 +3365,101 @@ Charlie Kirk?
 </h2>
 
 <p class="article-intro">
-
 Evidence first.
-
 Rumors second.
-
 Verdict last.
-
 </p>
 
 <div class="article-body">
 
 <p>
-Charlie Kirk
-was shot and killed
-while appearing
-at Utah Valley University
-in Orem,
-Utah,
+Charlie Kirk was shot and killed
+while appearing at Utah Valley University
+in Orem, Utah,
 on September 10, 2025.
 </p>
 
 <p>
-Tyler James Robinson
-has been charged
-in connection
-with the killing.
+Tyler James Robinson has been charged
+in connection with the killing.
+
+He has pleaded not guilty.
 </p>
 
-<p>
-He has pleaded
-not guilty.
-</p>
-
-
-<h3>
-PUBLICLY DESCRIBED EVIDENCE
-</h3>
+<h3>PUBLICLY DESCRIBED EVIDENCE</h3>
 
 <p>
-The prosecution's case
-has included
+The prosecution's case has included
 surveillance footage,
 a recovered firearm,
 DNA evidence,
 vehicle evidence,
 witness accounts
-and alleged
-digital communications.
+and alleged digital communications.
 </p>
 
-<p>
-Prosecutors have also described
-an alleged handwritten note
-and markings
-on ammunition.
-</p>
-
-
-<h3>
-THE FIREARM
-</h3>
+<h3>THE FIREARM</h3>
 
 <p>
-A Mauser Model 98
-.30-06 rifle
-was recovered
-wrapped in a towel
+A Mauser Model 98 .30-06 rifle
+was recovered wrapped in a towel
 in a wooded area.
 </p>
 
 <p>
-Prosecutors have cited
-DNA evidence
-from multiple areas
-of the rifle.
+Prosecutors have cited DNA evidence
+from multiple areas of the rifle.
 </p>
 
 <p>
-Defense attorneys
-have emphasized
-that DNA evidence
-does not automatically prove
-when
-or how
-the DNA was deposited.
+Defense attorneys have emphasized
+that DNA evidence does not automatically
+prove when or how DNA was deposited.
 </p>
 
-
-<h3>
-BALLISTICS
-</h3>
+<h3>BALLISTICS</h3>
 
 <p>
 Testing of bullet evidence
-did not conclusively
-identify
-or exclude
-the recovered rifle
-as the source
+did not conclusively identify or exclude
+the recovered rifle as the source
 of the fatal projectile.
 </p>
 
-<p>
-That does not eliminate
-the firearm
-from the case.
-</p>
+<h3>COURT STATUS</h3>
 
 <p>
-But it means
-the ballistic evidence
-should not be described
-as a perfect match
-if it was not one.
-</p>
-
-
-<h3>
-SEPTEMBER 2026
-COURT UPDATE
-</h3>
-
-<p>
-A judge has now ruled
-that prosecutors
+A judge has ruled that prosecutors
 presented enough evidence
-to require Robinson
-to stand trial.
+to require Robinson to stand trial.
 </p>
 
 <p>
-That decision
-is a probable-cause ruling.
-</p>
+That is a probable-cause ruling.
 
-<p>
-It means
-the judge found
-sufficient evidence
-for the prosecution
-to proceed.
+It is not a finding of guilt.
 </p>
-
-<p>
-It does not mean
-Robinson has been
-found guilty.
-</p>
-
-<p>
-The prosecution
-is seeking
-the death penalty.
-</p>
-
 
 <div class="verdict">
 
-<strong>
-CASE FILE 001 —
-OPEN
-</strong>
+<strong>CASE FILE 001 — OPEN</strong>
 
 <br><br>
 
-The prosecution
-has cleared
+The prosecution has cleared
 the probable-cause stage.
 
 <br><br>
 
-Robinson remains
-legally presumed innocent
-unless and until
-the government proves
-its case
-beyond a reasonable doubt
-at trial.
+Robinson remains legally presumed innocent
+unless and until the government proves
+its case beyond a reasonable doubt at trial.
 
 <br><br>
 
-Alternative theories
-also require evidence.
+Alternative theories also require evidence.
 
-Unanswered questions
-are not themselves
+Unanswered questions are not themselves
 proof of a conspiracy.
 
 </div>
@@ -5703,140 +3471,90 @@ proof of a conspiracy.
 </dialog>
 
 
-
 <!-- =====================================================
      JAVASCRIPT
-     ===================================================== -->
-
+===================================================== -->
 
 <script>
 
+function openArticle(id){
 
-/* =====================================================
-   ARTICLE POPUPS
-   ===================================================== */
+const article=document.getElementById(id);
 
-function openArticle(id) {
-
-    const article =
-    document.getElementById(id);
-
-    if(article) {
-
-        article.showModal();
-
-    }
+if(article){
+article.showModal();
+}
 
 }
 
+function closeArticle(id){
 
-function closeArticle(id) {
+const article=document.getElementById(id);
 
-    const article =
-    document.getElementById(id);
-
-    if(article) {
-
-        article.close();
-
-    }
+if(article){
+article.close();
+}
 
 }
 
+document.querySelectorAll("dialog").forEach(function(dialog){
 
-document
-.querySelectorAll("dialog")
-.forEach(function(dialog) {
+dialog.addEventListener("click",function(event){
 
-    dialog.addEventListener(
-        "click",
-        function(event) {
+if(event.target===dialog){
+dialog.close();
+}
 
-            if(event.target === dialog) {
-
-                dialog.close();
-
-            }
-
-        }
-    );
+});
 
 });
 
 
-/* =====================================================
-   THE BLIND TRUTH LIVE PAGE-VIEW COUNTER
+/* LIVE SITE VISIT COUNTER */
 
-   Every successful page load sends one "hit"
-   to the shared online counter.
-
-   IMPORTANT:
-   This measures PAGE LOADS / VISITS.
-   Refreshing the website can increase the number.
-   ===================================================== */
-
-
-const visitorCount =
+const visitorCount=
 document.getElementById("visitor-count");
 
-
-const counterURL =
+const counterURL=
 "https://abacus.jasoncameron.dev/hit/the-blind-truth-202-ui/homepage";
 
-
-fetch(counterURL, {
-    method:"GET",
-    cache:"no-store"
+fetch(counterURL,{
+method:"GET",
+cache:"no-store"
 })
 
-.then(function(response) {
+.then(function(response){
 
-    if(!response.ok) {
+if(!response.ok){
+throw new Error("Counter service unavailable");
+}
 
-        throw new Error(
-            "Counter service unavailable"
-        );
-
-    }
-
-    return response.json();
+return response.json();
 
 })
 
-.then(function(data) {
+.then(function(data){
 
-    if(
-        data &&
-        typeof data.value === "number"
-    ) {
+if(data && typeof data.value==="number"){
 
-        visitorCount.textContent =
-        data.value.toLocaleString();
+visitorCount.textContent=
+data.value.toLocaleString();
 
-    }
+}else{
 
-    else {
+throw new Error("Invalid counter response");
 
-        throw new Error(
-            "Invalid counter response"
-        );
-
-    }
+}
 
 })
 
-.catch(function(error) {
+.catch(function(error){
 
-    console.log(
-        "Visitor counter error:",
-        error
-    );
+console.log("Visitor counter error:",error);
 
-    visitorCount.textContent =
-    "UNAVAILABLE";
+visitorCount.textContent="UNAVAILABLE";
 
 });
-
 
 </script>
 
