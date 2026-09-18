@@ -17,12 +17,32 @@ Marion Goldring | Founder & Publisher of The Blind Truth
 <meta name="description"
 content="Marion Goldring is the founder and publisher of The Blind Truth, an independent digital publication focused on news, investigations, fact checks, sports, entertainment, gaming and evidence-based analysis.">
 
-<meta name="robots" content="index, follow">
+<meta name="author" content="Marion Goldring">
+
+<meta name="robots"
+content="index, follow, max-image-preview:large">
 
 <link rel="canonical"
 href="https://theblindtruth202-ui.github.io/the-blind-truth/marion-goldring.html">
 
-<meta property="og:type" content="profile">
+<!-- SITE ICON -->
+
+<link rel="icon"
+type="image/png"
+href="blind-truth-logo.png">
+
+<link rel="shortcut icon"
+type="image/png"
+href="blind-truth-logo.png">
+
+<link rel="apple-touch-icon"
+href="blind-truth-logo.png">
+
+
+<!-- OPEN GRAPH -->
+
+<meta property="og:type"
+content="profile">
 
 <meta property="og:title"
 content="Marion Goldring | Founder & Publisher of The Blind Truth">
@@ -33,9 +53,20 @@ content="Learn about Marion Goldring, founder and publisher of The Blind Truth, 
 <meta property="og:url"
 content="https://theblindtruth202-ui.github.io/the-blind-truth/marion-goldring.html">
 
+<meta property="og:site_name"
+content="The Blind Truth">
+
 <meta property="og:image"
 content="https://theblindtruth202-ui.github.io/the-blind-truth/marion-goldring-profile.png">
-<meta name="twitter:card" content="summary_large_image">
+
+<meta property="og:image:alt"
+content="Marion Goldring, founder and publisher of The Blind Truth">
+
+
+<!-- TWITTER / X -->
+
+<meta name="twitter:card"
+content="summary_large_image">
 
 <meta name="twitter:title"
 content="Marion Goldring | Founder & Publisher of The Blind Truth">
@@ -45,6 +76,13 @@ content="Founder and publisher of The Blind Truth. Question Everything. Follow t
 
 <meta name="twitter:image"
 content="https://theblindtruth202-ui.github.io/the-blind-truth/marion-goldring-profile.png">
+
+<meta name="twitter:image:alt"
+content="Marion Goldring, founder and publisher of The Blind Truth">
+
+
+<!-- STRUCTURED DATA -->
+
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -53,6 +91,7 @@ content="https://theblindtruth202-ui.github.io/the-blind-truth/marion-goldring-p
   "jobTitle": "Founder & Publisher",
   "description": "Founder and publisher of The Blind Truth, an independent digital publication focused on news, investigations, fact checks and evidence-based analysis.",
   "url": "https://theblindtruth202-ui.github.io/the-blind-truth/marion-goldring.html",
+  "image": "https://theblindtruth202-ui.github.io/the-blind-truth/marion-goldring-profile.png",
   "worksFor": {
     "@type": "Organization",
     "name": "The Blind Truth",
@@ -60,6 +99,7 @@ content="https://theblindtruth202-ui.github.io/the-blind-truth/marion-goldring-p
   }
 }
 </script>
+
 
 <style>
 
@@ -94,6 +134,11 @@ a{
 color:inherit;
 }
 
+
+/* =========================
+   NEWSROOM BAR
+========================= */
+
 .newsroom-bar{
 background:var(--green);
 color:#000;
@@ -103,6 +148,11 @@ padding:9px 15px;
 font-size:13px;
 letter-spacing:1.5px;
 }
+
+
+/* =========================
+   HEADER
+========================= */
 
 header{
 background:#080808;
@@ -160,9 +210,15 @@ text-decoration:none;
 color:#ddd;
 }
 
-nav a:hover{
+nav a:hover,
+nav a:focus{
 color:var(--green);
 }
+
+
+/* =========================
+   HERO
+========================= */
 
 .hero{
 max-width:1150px;
@@ -199,13 +255,9 @@ box-shadow:0 0 35px rgba(99,255,54,.16);
 .profile-placeholder img{
 width:100%;
 height:100%;
+display:block;
 object-fit:cover;
-}
-
-.profile-logo{
-width:140px !important;
-height:auto !important;
-object-fit:contain !important;
+object-position:center;
 }
 
 .profile-role{
@@ -285,6 +337,16 @@ background:#111;
 color:#fff;
 }
 
+.btn:hover,
+.btn:focus{
+transform:translateY(-1px);
+}
+
+
+/* =========================
+   GENERAL SECTIONS
+========================= */
+
 section{
 padding:65px 20px;
 }
@@ -307,6 +369,11 @@ font-size:36px;
 margin:5px 0 25px;
 }
 
+
+/* =========================
+   ABOUT
+========================= */
+
 .about{
 background:#0b0b0b;
 border-top:1px solid #202020;
@@ -318,6 +385,11 @@ font-size:17px;
 color:#c9c9c9;
 max-width:900px;
 }
+
+
+/* =========================
+   PUBLISHING PHILOSOPHY
+========================= */
 
 .mission-grid{
 display:grid;
@@ -350,6 +422,11 @@ color:var(--gray);
 font-size:14px;
 margin:0;
 }
+
+
+/* =========================
+   PUBLICATION
+========================= */
 
 .publisher{
 background:#080808;
@@ -386,6 +463,11 @@ padding:8px 13px;
 font-size:12px;
 font-weight:700;
 }
+
+
+/* =========================
+   PUBLISHED WORK
+========================= */
 
 .work{
 background:#0c0c0c;
@@ -432,6 +514,16 @@ font-weight:900;
 text-decoration:none;
 }
 
+.work-card a:hover,
+.work-card a:focus{
+text-decoration:underline;
+}
+
+
+/* =========================
+   QUOTE
+========================= */
+
 .quote{
 text-align:center;
 padding:80px 20px;
@@ -457,6 +549,11 @@ font-style:normal;
 color:#999;
 }
 
+
+/* =========================
+   FOOTER
+========================= */
+
 footer{
 border-top:1px solid #222;
 padding:35px 20px;
@@ -468,6 +565,11 @@ font-size:12px;
 footer strong{
 color:var(--green);
 }
+
+
+/* =========================
+   MOBILE
+========================= */
 
 @media(max-width:800px){
 
@@ -484,6 +586,10 @@ width:50px;
 height:50px;
 }
 
+.brand-text{
+font-size:18px;
+}
+
 .hero{
 grid-template-columns:1fr;
 padding-top:45px;
@@ -495,6 +601,11 @@ text-align:center;
 max-width:330px;
 margin:auto;
 width:100%;
+}
+
+.profile-placeholder{
+width:210px;
+height:210px;
 }
 
 .hero h1{
@@ -539,34 +650,57 @@ font-size:30px;
 
 </head>
 
+
 <body>
+
+
+<!-- =========================
+     NEWSROOM BAR
+========================= -->
 
 <div class="newsroom-bar">
 THE BLIND TRUTH • QUESTION EVERYTHING • FOLLOW THE EVIDENCE
 </div>
+
+
+<!-- =========================
+     HEADER
+========================= -->
 
 <header>
 
 <div class="header-inner">
 
 <a class="brand"
-href="index.html">
+href="index.html"
+aria-label="The Blind Truth homepage">
 
-<img src="blind-truth-logo.png"
+<img
+src="blind-truth-logo.png"
 alt="The Blind Truth logo">
 
 <div class="brand-text">
+
 THE BLIND TRUTH
-<span>INDEPENDENT DIGITAL PUBLICATION</span>
+
+<span>
+INDEPENDENT DIGITAL PUBLICATION
+</span>
+
 </div>
 
 </a>
 
-<nav>
 
-<a href="index.html">HOME</a>
+<nav aria-label="Main navigation">
 
-<a href="index.html#latest">LATEST</a>
+<a href="index.html">
+HOME
+</a>
+
+<a href="index.html#latest">
+LATEST
+</a>
 
 <a href="index.html#investigations">
 CASE FILES
@@ -586,6 +720,10 @@ ABOUT MARION
 <main>
 
 
+<!-- =========================
+     AUTHOR HERO
+========================= -->
+
 <section class="hero">
 
 <div class="profile-box">
@@ -593,9 +731,11 @@ ABOUT MARION
 <div class="profile-placeholder">
 
 <img
-src="blind-truth-logo.png"
-alt="The Blind Truth"
-class="profile-logo">
+src="marion-goldring-profile.png"
+alt="Marion Goldring, founder and publisher of The Blind Truth"
+width="230"
+height="230"
+fetchpriority="high">
 
 </div>
 
@@ -656,7 +796,12 @@ ABOUT MARION
 </section>
 
 
-<section class="about" id="about">
+<!-- =========================
+     BIOGRAPHY
+========================= -->
+
+<section class="about"
+id="about">
 
 <div class="section-inner">
 
@@ -689,7 +834,9 @@ unsolved mysteries and fact checking.
 <p>
 The publication's central philosophy is summarized
 by its motto:
-<strong>“Question Everything. Follow the Evidence.”</strong>
+<strong>
+“Question Everything. Follow the Evidence.”
+</strong>
 The goal is not to assume that every controversial
 claim is true or false, but to examine what can
 actually be supported by available evidence.
@@ -708,6 +855,10 @@ projects.
 </section>
 
 
+<!-- =========================
+     PUBLISHING PHILOSOPHY
+========================= -->
+
 <section>
 
 <div class="section-inner">
@@ -720,7 +871,9 @@ Publishing Philosophy
 How The Blind Truth Approaches a Story
 </h2>
 
+
 <div class="mission-grid">
+
 
 <div class="mission-card">
 
@@ -779,12 +932,17 @@ questions.
 
 </div>
 
+
 </div>
 
 </div>
 
 </section>
 
+
+<!-- =========================
+     THE PUBLICATION
+========================= -->
 
 <section class="publisher">
 
@@ -797,6 +955,7 @@ The Publication
 <h2>
 Founder of The Blind Truth
 </h2>
+
 
 <div class="publisher-box">
 
@@ -815,27 +974,76 @@ evidence breakdowns.
 <p>
 The Blind Truth also uses a verdict system to help
 readers distinguish between what has been
-established and what remains uncertain.
+established, what is disputed and what remains
+uncertain.
 </p>
+
 
 <div class="categories">
 
-<span class="category">Breaking News</span>
-<span class="category">Trending</span>
-<span class="category">Developing</span>
-<span class="category">Investigations</span>
-<span class="category">Fact Checks</span>
-<span class="category">Hip-Hop</span>
-<span class="category">Entertainment</span>
-<span class="category">Gaming</span>
-<span class="category">Government</span>
-<span class="category">Money</span>
-<span class="category">Science & Technology</span>
-<span class="category">Hidden History</span>
-<span class="category">Conspiracies</span>
-<span class="category">Unsolved Mysteries</span>
-<span class="category">Sports</span>
-<span class="category">Gossip & Rumors</span>
+<span class="category">
+Breaking News
+</span>
+
+<span class="category">
+Trending
+</span>
+
+<span class="category">
+Developing
+</span>
+
+<span class="category">
+Investigations
+</span>
+
+<span class="category">
+Fact Checks
+</span>
+
+<span class="category">
+Hip-Hop
+</span>
+
+<span class="category">
+Entertainment
+</span>
+
+<span class="category">
+Gaming
+</span>
+
+<span class="category">
+Government
+</span>
+
+<span class="category">
+Money
+</span>
+
+<span class="category">
+Science & Technology
+</span>
+
+<span class="category">
+Hidden History
+</span>
+
+<span class="category">
+Conspiracies
+</span>
+
+<span class="category">
+Unsolved Mysteries
+</span>
+
+<span class="category">
+Sports
+</span>
+
+<span class="category">
+Gossip & Rumors
+</span>
 
 </div>
 
@@ -845,6 +1053,10 @@ established and what remains uncertain.
 
 </section>
 
+
+<!-- =========================
+     PUBLISHED WORK
+========================= -->
 
 <section class="work">
 
@@ -857,6 +1069,7 @@ Published Work
 <h2>
 Investigations & Case Files
 </h2>
+
 
 <div class="work-grid">
 
@@ -960,6 +1173,10 @@ VIEW CASE FILE →
 </section>
 
 
+<!-- =========================
+     MOTTO
+========================= -->
+
 <section class="quote">
 
 <blockquote>
@@ -979,9 +1196,15 @@ Follow the Evidence.”
 </main>
 
 
+<!-- =========================
+     FOOTER
+========================= -->
+
 <footer>
 
-<strong>THE BLIND TRUTH</strong>
+<strong>
+THE BLIND TRUTH
+</strong>
 
 <br>
 
