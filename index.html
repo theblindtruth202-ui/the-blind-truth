@@ -3103,4 +3103,95 @@ IRAQ HELPED CARRY OUT 9/11
 <br><br>
 
 <strong>
-VERDICT:
+VERDICT: NOT SUPPORTED
+</strong>
+
+</div>
+
+</div>
+</div>
+</dialog>
+
+<script>
+
+function openArticle(id){
+
+const article=document.getElementById(id);
+
+if(article){
+article.showModal();
+}
+
+}
+
+function closeArticle(id){
+
+const article=document.getElementById(id);
+
+if(article){
+article.close();
+}
+
+}
+
+document.querySelectorAll("dialog").forEach(function(dialog){
+
+dialog.addEventListener("click",function(event){
+
+if(event.target===dialog){
+dialog.close();
+}
+
+});
+
+});
+
+
+const visitorCount =
+document.getElementById("visitor-count");
+
+fetch(
+"https://abacus.jasoncameron.dev/hit/the-blind-truth-202-ui/homepage",
+{
+method:"GET",
+cache:"no-store"
+}
+)
+
+.then(function(response){
+
+if(!response.ok){
+throw new Error("Counter service unavailable");
+}
+
+return response.json();
+
+})
+
+.then(function(data){
+
+if(data && typeof data.value==="number"){
+
+visitorCount.textContent =
+data.value.toLocaleString();
+
+}else{
+
+visitorCount.textContent = "UNAVAILABLE";
+
+}
+
+})
+
+.catch(function(error){
+
+console.log("Visitor counter error:",error);
+
+visitorCount.textContent = "UNAVAILABLE";
+
+});
+
+</script>
+
+</body>
+</html>
