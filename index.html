@@ -5,14 +5,18 @@
 
 <meta charset="UTF-8">
 
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="viewport"
+content="width=device-width, initial-scale=1.0">
 
-<meta name="theme-color" content="#050505">
+<meta name="theme-color"
+content="#050505">
 
 <meta name="google-site-verification"
 content="_RCvea5xnx3tGhqx8Z1qYD7VLB3qBeYT7mWuwthCMOE">
 
-<title>The Blind Truth | News, Sports, Entertainment, Gaming & Investigations</title>
+<title>
+The Blind Truth | News, Sports, Entertainment, Gaming & Investigations
+</title>
 
 <meta name="description"
 content="The Blind Truth covers breaking news, sports, entertainment, gaming, hip-hop, court cases, rumors, fact checks and evidence-first investigations. Question everything. Follow the evidence.">
@@ -23,7 +27,8 @@ content="index, follow, max-image-preview:large">
 <link rel="canonical"
 href="https://theblindtruth202-ui.github.io/the-blind-truth/">
 
-<meta property="og:type" content="website">
+<meta property="og:type"
+content="website">
 
 <meta property="og:title"
 content="The Blind Truth | News, Sports, Entertainment, Gaming & Investigations">
@@ -350,6 +355,15 @@ text-transform:uppercase;
 letter-spacing:1.2px;
 }
 
+.story-date{
+font-size:11px;
+font-weight:900;
+color:#888;
+letter-spacing:1px;
+text-transform:uppercase;
+margin-top:8px;
+}
+
 .main-story h1{
 font-family:"Arial Black",Impact,sans-serif;
 font-size:clamp(38px,6vw,70px);
@@ -498,7 +512,7 @@ margin-top:auto;
 
 
 /* =====================================================
-   JOIN THE CLUB + SHOP
+   JOIN THE CLUB
 ===================================================== */
 
 .join-club-section{
@@ -607,7 +621,6 @@ color:var(--green);
 background:#050505;
 color:var(--green);
 border:2px solid var(--green);
-box-shadow:0 0 25px rgba(99,255,54,.18);
 }
 
 .shop-button:hover{
@@ -630,12 +643,6 @@ background:rgba(255,91,189,.08);
 font-weight:900;
 font-size:13px;
 text-transform:uppercase;
-letter-spacing:.5px;
-}
-
-.tiktok-button:hover{
-border-color:var(--pink);
-color:var(--pink);
 }
 
 
@@ -697,7 +704,7 @@ text-transform:uppercase;
 
 
 /* =====================================================
-   DIALOG ARTICLES
+   ARTICLES
 ===================================================== */
 
 dialog{
@@ -794,6 +801,19 @@ font-size:20px;
 margin-bottom:6px;
 }
 
+.source-link{
+display:inline-block;
+margin-top:8px;
+color:var(--green);
+font-family:Arial,Helvetica,sans-serif;
+font-weight:900;
+font-size:13px;
+}
+
+.source-link:hover{
+color:white;
+}
+
 
 /* =====================================================
    FOOTER
@@ -820,10 +840,6 @@ margin:18px 0;
 .footer-links a{
 color:var(--green);
 font-weight:900;
-}
-
-.footer-links a:hover{
-color:white;
 }
 
 
@@ -965,7 +981,6 @@ THE BLIND TRUTH NEWSROOM
 
 </div>
 
-
 <div class="newsbar-right">
 
 <div class="visitor-counter"
@@ -984,7 +999,7 @@ LOADING...
 </div>
 
 <div>
-UPDATED SEPTEMBER 12, 2026
+UPDATED SEPTEMBER 19, 2026
 </div>
 
 </div>
@@ -1022,47 +1037,22 @@ QUESTION EVERYTHING • FOLLOW THE EVIDENCE
 
 </a>
 
-
 <nav>
 
-<a href="#breaking">
-Breaking
-</a>
+<a href="#breaking">Breaking</a>
+<a href="#trending">Trending</a>
+<a href="#sports">Sports</a>
+<a href="#hiphop">Hip-Hop</a>
+<a href="#entertainment">Entertainment</a>
+<a href="#gaming">Gaming</a>
+<a href="#gossip">Claims</a>
+<a href="#factchecks">Fact Checks</a>
+<a href="#investigations">Case Files</a>
 
-<a href="#trending">
-Trending
-</a>
-
-<a href="#sports">
-Sports
-</a>
-
-<a href="#hiphop">
-Hip-Hop
-</a>
-
-<a href="#entertainment">
-Entertainment
-</a>
-
-<a href="#gaming">
-Gaming
-</a>
-
-<a href="#gossip">
-Claims
-</a>
-
-<a href="#factchecks">
-Fact Checks
-</a>
-
-<a href="#investigations">
-Case Files
-</a> 
 <a href="marion-goldring.html">
 Author
 </a>
+
 <a
 class="shop-nav"
 href="https://the-blind-truth-shop.fourthwall.com"
@@ -1090,7 +1080,7 @@ TikTok
 
 
 <!-- =====================================================
-     HERO — CASE FILE 004
+     HERO — PERMANENT CASE FILE
 ===================================================== -->
 
 <section class="hero">
@@ -1098,7 +1088,6 @@ TikTok
 <div class="hero-grid">
 
 <article class="main-story">
-
 
 <div class="hero-brand-art">
 
@@ -1109,23 +1098,19 @@ class="hero-graffiti-logo">
 
 </div>
 
-
 <div class="main-label">
-25 YEARS LATER
+CASE FILE 004
 </div>
-
 
 <div class="category">
 9/11 • INVESTIGATION • AMERICA
 </div>
-
 
 <h1>
 WHAT DO WE
 REALLY KNOW
 ABOUT 9/11?
 </h1>
-
 
 <p>
 Twenty-five years after the September 11 attacks,
@@ -1134,7 +1119,6 @@ the al-Qaeda plot, Saudi-linked questions, the money trail,
 Iraq, structural claims and conspiracy theories from what
 the evidence actually proves.
 </p>
-
 
 <button
 class="read-button"
@@ -1148,62 +1132,78 @@ OPEN CASE FILE 004 →
 <div class="side-column">
 
 
-<article class="feature-card breaking-feature">
+<!--
+ONGOING STORIES DO NOT AUTO-EXPIRE.
+WHEN THERE IS A REAL UPDATE,
+CHANGE data-story-date TO THE NEW UPDATE DATE.
+-->
+
+<article
+class="feature-card breaking-feature"
+data-story-date="2026-09-18"
+data-ongoing="true">
 
 <div class="category">
-BREAKING • HIP-HOP • FEDERAL COURT
+D.C. • KENNEDY CENTER • DEVELOPING
+</div>
+
+<div class="story-date">
+UPDATED SEPTEMBER 18
 </div>
 
 <h2>
-Lil Durk Acquitted
-on All Charges
+Kennedy Center
+Future Faces
+New Court Fight
 </h2>
 
 <p>
-A federal jury has found Lil Durk
-not guilty on every charge in his
-murder-for-hire trial.
-
-The verdict clears him in this case,
-but he remains in federal custody
-because a separate case is still pending.
+President Trump declined to say
+whether he would try to demolish
+the Kennedy Center as litigation continues
+over the building's name and future.
 </p>
 
 <button
 class="read-button"
-onclick="openArticle('durk')">
-READ VERDICT →
+onclick="openArticle('kennedy')">
+READ UPDATE →
 </button>
 
 </article>
 
 
-<article class="feature-card">
+<article
+class="feature-card"
+data-story-date="2026-09-15">
 
 <div class="category">
-SPORTS • NFL • AUSTRALIA
+NBA • TORONTO • KAWHI LEONARD
+</div>
+
+<div class="story-date">
+SEPTEMBER 15
 </div>
 
 <h2>
-49ers Crush Rams
-in Historic Melbourne Game
+Kawhi Leonard
+Returns to Toronto
 </h2>
 
 <p>
-San Francisco wins 27–7
-before more than 100,000 spectators
-in the NFL's first regular-season
-game in Australia.
+The Raptors reacquired Leonard
+from the Clippers following
+the NBA's investigation into
+salary-cap circumvention.
 </p>
 
 <button
 class="read-button"
-onclick="openArticle('australia')">
+onclick="openArticle('kawhi')">
 READ STORY →
 </button>
 
 </article>
-
 
 </div>
 
@@ -1242,82 +1242,101 @@ Major developing stories
 <div class="story-grid">
 
 
-<article class="story-card">
+<article
+class="story-card"
+data-story-date="2026-09-18"
+data-ongoing="true">
 
 <div class="category">
-LIL DURK • NOT GUILTY
+WASHINGTON D.C. • DEVELOPING
+</div>
+
+<div class="story-date">
+UPDATED SEPTEMBER 18
 </div>
 
 <h3>
-Lil Durk Acquitted
-on Every Charge
+Kennedy Center
+Fight Intensifies
 </h3>
 
 <p>
-Jurors found Durk Banks
-not guilty on all charges
-in the federal murder-for-hire case
-that had accused him of orchestrating
-a 2022 attack targeting Quando Rondo.
+The center's future remains
+the subject of litigation,
+renovation plans and a dispute
+over proposed changes to the landmark.
 </p>
 
 <button
 class="read-button"
-onclick="openArticle('durk')">
-READ VERDICT →
+onclick="openArticle('kennedy')">
+READ UPDATE →
 </button>
 
 </article>
 
 
-<article class="story-card">
+<article
+class="story-card"
+data-story-date="2026-09-18"
+data-ongoing="true">
 
 <div class="category">
-SEPTEMBER 11 • 25 YEARS
+WHITE HOUSE • MEDIA ACCESS
+</div>
+
+<div class="story-date">
+SEPTEMBER 18
 </div>
 
 <h3>
-America Marks
-25 Years Since 9/11
+Trump Announces Ban
+on Three News Outlets
 </h3>
 
 <p>
-Ceremonies in New York,
-at the Pentagon and in Pennsylvania
-honor the nearly 3,000 people killed
-in the attacks.
+President Trump announced that
+CNN, MS NOW and Politico
+would be barred from White House access,
+setting up another press-access dispute.
 </p>
 
 <button
 class="read-button"
-onclick="openArticle('anniversary')">
+onclick="openArticle('mediaban')">
 READ STORY →
 </button>
 
 </article>
 
 
-<article class="story-card">
+<article
+class="story-card"
+data-story-date="2026-09-16">
 
 <div class="category">
-MIDDLE EAST • ENERGY
+ECONOMY • FEDERAL RESERVE
+</div>
+
+<div class="story-date">
+SEPTEMBER 16
 </div>
 
 <h3>
-Oil Above $100
-as Conflict Continues
+Federal Reserve
+Raises Interest Rates
 </h3>
 
 <p>
-Energy markets remain under pressure
-as conflict, shipping disruption
-and instability around major
-trade routes continue.
+The Fed raised its benchmark rate
+by a quarter percentage point,
+its first increase in three years,
+as inflation remained a concern.
 </p>
 
 <button
 class="read-button"
-onclick="openArticle('oil')">
+onclick="openArticle('fed')">
 READ STORY →
 </button>
 
@@ -1359,81 +1378,100 @@ Culture • Conversation • Developing
 <div class="story-grid">
 
 
-<article class="story-card">
+<article
+class="story-card"
+data-story-date="2026-09-18">
 
 <div class="category">
-LIL DURK • VERDICT
+CONVERSE • AD BACKLASH
+</div>
+
+<div class="story-date">
+SEPTEMBER 18
 </div>
 
 <h3>
-Durk Verdict Changes
-the Federal Case
+Converse Pulls Ad
+After Viral Backlash
 </h3>
 
 <p>
-After weeks of testimony
-and roughly three days of deliberations,
-jurors rejected the government's case
-against Lil Durk.
+Social-media users said
+a sneaker advertisement appeared
+to evoke KKK and lynching imagery.
+Converse apologized and removed it.
 </p>
 
 <button
 class="read-button"
-onclick="openArticle('durk')">
-READ VERDICT →
-</button>
-
-</article>
-
-
-<article class="story-card">
-
-<div class="category">
-NBA • LEGAL
-</div>
-
-<h3>
-DOJ Investigates
-Clippers Dealings
-</h3>
-
-<p>
-Federal investigators are examining
-the Clippers' dealings involving
-Kawhi Leonard after major NBA penalties.
-</p>
-
-<button
-class="read-button"
-onclick="openArticle('clippers')">
+onclick="openArticle('converse')">
 READ STORY →
 </button>
 
 </article>
 
 
-<article class="story-card">
+<article
+class="story-card"
+data-story-date="2026-09-14">
 
 <div class="category">
-9/11 • CASE FILE 004
+MACKLEMORE • TOUR CONTROVERSY
+</div>
+
+<div class="story-date">
+SEPTEMBER 14
 </div>
 
 <h3>
-The Saudi Question
-Still Isn't Fully Closed
+Macklemore Removed
+From Ed Sheeran Tour
 </h3>
 
 <p>
-Declassified material and civil litigation
-continue to raise questions about
-Saudi-linked individuals who assisted
-future hijackers.
+The rapper was removed
+from the Loop Tour following controversy
+surrounding remarks and performances
+during his opening set.
 </p>
 
 <button
 class="read-button"
-onclick="openArticle('nineeleven')">
-OPEN INVESTIGATION →
+onclick="openArticle('macklemore')">
+READ STORY →
+</button>
+
+</article>
+
+
+<article
+class="story-card"
+data-story-date="2026-09-15">
+
+<div class="category">
+NBA • BLOCKBUSTER TRADE
+</div>
+
+<div class="story-date">
+SEPTEMBER 15
+</div>
+
+<h3>
+Kawhi's Toronto Return
+Shakes the NBA
+</h3>
+
+<p>
+Leonard is heading back
+to the franchise he led
+to the 2019 NBA championship
+after seven seasons away.
+</p>
+
+<button
+class="read-button"
+onclick="openArticle('kawhi')">
+READ STORY →
 </button>
 
 </article>
@@ -1465,7 +1503,7 @@ Sports
 </div>
 
 <div class="section-description">
-NFL • NBA • Tennis
+NBA • MLB • Championships
 </div>
 
 </div>
@@ -1474,80 +1512,98 @@ NFL • NBA • Tennis
 <div class="story-grid">
 
 
-<article class="story-card">
+<article
+class="story-card"
+data-story-date="2026-09-15">
 
 <div class="category">
-NFL • AUSTRALIA
+NBA • RAPTORS • CLIPPERS
+</div>
+
+<div class="story-date">
+SEPTEMBER 15
 </div>
 
 <h3>
-49ers Beat Rams
-27–7 in Melbourne
+Raptors Reacquire
+Kawhi Leonard
 </h3>
 
 <p>
-Brock Purdy throws three touchdowns
-as San Francisco dominates
-the NFL's first regular-season
-game in Australia.
+Toronto sent Brandon Ingram,
+Gradey Dick and draft assets
+to Los Angeles in a blockbuster deal
+bringing Leonard back to Canada.
 </p>
 
 <button
 class="read-button"
-onclick="openArticle('australia')">
+onclick="openArticle('kawhi')">
 READ STORY →
 </button>
 
 </article>
 
 
-<article class="story-card">
+<article
+class="story-card"
+data-story-date="2026-09-18">
 
 <div class="category">
-U.S. OPEN • MEN
+MLB • LOS ANGELES
+</div>
+
+<div class="story-date">
+SEPTEMBER 18
 </div>
 
 <h3>
-Shelton vs. Tiafoe
-Makes Tennis History
+Dodgers Clinch
+Another NL West Title
 </h3>
 
 <p>
-The matchup becomes a historic
-Grand Slam meeting between
-two Black American men's
-tennis stars.
+Los Angeles defeated Cincinnati 8–2
+to secure its 13th NL West championship
+in the last 14 seasons.
 </p>
 
 <button
 class="read-button"
-onclick="openArticle('mensopen')">
+onclick="openArticle('dodgers')">
 READ STORY →
 </button>
 
 </article>
 
 
-<article class="story-card">
+<article
+class="story-card"
+data-story-date="2026-09-16">
 
 <div class="category">
-U.S. OPEN • WOMEN
+MLB • MILWAUKEE
+</div>
+
+<div class="story-date">
+SEPTEMBER 16
 </div>
 
 <h3>
-Rybakina Ends
-Coco Gauff's Run
+Brewers Win
+Fourth Straight Division
 </h3>
 
 <p>
-Elena Rybakina rallies
-from a set down to defeat
-Coco Gauff and advance.
+Milwaukee clinched
+its fourth consecutive
+National League Central title
+as the postseason picture tightened.
 </p>
 
 <button
 class="read-button"
-onclick="openArticle('gauff')">
+onclick="openArticle('brewers')">
 READ STORY →
 </button>
 
@@ -1589,80 +1645,99 @@ Artists • Court • Culture
 <div class="story-grid">
 
 
-<article class="story-card">
+<article
+class="story-card"
+data-story-date="2026-09-19">
 
 <div class="category">
-LIL DURK • ACQUITTED
+TAY KEITH • CAUSE OF DEATH
+</div>
+
+<div class="story-date">
+SEPTEMBER 19
 </div>
 
 <h3>
-Lil Durk Found
-Not Guilty
+Tay Keith's
+Cause of Death Revealed
 </h3>
 
 <p>
-The Grammy-winning rapper
-was acquitted on every charge
-in his federal murder-for-hire trial.
+The Nashville medical examiner
+ruled the producer's death accidental,
+citing the toxic effects
+of ketamine and mitragynine.
 </p>
 
 <button
 class="read-button"
-onclick="openArticle('durk')">
-READ VERDICT →
+onclick="openArticle('taykeith')">
+READ STORY →
 </button>
 
 </article>
 
 
-<article class="story-card">
+<article
+class="story-card"
+data-story-date="2026-09-18">
 
 <div class="category">
-TUPAC • COURT
+MALLY MALL • FEDERAL COURT
+</div>
+
+<div class="story-date">
+SEPTEMBER 18
 </div>
 
 <h3>
-Keffe D
-Awaits Sentencing
+Mally Mall Sentenced
+to 17 Months
 </h3>
 
 <p>
-Duane Davis remains convicted
-of first-degree murder
-in Tupac Shakur's killing
-and is awaiting sentencing.
+A federal judge revoked
+the producer's supervised release
+after he admitted multiple violations
+of court-ordered conditions.
 </p>
 
 <button
 class="read-button"
-onclick="openArticle('keffe')">
-READ UPDATE →
+onclick="openArticle('mallymall')">
+READ STORY →
 </button>
 
 </article>
 
 
-<article class="story-card">
+<article
+class="story-card"
+data-story-date="2026-09-14">
 
 <div class="category">
-CASE FILE 003
+MACKLEMORE • ED SHEERAN
+</div>
+
+<div class="story-date">
+SEPTEMBER 14
 </div>
 
 <h3>
-Diddy-Tupac Claim
-Still Unproven
+Tour Controversy
+Grows After Macklemore Exit
 </h3>
 
 <p>
-Keffe D's conviction did not establish
-that Sean Combs ordered or financed
-Tupac's murder.
+The removal sparked additional fallout
+as other opening acts withdrew
+and some fans sought refunds.
 </p>
 
 <button
 class="read-button"
-onclick="openArticle('diddy')">
-OPEN CASE FILE →
+onclick="openArticle('macklemore')">
+READ STORY →
 </button>
 
 </article>
@@ -1674,7 +1749,7 @@ OPEN CASE FILE →
 
 
 <!-- =====================================================
-     JOIN THE CLUB + OFFICIAL SHOP
+     JOIN THE CLUB
 ===================================================== -->
 
 <section
@@ -1704,7 +1779,6 @@ gaming, rumors, fact checks
 and evidence breakdowns.
 </p>
 
-
 <div class="club-actions">
 
 <a
@@ -1715,7 +1789,6 @@ class="join-club-button">
 JOIN THE BLIND TRUTH →
 </a>
 
-
 <a
 href="https://the-blind-truth-shop.fourthwall.com"
 target="_blank"
@@ -1725,7 +1798,6 @@ SHOP TBT MERCH →
 </a>
 
 </div>
-
 
 <div class="social-row">
 
@@ -1776,80 +1848,99 @@ Television • Film • Celebrity
 <div class="story-grid">
 
 
-<article class="story-card">
+<article
+class="story-card"
+data-story-date="2026-09-14">
 
 <div class="category">
 EMMYS • TELEVISION
 </div>
 
+<div class="story-date">
+SEPTEMBER 14
+</div>
+
 <h3>
-Jean Smart,
-Harrison Ford
-Near Emmy Milestones
+Widow's Bay
+Breaks Emmy Record
 </h3>
 
 <p>
-Smart could win another major
-comedy-actress Emmy while
-Ford seeks his first Emmy win.
+The Apple TV horror-comedy
+finished with 14 Emmy wins,
+including best comedy series,
+while The Pitt won best drama.
 </p>
 
 <button
 class="read-button"
-onclick="openArticle('emmys')">
+onclick="openArticle('emmys2026')">
 READ STORY →
 </button>
 
 </article>
 
 
-<article class="story-card">
+<article
+class="story-card"
+data-story-date="2026-09-19">
 
 <div class="category">
-CELEBRITY • TRAVEL
+DUNCAN SHEIK • MUSIC • BROADWAY
+</div>
+
+<div class="story-date">
+SEPTEMBER 19
 </div>
 
 <h3>
-Star-Studded Flight
-Makes Emergency Landing
+Duncan Sheik
+Dies at 56
 </h3>
 
 <p>
-A Delta flight carrying entertainers
-diverted safely after passengers
-reported a smoky odor.
+The Grammy- and Tony-winning
+singer-songwriter and composer
+behind Spring Awakening
+has died at age 56.
 </p>
 
 <button
 class="read-button"
-onclick="openArticle('delta')">
+onclick="openArticle('duncansheik')">
 READ STORY →
 </button>
 
 </article>
 
 
-<article class="story-card">
+<article
+class="story-card"
+data-story-date="2026-09-18">
 
 <div class="category">
-AWARDS • INDUSTRY
+NETFLIX • TELEVISION
+</div>
+
+<div class="story-date">
+SEPTEMBER 18
 </div>
 
 <h3>
-2026 Emmys Arrive
-Amid Hollywood Change
+Sweet Magnolias
+Ends After Five Seasons
 </h3>
 
 <p>
-Television's biggest night arrives
-as Hollywood confronts AI,
-production pressures
-and industry consolidation.
+Netflix's drama has concluded
+after five seasons,
+with the fifth season now serving
+as the series finale.
 </p>
 
 <button
 class="read-button"
-onclick="openArticle('emmys')">
+onclick="openArticle('sweetmagnolias')">
 READ STORY →
 </button>
 
@@ -1884,7 +1975,7 @@ Gaming
 </div>
 
 <div class="section-description">
-Releases • Community • Industry
+Releases • PlayStation • Industry
 </div>
 
 </div>
@@ -1893,78 +1984,100 @@ Releases • Community • Industry
 <div class="story-grid">
 
 
-<article class="story-card">
+<article
+class="story-card"
+data-story-date="2026-09-15">
 
 <div class="category">
-NBA 2K27 • AVAILABLE NOW
+PS5 • MARVEL • INSOMNIAC
+</div>
+
+<div class="story-date">
+SEPTEMBER 15
 </div>
 
 <h3>
-NBA 2K27
-Launches Worldwide
+Marvel's Wolverine
+Launches on PS5
 </h3>
 
 <p>
-NBA 2K27 is now fully released
-on current-generation platforms.
+Insomniac's long-awaited
+Wolverine game is officially available,
+bringing Logan's new standalone adventure
+to PlayStation 5.
 </p>
 
 <button
 class="read-button"
-onclick="openArticle('2k27')">
+onclick="openArticle('wolverine')">
 READ STORY →
 </button>
 
 </article>
 
 
-<article class="story-card">
+<article
+class="story-card"
+data-story-date="2026-09-17">
 
 <div class="category">
-NBA 2K27 • MYPLAYER
+FINAL FANTASY VII • PS5
+</div>
+
+<div class="story-date">
+SEPTEMBER 17
 </div>
 
 <h3>
-Builder Meta
-Starts Taking Shape
+Final Fantasy VII Revelation
+Shows New Gameplay
 </h3>
 
 <p>
-Players are testing badge thresholds,
-Cap Breakers, animations
-and efficient attribute combinations.
+New hands-on coverage reveals
+playable Vincent and Cid,
+the FITS system
+and the Jenova Deathmourner battle.
 </p>
 
 <button
 class="read-button"
-onclick="openArticle('2k27')">
+onclick="openArticle('ff7')">
 READ STORY →
 </button>
 
 </article>
 
 
-<article class="story-card">
+<article
+class="story-card"
+data-story-date="2026-09-18">
 
 <div class="category">
-NBA 2K27 • SEASON 1
+CONTROL RESONANT • REMEDY
+</div>
+
+<div class="story-date">
+SEPTEMBER 18
 </div>
 
 <h3>
-Season 1
-Now Underway
+Control Resonant
+Arrives September 24
 </h3>
 
 <p>
-The first season includes
-a reward ladder, Cap Breakers,
-Badge Tokens and City rewards.
+Remedy's paranormal sequel
+moves into a warped Manhattan
+with Dylan Faden
+as the playable lead.
 </p>
 
 <button
 class="read-button"
-onclick="openArticle('2k27')">
-READ STORY →
+onclick="openArticle('control')">
+READ PREVIEW →
 </button>
 
 </article>
@@ -2007,82 +2120,100 @@ Claims labeled by evidence status
 <div class="story-grid">
 
 
-<article class="story-card">
+<article
+class="story-card"
+data-story-date="2026-09-18">
 
 <div class="category">
-UNRESOLVED
+INTENT UNPROVEN
+</div>
+
+<div class="story-date">
+SEPTEMBER 18
 </div>
 
 <h3>
-Did Saudi-Linked
-Officials Know More?
+Was the Converse Ad
+Intentionally Racist?
 </h3>
 
 <p>
-Some Saudi-linked individuals
-assisted future hijackers.
-
-Whether that assistance
-was knowingly connected
-to the 9/11 plot remains disputed.
+The visual resemblance triggered
+widespread criticism,
+but evidence establishing
+deliberate racist intent has not emerged.
 </p>
 
 <button
 class="read-button"
-onclick="openArticle('nineeleven')">
+onclick="openArticle('converse')">
 SEE EVIDENCE →
 </button>
 
 </article>
 
 
-<article class="story-card">
+<article
+class="story-card"
+data-story-date="2026-09-18"
+data-ongoing="true">
 
 <div class="category">
-VERDICT • NOT GUILTY
+CLAIM CHECK • KENNEDY CENTER
+</div>
+
+<div class="story-date">
+UPDATED SEPTEMBER 18
 </div>
 
 <h3>
-Jurors Reject
-Lil Durk Allegations
+Has Demolition
+Already Been Ordered?
 </h3>
 
 <p>
-Cooperating witnesses implicated Durk,
-but the jury ultimately found him
-not guilty on every charge
-in this federal trial.
+Not according to the current public record.
+Trump declined to say whether
+he would pursue demolition,
+and advance court notice is required.
 </p>
 
 <button
 class="read-button"
-onclick="openArticle('durk')">
-READ VERDICT →
+onclick="openArticle('kennedy')">
+READ UPDATE →
 </button>
 
 </article>
 
 
-<article class="story-card">
+<article
+class="story-card"
+data-story-date="2026-09-15">
 
 <div class="category">
-UNDER INVESTIGATION
+VERIFIED • NBA
+</div>
+
+<div class="story-date">
+SEPTEMBER 15
 </div>
 
 <h3>
-Clippers Scandal
-Moves Beyond NBA
+Kawhi-to-Toronto
+Is No Longer a Rumor
 </h3>
 
 <p>
-Federal investigators are examining
-the team's dealings, but an investigation
-is not proof of a federal crime.
+The Raptors and Clippers
+completed the trade,
+officially returning Leonard
+to Toronto.
 </p>
 
 <button
 class="read-button"
-onclick="openArticle('clippers')">
+onclick="openArticle('kawhi')">
 READ STORY →
 </button>
 
@@ -2126,82 +2257,102 @@ Verified • Unproven • Misleading • False
 <div class="story-grid">
 
 
-<article class="story-card">
+<article
+class="story-card"
+data-story-date="2026-09-18">
 
 <div class="category">
-UNSUPPORTED
+FAULTY COMPARISON
+</div>
+
+<div class="story-date">
+SEPTEMBER 18
 </div>
 
 <h3>
-"The U.S. Government
-Planned 9/11"
+Is the U.S. Doing
+Better Than Every Country
+on Measles?
 </h3>
 
 <p>
-No credible public evidence establishes
-that U.S. officials designed
-or executed the attacks.
+FactCheck.org found that
+the international data does not support
+the claim that the United States
+has performed better than every country.
 </p>
 
 <button
 class="read-button"
-onclick="openArticle('nineeleven')">
-SEE EVIDENCE →
+onclick="openArticle('measles')">
+READ FACT CHECK →
 </button>
 
 </article>
 
 
-<article class="story-card">
+<article
+class="story-card"
+data-story-date="2026-09-15">
 
 <div class="category">
 FALSE
 </div>
 
+<div class="story-date">
+SEPTEMBER 15
+</div>
+
 <h3>
-"Iraq Carried Out 9/11"
+"Marvel's Wolverine
+Was Delayed Again"
 </h3>
 
 <p>
-The 9/11 Commission found no evidence
-that Saddam Hussein's government
-participated in the attacks.
+False.
+
+The game launched
+on PlayStation 5
+on September 15, 2026.
 </p>
 
 <button
 class="read-button"
-onclick="openArticle('nineeleven')">
+onclick="openArticle('wolverine')">
 SEE EVIDENCE →
 </button>
 
 </article>
 
 
-<article class="story-card">
+<article
+class="story-card"
+data-story-date="2026-09-14">
 
 <div class="category">
 MISLEADING
 </div>
 
+<div class="story-date">
+SEPTEMBER 14
+</div>
+
 <h3>
-"Charlie Kirk Suspect
-Has Been Found Guilty"
+"Ed Sheeran Personally
+Fired Macklemore"
 </h3>
 
 <p>
-False.
-
-A judge ordered Tyler Robinson
-to stand trial.
-
-That establishes probable cause,
-not guilt.
+Reporting indicates that
+promoters removed Macklemore
+after venue pressure.
+Sheeran said the decision was not his.
 </p>
 
 <button
 class="read-button"
-onclick="openArticle('kirk')">
-READ CASE FILE →
+onclick="openArticle('macklemore')">
+READ STORY →
 </button>
 
 </article>
@@ -2214,6 +2365,7 @@ READ CASE FILE →
 
 <!-- =====================================================
      INVESTIGATIONS / CASE FILES
+     THESE DO NOT AUTO-EXPIRE
 ===================================================== -->
 
 <section
@@ -2399,7 +2551,6 @@ READ CASE FILE →
 
 </div>
 
-
 </section>
 
 </main>
@@ -2422,12 +2573,11 @@ THE BLIND TRUTH
 Question everything.
 Follow the evidence.
 
+<div class="footer-links">
 
-<div class="footer-links"> 
-
-  <a href="marion-goldring.html">
+<a href="marion-goldring.html">
 FOUNDER &amp; PUBLISHER
-  </a> 
+</a>
 
 <a
 href="https://buttondown.com/TheBlindTruth"
@@ -2452,8 +2602,17 @@ TIKTOK
 
 </div>
 
-
 <small>
+Routine news stories automatically rotate
+off The Blind Truth after 14 days.
+
+Developing stories may remain active
+when credible new information continues
+to update the story.
+
+Permanent investigations and Case Files
+do not expire.
+
 Developing stories, allegations and rumors
 are labeled by evidence status.
 
@@ -2467,189 +2626,79 @@ when credible new evidence changes the record.
 
 
 <!-- =====================================================
-     LIL DURK
+     KENNEDY CENTER
 ===================================================== -->
 
-<dialog id="durk">
+<dialog id="kennedy">
 
 <div class="article">
 
 <button
 class="close"
-onclick="closeArticle('durk')">
+onclick="closeArticle('kennedy')">
 ×
 </button>
 
 <div class="category">
-BREAKING • HIP-HOP • FEDERAL COURT
+WASHINGTON D.C. • KENNEDY CENTER
 </div>
 
 <h2>
-Lil Durk Acquitted
-on All Charges
-in Murder-for-Hire Trial
+Kennedy Center
+Future Faces
+New Court Fight
 </h2>
 
 <p class="article-intro">
-A Los Angeles federal jury
-has found Grammy-winning rapper
-Lil Durk not guilty on every charge
-in the murder-for-hire case against him.
+The future of one of Washington's
+most recognizable cultural institutions
+remains caught between renovation plans,
+litigation and political conflict.
 </p>
 
 <div class="article-body">
 
 <p>
-Durk Banks, professionally known as Lil Durk,
-was acquitted on September 11, 2026
-of all charges in the federal case accusing him
-of orchestrating and financing a 2022 attack
-targeting rapper Quando Rondo.
+On September 18, President Donald Trump
+declined to say whether he would attempt
+to demolish the Kennedy Center.
 </p>
 
 <p>
-Quando Rondo, whose legal name is Tyquian Bowman,
-survived the shooting.
-
-His 24-year-old cousin,
-Saviay'a Robinson,
-was killed.
-</p>
-
-<h3>
-THE GOVERNMENT'S THEORY
-</h3>
-
-<p>
-Federal prosecutors alleged that Durk
-ordered and financed the attack
-as retaliation connected to the 2020 killing
-of his close friend King Von.
+The dispute follows earlier efforts
+to change the building's name
+and a Kennedy Center board vote
+to close the facility for renovations.
 </p>
 
 <p>
-The government relied in part
-on testimony from cooperating witnesses,
-including former associates
-who had reached plea agreements.
-</p>
-
-<h3>
-THE DEFENSE
-</h3>
-
-<p>
-Durk's attorneys argued that he did not
-order the attack and attacked the credibility
-of cooperating witnesses.
-</p>
-
-<p>
-The defense maintained that a former
-personal assistant was responsible
-for the plot without Durk's knowledge.
-</p>
-
-<h3>
-THE VERDICT
-</h3>
-
-<p>
-After the case went to the jury,
-Durk was found not guilty
-on every charge against him
-in this trial.
+A federal judge has ruled that
+Congress controls the center's official name
+and has required advance notice
+before demolition action can occur.
 </p>
 
 <div class="evidence">
 
 <strong>
-VERIFIED VERDICT
+CURRENT STATUS
 </strong>
 
-LIL DURK:
+No confirmed demolition order
+has been established in the current
+public reporting.
 
-NOT GUILTY ON ALL CHARGES
-IN THIS MURDER-FOR-HIRE TRIAL.
+The dispute remains active.
 
 </div>
 
-<h3>
-IS LIL DURK FREE?
-</h3>
-
-<p>
-No.
-</p>
-
-<p>
-The acquittal ends this particular
-murder-for-hire prosecution,
-but it does not currently mean
-Durk has been released from federal custody.
-</p>
-
-<p>
-He remains in custody because he faces
-a separate federal case involving
-racketeering, murder-related
-and weapons allegations.
-</p>
-
-<p>
-That separate trial is currently scheduled
-for October 5, 2026.
-</p>
-
-<p>
-Those allegations are separate
-from the charges on which Durk
-has now been acquitted,
-and he remains presumed innocent
-in the pending case unless proven guilty.
-</p>
-
-<h3>
-CO-DEFENDANTS
-</h3>
-
-<p>
-Deandre Wilson and David Lindsey,
-who were tried alongside Durk,
-were acquitted of the central
-murder-for-hire allegations
-but convicted on stalking-related charges.
-</p>
-
-<div class="verdict">
-
-<strong>
-THE BLIND TRUTH STATUS:
-VERIFIED
-</strong>
-
-<br><br>
-
-<strong>
-LIL DURK ACQUITTED
-ON ALL CHARGES
-IN THIS TRIAL.
-</strong>
-
-<br><br>
-
-The allegations were presented
-to a federal jury.
-
-The jury rejected the charges
-against Durk.
-
-<br><br>
-
-The separate pending federal case
-must be evaluated on its own evidence.
-
-</div>
+<a
+class="source-link"
+href="https://www.reuters.com/world/us/trump-declines-say-whether-he-will-tear-down-kennedy-center-2026-09-18/"
+target="_blank"
+rel="noopener noreferrer">
+SOURCE: REUTERS →
+</a>
 
 </div>
 
@@ -2659,77 +2708,1242 @@ must be evaluated on its own evidence.
 
 
 <!-- =====================================================
-     9/11 ANNIVERSARY
+     WHITE HOUSE MEDIA ACCESS
 ===================================================== -->
 
-<dialog id="anniversary">
+<dialog id="mediaban">
 
 <div class="article">
 
 <button
 class="close"
-onclick="closeArticle('anniversary')">
+onclick="closeArticle('mediaban')">
 ×
 </button>
 
 <div class="category">
-SEPTEMBER 11 • 25 YEARS
+WHITE HOUSE • MEDIA ACCESS
 </div>
 
 <h2>
-America Marks
-25 Years Since 9/11
+Trump Announces Ban
+on CNN, MS NOW
+and Politico
 </h2>
 
 <p class="article-intro">
-September 11, 2026 marks a quarter-century
-since the attacks that transformed
-American life, foreign policy
-and national security.
+A new dispute over press access
+has emerged after President Trump
+announced restrictions against
+three major news organizations.
 </p>
 
 <div class="article-body">
 
 <p>
-Nearly 3,000 people were killed
-on September 11, 2001 when four hijacked
-aircraft were used in coordinated
-terrorist attacks against the United States.
+On September 18,
+President Donald Trump announced
+that CNN, MS NOW and Politico
+would be banned from White House access.
 </p>
 
 <p>
-Two aircraft struck the World Trade Center
-in New York.
-
-American Airlines Flight 77 struck the Pentagon.
-
-United Airlines Flight 93 crashed in Pennsylvania
-after passengers and crew fought back
-against the hijackers.
+Trump criticized the outlets'
+past coverage while the organizations
+and press-freedom advocates questioned
+the legal basis and implications
+of the announced restrictions.
 </p>
 
 <p>
-Commemorations on the 25th anniversary
-were held at Ground Zero,
-the Pentagon and the Flight 93
-National Memorial.
+At the time of the announcement,
+questions remained about exactly
+how the restrictions would be implemented.
 </p>
 
 <div class="verdict">
 
 <strong>
-THE BLIND TRUTH
+THE BLIND TRUTH STATUS:
+DEVELOPING
 </strong>
 
 <br><br>
 
-Remembering the victims
-and investigating unanswered questions
-are not mutually exclusive.
+The announcement is documented.
 
-Both matter.
+The implementation,
+scope and legal challenges
+remain developing.
 
 </div>
+
+<a
+class="source-link"
+href="https://www.reuters.com/world/us/trump-bans-media-outlets-cnn-msnow-politico-white-house-2026-09-18/"
+target="_blank"
+rel="noopener noreferrer">
+SOURCE: REUTERS →
+</a>
+
+</div>
+
+</div>
+
+</dialog>
+
+
+<!-- =====================================================
+     FEDERAL RESERVE
+===================================================== -->
+
+<dialog id="fed">
+
+<div class="article">
+
+<button
+class="close"
+onclick="closeArticle('fed')">
+×
+</button>
+
+<div class="category">
+ECONOMY • FEDERAL RESERVE
+</div>
+
+<h2>
+Federal Reserve
+Raises Rates
+</h2>
+
+<p class="article-intro">
+The Federal Reserve has raised
+its benchmark interest rate
+for the first time in three years.
+</p>
+
+<div class="article-body">
+
+<p>
+On September 16,
+the Federal Reserve increased
+its benchmark rate by
+a quarter of a percentage point.
+</p>
+
+<p>
+The move placed the target range
+at 3.75% to 4.00%.
+</p>
+
+<p>
+The decision came as policymakers
+continued confronting inflation
+while assessing economic growth,
+employment and consumer demand.
+</p>
+
+<div class="evidence">
+
+<strong>
+WHY IT MATTERS
+</strong>
+
+Federal Reserve rates influence
+borrowing costs throughout the economy,
+including credit cards,
+auto loans,
+business lending and mortgages.
+
+</div>
+
+<a
+class="source-link"
+href="https://www.reuters.com/commentary/reuters-open-interest/global-markets-view-usa-2026-09-17/"
+target="_blank"
+rel="noopener noreferrer">
+SOURCE: REUTERS →
+</a>
+
+</div>
+
+</div>
+
+</dialog>
+
+
+<!-- =====================================================
+     CONVERSE
+===================================================== -->
+
+<dialog id="converse">
+
+<div class="article">
+
+<button
+class="close"
+onclick="closeArticle('converse')">
+×
+</button>
+
+<div class="category">
+CONVERSE • VIRAL • ADVERTISING
+</div>
+
+<h2>
+Converse Pulls Ad
+After Backlash
+Over Imagery
+</h2>
+
+<p class="article-intro">
+A Converse sneaker advertisement
+was removed after viewers said
+its composition resembled racist
+and lynching imagery.
+</p>
+
+<div class="article-body">
+
+<p>
+The advertisement promoted
+the Chuck 70 X sneaker
+and showed a white-clad figure
+holding shoes.
+</p>
+
+<p>
+Social-media users argued
+that the composition appeared
+to resemble a pointed KKK hood
+alongside imagery associated
+with a hanging or lynching.
+</p>
+
+<p>
+Converse removed the image
+and apologized,
+saying the company understood
+why people found it deeply upsetting.
+</p>
+
+<div class="verdict">
+
+<strong>
+CLAIM:
+THE IMAGE WAS DELIBERATELY
+DESIGNED AS RACIST IMAGERY
+</strong>
+
+<br><br>
+
+<strong>
+STATUS: UNPROVEN
+</strong>
+
+<br><br>
+
+The resemblance and backlash
+are documented.
+
+Deliberate intent has not been established
+by the available evidence.
+
+</div>
+
+<a
+class="source-link"
+href="https://www.washingtonpost.com/style/fashion/2026/09/18/converse-sneaker-ad-provokes-horror-backlash/"
+target="_blank"
+rel="noopener noreferrer">
+SOURCE: THE WASHINGTON POST →
+</a>
+
+</div>
+
+</div>
+
+</dialog>
+
+
+<!-- =====================================================
+     MACKLEMORE
+===================================================== -->
+
+<dialog id="macklemore">
+
+<div class="article">
+
+<button
+class="close"
+onclick="closeArticle('macklemore')">
+×
+</button>
+
+<div class="category">
+MACKLEMORE • ED SHEERAN • TOUR
+</div>
+
+<h2>
+Macklemore Removed
+From Ed Sheeran's
+Loop Tour
+</h2>
+
+<p class="article-intro">
+The tour lineup changed
+after controversy surrounding
+Macklemore's pro-Palestinian remarks
+and performances.
+</p>
+
+<div class="article-body">
+
+<p>
+Macklemore was removed
+from Ed Sheeran's Loop Tour
+following controversy connected
+to his opening performance
+and political remarks.
+</p>
+
+<p>
+Reporting indicated that venue pressure
+played a major role in the decision.
+</p>
+
+<p>
+Ed Sheeran said that removing
+Macklemore was not his personal decision.
+</p>
+
+<p>
+Other opening performers later
+left the tour,
+while some fans sought refunds
+because of the lineup changes.
+</p>
+
+<div class="verdict">
+
+<strong>
+CLAIM:
+ED SHEERAN PERSONALLY
+FIRED MACKLEMORE
+</strong>
+
+<br><br>
+
+<strong>
+STATUS: MISLEADING
+</strong>
+
+<br><br>
+
+Available reporting says
+the removal involved promoters
+and venue pressure.
+
+</div>
+
+<a
+class="source-link"
+href="https://www.businessinsider.com/ed-sheeran-loop-tour-macklemore-controversy-explained-2026-9"
+target="_blank"
+rel="noopener noreferrer">
+SOURCE: BUSINESS INSIDER →
+</a>
+
+</div>
+
+</div>
+
+</dialog>
+
+
+<!-- =====================================================
+     KAWHI LEONARD
+===================================================== -->
+
+<dialog id="kawhi">
+
+<div class="article">
+
+<button
+class="close"
+onclick="closeArticle('kawhi')">
+×
+</button>
+
+<div class="category">
+NBA • RAPTORS • KAWHI LEONARD
+</div>
+
+<h2>
+Kawhi Leonard
+Returns to Toronto
+</h2>
+
+<p class="article-intro">
+Seven years after delivering
+Toronto's first NBA championship,
+Kawhi Leonard is returning
+to the Raptors.
+</p>
+
+<div class="article-body">
+
+<p>
+The Toronto Raptors completed
+a trade with the Los Angeles Clippers
+to reacquire Kawhi Leonard.
+</p>
+
+<p>
+Toronto sent Brandon Ingram,
+Gradey Dick,
+two future first-round picks,
+a future first-round pick swap
+and two future second-round picks
+to Los Angeles.
+</p>
+
+<p>
+The deal followed an NBA investigation
+into salary-cap circumvention
+involving Leonard and the Clippers.
+</p>
+
+<p>
+League penalties against the Clippers
+included a major team fine,
+lost draft picks
+and a suspension for owner Steve Ballmer.
+</p>
+
+<div class="evidence">
+
+<strong>
+VERIFIED
+</strong>
+
+Kawhi Leonard's return
+to the Toronto Raptors
+is an completed NBA transaction,
+not a trade rumor.
+
+</div>
+
+<a
+class="source-link"
+href="https://www.reuters.com/sports/raptors-acquire-leonard-clippers-following-nba-probe-2026-09-15/"
+target="_blank"
+rel="noopener noreferrer">
+SOURCE: REUTERS →
+</a>
+
+</div>
+
+</div>
+
+</dialog>
+
+
+<!-- =====================================================
+     DODGERS
+===================================================== -->
+
+<dialog id="dodgers">
+
+<div class="article">
+
+<button
+class="close"
+onclick="closeArticle('dodgers')">
+×
+</button>
+
+<div class="category">
+MLB • LOS ANGELES DODGERS
+</div>
+
+<h2>
+Dodgers Claim
+Another NL West Title
+</h2>
+
+<p class="article-intro">
+Los Angeles continues
+one of baseball's longest
+runs of divisional dominance.
+</p>
+
+<div class="article-body">
+
+<p>
+The Dodgers defeated
+the Cincinnati Reds 8–2
+to clinch the National League West.
+</p>
+
+<p>
+The championship is
+the Dodgers' 13th NL West title
+in 14 seasons.
+</p>
+
+<p>
+Kyle Tucker went 4-for-5
+with a home run,
+two doubles
+and three RBIs.
+</p>
+
+<p>
+The Dodgers now move deeper
+into the fight for playoff seeding
+and another postseason run.
+</p>
+
+<a
+class="source-link"
+href="https://www.reuters.com/sports/dodgers-cruise-past-reds-claim-13th-nl-west-title-14-years--fldm-2026-09-18/"
+target="_blank"
+rel="noopener noreferrer">
+SOURCE: REUTERS →
+</a>
+
+</div>
+
+</div>
+
+</dialog>
+
+
+<!-- =====================================================
+     BREWERS
+===================================================== -->
+
+<dialog id="brewers">
+
+<div class="article">
+
+<button
+class="close"
+onclick="closeArticle('brewers')">
+×
+</button>
+
+<div class="category">
+MLB • MILWAUKEE BREWERS
+</div>
+
+<h2>
+Brewers Clinch
+Fourth Straight
+NL Central Title
+</h2>
+
+<p class="article-intro">
+Milwaukee has secured
+another division championship
+as baseball heads toward October.
+</p>
+
+<div class="article-body">
+
+<p>
+The Brewers clinched
+their fourth consecutive
+National League Central championship.
+</p>
+
+<p>
+Jacob Misiorowski threw
+five scoreless innings
+in Milwaukee's 5–1 victory
+over Pittsburgh.
+</p>
+
+<p>
+A Chicago Cubs loss
+to the Atlanta Braves
+completed the clinching scenario.
+</p>
+
+<a
+class="source-link"
+href="https://www.reuters.com/sports/mlb-roundup-jacob-misiorowski-brewers-seal-nl-central-title--flm-2026-09-16/"
+target="_blank"
+rel="noopener noreferrer">
+SOURCE: REUTERS →
+</a>
+
+</div>
+
+</div>
+
+</dialog>
+
+
+<!-- =====================================================
+     TAY KEITH
+===================================================== -->
+
+<dialog id="taykeith">
+
+<div class="article">
+
+<button
+class="close"
+onclick="closeArticle('taykeith')">
+×
+</button>
+
+<div class="category">
+TAY KEITH • MUSIC
+</div>
+
+<h2>
+Tay Keith's
+Cause of Death
+Revealed
+</h2>
+
+<p class="article-intro">
+The Nashville medical examiner
+has released findings
+in the death of producer Tay Keith.
+</p>
+
+<div class="article-body">
+
+<p>
+Tay Keith,
+born Brytavious Lakeith Chambers,
+died at age 29.
+</p>
+
+<p>
+The medical examiner determined
+that his death resulted
+from the toxic effects
+of ketamine and mitragynine
+and related kratom compounds.
+</p>
+
+<p>
+The death was ruled accidental.
+</p>
+
+<p>
+Keith was one of the most prominent
+producers to emerge from Memphis,
+working with artists including
+Drake and Travis Scott.
+</p>
+
+<a
+class="source-link"
+href="https://people.com/tay-keith-cause-of-death-revealed-accidental-kratom-ketamine-overdose-12006331"
+target="_blank"
+rel="noopener noreferrer">
+SOURCE: PEOPLE →
+</a>
+
+</div>
+
+</div>
+
+</dialog>
+
+
+<!-- =====================================================
+     MALLY MALL
+===================================================== -->
+
+<dialog id="mallymall">
+
+<div class="article">
+
+<button
+class="close"
+onclick="closeArticle('mallymall')">
+×
+</button>
+
+<div class="category">
+MALLY MALL • FEDERAL COURT
+</div>
+
+<h2>
+Mally Mall
+Sentenced to
+17 Months
+</h2>
+
+<p class="article-intro">
+A federal judge has revoked
+music producer Mally Mall's
+supervised release.
+</p>
+
+<div class="article-body">
+
+<p>
+Jamal Rashid,
+better known as Mally Mall,
+was sentenced to 17 months
+in federal prison.
+</p>
+
+<p>
+The Justice Department said
+Rashid admitted violating
+multiple conditions
+of his supervised release.
+</p>
+
+<p>
+The violations included
+drug use,
+providing false information
+to his probation officer,
+unauthorized contact
+and association violations.
+</p>
+
+<a
+class="source-link"
+href="https://www.justice.gov/usao-nv/pr/court-revokes-supervised-release-and-sentences-music-producer-mally-mall-prison"
+target="_blank"
+rel="noopener noreferrer">
+SOURCE: U.S. DEPARTMENT OF JUSTICE →
+</a>
+
+</div>
+
+</div>
+
+</dialog>
+
+
+<!-- =====================================================
+     2026 EMMYS
+===================================================== -->
+
+<dialog id="emmys2026">
+
+<div class="article">
+
+<button
+class="close"
+onclick="closeArticle('emmys2026')">
+×
+</button>
+
+<div class="category">
+EMMYS • TELEVISION
+</div>
+
+<h2>
+Widow's Bay
+Breaks Emmy Record
+</h2>
+
+<p class="article-intro">
+The 2026 Emmy Awards produced
+a record-setting night
+for Widow's Bay.
+</p>
+
+<div class="article-body">
+
+<p>
+Widow's Bay finished
+the Emmy season with 14 wins,
+including best comedy series.
+</p>
+
+<p>
+Matthew Rhys won
+best actor in a comedy series,
+while the show's creative team
+also collected major writing
+and directing awards.
+</p>
+
+<p>
+The Pitt won best drama series
+and Noah Wyle won
+best actor in a drama.
+</p>
+
+<p>
+Jean Smart won another
+lead comedy actress Emmy
+for Hacks.
+</p>
+
+<a
+class="source-link"
+href="https://apnews.com/article/b70e33e5cd1ebc43cb968715a8ffe12b"
+target="_blank"
+rel="noopener noreferrer">
+SOURCE: ASSOCIATED PRESS →
+</a>
+
+</div>
+
+</div>
+
+</dialog>
+
+
+<!-- =====================================================
+     DUNCAN SHEIK
+===================================================== -->
+
+<dialog id="duncansheik">
+
+<div class="article">
+
+<button
+class="close"
+onclick="closeArticle('duncansheik')">
+×
+</button>
+
+<div class="category">
+DUNCAN SHEIK • MUSIC • THEATER
+</div>
+
+<h2>
+Duncan Sheik
+Dies at 56
+</h2>
+
+<p class="article-intro">
+The Grammy- and Tony-winning
+singer-songwriter and theater composer
+has died at age 56.
+</p>
+
+<div class="article-body">
+
+<p>
+Duncan Sheik first became widely known
+for his 1990s hit
+Barely Breathing.
+</p>
+
+<p>
+He later became
+an acclaimed theater composer,
+most notably for Spring Awakening.
+</p>
+
+<p>
+The Broadway production
+won eight Tony Awards,
+and Sheik's work earned
+both Tony and Grammy recognition.
+</p>
+
+<a
+class="source-link"
+href="https://apnews.com/article/75ddd243f32ba8c7646d37c14f1c536d"
+target="_blank"
+rel="noopener noreferrer">
+SOURCE: ASSOCIATED PRESS →
+</a>
+
+</div>
+
+</div>
+
+</dialog>
+
+
+<!-- =====================================================
+     SWEET MAGNOLIAS
+===================================================== -->
+
+<dialog id="sweetmagnolias">
+
+<div class="article">
+
+<button
+class="close"
+onclick="closeArticle('sweetmagnolias')">
+×
+</button>
+
+<div class="category">
+NETFLIX • SWEET MAGNOLIAS
+</div>
+
+<h2>
+Sweet Magnolias
+Ends After
+Five Seasons
+</h2>
+
+<p class="article-intro">
+Netflix's long-running drama
+has officially reached
+the end of its run.
+</p>
+
+<div class="article-body">
+
+<p>
+Sweet Magnolias has concluded
+after five seasons.
+</p>
+
+<p>
+Season five,
+which debuted in June,
+will serve as the show's
+final season.
+</p>
+
+<p>
+Showrunner Sheryl J. Anderson
+will remain in business with Netflix
+through another television project.
+</p>
+
+<a
+class="source-link"
+href="https://www.thewrap.com/creative-content/tv-shows/sweet-magnolias-canceled-ladies-of-the-house-greenlit-netflix/"
+target="_blank"
+rel="noopener noreferrer">
+SOURCE: THEWRAP →
+</a>
+
+</div>
+
+</div>
+
+</dialog>
+
+
+<!-- =====================================================
+     MARVEL'S WOLVERINE
+===================================================== -->
+
+<dialog id="wolverine">
+
+<div class="article">
+
+<button
+class="close"
+onclick="closeArticle('wolverine')">
+×
+</button>
+
+<div class="category">
+PS5 • MARVEL'S WOLVERINE
+</div>
+
+<h2>
+Marvel's Wolverine
+Launches on PS5
+</h2>
+
+<p class="article-intro">
+Insomniac Games'
+long-awaited Wolverine title
+is officially available.
+</p>
+
+<div class="article-body">
+
+<p>
+Marvel's Wolverine launched
+for PlayStation 5
+on September 15, 2026.
+</p>
+
+<p>
+The game follows Logan
+through a standalone
+Insomniac Games story
+developed with Marvel Games.
+</p>
+
+<p>
+The title emphasizes
+close-range claw combat,
+Logan's healing abilities,
+cinematic action
+and an international storyline.
+</p>
+
+<div class="verdict">
+
+<strong>
+CLAIM:
+WOLVERINE WAS DELAYED AGAIN
+</strong>
+
+<br><br>
+
+<strong>
+VERDICT: FALSE
+</strong>
+
+<br><br>
+
+The game launched
+September 15, 2026.
+
+</div>
+
+<a
+class="source-link"
+href="https://blog.playstation.com/2026/09/14/marvels-wolverine-developers-discuss-capturing-the-essence-of-logan-out-september-15/"
+target="_blank"
+rel="noopener noreferrer">
+SOURCE: PLAYSTATION →
+</a>
+
+</div>
+
+</div>
+
+</dialog>
+
+
+<!-- =====================================================
+     FINAL FANTASY VII REVELATION
+===================================================== -->
+
+<dialog id="ff7">
+
+<div class="article">
+
+<button
+class="close"
+onclick="closeArticle('ff7')">
+×
+</button>
+
+<div class="category">
+FINAL FANTASY VII REVELATION
+</div>
+
+<h2>
+Final Fantasy VII Revelation
+Shows New Gameplay
+</h2>
+
+<p class="article-intro">
+The final chapter
+of Square Enix's remake trilogy
+is beginning to take shape.
+</p>
+
+<div class="article-body">
+
+<p>
+New hands-on gameplay
+from Final Fantasy VII Revelation
+featured the Whirlwind Maze.
+</p>
+
+<p>
+Vincent and Cid
+are playable party members,
+each receiving distinct
+combat mechanics.
+</p>
+
+<p>
+The demonstration also showed
+the new FITS system
+and a battle against
+Jenova Deathmourner.
+</p>
+
+<p>
+Final Fantasy VII Revelation
+is scheduled for release
+on April 8, 2027
+for PlayStation 5.
+</p>
+
+<a
+class="source-link"
+href="https://blog.playstation.com/2026/09/17/final-fantasy-vii-revelation-hands-on-report-into-the-whirlwind-maze-where-sephiroth-awaits/"
+target="_blank"
+rel="noopener noreferrer">
+SOURCE: PLAYSTATION →
+</a>
+
+</div>
+
+</div>
+
+</dialog>
+
+
+<!-- =====================================================
+     CONTROL RESONANT
+===================================================== -->
+
+<dialog id="control">
+
+<div class="article">
+
+<button
+class="close"
+onclick="closeArticle('control')">
+×
+</button>
+
+<div class="category">
+CONTROL RESONANT • REMEDY
+</div>
+
+<h2>
+Control Resonant
+Launches September 24
+</h2>
+
+<p class="article-intro">
+Remedy Entertainment
+is taking the Control universe
+outside the Oldest House
+and into Manhattan.
+</p>
+
+<div class="article-body">
+
+<p>
+Control Resonant launches
+September 24, 2026.
+</p>
+
+<p>
+This time,
+Dylan Faden is
+the primary playable character.
+</p>
+
+<p>
+The sequel expands
+the paranormal world
+into a warped version
+of New York City.
+</p>
+
+<p>
+Remedy says the main campaign
+will take approximately
+25 to 35 hours,
+with additional content
+available for completionists.
+</p>
+
+<a
+class="source-link"
+href="https://blog.playstation.com/2026/09/18/control-resonant-how-remedy-is-going-bigger-and-weirder-with-its-paranatural-horror-sequel-on-september-24/"
+target="_blank"
+rel="noopener noreferrer">
+SOURCE: PLAYSTATION →
+</a>
+
+</div>
+
+</div>
+
+</dialog>
+
+
+<!-- =====================================================
+     MEASLES FACT CHECK
+===================================================== -->
+
+<dialog id="measles">
+
+<div class="article">
+
+<button
+class="close"
+onclick="closeArticle('measles')">
+×
+</button>
+
+<div class="category">
+FACT CHECK • MEASLES
+</div>
+
+<h2>
+Is the U.S.
+Doing Better Than
+Every Other Country?
+</h2>
+
+<p class="article-intro">
+International data does not support
+the broad claim that the United States
+has handled measles better
+than every other country.
+</p>
+
+<div class="article-body">
+
+<p>
+Health Secretary Robert F. Kennedy Jr.
+has repeatedly said
+the United States is doing better
+than any other country
+at controlling measles outbreaks.
+</p>
+
+<p>
+FactCheck.org examined
+international measles data
+and found that many countries
+had lower per-capita case rates
+than the United States.
+</p>
+
+<p>
+Direct comparisons between countries
+can be complicated by differences
+in surveillance and reporting,
+but the available data
+does not support a global
+number-one claim for the United States.
+</p>
+
+<div class="verdict">
+
+<strong>
+THE BLIND TRUTH STATUS:
+FAULTY COMPARISON
+</strong>
+
+<br><br>
+
+The available international data
+does not support the claim
+that the United States
+has outperformed every country.
+
+</div>
+
+<a
+class="source-link"
+href="https://www.factcheck.org/2026/09/rfk-jr-s-faulty-claim-that-u-s-measles-response-is-better-than-any-other-country/"
+target="_blank"
+rel="noopener noreferrer">
+SOURCE: FACTCHECK.ORG →
+</a>
 
 </div>
 
@@ -3109,14 +4323,22 @@ VERDICT: NOT SUPPORTED
 </div>
 
 </div>
+
 </div>
+
 </dialog>
+
 
 <script>
 
+/* =====================================================
+   ARTICLE WINDOWS
+===================================================== */
+
 function openArticle(id){
 
-const article=document.getElementById(id);
+const article =
+document.getElementById(id);
 
 if(article){
 article.showModal();
@@ -3124,9 +4346,11 @@ article.showModal();
 
 }
 
+
 function closeArticle(id){
 
-const article=document.getElementById(id);
+const article =
+document.getElementById(id);
 
 if(article){
 article.close();
@@ -3134,11 +4358,16 @@ article.close();
 
 }
 
-document.querySelectorAll("dialog").forEach(function(dialog){
 
-dialog.addEventListener("click",function(event){
+document
+.querySelectorAll("dialog")
+.forEach(function(dialog){
 
-if(event.target===dialog){
+dialog.addEventListener(
+"click",
+function(event){
+
+if(event.target === dialog){
 dialog.close();
 }
 
@@ -3146,6 +4375,72 @@ dialog.close();
 
 });
 
+
+/* =====================================================
+   14-DAY STORY ROTATION SYSTEM
+
+   RULE:
+   Normal routine stories automatically disappear
+   after 14 days.
+
+   TO KEEP AN ONGOING STORY:
+   data-ongoing="true"
+
+   WHEN AN ONGOING STORY GETS A REAL UPDATE:
+   Change data-story-date to the date
+   of the newest meaningful update.
+
+   CASE FILES DO NOT USE data-story-date,
+   so they never auto-expire.
+===================================================== */
+
+const STORY_MAX_AGE_DAYS = 14;
+
+const currentDate =
+new Date();
+
+document
+.querySelectorAll("[data-story-date]")
+.forEach(function(story){
+
+const storyDateValue =
+story.dataset.storyDate;
+
+const ongoing =
+story.dataset.ongoing === "true";
+
+if(!storyDateValue){
+return;
+}
+
+if(ongoing){
+return;
+}
+
+const storyDate =
+new Date(
+storyDateValue + "T23:59:59"
+);
+
+const ageInMilliseconds =
+currentDate - storyDate;
+
+const ageInDays =
+ageInMilliseconds /
+(1000 * 60 * 60 * 24);
+
+if(ageInDays > STORY_MAX_AGE_DAYS){
+
+story.remove();
+
+}
+
+});
+
+
+/* =====================================================
+   VISITOR COUNTER
+===================================================== */
 
 const visitorCount =
 document.getElementById("visitor-count");
@@ -3161,7 +4456,9 @@ cache:"no-store"
 .then(function(response){
 
 if(!response.ok){
-throw new Error("Counter service unavailable");
+throw new Error(
+"Counter service unavailable"
+);
 }
 
 return response.json();
@@ -3170,14 +4467,18 @@ return response.json();
 
 .then(function(data){
 
-if(data && typeof data.value==="number"){
+if(
+data &&
+typeof data.value === "number"
+){
 
 visitorCount.textContent =
 data.value.toLocaleString();
 
 }else{
 
-visitorCount.textContent = "UNAVAILABLE";
+visitorCount.textContent =
+"UNAVAILABLE";
 
 }
 
@@ -3185,13 +4486,18 @@ visitorCount.textContent = "UNAVAILABLE";
 
 .catch(function(error){
 
-console.log("Visitor counter error:",error);
+console.log(
+"Visitor counter error:",
+error
+);
 
-visitorCount.textContent = "UNAVAILABLE";
+visitorCount.textContent =
+"UNAVAILABLE";
 
 });
 
 </script>
 
 </body>
+
 </html>
