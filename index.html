@@ -1,25 +1,22 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-
 <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#050505">
+<meta name="google-site-verification" content="_RCvea5xnx3tGhqx8Z1qYD7VLB3qBeYT7mWuwthCMOE">
+<meta name="tbt-build" content="20260923-1450">
+<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+<meta http-equiv="Pragma" content="no-cache">
+<meta http-equiv="Expires" content="0">
 
-<meta name="viewport"
-content="width=device-width, initial-scale=1.0">
-
-<meta name="theme-color"
-content="#050505">
-
-<meta name="google-site-verification"
-content="_RCvea5xnx3tGhqx8Z1qYD7VLB3qBeYT7mWuwthCMOE">
-
-<title>
-The Blind Truth | News, Sports, Entertainment, Gaming & Investigations
-</title>
+<title>The Blind Truth | Xbox Shake-Up: Activision Takes Over Halo</title>
 
 <meta name="description"
-content="The Blind Truth covers breaking news, sports, entertainment, gaming, hip-hop, court cases, rumors, fact checks and evidence-first investigations. Question everything. Follow the evidence.">
+content="The Blind Truth covers breaking news, sports, entertainment, gaming, hip-hop, fact checks and evidence-first investigations.">
+
+<meta name="author"
+content="Marion Goldring">
 
 <meta name="robots"
 content="index, follow, max-image-preview:large">
@@ -27,14 +24,19 @@ content="index, follow, max-image-preview:large">
 <link rel="canonical"
 href="https://theblindtruth202-ui.github.io/the-blind-truth/">
 
+<link rel="preload"
+as="image"
+href="xbox-halo-activision-main-story.png?v=20260923-1450">
+
+
 <meta property="og:type"
 content="website">
 
 <meta property="og:title"
-content="The Blind Truth | News, Sports, Entertainment, Gaming & Investigations">
+content="Xbox Shake-Up: Activision Takes Over Halo as Microsoft Cuts 268 More Jobs">
 
 <meta property="og:description"
-content="Breaking news, sports, entertainment, gaming and evidence-first investigations. Question everything. Follow the evidence.">
+content="Microsoft is restructuring Xbox, shifting development of the next major Halo title under Activision and eliminating 268 additional roles.">
 
 <meta property="og:url"
 content="https://theblindtruth202-ui.github.io/the-blind-truth/">
@@ -43,19 +45,45 @@ content="https://theblindtruth202-ui.github.io/the-blind-truth/">
 content="The Blind Truth">
 
 <meta property="og:image"
-content="https://theblindtruth202-ui.github.io/the-blind-truth/blind-truth-logo.png">
+content="https://theblindtruth202-ui.github.io/the-blind-truth/xbox-halo-activision-main-story.png?v=20260923-1450">
+
+<meta property="og:image:width"
+content="1672">
+
+<meta property="og:image:height"
+content="941">
+
 
 <meta name="twitter:card"
 content="summary_large_image">
 
 <meta name="twitter:title"
-content="The Blind Truth">
+content="Xbox Shake-Up: Activision Takes Over Halo">
 
 <meta name="twitter:description"
-content="Question everything. Follow the evidence.">
+content="Microsoft restructures Xbox as the next major Halo title moves under Activision.">
 
 <meta name="twitter:image"
-content="https://theblindtruth202-ui.github.io/the-blind-truth/blind-truth-logo.png">
+content="https://theblindtruth202-ui.github.io/the-blind-truth/xbox-halo-activision-main-story.png?v=20260923-1450">
+
+
+<script type="application/ld+json">
+{
+"@context":"https://schema.org",
+"@type":"WebSite",
+"name":"The Blind Truth",
+"url":"https://theblindtruth202-ui.github.io/the-blind-truth/",
+"publisher":{
+"@type":"Organization",
+"name":"The Blind Truth",
+"url":"https://theblindtruth202-ui.github.io/the-blind-truth/",
+"logo":{
+"@type":"ImageObject",
+"url":"https://theblindtruth202-ui.github.io/the-blind-truth/blind-truth-logo.png"
+}
+}
+}
+</script>
 
 
 <style>
@@ -63,14 +91,11 @@ content="https://theblindtruth202-ui.github.io/the-blind-truth/blind-truth-logo.
 :root{
 --black:#050505;
 --panel:#111;
---panel2:#171717;
 --white:#f5f5f5;
 --gray:#b8b8b8;
 --green:#63ff36;
 --red:#ff3434;
 --yellow:#ffd93d;
---blue:#39d7ff;
---purple:#a86bff;
 --pink:#ff5bbd;
 --border:#303030;
 }
@@ -88,13 +113,6 @@ margin:0;
 background:
 radial-gradient(circle at 10% 0%,rgba(99,255,54,.10),transparent 28%),
 radial-gradient(circle at 90% 8%,rgba(255,52,52,.08),transparent 24%),
-repeating-linear-gradient(
-0deg,
-rgba(255,255,255,.012) 0px,
-rgba(255,255,255,.012) 1px,
-transparent 1px,
-transparent 5px
-),
 #050505;
 color:var(--white);
 font-family:Arial,Helvetica,sans-serif;
@@ -116,9 +134,7 @@ margin:auto;
 }
 
 
-/* =====================================================
-   NEWSROOM BAR
-===================================================== */
+/* NEWSROOM BAR */
 
 .newsbar{
 background:#000;
@@ -162,14 +178,14 @@ align-items:center;
 gap:7px;
 color:#ddd;
 font-weight:900;
-white-space:nowrap;
 padding:4px 10px;
 border:1px solid rgba(99,255,54,.25);
 border-radius:999px;
 background:rgba(99,255,54,.05);
 }
 
-.counter-eye{
+.counter-eye,
+#visitor-count{
 color:var(--green);
 }
 
@@ -179,15 +195,8 @@ font-size:10px;
 letter-spacing:1px;
 }
 
-#visitor-count{
-color:var(--green);
-font-family:"Arial Black",Impact,sans-serif;
-}
 
-
-/* =====================================================
-   HEADER
-===================================================== */
+/* HEADER */
 
 header{
 position:sticky;
@@ -222,23 +231,18 @@ justify-content:center;
 color:var(--green);
 font-weight:900;
 background:#080808;
-transform:rotate(-4deg);
-box-shadow:0 0 18px rgba(99,255,54,.18);
 }
 
 .logo-text strong{
 display:block;
 font-family:"Arial Black",Impact,sans-serif;
 font-size:20px;
-letter-spacing:1px;
-line-height:1;
 }
 
 .logo-text small{
 display:block;
 color:#999;
 font-size:10px;
-margin-top:5px;
 letter-spacing:2px;
 }
 
@@ -274,9 +278,7 @@ color:var(--pink);
 }
 
 
-/* =====================================================
-   HERO
-===================================================== */
+/* HERO */
 
 .hero{
 padding:40px 0 25px;
@@ -289,15 +291,9 @@ gap:20px;
 }
 
 .main-story{
-min-height:650px;
 border:1px solid rgba(99,255,54,.35);
 border-radius:22px;
-padding:clamp(28px,5vw,55px);
-display:flex;
-flex-direction:column;
-justify-content:flex-end;
-position:relative;
-overflow:hidden;
+padding:clamp(24px,4vw,45px);
 background:
 linear-gradient(
 135deg,
@@ -308,41 +304,28 @@ rgba(255,52,52,.09)
 box-shadow:0 20px 60px rgba(0,0,0,.42);
 }
 
-.hero-brand-art{
-width:100%;
-display:flex;
-justify-content:center;
-align-items:center;
-margin:auto auto 20px;
-position:relative;
-z-index:3;
-}
-
-.hero-graffiti-logo{
+.hero-main-image{
 display:block;
-width:min(100%,650px);
-max-height:245px;
-height:auto;
-object-fit:contain;
-filter:drop-shadow(0 0 12px rgba(99,255,54,.38));
+width:100%;
+aspect-ratio:1672/941;
+object-fit:cover;
+border-radius:16px;
+border:1px solid rgba(99,255,54,.35);
+margin-bottom:24px;
 }
 
 .main-label{
 display:inline-block;
-width:max-content;
 padding:7px 13px;
 border-radius:7px;
 background:var(--red);
-color:#fff;
 font-weight:900;
 font-size:12px;
 letter-spacing:1px;
-margin-bottom:15px;
 }
 
 .category{
 display:inline-block;
-width:max-content;
 max-width:100%;
 padding:5px 8px;
 border-radius:5px;
@@ -352,7 +335,7 @@ color:var(--green);
 font-size:12px;
 font-weight:900;
 text-transform:uppercase;
-letter-spacing:1.2px;
+letter-spacing:1px;
 }
 
 .story-date{
@@ -366,17 +349,17 @@ margin-top:8px;
 
 .main-story h1{
 font-family:"Arial Black",Impact,sans-serif;
-font-size:clamp(38px,6vw,70px);
+font-size:clamp(36px,5.4vw,64px);
 line-height:.98;
 letter-spacing:-3px;
 text-transform:uppercase;
 margin:10px 0 18px;
 }
 
-.main-story p{
-color:#c1c1c1;
-font-size:18px;
-max-width:760px;
+.main-story p,
+.feature-card p,
+.story-card p{
+color:var(--gray);
 }
 
 .side-column{
@@ -384,37 +367,36 @@ display:grid;
 gap:20px;
 }
 
-.feature-card{
-background:linear-gradient(145deg,#161616,#0d0d0d);
+.feature-card,
+.story-card{
+background:
+linear-gradient(
+145deg,
+#161616,
+#0d0d0d
+);
 border:1px solid var(--border);
 border-radius:22px;
 padding:28px;
-position:relative;
-overflow:hidden;
 }
 
-.feature-card h2{
-margin:7px 0 12px;
-line-height:1.08;
+.feature-card h2,
+.story-card h3{
 font-family:"Arial Black",Impact,sans-serif;
-font-size:27px;
 text-transform:uppercase;
-}
-
-.feature-card p{
-color:var(--gray);
+line-height:1.08;
 }
 
 .breaking-feature{
-border:1px solid rgba(255,52,52,.6);
-box-shadow:0 0 25px rgba(255,52,52,.08);
+border-color:rgba(255,52,52,.6);
 }
 
 .read-button{
+display:inline-block;
 background:none;
 border:none;
 padding:0;
-color:white;
+color:#fff;
 font-family:"Arial Black",Impact,sans-serif;
 font-weight:900;
 cursor:pointer;
@@ -427,9 +409,7 @@ color:var(--green);
 }
 
 
-/* =====================================================
-   NEWS SECTIONS
-===================================================== */
+/* NEWS */
 
 .news-section{
 padding:38px 0;
@@ -456,7 +436,6 @@ text-transform:uppercase;
 .section-description{
 color:#999;
 font-size:14px;
-text-align:right;
 }
 
 .story-grid{
@@ -467,14 +446,8 @@ gap:18px;
 
 .story-card{
 min-height:270px;
-padding:24px;
-border:1px solid #353535;
-border-radius:20px;
-background:linear-gradient(145deg,#151515,#0c0c0c);
 display:flex;
 flex-direction:column;
-box-shadow:0 12px 34px rgba(0,0,0,.32);
-transition:.2s;
 }
 
 .story-card:nth-child(3n+1){
@@ -489,21 +462,9 @@ border-top:3px solid var(--red);
 border-top:3px solid var(--yellow);
 }
 
-.story-card:hover{
-transform:translateY(-4px);
-}
-
 .story-card h3{
-margin:9px 0 12px;
-line-height:1.12;
-font-family:"Arial Black",Impact,sans-serif;
 font-size:22px;
-text-transform:uppercase;
-}
-
-.story-card p{
-color:var(--gray);
-margin:0 0 20px;
+margin:9px 0 12px;
 }
 
 .story-card .read-button{
@@ -511,45 +472,31 @@ margin-top:auto;
 }
 
 
-/* =====================================================
-   JOIN THE CLUB
-===================================================== */
+/* CLUB */
 
 .join-club-section{
-width:100%;
 margin:55px auto;
-scroll-margin-top:100px;
 }
 
 .join-club-box{
-position:relative;
-overflow:hidden;
 text-align:center;
-padding:60px 28px;
+padding:55px 25px;
 border:2px solid var(--green);
 border-radius:25px;
 background:
-radial-gradient(circle at top,rgba(99,255,54,.18),transparent 46%),
-linear-gradient(145deg,#111,#050505);
-box-shadow:
-0 0 22px rgba(99,255,54,.28),
-inset 0 0 45px rgba(99,255,54,.05);
-}
-
-.join-club-box::before{
-content:"TBT";
-position:absolute;
-font-family:"Arial Black",Impact,sans-serif;
-font-size:240px;
-color:rgba(99,255,54,.025);
-left:50%;
-top:50%;
-transform:translate(-50%,-50%) rotate(-7deg);
-pointer-events:none;
+radial-gradient(
+circle at top,
+rgba(99,255,54,.18),
+transparent 46%
+),
+linear-gradient(
+145deg,
+#111,
+#050505
+);
 }
 
 .join-kicker{
-position:relative;
 color:var(--red);
 font-weight:900;
 letter-spacing:3px;
@@ -557,35 +504,26 @@ font-size:12px;
 }
 
 .join-club-box h2{
-position:relative;
-margin:5px 0 10px;
+margin:5px 0;
 font-family:"Arial Black",Impact,sans-serif;
 font-size:clamp(55px,10vw,105px);
 line-height:.95;
-letter-spacing:-4px;
 color:var(--green);
-text-shadow:0 0 25px rgba(99,255,54,.38);
 }
 
 .join-club-tagline{
-position:relative;
 font-family:"Arial Black",Impact,sans-serif;
 font-size:clamp(19px,3vw,28px);
-text-transform:uppercase;
 }
 
 .join-club-copy{
-position:relative;
 max-width:720px;
 margin:15px auto 28px;
 color:#bbb;
-font-size:17px;
 }
 
 .club-actions{
-position:relative;
 display:flex;
-align-items:center;
 justify-content:center;
 gap:15px;
 flex-wrap:wrap;
@@ -594,7 +532,6 @@ flex-wrap:wrap;
 .join-club-button,
 .shop-button{
 display:inline-flex;
-align-items:center;
 justify-content:center;
 min-width:220px;
 padding:16px 28px;
@@ -602,56 +539,32 @@ border-radius:10px;
 font-family:"Arial Black",Impact,sans-serif;
 font-weight:900;
 text-transform:uppercase;
-transition:.2s;
 }
 
 .join-club-button{
 background:var(--green);
 color:#050505;
-border:2px solid var(--green);
-box-shadow:0 0 25px rgba(99,255,54,.35);
-}
-
-.join-club-button:hover{
-background:#050505;
-color:var(--green);
 }
 
 .shop-button{
-background:#050505;
-color:var(--green);
 border:2px solid var(--green);
-}
-
-.shop-button:hover{
-background:var(--green);
-color:#050505;
-}
-
-.social-row{
-position:relative;
-margin-top:22px;
+color:var(--green);
 }
 
 .tiktok-button{
 display:inline-block;
+margin-top:22px;
 padding:10px 18px;
 border:1px solid rgba(255,91,189,.55);
 border-radius:999px;
-color:#fff;
-background:rgba(255,91,189,.08);
 font-weight:900;
-font-size:13px;
-text-transform:uppercase;
 }
 
 
-/* =====================================================
-   INVESTIGATIONS
-===================================================== */
+/* INVESTIGATIONS */
 
 .investigation{
-padding:55px;
+padding:45px;
 border:2px solid rgba(99,255,54,.38);
 border-radius:24px;
 background:
@@ -662,15 +575,12 @@ rgba(99,255,54,.10),
 rgba(255,52,52,.07)
 );
 margin-bottom:25px;
-position:relative;
-overflow:hidden;
 }
 
 .investigation h2{
 font-family:"Arial Black",Impact,sans-serif;
-font-size:clamp(38px,6vw,65px);
+font-size:clamp(34px,5vw,60px);
 line-height:1;
-letter-spacing:-3px;
 text-transform:uppercase;
 margin:10px 0;
 }
@@ -683,12 +593,6 @@ border-radius:999px;
 padding:7px 12px;
 font-size:12px;
 font-weight:bold;
-margin:10px 0 15px;
-}
-
-.investigation p{
-color:#c1c1c1;
-font-size:18px;
 }
 
 .verdict-tag{
@@ -699,23 +603,24 @@ color:var(--yellow);
 border-radius:6px;
 font-size:12px;
 font-weight:900;
-text-transform:uppercase;
 }
 
 
-/* =====================================================
-   ARTICLES
-===================================================== */
+/* ARTICLE WINDOWS */
 
 dialog{
 width:min(900px,calc(100% - 20px));
 max-height:92vh;
 padding:0;
-background:linear-gradient(145deg,#111,#080808);
-color:white;
+background:
+linear-gradient(
+145deg,
+#111,
+#080808
+);
+color:#fff;
 border:1px solid rgba(99,255,54,.35);
 border-radius:22px;
-box-shadow:0 30px 120px rgba(0,0,0,.85);
 }
 
 dialog::backdrop{
@@ -735,7 +640,7 @@ height:44px;
 border-radius:50%;
 border:1px solid #444;
 background:#181818;
-color:white;
+color:#fff;
 font-size:24px;
 cursor:pointer;
 }
@@ -744,9 +649,7 @@ cursor:pointer;
 font-family:"Arial Black",Impact,sans-serif;
 font-size:clamp(35px,6vw,58px);
 line-height:1;
-letter-spacing:-2px;
 text-transform:uppercase;
-margin:10px 0 15px;
 }
 
 .article-intro{
@@ -757,13 +660,12 @@ padding-bottom:20px;
 }
 
 .article-body{
-font-family:Georgia,"Times New Roman",serif;
+font-family:
+Georgia,
+"Times New Roman",
+serif;
 font-size:18px;
 line-height:1.85;
-}
-
-.article-body p{
-margin-bottom:22px;
 }
 
 .article-body h3{
@@ -775,12 +677,7 @@ text-transform:uppercase;
 
 .verdict{
 border-left:5px solid var(--green);
-background:
-linear-gradient(
-90deg,
-rgba(99,255,54,.09),
-rgba(255,52,52,.035)
-);
+background:rgba(99,255,54,.07);
 padding:20px;
 margin:25px 0;
 }
@@ -798,7 +695,6 @@ font-family:Arial,Helvetica,sans-serif;
 display:block;
 color:var(--green);
 font-size:20px;
-margin-bottom:6px;
 }
 
 .source-link{
@@ -810,14 +706,8 @@ font-weight:900;
 font-size:13px;
 }
 
-.source-link:hover{
-color:white;
-}
 
-
-/* =====================================================
-   FOOTER
-===================================================== */
+/* FOOTER */
 
 footer{
 border-top:1px solid var(--border);
@@ -827,7 +717,7 @@ color:#999;
 }
 
 footer strong{
-color:white;
+color:#fff;
 }
 
 .footer-links{
@@ -843,9 +733,7 @@ font-weight:900;
 }
 
 
-/* =====================================================
-   MOBILE
-===================================================== */
+/* MOBILE */
 
 @media(max-width:900px){
 
@@ -873,22 +761,11 @@ width:calc(100% - 20px);
 padding:7px 0;
 align-items:flex-start;
 flex-direction:column;
-gap:5px;
 }
 
 .newsbar-right{
 width:100%;
 justify-content:space-between;
-gap:8px;
-}
-
-.logo-circle{
-width:42px;
-height:42px;
-}
-
-.logo-text strong{
-font-size:17px;
 }
 
 .logo-text small{
@@ -904,17 +781,7 @@ padding-top:20px;
 }
 
 .main-story{
-min-height:620px;
-padding:24px;
-}
-
-.hero-brand-art{
-margin:auto auto 15px;
-}
-
-.hero-graffiti-logo{
-width:100%;
-max-height:190px;
+padding:20px;
 }
 
 .side-column,
@@ -927,20 +794,8 @@ align-items:flex-start;
 flex-direction:column;
 }
 
-.section-description{
-text-align:left;
-}
-
 .investigation{
-padding:30px;
-}
-
-.join-club-box{
-padding:45px 18px;
-}
-
-.join-club-box h2{
-letter-spacing:-2px;
+padding:28px;
 }
 
 .club-actions{
@@ -963,9 +818,7 @@ max-width:330px;
 <body>
 
 
-<!-- =====================================================
-     NEWSROOM BAR
-===================================================== -->
+<!-- NEWSROOM BAR -->
 
 <div class="newsbar">
 
@@ -981,12 +834,14 @@ THE BLIND TRUTH NEWSROOM
 
 </div>
 
+
 <div class="newsbar-right">
 
-<div class="visitor-counter"
-aria-label="Website visit counter">
+<div class="visitor-counter">
 
-<span class="counter-eye">●</span>
+<span class="counter-eye">
+●
+</span>
 
 <span class="counter-label">
 SITE VISITS
@@ -999,7 +854,7 @@ LOADING...
 </div>
 
 <div>
-UPDATED SEPTEMBER 19, 2026
+UPDATED SEPTEMBER 23, 2026 • BUILD 2:50 PM ET
 </div>
 
 </div>
@@ -1009,15 +864,15 @@ UPDATED SEPTEMBER 19, 2026
 </div>
 
 
-<!-- =====================================================
-     HEADER
-===================================================== -->
+<!-- HEADER -->
 
 <header>
 
 <div class="container header-inner">
 
-<a href="#top" class="logo">
+<a
+href="#top"
+class="logo">
 
 <div class="logo-circle">
 TBT
@@ -1037,17 +892,44 @@ QUESTION EVERYTHING • FOLLOW THE EVIDENCE
 
 </a>
 
+
 <nav>
 
-<a href="#breaking">Breaking</a>
-<a href="#trending">Trending</a>
-<a href="#sports">Sports</a>
-<a href="#hiphop">Hip-Hop</a>
-<a href="#entertainment">Entertainment</a>
-<a href="#gaming">Gaming</a>
-<a href="#gossip">Claims</a>
-<a href="#factchecks">Fact Checks</a>
-<a href="#investigations">Case Files</a>
+<a href="#breaking">
+Breaking
+</a>
+
+<a href="#trending">
+Trending
+</a>
+
+<a href="#sports">
+Sports
+</a>
+
+<a href="#hiphop">
+Hip-Hop
+</a>
+
+<a href="#entertainment">
+Entertainment
+</a>
+
+<a href="#gaming">
+Gaming
+</a>
+
+<a href="#gossip">
+Claims
+</a>
+
+<a href="#factchecks">
+Fact Checks
+</a>
+
+<a href="#investigations">
+Case Files
+</a>
 
 <a href="marion-goldring.html">
 Author
@@ -1076,48 +958,97 @@ TikTok
 </header>
 
 
-<main id="top" class="container">
+<main
+id="top"
+class="container">
 
 
-<!-- =====================================================
-     HERO — PERMANENT CASE FILE
-===================================================== -->
+<!-- MAIN STORY -->
 
 <section class="hero">
 
 <div class="hero-grid">
 
-<article class="main-story">
 
-<div class="hero-brand-art">
+<article
+class="main-story"
+data-story-date="2026-09-23">
+
+<a
+href="xbox-halo-activision.html">
 
 <img
-src="tbt-graffiti-logo.png"
-alt="TBT - The Blind Truth"
-class="hero-graffiti-logo">
+class="hero-main-image"
+src="xbox-halo-activision-main-story.png?v=20260923-1450"
+alt="The Blind Truth Xbox Halo Activision main story image"
+fetchpriority="high">
 
-</div>
+</a>
+
 
 <div class="main-label">
-CASE FILE 004
+MAIN STORY
 </div>
 
 <div class="category">
-9/11 • INVESTIGATION • AMERICA
+MICROSOFT • XBOX • ACTIVISION • HALO
+</div>
+
+<div class="story-date">
+SEPTEMBER 23, 2026
 </div>
 
 <h1>
-WHAT DO WE
-REALLY KNOW
-ABOUT 9/11?
+XBOX SHAKE-UP:
+<br>
+ACTIVISION TAKES
+<br>
+OVER HALO
 </h1>
 
 <p>
-Twenty-five years after the September 11 attacks,
-The Blind Truth separates documented intelligence failures,
-the al-Qaeda plot, Saudi-linked questions, the money trail,
-Iraq, structural claims and conspiracy theories from what
-the evidence actually proves.
+Microsoft is carrying out
+another major Xbox restructuring.
+
+Development of the next flagship
+Halo title is moving to
+a purpose-built Activision team
+as Microsoft eliminates
+268 additional roles
+and reorganizes
+several gaming studios.
+</p>
+
+<a
+class="read-button"
+href="xbox-halo-activision.html">
+READ FULL STORY →
+</a>
+
+</article>
+
+
+<div class="side-column">
+
+
+<article class="feature-card">
+
+<div class="category">
+CASE FILE 004 • 9/11
+</div>
+
+<h2>
+What Do We Really
+Know About 9/11?
+</h2>
+
+<p>
+Twenty-five years later,
+The Blind Truth separates
+documented facts,
+intelligence failures,
+disputed claims
+and unanswered questions.
 </p>
 
 <button
@@ -1129,81 +1060,40 @@ OPEN CASE FILE 004 →
 </article>
 
 
-<div class="side-column">
-
-
-<!--
-ONGOING STORIES DO NOT AUTO-EXPIRE.
-WHEN THERE IS A REAL UPDATE,
-CHANGE data-story-date TO THE NEW UPDATE DATE.
--->
-
 <article
 class="feature-card breaking-feature"
-data-story-date="2026-09-18"
-data-ongoing="true">
+data-story-date="2026-09-23">
 
 <div class="category">
-D.C. • KENNEDY CENTER • DEVELOPING
+MLB • ASTROS • AL WEST
 </div>
 
 <div class="story-date">
-UPDATED SEPTEMBER 18
+SEPTEMBER 23
 </div>
 
 <h2>
-Kennedy Center
-Future Faces
-New Court Fight
+Alvarez Hits No. 41
+as Astros Tie
+for AL West Lead
 </h2>
 
 <p>
-President Trump declined to say
-whether he would try to demolish
-the Kennedy Center as litigation continues
-over the building's name and future.
+Yordan Alvarez homered
+and drove in three
+as Houston shut out Seattle 7–0
+and pulled even with Texas
+atop the AL West.
 </p>
 
 <button
 class="read-button"
-onclick="openArticle('kennedy')">
-READ UPDATE →
-</button>
-
-</article>
-
-
-<article
-class="feature-card"
-data-story-date="2026-09-15">
-
-<div class="category">
-NBA • TORONTO • KAWHI LEONARD
-</div>
-
-<div class="story-date">
-SEPTEMBER 15
-</div>
-
-<h2>
-Kawhi Leonard
-Returns to Toronto
-</h2>
-
-<p>
-The Raptors reacquired Leonard
-from the Clippers following
-the NBA's investigation into
-salary-cap circumvention.
-</p>
-
-<button
-class="read-button"
-onclick="openArticle('kawhi')">
+onclick="openArticle('astros')">
 READ STORY →
 </button>
 
 </article>
+
 
 </div>
 
@@ -1212,11 +1102,11 @@ READ STORY →
 </section>
 
 
-<!-- =====================================================
-     BREAKING NEWS
-===================================================== -->
+<!-- BREAKING NEWS -->
 
-<section class="news-section" id="breaking">
+<section
+class="news-section"
+id="breaking">
 
 <div class="section-header">
 
@@ -1244,32 +1134,68 @@ Major developing stories
 
 <article
 class="story-card"
-data-story-date="2026-09-18"
-data-ongoing="true">
+data-story-date="2026-09-23">
 
 <div class="category">
-WASHINGTON D.C. • DEVELOPING
+ARCTIC • U.S. • DENMARK • GREENLAND
 </div>
 
 <div class="story-date">
-UPDATED SEPTEMBER 18
+09/23
 </div>
 
 <h3>
-Kennedy Center
-Fight Intensifies
+U.S., Denmark and Greenland
+Sign Arctic Security Agreement
 </h3>
 
 <p>
-The center's future remains
-the subject of litigation,
-renovation plans and a dispute
-over proposed changes to the landmark.
+The agreement expands
+U.S. military access
+in Greenland
+while Greenland remains
+within the Kingdom of Denmark.
 </p>
 
 <button
 class="read-button"
-onclick="openArticle('kennedy')">
+onclick="openArticle('greenland')">
+READ STORY →
+</button>
+
+</article>
+
+
+<article
+class="story-card"
+data-story-date="2026-09-23"
+data-ongoing="true">
+
+<div class="category">
+U.S. • IRAN • DIPLOMACY
+</div>
+
+<div class="story-date">
+09/23
+</div>
+
+<h3>
+U.S.-Iran Diplomacy
+Remains Active
+</h3>
+
+<p>
+Officials on both sides
+have publicly discussed diplomacy
+while major disputes
+remain unresolved
+and no final settlement
+has been announced.
+</p>
+
+<button
+class="read-button"
+onclick="openArticle('irantalks')">
 READ UPDATE →
 </button>
 
@@ -1282,62 +1208,30 @@ data-story-date="2026-09-18"
 data-ongoing="true">
 
 <div class="category">
-WHITE HOUSE • MEDIA ACCESS
+WASHINGTON D.C. • DEVELOPING
 </div>
 
 <div class="story-date">
-SEPTEMBER 18
+09/18
 </div>
 
 <h3>
-Trump Announces Ban
-on Three News Outlets
+Kennedy Center
+Fight Remains Active
 </h3>
 
 <p>
-President Trump announced that
-CNN, MS NOW and Politico
-would be barred from White House access,
-setting up another press-access dispute.
+Litigation
+and renovation plans
+continue to shape
+the future
+of the Kennedy Center.
 </p>
 
 <button
 class="read-button"
-onclick="openArticle('mediaban')">
-READ STORY →
-</button>
-
-</article>
-
-
-<article
-class="story-card"
-data-story-date="2026-09-16">
-
-<div class="category">
-ECONOMY • FEDERAL RESERVE
-</div>
-
-<div class="story-date">
-SEPTEMBER 16
-</div>
-
-<h3>
-Federal Reserve
-Raises Interest Rates
-</h3>
-
-<p>
-The Fed raised its benchmark rate
-by a quarter percentage point,
-its first increase in three years,
-as inflation remained a concern.
-</p>
-
-<button
-class="read-button"
-onclick="openArticle('fed')">
-READ STORY →
+onclick="openArticle('kennedy')">
+READ UPDATE →
 </button>
 
 </article>
@@ -1348,11 +1242,11 @@ READ STORY →
 </section>
 
 
-<!-- =====================================================
-     TRENDING
-===================================================== -->
+<!-- TRENDING -->
 
-<section class="news-section" id="trending">
+<section
+class="news-section"
+id="trending">
 
 <div class="section-header">
 
@@ -1387,7 +1281,7 @@ CONVERSE • AD BACKLASH
 </div>
 
 <div class="story-date">
-SEPTEMBER 18
+09/18
 </div>
 
 <h3>
@@ -1396,10 +1290,12 @@ After Viral Backlash
 </h3>
 
 <p>
-Social-media users said
-a sneaker advertisement appeared
-to evoke KKK and lynching imagery.
-Converse apologized and removed it.
+Converse removed an ad
+after viewers said
+its composition evoked
+racist and lynching imagery.
+
+Intent remains unproven.
 </p>
 
 <button
@@ -1413,31 +1309,33 @@ READ STORY →
 
 <article
 class="story-card"
-data-story-date="2026-09-14">
+data-story-date="2026-09-23">
 
 <div class="category">
-MACKLEMORE • TOUR CONTROVERSY
+MTV VMAS • MUSIC • AWARDS
 </div>
 
 <div class="story-date">
-SEPTEMBER 14
+09/23
 </div>
 
 <h3>
-Macklemore Removed
-From Ed Sheeran Tour
+2026 VMAs
+Set Up Historic Night
 </h3>
 
 <p>
-The rapper was removed
-from the Loop Tour following controversy
-surrounding remarks and performances
-during his opening set.
+Taylor Swift is set
+to receive the inaugural
+Artist Director Honors
+while Madonna leads
+the nominations
+and is scheduled to perform.
 </p>
 
 <button
 class="read-button"
-onclick="openArticle('macklemore')">
+onclick="openArticle('vmas2026')">
 READ STORY →
 </button>
 
@@ -1453,7 +1351,7 @@ NBA • BLOCKBUSTER TRADE
 </div>
 
 <div class="story-date">
-SEPTEMBER 15
+09/15
 </div>
 
 <h3>
@@ -1462,10 +1360,11 @@ Shakes the NBA
 </h3>
 
 <p>
-Leonard is heading back
-to the franchise he led
-to the 2019 NBA championship
-after seven seasons away.
+Kawhi Leonard
+is heading back to Toronto
+after the Raptors
+completed a trade
+with the Clippers.
 </p>
 
 <button
@@ -1482,11 +1381,11 @@ READ STORY →
 </section>
 
 
-<!-- =====================================================
-     SPORTS
-===================================================== -->
+<!-- SPORTS -->
 
-<section class="news-section" id="sports">
+<section
+class="news-section"
+id="sports">
 
 <div class="section-header">
 
@@ -1521,7 +1420,7 @@ NBA • RAPTORS • CLIPPERS
 </div>
 
 <div class="story-date">
-SEPTEMBER 15
+09/15
 </div>
 
 <h3>
@@ -1530,10 +1429,10 @@ Kawhi Leonard
 </h3>
 
 <p>
-Toronto sent Brandon Ingram,
-Gradey Dick and draft assets
-to Los Angeles in a blockbuster deal
-bringing Leonard back to Canada.
+Toronto reacquired Leonard
+from the Clippers
+in a major trade
+following an NBA investigation.
 </p>
 
 <button
@@ -1554,7 +1453,7 @@ MLB • LOS ANGELES
 </div>
 
 <div class="story-date">
-SEPTEMBER 18
+09/18
 </div>
 
 <h3>
@@ -1563,9 +1462,10 @@ Another NL West Title
 </h3>
 
 <p>
-Los Angeles defeated Cincinnati 8–2
-to secure its 13th NL West championship
-in the last 14 seasons.
+Los Angeles defeated
+Cincinnati 8–2
+to secure
+another division title.
 </p>
 
 <button
@@ -1579,31 +1479,31 @@ READ STORY →
 
 <article
 class="story-card"
-data-story-date="2026-09-16">
+data-story-date="2026-09-23">
 
 <div class="category">
-MLB • MILWAUKEE
+MLB • HOUSTON • AL WEST
 </div>
 
 <div class="story-date">
-SEPTEMBER 16
+09/23
 </div>
 
 <h3>
-Brewers Win
-Fourth Straight Division
+Astros Tie Rangers
+Atop AL West
 </h3>
 
 <p>
-Milwaukee clinched
-its fourth consecutive
-National League Central title
-as the postseason picture tightened.
+Yordan Alvarez hit
+his 41st home run
+and drove in three
+as Houston blanked Seattle 7–0.
 </p>
 
 <button
 class="read-button"
-onclick="openArticle('brewers')">
+onclick="openArticle('astros')">
 READ STORY →
 </button>
 
@@ -1615,11 +1515,11 @@ READ STORY →
 </section>
 
 
-<!-- =====================================================
-     HIP-HOP / MUSIC
-===================================================== -->
+<!-- HIP-HOP -->
 
-<section class="news-section" id="hiphop">
+<section
+class="news-section"
+id="hiphop">
 
 <div class="section-header">
 
@@ -1654,7 +1554,7 @@ TAY KEITH • CAUSE OF DEATH
 </div>
 
 <div class="story-date">
-SEPTEMBER 19
+09/19
 </div>
 
 <h3>
@@ -1663,10 +1563,10 @@ Cause of Death Revealed
 </h3>
 
 <p>
-The Nashville medical examiner
-ruled the producer's death accidental,
-citing the toxic effects
-of ketamine and mitragynine.
+The Nashville
+medical examiner
+ruled the producer's
+death accidental.
 </p>
 
 <button
@@ -1687,7 +1587,7 @@ MALLY MALL • FEDERAL COURT
 </div>
 
 <div class="story-date">
-SEPTEMBER 18
+09/18
 </div>
 
 <h3>
@@ -1696,10 +1596,10 @@ to 17 Months
 </h3>
 
 <p>
-A federal judge revoked
-the producer's supervised release
-after he admitted multiple violations
-of court-ordered conditions.
+A federal judge
+revoked the producer's
+supervised release
+after admitted violations.
 </p>
 
 <button
@@ -1720,18 +1620,22 @@ MACKLEMORE • ED SHEERAN
 </div>
 
 <div class="story-date">
-SEPTEMBER 14
+09/14
 </div>
 
 <h3>
-Tour Controversy
-Grows After Macklemore Exit
+Tour Controversy Grows
+After Macklemore Exit
 </h3>
 
 <p>
-The removal sparked additional fallout
-as other opening acts withdrew
-and some fans sought refunds.
+Reporting linked
+Macklemore's removal
+to promoters
+and venue pressure.
+
+Ed Sheeran said
+it was not his decision.
 </p>
 
 <button
@@ -1748,9 +1652,7 @@ READ STORY →
 </section>
 
 
-<!-- =====================================================
-     JOIN THE CLUB
-===================================================== -->
+<!-- JOIN THE CLUB -->
 
 <section
 class="join-club-section"
@@ -1767,58 +1669,59 @@ JOIN THE CLUB
 </h2>
 
 <div class="join-club-tagline">
-QUESTION EVERYTHING. FOLLOW THE EVIDENCE.
+QUESTION EVERYTHING.
+FOLLOW THE EVIDENCE.
 </div>
 
 <p class="join-club-copy">
-Don't miss the next story.
-Get The Blind Truth breaking news,
-investigations, trending stories,
-hip-hop, entertainment, sports,
-gaming, rumors, fact checks
-and evidence breakdowns.
+Get The Blind Truth
+breaking news,
+investigations,
+trending stories,
+hip-hop,
+entertainment,
+sports,
+gaming,
+claims
+and fact checks.
 </p>
+
 
 <div class="club-actions">
 
 <a
+class="join-club-button"
 href="https://buttondown.com/TheBlindTruth"
 target="_blank"
-rel="noopener noreferrer"
-class="join-club-button">
+rel="noopener noreferrer">
 JOIN THE BLIND TRUTH →
 </a>
 
 <a
+class="shop-button"
 href="https://the-blind-truth-shop.fourthwall.com"
 target="_blank"
-rel="noopener noreferrer"
-class="shop-button">
+rel="noopener noreferrer">
 SHOP TBT MERCH →
 </a>
 
 </div>
 
-<div class="social-row">
 
 <a
+class="tiktok-button"
 href="https://www.tiktok.com/@theblindtruthofficial"
 target="_blank"
-rel="noopener noreferrer"
-class="tiktok-button">
+rel="noopener noreferrer">
 FOLLOW @THEBLINDTRUTHOFFICIAL ON TIKTOK →
 </a>
-
-</div>
 
 </div>
 
 </section>
 
 
-<!-- =====================================================
-     ENTERTAINMENT
-===================================================== -->
+<!-- ENTERTAINMENT -->
 
 <section
 class="news-section"
@@ -1850,31 +1753,32 @@ Television • Film • Celebrity
 
 <article
 class="story-card"
-data-story-date="2026-09-14">
+data-story-date="2026-09-23">
 
 <div class="category">
-EMMYS • TELEVISION
+2026 VMAS • MTV
 </div>
 
 <div class="story-date">
-SEPTEMBER 14
+09/23
 </div>
 
 <h3>
-Widow's Bay
-Breaks Emmy Record
+Taylor Swift Nears
+VMA Record
+as Madonna Returns
 </h3>
 
 <p>
-The Apple TV horror-comedy
-finished with 14 Emmy wins,
-including best comedy series,
-while The Pitt won best drama.
+Swift is set
+to receive a new VMA honor
+while Madonna leads nominations
+and prepares to perform.
 </p>
 
 <button
 class="read-button"
-onclick="openArticle('emmys2026')">
+onclick="openArticle('vmas2026')">
 READ STORY →
 </button>
 
@@ -1890,7 +1794,7 @@ DUNCAN SHEIK • MUSIC • BROADWAY
 </div>
 
 <div class="story-date">
-SEPTEMBER 19
+09/19
 </div>
 
 <h3>
@@ -1899,10 +1803,12 @@ Dies at 56
 </h3>
 
 <p>
-The Grammy- and Tony-winning
-singer-songwriter and composer
+The Grammy-
+and Tony-winning
+singer-songwriter
+and composer
 behind Spring Awakening
-has died at age 56.
+died at 56.
 </p>
 
 <button
@@ -1923,7 +1829,7 @@ NETFLIX • TELEVISION
 </div>
 
 <div class="story-date">
-SEPTEMBER 18
+09/18
 </div>
 
 <h3>
@@ -1932,10 +1838,9 @@ Ends After Five Seasons
 </h3>
 
 <p>
-Netflix's drama has concluded
-after five seasons,
-with the fifth season now serving
-as the series finale.
+Netflix's drama
+has concluded
+after five seasons.
 </p>
 
 <button
@@ -1952,9 +1857,7 @@ READ STORY →
 </section>
 
 
-<!-- =====================================================
-     GAMING
-===================================================== -->
+<!-- GAMING -->
 
 <section
 class="news-section"
@@ -1975,7 +1878,7 @@ Gaming
 </div>
 
 <div class="section-description">
-Releases • PlayStation • Industry
+Xbox • PlayStation • Industry
 </div>
 
 </div>
@@ -1993,7 +1896,7 @@ PS5 • MARVEL • INSOMNIAC
 </div>
 
 <div class="story-date">
-SEPTEMBER 15
+09/15
 </div>
 
 <h3>
@@ -2002,10 +1905,9 @@ Launches on PS5
 </h3>
 
 <p>
-Insomniac's long-awaited
-Wolverine game is officially available,
-bringing Logan's new standalone adventure
-to PlayStation 5.
+Insomniac's Wolverine game
+launched
+on PlayStation 5.
 </p>
 
 <button
@@ -2019,33 +1921,37 @@ READ STORY →
 
 <article
 class="story-card"
-data-story-date="2026-09-17">
+data-story-date="2026-09-23">
 
 <div class="category">
-FINAL FANTASY VII • PS5
+XBOX • HALO • ACTIVISION
 </div>
 
 <div class="story-date">
-SEPTEMBER 17
+09/23
 </div>
 
 <h3>
-Final Fantasy VII Revelation
-Shows New Gameplay
+Activision Takes
+Over Halo
 </h3>
 
 <p>
-New hands-on coverage reveals
-playable Vincent and Cid,
-the FITS system
-and the Jenova Deathmourner battle.
+Development
+of the next flagship
+Halo title
+is moving to
+a purpose-built
+Activision team
+during Microsoft's
+Xbox restructuring.
 </p>
 
-<button
+<a
 class="read-button"
-onclick="openArticle('ff7')">
+href="xbox-halo-activision.html">
 READ STORY →
-</button>
+</a>
 
 </article>
 
@@ -2059,7 +1965,7 @@ CONTROL RESONANT • REMEDY
 </div>
 
 <div class="story-date">
-SEPTEMBER 18
+09/18
 </div>
 
 <h3>
@@ -2088,9 +1994,7 @@ READ PREVIEW →
 </section>
 
 
-<!-- =====================================================
-     CLAIMS & RUMORS
-===================================================== -->
+<!-- CLAIMS -->
 
 <section
 class="news-section"
@@ -2129,7 +2033,7 @@ INTENT UNPROVEN
 </div>
 
 <div class="story-date">
-SEPTEMBER 18
+09/18
 </div>
 
 <h3>
@@ -2138,10 +2042,12 @@ Intentionally Racist?
 </h3>
 
 <p>
-The visual resemblance triggered
-widespread criticism,
-but evidence establishing
-deliberate racist intent has not emerged.
+The resemblance
+and backlash
+are documented.
+
+Deliberate racist intent
+has not been established.
 </p>
 
 <button
@@ -2163,7 +2069,7 @@ CLAIM CHECK • KENNEDY CENTER
 </div>
 
 <div class="story-date">
-UPDATED SEPTEMBER 18
+09/18
 </div>
 
 <h3>
@@ -2172,10 +2078,9 @@ Already Been Ordered?
 </h3>
 
 <p>
-Not according to the current public record.
-Trump declined to say whether
-he would pursue demolition,
-and advance court notice is required.
+The cited public reporting
+did not establish
+a confirmed demolition order.
 </p>
 
 <button
@@ -2196,7 +2101,7 @@ VERIFIED • NBA
 </div>
 
 <div class="story-date">
-SEPTEMBER 15
+09/15
 </div>
 
 <h3>
@@ -2205,10 +2110,9 @@ Is No Longer a Rumor
 </h3>
 
 <p>
-The Raptors and Clippers
-completed the trade,
-officially returning Leonard
-to Toronto.
+The Raptors
+and Clippers
+completed the trade.
 </p>
 
 <button
@@ -2225,9 +2129,7 @@ READ STORY →
 </section>
 
 
-<!-- =====================================================
-     FACT CHECKS
-===================================================== -->
+<!-- FACT CHECKS -->
 
 <section
 class="news-section"
@@ -2262,24 +2164,24 @@ class="story-card"
 data-story-date="2026-09-18">
 
 <div class="category">
-FAULTY COMPARISON
+CLAIM CHECK
 </div>
 
 <div class="story-date">
-SEPTEMBER 18
+09/18
 </div>
 
 <h3>
-Is the U.S. Doing
-Better Than Every Country
+Is the U.S. Doing Better
+Than Every Country
 on Measles?
 </h3>
 
 <p>
-FactCheck.org found that
-the international data does not support
-the claim that the United States
-has performed better than every country.
+International data
+reviewed by FactCheck.org
+does not support
+the broad claim.
 </p>
 
 <button
@@ -2300,7 +2202,7 @@ FALSE
 </div>
 
 <div class="story-date">
-SEPTEMBER 15
+09/15
 </div>
 
 <h3>
@@ -2309,8 +2211,6 @@ Was Delayed Again"
 </h3>
 
 <p>
-False.
-
 The game launched
 on PlayStation 5
 on September 15, 2026.
@@ -2334,7 +2234,7 @@ MISLEADING
 </div>
 
 <div class="story-date">
-SEPTEMBER 14
+09/14
 </div>
 
 <h3>
@@ -2343,10 +2243,13 @@ Fired Macklemore"
 </h3>
 
 <p>
-Reporting indicates that
-promoters removed Macklemore
-after venue pressure.
-Sheeran said the decision was not his.
+Reporting indicates
+promoters
+and venue pressure
+drove the removal.
+
+Sheeran said
+it was not his decision.
 </p>
 
 <button
@@ -2363,10 +2266,7 @@ READ STORY →
 </section>
 
 
-<!-- =====================================================
-     INVESTIGATIONS / CASE FILES
-     THESE DO NOT AUTO-EXPIRE
-===================================================== -->
+<!-- CASE FILES -->
 
 <section
 class="news-section"
@@ -2393,8 +2293,6 @@ Evidence • Myth • Verdict
 </div>
 
 
-<!-- CASE FILE 004 -->
-
 <div class="investigation">
 
 <div class="category">
@@ -2419,19 +2317,18 @@ PARTIALLY RESOLVED
 </div>
 
 <p>
-The evidence overwhelmingly identifies
-al-Qaeda as the organization behind the attacks.
+The record identifies
+al-Qaeda
+as the organization
+behind the attacks
+and documents
+major intelligence failures.
 
-The government also had serious warning signs,
-missed opportunities and intelligence failures.
-
-What the public evidence does not establish
-is that the U.S. government planned
-or deliberately permitted the attacks.
-
-Questions surrounding Saudi-linked assistance
-to future hijackers remain worthy
-of continued investigation.
+The public evidence
+does not establish
+that U.S. officials
+planned or deliberately
+permitted the attacks.
 </p>
 
 <button
@@ -2442,8 +2339,6 @@ READ FULL INVESTIGATION →
 
 </div>
 
-
-<!-- CASE FILE 003 -->
 
 <div class="investigation">
 
@@ -2467,9 +2362,18 @@ FINAL VERDICT: UNPROVEN
 </div>
 
 <p>
-Keffe D's conviction does not establish
-that Sean Combs ordered, funded
-or participated in Tupac Shakur's murder.
+Duane "Keffe D" Davis
+was convicted
+of orchestrating
+Tupac Shakur's killing.
+
+That conviction
+does not establish
+that Sean Combs
+ordered,
+funded
+or participated
+in the murder.
 </p>
 
 <button
@@ -2480,8 +2384,6 @@ READ FULL INVESTIGATION →
 
 </div>
 
-
-<!-- CASE FILE 002 -->
 
 <div class="investigation">
 
@@ -2499,11 +2401,15 @@ A REAL CHOKE JOB?
 </div>
 
 <p>
-Jordan's 6–0 Finals record is real.
+Jordan's 6–0
+NBA Finals record is real.
 
-So are the playoff losses,
-bad games and context often erased
-by the mythology of invincibility.
+So are playoff losses
+and context
+that disappear
+when the story
+is reduced
+to Finals record alone.
 </p>
 
 <button
@@ -2515,12 +2421,10 @@ READ CASE FILE →
 </div>
 
 
-<!-- CASE FILE 001 -->
-
 <div class="investigation">
 
 <div class="category">
-CASE FILE 001
+CASE FILE 001 • OPEN CRIMINAL CASE
 </div>
 
 <h2>
@@ -2533,14 +2437,17 @@ CHARLIE KIRK?
 </div>
 
 <p>
-Tyler James Robinson has been ordered
-to stand trial after a judge found
-sufficient probable cause.
+Tyler Robinson
+has pleaded not guilty
+and was ordered
+to stand trial
+after a judge found
+sufficient evidence
+for the case to proceed.
 
-That ruling is not a finding of guilt.
-
-The case remains open until
-the evidence is tested at trial.
+That ruling
+is not
+a finding of guilt.
 </p>
 
 <button
@@ -2551,14 +2458,14 @@ READ CASE FILE →
 
 </div>
 
+
 </section>
+
 
 </main>
 
 
-<!-- =====================================================
-     FOOTER
-===================================================== -->
+<!-- FOOTER -->
 
 <footer>
 
@@ -2603,21 +2510,16 @@ TIKTOK
 </div>
 
 <small>
-Routine news stories automatically rotate
-off The Blind Truth after 14 days.
+Routine stories rotate
+after 14 days.
 
-Developing stories may remain active
-when credible new information continues
-to update the story.
+Developing stories
+may remain active
+when credible new information
+continues to update them.
 
-Permanent investigations and Case Files
+Permanent Case Files
 do not expire.
-
-Developing stories, allegations and rumors
-are labeled by evidence status.
-
-The Blind Truth updates classifications
-when credible new evidence changes the record.
 </small>
 
 </div>
@@ -2625,9 +2527,153 @@ when credible new evidence changes the record.
 </footer>
 
 
-<!-- =====================================================
-     KENNEDY CENTER
-===================================================== -->
+<!-- GREENLAND -->
+
+<dialog id="greenland">
+
+<div class="article">
+
+<button
+class="close"
+onclick="closeArticle('greenland')">
+×
+</button>
+
+<div class="category">
+U.S. • DENMARK • GREENLAND • ARCTIC
+</div>
+
+<h2>
+New Arctic Security
+Agreement Signed
+</h2>
+
+<p class="article-intro">
+The United States,
+Denmark and Greenland
+signed an agreement
+covering Arctic
+and North Atlantic security.
+</p>
+
+<div class="article-body">
+
+<p>
+The September 22 agreement
+expands U.S. military access
+in Greenland
+and adds defense areas
+while leaving Greenland
+within the Kingdom of Denmark.
+</p>
+
+<div class="evidence">
+
+<strong>
+DOCUMENTED
+</strong>
+
+The agreement
+was formally signed
+by the United States,
+Denmark
+and Greenland.
+
+</div>
+
+<a
+class="source-link"
+href="https://apnews.com/article/084ac2a82952c2dff403c48bd3564113"
+target="_blank"
+rel="noopener noreferrer">
+SOURCE: ASSOCIATED PRESS →
+</a>
+
+</div>
+
+</div>
+
+</dialog>
+
+
+<!-- IRAN -->
+
+<dialog id="irantalks">
+
+<div class="article">
+
+<button
+class="close"
+onclick="closeArticle('irantalks')">
+×
+</button>
+
+<div class="category">
+U.S. • IRAN • DIPLOMACY
+</div>
+
+<h2>
+U.S.-Iran Diplomacy
+Remains Active
+</h2>
+
+<p class="article-intro">
+Officials have publicly discussed
+renewed diplomacy,
+but no final settlement
+has been announced.
+</p>
+
+<div class="article-body">
+
+<p>
+President Donald Trump
+said he believed
+a settlement
+could eventually be reached.
+</p>
+
+<p>
+An Iranian official
+separately told Reuters
+that Tehran's U.N. delegation
+had authority
+to pursue diplomacy
+through mediators.
+</p>
+
+<div class="verdict">
+
+<strong>
+STATUS: DEVELOPING
+</strong>
+
+<br><br>
+
+Diplomatic contacts
+are documented.
+
+Major disputes
+remain unresolved.
+
+</div>
+
+<a
+class="source-link"
+href="https://www.reuters.com/world/middle-east/iran-ready-reopen-strait-hormuz-if-us-eases-military-pressure-lifts-blockade-2026-09-22/"
+target="_blank"
+rel="noopener noreferrer">
+SOURCE: REUTERS →
+</a>
+
+</div>
+
+</div>
+
+</dialog>
+
+
+<!-- KENNEDY CENTER -->
 
 <dialog id="kennedy">
 
@@ -2650,32 +2696,31 @@ New Court Fight
 </h2>
 
 <p class="article-intro">
-The future of one of Washington's
-most recognizable cultural institutions
-remains caught between renovation plans,
-litigation and political conflict.
+The center remains caught
+between renovation plans,
+litigation
+and political conflict.
 </p>
 
 <div class="article-body">
 
 <p>
-On September 18, President Donald Trump
-declined to say whether he would attempt
-to demolish the Kennedy Center.
+On September 18,
+President Donald Trump
+declined to say
+whether he would attempt
+to demolish
+the Kennedy Center.
 </p>
 
 <p>
-The dispute follows earlier efforts
-to change the building's name
-and a Kennedy Center board vote
-to close the facility for renovations.
-</p>
-
-<p>
-A federal judge has ruled that
-Congress controls the center's official name
-and has required advance notice
-before demolition action can occur.
+A federal judge
+required advance notice
+before demolition steps
+and ruled
+that only Congress
+can authorize
+an official name change.
 </p>
 
 <div class="evidence">
@@ -2684,11 +2729,9 @@ before demolition action can occur.
 CURRENT STATUS
 </strong>
 
-No confirmed demolition order
-has been established in the current
-public reporting.
-
-The dispute remains active.
+The cited reporting
+did not establish
+a confirmed demolition order.
 
 </div>
 
@@ -2707,174 +2750,7 @@ SOURCE: REUTERS →
 </dialog>
 
 
-<!-- =====================================================
-     WHITE HOUSE MEDIA ACCESS
-===================================================== -->
-
-<dialog id="mediaban">
-
-<div class="article">
-
-<button
-class="close"
-onclick="closeArticle('mediaban')">
-×
-</button>
-
-<div class="category">
-WHITE HOUSE • MEDIA ACCESS
-</div>
-
-<h2>
-Trump Announces Ban
-on CNN, MS NOW
-and Politico
-</h2>
-
-<p class="article-intro">
-A new dispute over press access
-has emerged after President Trump
-announced restrictions against
-three major news organizations.
-</p>
-
-<div class="article-body">
-
-<p>
-On September 18,
-President Donald Trump announced
-that CNN, MS NOW and Politico
-would be banned from White House access.
-</p>
-
-<p>
-Trump criticized the outlets'
-past coverage while the organizations
-and press-freedom advocates questioned
-the legal basis and implications
-of the announced restrictions.
-</p>
-
-<p>
-At the time of the announcement,
-questions remained about exactly
-how the restrictions would be implemented.
-</p>
-
-<div class="verdict">
-
-<strong>
-THE BLIND TRUTH STATUS:
-DEVELOPING
-</strong>
-
-<br><br>
-
-The announcement is documented.
-
-The implementation,
-scope and legal challenges
-remain developing.
-
-</div>
-
-<a
-class="source-link"
-href="https://www.reuters.com/world/us/trump-bans-media-outlets-cnn-msnow-politico-white-house-2026-09-18/"
-target="_blank"
-rel="noopener noreferrer">
-SOURCE: REUTERS →
-</a>
-
-</div>
-
-</div>
-
-</dialog>
-
-
-<!-- =====================================================
-     FEDERAL RESERVE
-===================================================== -->
-
-<dialog id="fed">
-
-<div class="article">
-
-<button
-class="close"
-onclick="closeArticle('fed')">
-×
-</button>
-
-<div class="category">
-ECONOMY • FEDERAL RESERVE
-</div>
-
-<h2>
-Federal Reserve
-Raises Rates
-</h2>
-
-<p class="article-intro">
-The Federal Reserve has raised
-its benchmark interest rate
-for the first time in three years.
-</p>
-
-<div class="article-body">
-
-<p>
-On September 16,
-the Federal Reserve increased
-its benchmark rate by
-a quarter of a percentage point.
-</p>
-
-<p>
-The move placed the target range
-at 3.75% to 4.00%.
-</p>
-
-<p>
-The decision came as policymakers
-continued confronting inflation
-while assessing economic growth,
-employment and consumer demand.
-</p>
-
-<div class="evidence">
-
-<strong>
-WHY IT MATTERS
-</strong>
-
-Federal Reserve rates influence
-borrowing costs throughout the economy,
-including credit cards,
-auto loans,
-business lending and mortgages.
-
-</div>
-
-<a
-class="source-link"
-href="https://www.reuters.com/commentary/reuters-open-interest/global-markets-view-usa-2026-09-17/"
-target="_blank"
-rel="noopener noreferrer">
-SOURCE: REUTERS →
-</a>
-
-</div>
-
-</div>
-
-</dialog>
-
-
-<!-- =====================================================
-     CONVERSE
-===================================================== -->
+<!-- CONVERSE -->
 
 <dialog id="converse">
 
@@ -2893,38 +2769,25 @@ CONVERSE • VIRAL • ADVERTISING
 <h2>
 Converse Pulls Ad
 After Backlash
-Over Imagery
 </h2>
 
 <p class="article-intro">
-A Converse sneaker advertisement
-was removed after viewers said
-its composition resembled racist
-and lynching imagery.
+Converse removed
+a sneaker advertisement
+after viewers
+criticized its imagery.
 </p>
 
 <div class="article-body">
 
 <p>
-The advertisement promoted
-the Chuck 70 X sneaker
-and showed a white-clad figure
-holding shoes.
-</p>
+Viewers said
+the composition resembled
+racist
+and lynching imagery.
 
-<p>
-Social-media users argued
-that the composition appeared
-to resemble a pointed KKK hood
-alongside imagery associated
-with a hanging or lynching.
-</p>
-
-<p>
-Converse removed the image
-and apologized,
-saying the company understood
-why people found it deeply upsetting.
+Converse apologized
+and removed the ad.
 </p>
 
 <div class="verdict">
@@ -2943,11 +2806,12 @@ STATUS: UNPROVEN
 
 <br><br>
 
-The resemblance and backlash
+The resemblance
+and backlash
 are documented.
 
-Deliberate intent has not been established
-by the available evidence.
+Deliberate intent
+has not been established.
 
 </div>
 
@@ -2966,9 +2830,363 @@ SOURCE: THE WASHINGTON POST →
 </dialog>
 
 
-<!-- =====================================================
-     MACKLEMORE
-===================================================== -->
+<!-- VMAS -->
+
+<dialog id="vmas2026">
+
+<div class="article">
+
+<button
+class="close"
+onclick="closeArticle('vmas2026')">
+×
+</button>
+
+<div class="category">
+MTV VMAS • MUSIC • AWARDS
+</div>
+
+<h2>
+2026 VMAs Prepare
+for Historic Night
+</h2>
+
+<p class="article-intro">
+Taylor Swift
+is set for a new honor
+while Madonna leads nominations
+and returns
+to the VMA stage.
+</p>
+
+<div class="article-body">
+
+<p>
+Swift is set
+to receive
+the inaugural
+Artist Director Honors,
+which AP reports
+would bring her
+career VMA total to 31.
+</p>
+
+<p>
+Madonna leads
+the nominations
+with 11
+and is scheduled
+to perform.
+</p>
+
+<a
+class="source-link"
+href="https://apnews.com/article/711f84857a0d65730696adf0ebdfa9a8"
+target="_blank"
+rel="noopener noreferrer">
+SOURCE: ASSOCIATED PRESS →
+</a>
+
+</div>
+
+</div>
+
+</dialog>
+
+
+<!-- KAWHI -->
+
+<dialog id="kawhi">
+
+<div class="article">
+
+<button
+class="close"
+onclick="closeArticle('kawhi')">
+×
+</button>
+
+<div class="category">
+NBA • RAPTORS • KAWHI LEONARD
+</div>
+
+<h2>
+Kawhi Leonard
+Returns to Toronto
+</h2>
+
+<p class="article-intro">
+The Raptors
+completed a trade
+to bring Leonard
+back to Toronto.
+</p>
+
+<div class="article-body">
+
+<p>
+Toronto sent
+Brandon Ingram,
+Gradey Dick
+and multiple draft assets
+to the Clippers.
+</p>
+
+<p>
+The transaction followed
+an NBA investigation
+involving Leonard
+and the Clippers.
+</p>
+
+<div class="evidence">
+
+<strong>
+VERIFIED
+</strong>
+
+Leonard's return
+is a completed transaction,
+not a trade rumor.
+
+</div>
+
+<a
+class="source-link"
+href="https://www.reuters.com/sports/raptors-acquire-leonard-clippers-following-nba-probe-2026-09-15/"
+target="_blank"
+rel="noopener noreferrer">
+SOURCE: REUTERS →
+</a>
+
+</div>
+
+</div>
+
+</dialog>
+
+
+<!-- DODGERS -->
+
+<dialog id="dodgers">
+
+<div class="article">
+
+<button
+class="close"
+onclick="closeArticle('dodgers')">
+×
+</button>
+
+<div class="category">
+MLB • LOS ANGELES DODGERS
+</div>
+
+<h2>
+Dodgers Claim
+Another NL West Title
+</h2>
+
+<p class="article-intro">
+Los Angeles continues
+one of baseball's
+longest runs
+of divisional success.
+</p>
+
+<div class="article-body">
+
+<p>
+The Dodgers defeated
+Cincinnati 8–2
+and secured
+their 13th NL West title
+in 14 seasons.
+</p>
+
+<a
+class="source-link"
+href="https://www.reuters.com/sports/dodgers-cruise-past-reds-claim-13th-nl-west-title-14-years--fldm-2026-09-18/"
+target="_blank"
+rel="noopener noreferrer">
+SOURCE: REUTERS →
+</a>
+
+</div>
+
+</div>
+
+</dialog>
+
+
+<!-- ASTROS -->
+
+<dialog id="astros">
+
+<div class="article">
+
+<button
+class="close"
+onclick="closeArticle('astros')">
+×
+</button>
+
+<div class="category">
+MLB • ASTROS • AL WEST
+</div>
+
+<h2>
+Alvarez Hits No. 41
+as Astros Pull Even
+Atop AL West
+</h2>
+
+<p class="article-intro">
+Houston's division race
+is going down
+to the final games.
+</p>
+
+<div class="article-body">
+
+<p>
+Yordan Alvarez hit
+his 41st home run
+and drove in three
+as Houston beat Seattle 7–0,
+moving the Astros
+into a tie
+with Texas
+atop the AL West.
+</p>
+
+<a
+class="source-link"
+href="https://abcnews.com/Sports/wireStory/alvarez-hits-41st-homer-drives-3-astros-blank-136674398"
+target="_blank"
+rel="noopener noreferrer">
+SOURCE: ASSOCIATED PRESS →
+</a>
+
+</div>
+
+</div>
+
+</dialog>
+
+
+<!-- TAY KEITH -->
+
+<dialog id="taykeith">
+
+<div class="article">
+
+<button
+class="close"
+onclick="closeArticle('taykeith')">
+×
+</button>
+
+<div class="category">
+TAY KEITH • MUSIC
+</div>
+
+<h2>
+Tay Keith's
+Cause of Death Revealed
+</h2>
+
+<p class="article-intro">
+The Nashville
+medical examiner
+released findings
+in the producer's death.
+</p>
+
+<div class="article-body">
+
+<p>
+The medical examiner
+determined
+that Tay Keith's death
+resulted from toxic effects
+of ketamine
+and mitragynine-related compounds
+and ruled the death accidental.
+</p>
+
+<a
+class="source-link"
+href="https://people.com/tay-keith-cause-of-death-revealed-accidental-kratom-ketamine-overdose-12006331"
+target="_blank"
+rel="noopener noreferrer">
+SOURCE: PEOPLE →
+</a>
+
+</div>
+
+</div>
+
+</dialog>
+
+
+<!-- MALLY MALL -->
+
+<dialog id="mallymall">
+
+<div class="article">
+
+<button
+class="close"
+onclick="closeArticle('mallymall')">
+×
+</button>
+
+<div class="category">
+MALLY MALL • FEDERAL COURT
+</div>
+
+<h2>
+Mally Mall
+Sentenced to
+17 Months
+</h2>
+
+<p class="article-intro">
+A federal judge revoked
+the producer's
+supervised release.
+</p>
+
+<div class="article-body">
+
+<p>
+The Justice Department said
+Jamal Rashid,
+known as Mally Mall,
+admitted multiple
+supervised-release violations
+and was sentenced
+to 17 months
+in federal prison.
+</p>
+
+<a
+class="source-link"
+href="https://www.justice.gov/usao-nv/pr/court-revokes-supervised-release-and-sentences-music-producer-mally-mall-prison"
+target="_blank"
+rel="noopener noreferrer">
+SOURCE: U.S. DEPARTMENT OF JUSTICE →
+</a>
+
+</div>
+
+</div>
+
+</dialog>
+
+
+<!-- MACKLEMORE -->
 
 <dialog id="macklemore">
 
@@ -2992,36 +3210,26 @@ Loop Tour
 
 <p class="article-intro">
 The tour lineup changed
-after controversy surrounding
-Macklemore's pro-Palestinian remarks
+after controversy
+surrounding Macklemore's
+remarks
 and performances.
 </p>
 
 <div class="article-body">
 
 <p>
-Macklemore was removed
-from Ed Sheeran's Loop Tour
-following controversy connected
-to his opening performance
-and political remarks.
+Reporting indicated
+promoter
+and venue pressure
+played a major role.
 </p>
 
 <p>
-Reporting indicated that venue pressure
-played a major role in the decision.
-</p>
-
-<p>
-Ed Sheeran said that removing
-Macklemore was not his personal decision.
-</p>
-
-<p>
-Other opening performers later
-left the tour,
-while some fans sought refunds
-because of the lineup changes.
+Ed Sheeran said
+removing Macklemore
+was not
+his personal decision.
 </p>
 
 <div class="verdict">
@@ -3037,12 +3245,6 @@ FIRED MACKLEMORE
 <strong>
 STATUS: MISLEADING
 </strong>
-
-<br><br>
-
-Available reporting says
-the removal involved promoters
-and venue pressure.
 
 </div>
 
@@ -3061,448 +3263,7 @@ SOURCE: BUSINESS INSIDER →
 </dialog>
 
 
-<!-- =====================================================
-     KAWHI LEONARD
-===================================================== -->
-
-<dialog id="kawhi">
-
-<div class="article">
-
-<button
-class="close"
-onclick="closeArticle('kawhi')">
-×
-</button>
-
-<div class="category">
-NBA • RAPTORS • KAWHI LEONARD
-</div>
-
-<h2>
-Kawhi Leonard
-Returns to Toronto
-</h2>
-
-<p class="article-intro">
-Seven years after delivering
-Toronto's first NBA championship,
-Kawhi Leonard is returning
-to the Raptors.
-</p>
-
-<div class="article-body">
-
-<p>
-The Toronto Raptors completed
-a trade with the Los Angeles Clippers
-to reacquire Kawhi Leonard.
-</p>
-
-<p>
-Toronto sent Brandon Ingram,
-Gradey Dick,
-two future first-round picks,
-a future first-round pick swap
-and two future second-round picks
-to Los Angeles.
-</p>
-
-<p>
-The deal followed an NBA investigation
-into salary-cap circumvention
-involving Leonard and the Clippers.
-</p>
-
-<p>
-League penalties against the Clippers
-included a major team fine,
-lost draft picks
-and a suspension for owner Steve Ballmer.
-</p>
-
-<div class="evidence">
-
-<strong>
-VERIFIED
-</strong>
-
-Kawhi Leonard's return
-to the Toronto Raptors
-is an completed NBA transaction,
-not a trade rumor.
-
-</div>
-
-<a
-class="source-link"
-href="https://www.reuters.com/sports/raptors-acquire-leonard-clippers-following-nba-probe-2026-09-15/"
-target="_blank"
-rel="noopener noreferrer">
-SOURCE: REUTERS →
-</a>
-
-</div>
-
-</div>
-
-</dialog>
-
-
-<!-- =====================================================
-     DODGERS
-===================================================== -->
-
-<dialog id="dodgers">
-
-<div class="article">
-
-<button
-class="close"
-onclick="closeArticle('dodgers')">
-×
-</button>
-
-<div class="category">
-MLB • LOS ANGELES DODGERS
-</div>
-
-<h2>
-Dodgers Claim
-Another NL West Title
-</h2>
-
-<p class="article-intro">
-Los Angeles continues
-one of baseball's longest
-runs of divisional dominance.
-</p>
-
-<div class="article-body">
-
-<p>
-The Dodgers defeated
-the Cincinnati Reds 8–2
-to clinch the National League West.
-</p>
-
-<p>
-The championship is
-the Dodgers' 13th NL West title
-in 14 seasons.
-</p>
-
-<p>
-Kyle Tucker went 4-for-5
-with a home run,
-two doubles
-and three RBIs.
-</p>
-
-<p>
-The Dodgers now move deeper
-into the fight for playoff seeding
-and another postseason run.
-</p>
-
-<a
-class="source-link"
-href="https://www.reuters.com/sports/dodgers-cruise-past-reds-claim-13th-nl-west-title-14-years--fldm-2026-09-18/"
-target="_blank"
-rel="noopener noreferrer">
-SOURCE: REUTERS →
-</a>
-
-</div>
-
-</div>
-
-</dialog>
-
-
-<!-- =====================================================
-     BREWERS
-===================================================== -->
-
-<dialog id="brewers">
-
-<div class="article">
-
-<button
-class="close"
-onclick="closeArticle('brewers')">
-×
-</button>
-
-<div class="category">
-MLB • MILWAUKEE BREWERS
-</div>
-
-<h2>
-Brewers Clinch
-Fourth Straight
-NL Central Title
-</h2>
-
-<p class="article-intro">
-Milwaukee has secured
-another division championship
-as baseball heads toward October.
-</p>
-
-<div class="article-body">
-
-<p>
-The Brewers clinched
-their fourth consecutive
-National League Central championship.
-</p>
-
-<p>
-Jacob Misiorowski threw
-five scoreless innings
-in Milwaukee's 5–1 victory
-over Pittsburgh.
-</p>
-
-<p>
-A Chicago Cubs loss
-to the Atlanta Braves
-completed the clinching scenario.
-</p>
-
-<a
-class="source-link"
-href="https://www.reuters.com/sports/mlb-roundup-jacob-misiorowski-brewers-seal-nl-central-title--flm-2026-09-16/"
-target="_blank"
-rel="noopener noreferrer">
-SOURCE: REUTERS →
-</a>
-
-</div>
-
-</div>
-
-</dialog>
-
-
-<!-- =====================================================
-     TAY KEITH
-===================================================== -->
-
-<dialog id="taykeith">
-
-<div class="article">
-
-<button
-class="close"
-onclick="closeArticle('taykeith')">
-×
-</button>
-
-<div class="category">
-TAY KEITH • MUSIC
-</div>
-
-<h2>
-Tay Keith's
-Cause of Death
-Revealed
-</h2>
-
-<p class="article-intro">
-The Nashville medical examiner
-has released findings
-in the death of producer Tay Keith.
-</p>
-
-<div class="article-body">
-
-<p>
-Tay Keith,
-born Brytavious Lakeith Chambers,
-died at age 29.
-</p>
-
-<p>
-The medical examiner determined
-that his death resulted
-from the toxic effects
-of ketamine and mitragynine
-and related kratom compounds.
-</p>
-
-<p>
-The death was ruled accidental.
-</p>
-
-<p>
-Keith was one of the most prominent
-producers to emerge from Memphis,
-working with artists including
-Drake and Travis Scott.
-</p>
-
-<a
-class="source-link"
-href="https://people.com/tay-keith-cause-of-death-revealed-accidental-kratom-ketamine-overdose-12006331"
-target="_blank"
-rel="noopener noreferrer">
-SOURCE: PEOPLE →
-</a>
-
-</div>
-
-</div>
-
-</dialog>
-
-
-<!-- =====================================================
-     MALLY MALL
-===================================================== -->
-
-<dialog id="mallymall">
-
-<div class="article">
-
-<button
-class="close"
-onclick="closeArticle('mallymall')">
-×
-</button>
-
-<div class="category">
-MALLY MALL • FEDERAL COURT
-</div>
-
-<h2>
-Mally Mall
-Sentenced to
-17 Months
-</h2>
-
-<p class="article-intro">
-A federal judge has revoked
-music producer Mally Mall's
-supervised release.
-</p>
-
-<div class="article-body">
-
-<p>
-Jamal Rashid,
-better known as Mally Mall,
-was sentenced to 17 months
-in federal prison.
-</p>
-
-<p>
-The Justice Department said
-Rashid admitted violating
-multiple conditions
-of his supervised release.
-</p>
-
-<p>
-The violations included
-drug use,
-providing false information
-to his probation officer,
-unauthorized contact
-and association violations.
-</p>
-
-<a
-class="source-link"
-href="https://www.justice.gov/usao-nv/pr/court-revokes-supervised-release-and-sentences-music-producer-mally-mall-prison"
-target="_blank"
-rel="noopener noreferrer">
-SOURCE: U.S. DEPARTMENT OF JUSTICE →
-</a>
-
-</div>
-
-</div>
-
-</dialog>
-
-
-<!-- =====================================================
-     2026 EMMYS
-===================================================== -->
-
-<dialog id="emmys2026">
-
-<div class="article">
-
-<button
-class="close"
-onclick="closeArticle('emmys2026')">
-×
-</button>
-
-<div class="category">
-EMMYS • TELEVISION
-</div>
-
-<h2>
-Widow's Bay
-Breaks Emmy Record
-</h2>
-
-<p class="article-intro">
-The 2026 Emmy Awards produced
-a record-setting night
-for Widow's Bay.
-</p>
-
-<div class="article-body">
-
-<p>
-Widow's Bay finished
-the Emmy season with 14 wins,
-including best comedy series.
-</p>
-
-<p>
-Matthew Rhys won
-best actor in a comedy series,
-while the show's creative team
-also collected major writing
-and directing awards.
-</p>
-
-<p>
-The Pitt won best drama series
-and Noah Wyle won
-best actor in a drama.
-</p>
-
-<p>
-Jean Smart won another
-lead comedy actress Emmy
-for Hacks.
-</p>
-
-<a
-class="source-link"
-href="https://apnews.com/article/b70e33e5cd1ebc43cb968715a8ffe12b"
-target="_blank"
-rel="noopener noreferrer">
-SOURCE: ASSOCIATED PRESS →
-</a>
-
-</div>
-
-</div>
-
-</dialog>
-
-
-<!-- =====================================================
-     DUNCAN SHEIK
-===================================================== -->
+<!-- DUNCAN SHEIK -->
 
 <dialog id="duncansheik">
 
@@ -3524,30 +3285,23 @@ Dies at 56
 </h2>
 
 <p class="article-intro">
-The Grammy- and Tony-winning
-singer-songwriter and theater composer
-has died at age 56.
+The Grammy-
+and Tony-winning
+singer-songwriter
+and composer
+died at age 56.
 </p>
 
 <div class="article-body">
 
 <p>
-Duncan Sheik first became widely known
-for his 1990s hit
-Barely Breathing.
-</p>
-
-<p>
-He later became
-an acclaimed theater composer,
-most notably for Spring Awakening.
-</p>
-
-<p>
-The Broadway production
-won eight Tony Awards,
-and Sheik's work earned
-both Tony and Grammy recognition.
+Sheik was widely known
+for "Barely Breathing"
+and later became
+an acclaimed
+theater composer,
+most notably
+for Spring Awakening.
 </p>
 
 <a
@@ -3565,9 +3319,7 @@ SOURCE: ASSOCIATED PRESS →
 </dialog>
 
 
-<!-- =====================================================
-     SWEET MAGNOLIAS
-===================================================== -->
+<!-- SWEET MAGNOLIAS -->
 
 <dialog id="sweetmagnolias">
 
@@ -3585,34 +3337,23 @@ NETFLIX • SWEET MAGNOLIAS
 
 <h2>
 Sweet Magnolias
-Ends After
-Five Seasons
+Ends After Five Seasons
 </h2>
 
 <p class="article-intro">
 Netflix's long-running drama
-has officially reached
-the end of its run.
+has reached
+the end
+of its run.
 </p>
 
 <div class="article-body">
 
 <p>
-Sweet Magnolias has concluded
-after five seasons.
-</p>
-
-<p>
-Season five,
-which debuted in June,
-will serve as the show's
-final season.
-</p>
-
-<p>
-Showrunner Sheryl J. Anderson
-will remain in business with Netflix
-through another television project.
+Season five
+serves as
+the final season
+of Sweet Magnolias.
 </p>
 
 <a
@@ -3630,9 +3371,7 @@ SOURCE: THEWRAP →
 </dialog>
 
 
-<!-- =====================================================
-     MARVEL'S WOLVERINE
-===================================================== -->
+<!-- WOLVERINE -->
 
 <dialog id="wolverine">
 
@@ -3655,32 +3394,11 @@ Launches on PS5
 
 <p class="article-intro">
 Insomniac Games'
-long-awaited Wolverine title
-is officially available.
-</p>
-
-<div class="article-body">
-
-<p>
-Marvel's Wolverine launched
-for PlayStation 5
+Wolverine title launched
 on September 15, 2026.
 </p>
 
-<p>
-The game follows Logan
-through a standalone
-Insomniac Games story
-developed with Marvel Games.
-</p>
-
-<p>
-The title emphasizes
-close-range claw combat,
-Logan's healing abilities,
-cinematic action
-and an international storyline.
-</p>
+<div class="article-body">
 
 <div class="verdict">
 
@@ -3717,82 +3435,7 @@ SOURCE: PLAYSTATION →
 </dialog>
 
 
-<!-- =====================================================
-     FINAL FANTASY VII REVELATION
-===================================================== -->
-
-<dialog id="ff7">
-
-<div class="article">
-
-<button
-class="close"
-onclick="closeArticle('ff7')">
-×
-</button>
-
-<div class="category">
-FINAL FANTASY VII REVELATION
-</div>
-
-<h2>
-Final Fantasy VII Revelation
-Shows New Gameplay
-</h2>
-
-<p class="article-intro">
-The final chapter
-of Square Enix's remake trilogy
-is beginning to take shape.
-</p>
-
-<div class="article-body">
-
-<p>
-New hands-on gameplay
-from Final Fantasy VII Revelation
-featured the Whirlwind Maze.
-</p>
-
-<p>
-Vincent and Cid
-are playable party members,
-each receiving distinct
-combat mechanics.
-</p>
-
-<p>
-The demonstration also showed
-the new FITS system
-and a battle against
-Jenova Deathmourner.
-</p>
-
-<p>
-Final Fantasy VII Revelation
-is scheduled for release
-on April 8, 2027
-for PlayStation 5.
-</p>
-
-<a
-class="source-link"
-href="https://blog.playstation.com/2026/09/17/final-fantasy-vii-revelation-hands-on-report-into-the-whirlwind-maze-where-sephiroth-awaits/"
-target="_blank"
-rel="noopener noreferrer">
-SOURCE: PLAYSTATION →
-</a>
-
-</div>
-
-</div>
-
-</dialog>
-
-
-<!-- =====================================================
-     CONTROL RESONANT
-===================================================== -->
+<!-- CONTROL -->
 
 <dialog id="control">
 
@@ -3814,38 +3457,21 @@ Launches September 24
 </h2>
 
 <p class="article-intro">
-Remedy Entertainment
-is taking the Control universe
-outside the Oldest House
-and into Manhattan.
+Remedy's sequel
+moves the Control universe
+into a warped Manhattan.
 </p>
 
 <div class="article-body">
 
 <p>
-Control Resonant launches
+Dylan Faden
+is the primary
+playable character.
+
+Remedy says
+the game launches
 September 24, 2026.
-</p>
-
-<p>
-This time,
-Dylan Faden is
-the primary playable character.
-</p>
-
-<p>
-The sequel expands
-the paranormal world
-into a warped version
-of New York City.
-</p>
-
-<p>
-Remedy says the main campaign
-will take approximately
-25 to 35 hours,
-with additional content
-available for completionists.
 </p>
 
 <a
@@ -3863,9 +3489,7 @@ SOURCE: PLAYSTATION →
 </dialog>
 
 
-<!-- =====================================================
-     MEASLES FACT CHECK
-===================================================== -->
+<!-- MEASLES -->
 
 <dialog id="measles">
 
@@ -3888,54 +3512,28 @@ Every Other Country?
 </h2>
 
 <p class="article-intro">
-International data does not support
-the broad claim that the United States
-has handled measles better
-than every other country.
+International data
+reviewed by FactCheck.org
+does not support
+the broad claim.
 </p>
 
 <div class="article-body">
 
 <p>
-Health Secretary Robert F. Kennedy Jr.
-has repeatedly said
-the United States is doing better
-than any other country
-at controlling measles outbreaks.
-</p>
-
-<p>
-FactCheck.org examined
-international measles data
-and found that many countries
-had lower per-capita case rates
+FactCheck.org found
+many countries
+with lower per-capita
+case rates
 than the United States.
 </p>
 
 <p>
-Direct comparisons between countries
-can be complicated by differences
-in surveillance and reporting,
-but the available data
-does not support a global
-number-one claim for the United States.
+Cross-country comparisons
+have limitations
+because surveillance
+and reporting differ.
 </p>
-
-<div class="verdict">
-
-<strong>
-THE BLIND TRUTH STATUS:
-FAULTY COMPARISON
-</strong>
-
-<br><br>
-
-The available international data
-does not support the claim
-that the United States
-has outperformed every country.
-
-</div>
 
 <a
 class="source-link"
@@ -3952,9 +3550,7 @@ SOURCE: FACTCHECK.ORG →
 </dialog>
 
 
-<!-- =====================================================
-     CASE FILE 004 — 9/11
-===================================================== -->
+<!-- CASE FILE 004 -->
 
 <dialog id="nineeleven">
 
@@ -3979,44 +3575,24 @@ or Something More?
 
 <p class="article-intro">
 Twenty-five years later,
-we separate what is proven,
-what is unresolved,
-what was missed
-and what remains unsupported.
+The Blind Truth separates
+documented evidence
+from unsupported claims.
 </p>
 
 <div class="article-body">
-
-<h3>
-THE CENTRAL QUESTION
-</h3>
-
-<p>
-Did the United States government plan
-the September 11 attacks?
-
-Did officials know what was coming
-and deliberately allow it?
-
-Did intelligence agencies possess enough
-information to stop the plot?
-
-Did another government assist the hijackers?
-
-Those are separate questions
-and require separate evidence.
-</p>
-
 
 <h3>
 WHO PLANNED 9/11?
 </h3>
 
 <p>
-The strongest available documentary record
-identifies Osama bin Laden,
+The strongest documentary record
+identifies
+Osama bin Laden,
 Khalid Sheikh Mohammed,
-Mohammed Atef and the al-Qaeda network
+Mohammed Atef
+and al-Qaeda
 as the principal organizers.
 </p>
 
@@ -4026,134 +3602,66 @@ as the principal organizers.
 STRONGLY SUPPORTED
 </strong>
 
-Al-Qaeda planned and carried out
+Al-Qaeda planned
+and carried out
 the September 11 attacks.
 
 </div>
 
 
 <h3>
-THE SYSTEM WAS BLINKING RED
+WARNING SIGNS
 </h3>
 
 <p>
-During the spring and summer of 2001,
-American intelligence agencies received
-repeated reporting warning that al-Qaeda
-was preparing a major operation.
-</p>
+U.S. agencies
+received repeated warnings
+in 2001
+that al-Qaeda
+was preparing
+a major operation.
 
-<p>
-Those warnings did not identify
+The warnings
+did not identify
 the complete operational plan,
-date and targets.
-
-They did establish that al-Qaeda
-posed a serious threat.
+date
+and targets.
 </p>
 
 
 <h3>
-BIN LADEN DETERMINED
-TO STRIKE IN U.S.
+INTELLIGENCE FAILURES
 </h3>
 
 <p>
-On August 6, 2001,
-President George W. Bush received
-a presidential intelligence briefing titled
-"Bin Ladin Determined to Strike in US."
-</p>
-
-<p>
-The document did not state that four aircraft
-would be hijacked on September 11,
-but claims that the administration
-had no warning whatsoever are inaccurate.
+Future hijackers
+Khalid al-Mihdhar
+and Nawaf al-Hazmi
+were known
+to U.S. intelligence
+before 9/11,
+and critical information
+about them
+was not effectively shared.
 </p>
 
 
 <h3>
-MIHDHAR AND HAZMI
+DID THE GOVERNMENT
+LET IT HAPPEN?
 </h3>
 
 <p>
-Future hijackers Khalid al-Mihdhar
-and Nawaf al-Hazmi were known
-to American intelligence before 9/11.
-</p>
-
-<p>
-Information concerning them
-was not effectively shared with FBI personnel
-at critical moments.
-</p>
-
-<div class="evidence">
-
-<strong>
-MAJOR DOCUMENTED FAILURE
-</strong>
-
-The 9/11 Commission concluded
-that locating and detaining Mihdhar and Hazmi
-might have disrupted the plot.
-
-</div>
-
-
-<h3>
-THE PHOENIX MEMO
-</h3>
-
-<p>
-In July 2001 an FBI agent in Phoenix
-raised concerns about individuals
-connected to radical activity
-attending American aviation schools.
-</p>
-
-<p>
-The warning was not developed
-into a nationwide investigation
-before September 11.
-</p>
-
-
-<h3>
-ZACARIAS MOUSSAOUI
-</h3>
-
-<p>
-Zacarias Moussaoui was arrested
-in Minnesota in August 2001
-after flight instructors became suspicious
-of his interest in training involving
-large commercial aircraft.
-</p>
-
-<p>
-The information was not integrated
-with the Phoenix warning and broader
-al-Qaeda threat picture in time.
-</p>
-
-
-<h3>
-DID THE GOVERNMENT LET IT HAPPEN?
-</h3>
-
-<p>
-The public record demonstrates severe failures
+The public record
+documents major failures
 of intelligence sharing,
-bureaucratic coordination,
-watchlisting, analysis and urgency.
-</p>
+watchlisting
+and coordination.
 
-<p>
-What it does not establish is an intentional
-order from U.S. officials to allow
-the attack to occur.
+It does not establish
+an intentional order
+by U.S. officials
+to allow the attacks.
 </p>
 
 <div class="verdict">
@@ -4167,15 +3675,10 @@ DELIBERATELY ALLOWED 9/11
 <br><br>
 
 <strong>
-VERDICT: UNPROVEN
+STATUS:
+NOT ESTABLISHED
+BY THE PUBLIC EVIDENCE
 </strong>
-
-<br><br>
-
-Failure is documented.
-
-Intentional facilitation
-has not been established.
 
 </div>
 
@@ -4185,110 +3688,34 @@ THE SAUDI QUESTION
 </h3>
 
 <p>
-Fifteen of the nineteen hijackers
-were Saudi citizens.
-
-Nationality alone does not establish
-government involvement.
-</p>
-
-<p>
-Future hijackers Mihdhar and Hazmi
-received substantial assistance
-after arriving in California
-from Saudi national Omar al-Bayoumi.
-</p>
-
-<p>
-Bayoumi helped them find housing,
-co-signed a lease and assisted them
-in establishing themselves in San Diego.
+Saudi-linked assistance
+to future hijackers
+remains an area
+of scrutiny,
+but no public finding
+has established
+that Saudi Arabia
+as a government
+ordered 9/11.
 </p>
 
 
 <h3>
-OPERATION ENCORE
+WORLD TRADE CENTER
 </h3>
 
 <p>
-The FBI later conducted a deeper investigation
-known as Operation Encore,
-examining Bayoumi and other Saudi-linked
-individuals to determine whether a network
-knowingly assisted the hijackers.
-</p>
-
-<p>
-No public finding has established
-that Saudi Arabia as a government ordered 9/11.
-</p>
-
-
-<h3>
-THE MONEY TRAIL
-</h3>
-
-<p>
-The September 11 operation
-is estimated to have cost roughly
-$400,000 to $500,000.
-</p>
-
-<p>
-Much of the operational money
-has been traced through Khalid Sheikh Mohammed
-and the al-Qaeda network.
-</p>
-
-<div class="evidence">
-
-<strong>
-MONEY TRAIL: STRONG TO AL-QAEDA
-</strong>
-
-The operational financing is strongly linked
-to the al-Qaeda network.
-
-The ultimate source of every dollar
-was not established.
-
-</div>
-
-
-<h3>
-THE TWIN TOWERS
-</h3>
-
-<p>
-The National Institute of Standards
-and Technology concluded that aircraft impact,
-structural damage, loss of fireproofing
-and prolonged fires caused the collapses
-of the Twin Towers.
-</p>
-
-<p>
-NIST reported no evidence supporting
-controlled demolition.
-</p>
-
-
-<h3>
-WORLD TRADE CENTER 7
-</h3>
-
-<p>
-World Trade Center 7 was not struck
-by an aircraft.
-
-NIST concluded that fire and progressive
-structural failure caused its collapse.
-</p>
-
-<p>
-No verified evidence has established
-that demolition charges were installed
-inside the building.
+NIST concluded
+that aircraft impact,
+structural damage,
+loss of fireproofing
+and prolonged fires
+caused the Twin Towers
+to collapse,
+and that fire
+and progressive structural failure
+caused the collapse
+of World Trade Center 7.
 </p>
 
 
@@ -4297,30 +3724,295 @@ IRAQ
 </h3>
 
 <p>
-The 9/11 Commission found no evidence
-that Saddam Hussein's government developed
-an operational partnership with al-Qaeda
-to conduct the September 11 attacks.
+The 9/11 Commission
+found no evidence
+that Saddam Hussein's government
+developed
+an operational partnership
+with al-Qaeda
+to conduct the attacks.
+</p>
+
+<a
+class="source-link"
+href="https://www.9-11commission.gov/report/911Report.pdf"
+target="_blank"
+rel="noopener noreferrer">
+SOURCE: 9/11 COMMISSION →
+</a>
+
+<br>
+
+<a
+class="source-link"
+href="https://www.nist.gov/world-trade-center-wtc-disaster-study"
+target="_blank"
+rel="noopener noreferrer">
+SOURCE: NIST →
+</a>
+
+</div>
+
+</div>
+
+</dialog>
+
+
+<!-- CASE FILE 003 -->
+
+<dialog id="diddy">
+
+<div class="article">
+
+<button
+class="close"
+onclick="closeArticle('diddy')">
+×
+</button>
+
+<div class="category">
+CASE FILE 003 • TUPAC • DIDDY
+</div>
+
+<h2>
+Did Diddy Have a Role
+in Tupac Shakur's Murder?
+</h2>
+
+<p class="article-intro">
+Duane "Keffe D" Davis
+was convicted
+of orchestrating
+Tupac Shakur's murder.
+
+The separate allegation
+involving Sean Combs
+remains unproven.
+</p>
+
+<div class="article-body">
+
+<p>
+A Las Vegas jury
+convicted Duane Davis
+of first-degree murder
+in Tupac Shakur's
+1996 killing.
 </p>
 
 <p>
-Iraq did not carry out 9/11.
+That verdict
+did not convict
+Sean Combs
+or establish
+that Combs ordered,
+funded
+or participated
+in Shakur's murder.
 </p>
 
 <div class="verdict">
 
 <strong>
-CLAIM:
-IRAQ HELPED CARRY OUT 9/11
+THE BLIND TRUTH CONCLUSION:
+UNPROVEN
 </strong>
 
 <br><br>
 
-<strong>
-VERDICT: NOT SUPPORTED
-</strong>
+The Davis conviction
+does not establish
+the separate allegation
+against Combs.
 
 </div>
+
+<a
+class="source-link"
+href="https://apnews.com/article/90c08ae150f366c83938c425c73adb9c"
+target="_blank"
+rel="noopener noreferrer">
+SOURCE: ASSOCIATED PRESS →
+</a>
+
+</div>
+
+</div>
+
+</dialog>
+
+
+<!-- CASE FILE 002 -->
+
+<dialog id="jordan">
+
+<div class="article">
+
+<button
+class="close"
+onclick="closeArticle('jordan')">
+×
+</button>
+
+<div class="category">
+CASE FILE 002 • NBA
+</div>
+
+<h2>
+Michael Jordan —
+A Real Choke Job?
+</h2>
+
+<p class="article-intro">
+Jordan's perfect
+6–0 NBA Finals series record
+is only part
+of a much larger
+playoff record.
+</p>
+
+<div class="article-body">
+
+<p>
+Michael Jordan won
+six NBA championships
+and six Finals MVP awards.
+</p>
+
+<p>
+His teams also experienced
+playoff eliminations
+before the Bulls
+became champions
+and lost to Orlando
+in the 1995 postseason
+after his return.
+</p>
+
+<div class="verdict">
+
+<strong>
+CASE FILE CONCLUSION
+</strong>
+
+<br><br>
+
+The 6–0 Finals statistic
+is accurate,
+but it is not
+his entire playoff record.
+
+</div>
+
+<a
+class="source-link"
+href="https://www.basketball-reference.com/players/j/jordami01.html"
+target="_blank"
+rel="noopener noreferrer">
+SOURCE: BASKETBALL-REFERENCE →
+</a>
+
+</div>
+
+</div>
+
+</dialog>
+
+
+<!-- CASE FILE 001 -->
+
+<dialog id="kirk">
+
+<div class="article">
+
+<button
+class="close"
+onclick="closeArticle('kirk')">
+×
+</button>
+
+<div class="category">
+CASE FILE 001 • OPEN CRIMINAL CASE
+</div>
+
+<h2>
+Who Killed
+Charlie Kirk?
+</h2>
+
+<p class="article-intro">
+The criminal case
+remains open.
+
+The defendant
+has pleaded not guilty,
+and the evidence
+has not yet
+been tested at trial.
+</p>
+
+<div class="article-body">
+
+<p>
+Tyler Robinson
+is accused
+of fatally shooting
+Charlie Kirk
+at Utah Valley University
+on September 10, 2025.
+</p>
+
+<p>
+On September 1, 2026,
+a Utah judge ruled
+there was sufficient evidence
+for Robinson
+to stand trial
+on a capital murder charge.
+
+Robinson pleaded
+not guilty.
+</p>
+
+<p>
+Prosecutors described
+video,
+DNA
+and other evidence
+they say links Robinson
+to the shooting.
+
+Defense lawyers
+dispute aspects
+of the prosecution's case.
+</p>
+
+<div class="evidence">
+
+<strong>
+LEGAL STATUS
+</strong>
+
+A probable-cause ruling
+allows the case
+to proceed to trial.
+
+It is not
+a finding of guilt.
+
+Robinson is presumed innocent
+unless proven guilty
+in court.
+
+</div>
+
+<a
+class="source-link"
+href="https://www.reuters.com/legal/government/utah-judge-decide-if-accused-killer-charlie-kirk-will-stand-trial-face-death-2026-09-01/"
+target="_blank"
+rel="noopener noreferrer">
+SOURCE: REUTERS →
+</a>
 
 </div>
 
@@ -4331,17 +4023,18 @@ VERDICT: NOT SUPPORTED
 
 <script>
 
-/* =====================================================
-   ARTICLE WINDOWS
-===================================================== */
+
+/* ARTICLE WINDOWS */
 
 function openArticle(id){
 
-const article =
+const a =
 document.getElementById(id);
 
-if(article){
-article.showModal();
+if(a){
+
+a.showModal();
+
 }
 
 }
@@ -4349,11 +4042,13 @@ article.showModal();
 
 function closeArticle(id){
 
-const article =
+const a =
 document.getElementById(id);
 
-if(article){
-article.close();
+if(a){
+
+a.close();
+
 }
 
 }
@@ -4368,7 +4063,9 @@ dialog.addEventListener(
 function(event){
 
 if(event.target === dialog){
+
 dialog.close();
+
 }
 
 });
@@ -4376,28 +4073,13 @@ dialog.close();
 });
 
 
-/* =====================================================
-   14-DAY STORY ROTATION SYSTEM
-
-   RULE:
-   Normal routine stories automatically disappear
-   after 14 days.
-
-   TO KEEP AN ONGOING STORY:
-   data-ongoing="true"
-
-   WHEN AN ONGOING STORY GETS A REAL UPDATE:
-   Change data-story-date to the date
-   of the newest meaningful update.
-
-   CASE FILES DO NOT USE data-story-date,
-   so they never auto-expire.
-===================================================== */
+/* 14-DAY STORY ROTATION */
 
 const STORY_MAX_AGE_DAYS = 14;
 
 const currentDate =
 new Date();
+
 
 document
 .querySelectorAll("[data-story-date]")
@@ -4409,27 +4091,30 @@ story.dataset.storyDate;
 const ongoing =
 story.dataset.ongoing === "true";
 
-if(!storyDateValue){
+
+if(!storyDateValue || ongoing){
+
 return;
+
 }
 
-if(ongoing){
-return;
-}
 
 const storyDate =
 new Date(
-storyDateValue + "T23:59:59"
+storyDateValue +
+"T23:59:59"
 );
 
-const ageInMilliseconds =
-currentDate - storyDate;
 
 const ageInDays =
-ageInMilliseconds /
+(currentDate - storyDate) /
 (1000 * 60 * 60 * 24);
 
-if(ageInDays > STORY_MAX_AGE_DAYS){
+
+if(
+ageInDays >
+STORY_MAX_AGE_DAYS
+){
 
 story.remove();
 
@@ -4438,15 +4123,16 @@ story.remove();
 });
 
 
-/* =====================================================
-   VISITOR COUNTER
-===================================================== */
+/* VISITOR COUNTER */
 
 const visitorCount =
-document.getElementById("visitor-count");
+document.getElementById(
+"visitor-count"
+);
+
 
 fetch(
-"https://abacus.jasoncameron.dev/hit/the-blind-truth-202-ui/homepage",
+"https://abacus.jasoncameron.dev/hit/the-blind-truth-202-ui/homepage?build=20260923-1450",
 {
 method:"GET",
 cache:"no-store"
@@ -4456,9 +4142,11 @@ cache:"no-store"
 .then(function(response){
 
 if(!response.ok){
+
 throw new Error(
-"Counter service unavailable"
+"Counter unavailable"
 );
+
 }
 
 return response.json();
@@ -4484,19 +4172,16 @@ visitorCount.textContent =
 
 })
 
-.catch(function(error){
-
-console.log(
-"Visitor counter error:",
-error
-);
+.catch(function(){
 
 visitorCount.textContent =
 "UNAVAILABLE";
 
 });
 
+
 </script>
+
 
 </body>
 
